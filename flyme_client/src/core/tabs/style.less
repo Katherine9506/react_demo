@@ -1,0 +1,23 @@
+@import "../../styles/const.less";
+
+.tabs {
+    width:100%;
+    height:auto;
+    border-bottom:solid 1px #E5E5E5;
+}
+
+.tab {
+    display:inline-block;
+    vertical-align:top;
+    width:auto;
+    height:36px;
+    line-height:36px;
+    padding-right:20px;
+    font-size:13px;
+    color:#555;
+    cursor:pointer;
+}
+
+.tab[data-active=true] {
+    color: @main-color;
+}

@@ -1,0 +1,38 @@
+/*主色值*/
+/*青色*/
+/*头部高度*/
+/*左侧面板宽度*/
+/*左侧面板背景*/
+/*左侧面板背景*/
+/*左侧菜单高度*/
+/*左侧菜单标题高度*/
+/*内容区背景色*/
+/*子导航宽度*/
+/*表单默认高度*/
+/*数据列表高度*/
+/*表单默认边色*/
+/*表单聚焦边色*/
+/*提示高度*/
+/*select 样式*/
+/*表单样式常量*/
+/*checkbox*/
+.tabs {
+  width: 100%;
+  height: auto;
+  border-bottom: solid 1px #E5E5E5;
+}
+.tab {
+  display: inline-block;
+  vertical-align: top;
+  width: auto;
+  height: 36px;
+  line-height: 36px;
+  padding-right: 20px;
+  font-size: 13px;
+  color: #555;
+  cursor: pointer;
+}
+.tab[data-active=true] {
+  color: #5e79f6;
+}
+/*# sourceMappingURL=style.css.map */

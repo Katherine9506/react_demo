@@ -1,0 +1,41 @@
+<!--pages/mine/mine.wxml-->
+<view>
+    <view class='header'>
+        <image class='bg' src='/images/mine-top.png' mode='widthFix'></image>
+        <view class='bed'>
+            <view class='txBox'>
+                <image src='{{user.avatarUrl}}' mode='widthFix'></image>
+            </view>
+            <view class='name'>{{user.nickName}}</view>
+            <view class='member'>
+                <button wx:if="{{user.is_member}}" class='{{user.is_member?"expire-date":""}}'>
+                    会员到期时间 {{user.expire_date}}
+                </button>
+                <button bindtap="getMembership" wx:else>开通会员</button>
+            </view>
+        </view>
+    </view>
+    <view>
+        <view class='same' bindtap='myAudioTap'>
+            <view>
+                <image class='icon' src='/images/icon-book.png' mode='widthFix'></image>
+                <text>我的书和音频</text>
+            </view>
+            <image class='iconArrow' src='/images/arrow.png' mode='widthFix'></image>
+        </view>
+        <view class='same' bindtap='memberTap'>
+            <view>
+                <image class='icon' src='/images/icon-mb.png' mode='widthFix'></image>
+                <text>会员记录</text>
+            </view>
+            <image class='iconArrow' src='/images/arrow.png' mode='widthFix'></image>
+        </view>
+        <button class='same' open-type='contact'>
+            <view>
+                <image class='icon' src='/images/icon-kf.png' mode='widthFix'></image>
+                <text>客服与反馈</text>
+            </view>
+            <image class='iconArrow' src='/images/arrow.png' mode='widthFix'></image>
+        </button>
+    </view>
+</view>

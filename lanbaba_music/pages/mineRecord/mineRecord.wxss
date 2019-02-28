@@ -1,0 +1,26 @@
+/* pages/mineRecord/mineRecord.wxss */
+page{
+  background: #F6F6F6;
+}
+.orderBar{
+  padding: 0 80rpx;
+  height: 92rpx;
+  display: flex;
+  justify-content: space-around;
+  font-size: 32rpx;
+  color: #494949;
+  background: #fff;
+}
+.orderBar view{
+  line-height: 90rpx;
+}
+.orderBar view.active{
+  color: #3B90F3;
+  border-bottom: 2rpx solid #3B90F3;
+}
+.none{
+  font-size: 24rpx;
+  color: #9e9e9e;
+  text-align: center;
+  padding-top:300rpx;
+}

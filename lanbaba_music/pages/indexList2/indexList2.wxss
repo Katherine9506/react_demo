@@ -1,0 +1,275 @@
+/* pages/indexList/indexList.wxss */
+.innerBox{
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.listBanner{
+  position: relative;
+}
+.listBanner image.listImg{
+  display: block;
+  width: 100%;
+}
+.listBanner .listIntro{
+  position: absolute;
+  bottom: 41rpx;
+  left: 0;
+  width: 100%;
+  line-height: 34rpx;
+  font-size: 28rpx;
+  color: #fff;
+  box-sizing: border-box;
+  padding:0 52rpx;
+}
+
+.rangBar scroll-view {
+  font-size: 0;
+  overflow: hidden;
+  height: 92rpx;
+  line-height: 90rpx;
+  text-align: center;
+  width: 100%;
+  white-space: nowrap;
+}
+.rangBar scroll-view view{
+  width: 90rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  display: inline-block;
+  font-size: 32rpx;
+  margin: 0 20rpx;
+  color: #666666;
+}
+.rangBar scroll-view view.on{
+  color: #3890f3;
+  border-bottom: 2rpx solid #3B90F3;
+}
+.product{
+  padding:0 32rpx 32rpx;
+  background: #fff;
+}
+.list{
+  overflow: hidden;
+  
+}
+.product:last-child .list{
+  border: 0;
+}
+.item{
+  /* width: 327rpx;
+  float: left; */
+  padding:30rpx 0;
+  overflow: hidden;
+  border-bottom: 1rpx solid #DADADA;
+}
+
+.produPic{
+  width: 152rpx;
+  height: 152rpx;
+  border-radius: 30rpx;
+  overflow: hidden;
+  position: relative;
+  float: left;
+  margin-right: 30rpx;
+}
+.produPic .pImg{
+  display: block;
+  width: 100%;
+}
+.audioLe{
+  height: 32rpx;
+  line-height: 32rpx;
+  font-size: 24rpx;
+  color: #9b9b9b;
+  margin-top: 21rpx;
+}
+.audioLe image{
+  width: 26rpx;
+  height: 26rpx;
+  margin-right: 8rpx;
+  vertical-align: middle;
+  margin-top: -6rpx;
+}
+.produPic .tag{
+  width: 150rpx;
+  height: 36rpx;
+  line-height: 36rpx;
+  font-size: 22rpx;
+  color: #fff;
+  text-align: center;
+  background:linear-gradient(to right, #2892f5,#00d2ff);
+  transform: rotate(-45deg);
+  transform-origin: 50% 50%;
+  position: absolute;
+  top:13rpx;
+  left:-47rpx;
+}
+.itemBottom{
+  float: left;
+  width: 500rpx;
+}
+.itemBottom .lName{
+  font-size: 28rpx;
+  line-height:56rpx;
+  height:56rpx;
+  color: #252525;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space:nowrap;
+}
+.itemBottom .listen{
+  font-size: 24rpx;
+  line-height: 34rpx;
+  height: 34rpx;
+  color: #adadad;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space:nowrap;
+}
+.listBar{
+  display: flex;
+  justify-content: space-around;
+  height: 90rpx;
+  border-bottom: 1rpx solid #DADADA;
+}
+.listBar view{
+  padding: 0 10rpx;
+  width: 140rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  font-size: 32rpx;
+  color: #797979;
+  position: relative;
+}
+.listBar view.active{
+  color: #3890f3;
+}
+.listBar view.active::after{
+  position: absolute;
+  bottom: -1rpx;
+  left: 0;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 2rpx;
+  background: #3B90F3;
+}
+.intro{
+  font-size: 26rpx;
+  color: #1b1b1b;
+  line-height: 50rpx;
+  padding: 18rpx 32rpx ;
+}
+.intro .tags{
+  display: flex;
+  margin-top: 48rpx;
+}
+.intro .tags .tagsT{
+  width: 82rpx;
+}
+.tagsList text{
+  display: inline-block;
+  padding: 0 17rpx;
+  height: 50rpx;
+  line-height: 48rpx;
+  box-sizing: border-box;
+  border:1rpx solid #B5B5B5;
+  border-radius: 9rpx;
+  margin-right: 8rpx;
+  margin-bottom: 8rpx;
+  vertical-align: top;
+}
+.member{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 64rpx;
+  padding: 17rpx 0;
+  background: #F3F3F3;
+}
+.member button{
+  height: 64rpx;
+  width: 477rpx;
+  line-height: 64rpx;
+  border-radius: 32rpx;
+  font-size: 32rpx;
+  color: #fff;
+  background: linear-gradient(to right,#00d2ff,#3890f3);
+  padding: 0;
+}
+.memberModal{
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 100;
+}
+.modalMain{
+  width:552rpx;
+  height: 600rpx;
+  background: #fff;
+  border-radius: 30rpx;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-60%);
+}
+.modalTit{
+  background: #0F174D;
+  border-top-left-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+  height: 130rpx;
+  line-height: 130rpx;
+  position: relative;
+}
+.modalTit image{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  vertical-align: bottom;
+}
+.modalTs{
+  padding-top: 72rpx;
+  text-align: center;
+  color: #202020;
+  margin-bottom: 104rpx;
+}
+.modalTs .txt1{
+  font-size: 42rpx;
+  line-height: 80rpx;
+}
+.modalTs .txt2{
+  font-size: 24rpx;
+  line-height: 47rpx;
+  padding:  14rpx 0;
+}
+.btns{
+  display: flex;
+  padding: 0 58rpx;
+  justify-content: space-around;
+}
+.btns button{
+  width: 174rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 28rpx;
+  padding: 0;
+  border-radius: 30rpx;
+  margin: 0;
+  box-sizing: border-box;
+}
+.btns button.cancel{
+  background: transparent;
+  border: 2rpx solid #C7C7C7;
+  line-height: 56rpx;
+}
+.btns button.confim{
+  background: linear-gradient(to bottom,#00d2ff,#3890f3);
+  color: #fff;
+}

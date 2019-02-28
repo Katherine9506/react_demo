@@ -1,0 +1,11 @@
+<!--pages/mineRecord/mineRecord.wxml-->
+<view>
+  <view class='orderBar'>
+    <view class='{{current==0?"active":""}}' bindtap='tabTap' data-id='0'>购买记录</view>
+    <view class='{{current==1?"active":""}}' bindtap='tabTap' data-id='1'>活动记录</view>
+  </view>
+  <view>
+    <view class='none'>记录是空的哦！</view>
+    
+  </view>
+</view>

@@ -1,0 +1,68 @@
+<!--pages/indexSearch/indexSearch.wxml-->
+<view class='indexHeader'>
+  <form>
+    <view class='searchBox'>
+      <view class='inputBox'>
+        <image src='/images/icon-search.png' mode='widthFix'></image>
+        <input placeholder='搜索音频、专辑、视频' />
+      </view>
+      <button class='searchBtn'>取消</button>
+    </view>
+  </form>
+</view>
+<view class='recommend'>
+  <view class='hotRecommend'>热门搜索</view>
+  <view class='hotRecommendList'>
+    <block wx:for='{{recommendList}}'>
+      <view style='background:{{item.bgColor}}'>{{item.name}}</view>
+    </block>
+  </view>
+</view>
+<view class='product'>
+  <view class='list'>
+    <view class='item'>
+      <view class='produPic'>
+        <image class='pImg' src='/images/product01.png' mode='widthFix'></image>
+        <view class='tag'>会员</view>
+        <view class='audioLe'><image src='/images/icon-disc.png'></image><text>17首/20首</text></view>
+      </view>
+      <view class='itemBottom'>
+        <view class='lName'>小猴子的故事</view>
+        <view class='listen'>聆听名家经典作品</view>
+      </view> 
+    </view>
+    <view class='item'>
+      <view class='produPic'>
+        <image class='pImg' src='/images/product02.png' mode='widthFix'></image>
+        <view class='tag'>会员</view>
+        <view class='audioLe'><image src='/images/icon-disc.png'></image><text>17首/20首</text></view>
+      </view>
+      <view class='itemBottom'>
+        <view class='lName'>小猴子的故事</view>
+        <view class='listen'>聆听名家经典作品</view>
+      </view> 
+    </view>
+    <view class='item'>
+      <view class='produPic'>
+        <image class='pImg' src='/images/product03.png' mode='widthFix'></image>
+        <view class='tag'>会员</view>
+        <view class='audioLe'><image src='/images/icon-disc.png'></image><text>17首/20首</text></view>
+      </view>
+      <view class='itemBottom'>
+        <view class='lName'>小猴子的故事</view>
+        <view class='listen'>聆听名家经典作品</view>
+      </view> 
+    </view>
+    <view class='item'>
+      <view class='produPic'>
+        <image class='pImg' src='/images/product04.png' mode='widthFix'></image>
+        <view class='tag'>会员</view>
+        <view class='audioLe'><image src='/images/icon-disc.png'></image><text>17首/20首</text></view>
+      </view>
+      <view class='itemBottom'>
+        <view class='lName'>小猴子的故事</view>
+        <view class='listen'>聆听名家经典作品</view>
+      </view> 
+    </view>
+  </view>
+</view>

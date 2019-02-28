@@ -1,0 +1,78 @@
+{extend name="base" /}
+{block name="body"}
+<div class="layui-body">
+    <!--tab标签-->
+    <div class="layui-tab layui-tab-brief">
+        <ul class="layui-tab-title">
+            <li class=""><a href="{:url('admin/percent/index')}">数据列表</a></li>
+            <li class="layui-this">
+                {if request()->action() == "add"}
+                添加数据
+                {else}
+                编辑编辑
+                {/if}
+            </li>
+        </ul>
+
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show">
+                {if request()->action() == "add"}
+                <form class="layui-form form-container" action="{:url('admin/percent/add')}" method="post">
+                {else/}
+                <form class="layui-form form-container" action="{:url('admin/percent/edit')}" method="post">
+                    <input type="hidden" name="id" value="{$detail['id']}">
+                {/if}
+
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">选择指标</label>
+                            <div class="layui-input-block">
+                                <select name="quota">
+                                    {foreach $quotaList as $k => $v}
+                                    <option value="{$v}" {if isset($detail['quota']) && $detail['quota']==$v}selected="true"{/if}>{$k}</option>
+                                    {/foreach}
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">买入百分比</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="buy_value" value="{$detail['buy_value']|default=''}" required  lay-verify="number" placeholder="买入百分比(%)" class="layui-input">
+                            </div>
+                        </div>
+
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">卖出百分比</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="sell_value" value="{$detail['sell_value']|default=''}" required  lay-verify="number" placeholder="卖出百分比(%)" class="layui-input">
+                            </div>
+                        </div>
+
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">成交时间</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="deal_time" value="{:isset($detail['deal_time']) ? $detail['deal_time'] : ''}" readonly required  lay-verify="required" placeholder="成交时间" class="layui-input" id="time1">
+                            </div>
+                        </div>
+
+                        <div class="layui-form-item">
+                            <div class="layui-input-block">
+                                <button class="layui-btn" lay-submit lay-filter="*">保存</button>
+                                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                            </div>
+                        </div>
+                    </form>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}
+
+
+{block name="script"}
+<script>
+    jeDate("#time1", {
+        format: "hh:mm:ss"
+    });
+</script>
+{/block}

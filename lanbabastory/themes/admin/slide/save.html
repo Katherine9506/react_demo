@@ -1,0 +1,76 @@
+{extend name="base" /}
+{block name="body"}
+<div class="layui-body">
+    <!--tab标签-->
+    <div class="layui-tab layui-tab-brief">
+        <ul class="layui-tab-title">
+            <li class=""><a href="{:url('admin/slide/index')}">轮播列表</a></li>
+            <li class="layui-this">
+                {if request()->action() == "add"}
+                添加轮播图
+                {else}
+                编辑轮播图
+                {/if}
+            </li>
+        </ul>
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show">
+
+                {if request()->action() == "add"}
+                <form class="layui-form form-container" action="{:url('admin/slide/add')}" method="post">
+                {else/}
+                <form class="layui-form form-container" action="{:url('admin/slide/edit')}" method="post">
+                <input type="hidden" name="id" value="{$detail['id']}">
+                {/if}
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">名称</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="name" value="{$detail['name']|default=''}" required  lay-verify="required" placeholder="请输入名称" class="layui-input">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">图片</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="image" value="{$detail['image']|default=''}" placeholder="（选填）请上传图片" class="layui-input layui-input-inline" id="thumb">
+                            <input type="file" name="file" class="layui-upload-file">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">链接</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="link" value="{$detail['link']|default=''}" placeholder="（选填）请输入链接" class="layui-input">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">状态</label>
+                        <div class="layui-input-block">
+                            {foreach [1 => "显示", 0 => "隐藏"] as $k => $v}
+                                <input type="radio" name="status" value="{$k}" title="{$v}" {if condition="(isset($detail['status']) && $detail['status']==$k) || (!isset($detail['status']) && 1==$k)"}checked="checked"{/if}>
+                            {/foreach}
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">排序</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="sort" value="{$detail['sort']|default='0'}" required lay-verify="sort" placeholder="请输入排序" class="layui-input">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <button class="layui-btn" lay-submit lay-filter="*">更新</button>
+                            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}

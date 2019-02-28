@@ -1,0 +1,59 @@
+{extend name="base" /}
+{block name="body"}
+<div class="layui-body">
+    <!--tab标签-->
+    <div class="layui-tab layui-tab-brief">
+        <ul class="layui-tab-title">
+            <li class="layui-this">交易明细</li>
+            <li class=""><a href="{:url('admin/deal/add')}">添加数据</a></li>
+        </ul>
+
+        <div class="layui-tab-content">
+            <div style="text-indent:10px;background:#ebccd1;color:#a94442;font-size:14px;width:100%;min-height:20px;padding:10px 0;">
+                温馨提示:每个指标的下推荐6条展示数据!
+            </div>
+            <div class="layui-tab-item layui-show">
+                <table class="layui-table">
+                    <thead>
+                    <tr>
+                        <th style="width: 30px;">ID</th>
+                        <th>指标名称</th>
+                        <th>买入量</th>
+                        <th>买入价格</th>
+                        <th>买入时间</th>
+                        <th>卖出量</th>
+                        <th>卖出价格</th>
+                        <th>卖出时间</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        {if count($list)}
+                        {foreach $list as $item}
+                        <tr>
+                            <td style="width: 30px;">{$item["id"]}</td>
+                            <td>{$item['quota_title']}</td>
+                            <td>{:number_format($item['buy_number'])} 份</td>
+                            <td>¥ {$item['buy_price']}</td>
+                            <td>{$item['buy_time']}</td>
+                            <td>{:number_format($item['sell_number'])} 份</td>
+                            <td>¥ {$item['sell_price']}</td>
+                            <td>{$item['sell_time']}</td>
+                            <td>
+                                <a href="{:url('admin/deal/edit', ['id' => $item['id']])}" class="layui-btn layui-btn-normal layui-btn-mini">编辑</a>
+                                <a href="{:url('admin/deal/del', ['id' => $item['id']])}" class="layui-btn layui-btn-danger layui-btn-mini ajax-delete">删除</a>
+                            </td>
+                        </tr>
+                        {/foreach}
+                        {else/}
+                        <tr>
+                            <td colspan="8" align="middle">Sorry, 暂无数据</td>
+                        </tr>
+                        {/if}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}

@@ -1,0 +1,94 @@
+<!--index.wxml-->
+<block wx:if="{{!loading}}">
+    <view class='indexHeader'>
+        <view class='playing' wx:if="{{hasAppMusic}}">
+            <view class='audioInfor'>
+                <view class='audioPic' bindtap="navigateToAudioDetail" data-title="{{currentAudio.title}}">
+                    <image src='{{_host + currentAudio.thumb}}' mode='widthFix'></image>
+                    <audio poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" id="myAudio"
+                           loop></audio>
+                </view>
+                <view class='nameTime'>
+                    <view class='name'>{{currentAudio.title}}</view>
+                    <view class='longtime'>
+                        <text>{{secondsString}}</text>
+                        /
+                        <text>{{currentAudio.duration}}</text>
+                    </view>
+                </view>
+            </view>
+            <view class='audioControl'>
+                <button class='turn' bindtap="switchPrevAudio">
+                    <image src='/images/icon-prev.png' mode='widthFix'></image>
+                </button>
+                <button class='play' bindtap="switchPlayStatus">
+                    <image wx:if="{{status}}" src='/images/icon-play.png' mode='widthFix'></image>
+                    <image wx:else src='/images/icon_pause.png' mode='widthFix'></image>
+                </button>
+                <button class='turn' bindtap="switchNextAudio">
+                    <image src='/images/icon-next.png' mode='widthFix'></image>
+                </button>
+            </view>
+        </view>
+        <view class='searchBox'>
+            <view class='inputBox' bindtap='searchTap'>
+                <image src='/images/icon-search.png' mode='widthFix'></image>
+                <input placeholder='搜索音频、专辑、视频'/>
+            </view>
+        </view>
+    </view>
+    <view class='banner'>
+        <swiper indicator-dots indicator-color='{{indicatorC}}' indicator-active-color='{{indicatorAC}}'
+                autoplay='{{autoplay}}' circular='{{circular}}'>
+            <block wx:for="{{slides}}" wx:key="{{index}}" wx:for-item="slide">
+                <swiper-item>
+                    <view>
+                        <image src='{{_host + slide.image}}' mode='widthFix'></image>
+                    </view>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <view class='navigatorList'>
+        <navigator url='/pages/indexRank/indexRank'>
+            <image src='/images/nav1.png' mode='widthFix'></image>
+            <view>排行榜</view>
+        </navigator>
+        <block wx:for="{{albumTags}}" wx:key="{{index}}" wx:for-item="tag">
+            <navigator url='/pages/indexRank2/indexRank2?tag_id={{tag.id}}&tag_name={{tag.title}}'>
+                <image src='{{_host + tag.image}}' mode='widthFix'></image>
+                <view>{{tag.title}}</view>
+            </navigator>
+        </block>
+    </view>
+    <block wx:for="{{albumCategories}}" wx:key="{{index}}" wx:for-item="category">
+        <view class='product'>
+            <view class='title'>
+                <view class='txt'>
+                    <text></text>
+                    {{category.title}}
+                </view>
+                <view bindtap='moreTap' class='more' data-id="{{category.id}}" data-title="{{category.title}}">更多</view>
+            </view>
+            <view class='list'>
+                <block wx:for="{{category.albums}}" wx:key="{{index}}" wx:for-item="album">
+                    <view class='item' bindtap='albumDetail' data-id="{{album.id}}" data-is_vip="{{album.is_vip}}"
+                          data-title="{{album.title}}">
+                        <view class='produPic'>
+                            <image class='pImg' src='{{_host + album.thumb}}' mode='widthFix'></image>
+                            <view class='tag' wx:if="{{album.is_vip}}">会员</view>
+                            <view class='audioLe'>
+                                <image src='/images/icon-disc.png'></image>
+                                <text>{{album.number}}</text>
+                            </view>
+                        </view>
+                        <view class='itemBottom'>
+                            <view class='lName'>{{album.title}}</view>
+                            <view class='listen'>{{album.breif}}</view>
+                        </view>
+                    </view>
+                </block>
+            </view>
+        </view>
+    </block>
+</block>

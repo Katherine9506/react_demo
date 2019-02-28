@@ -1,0 +1,59 @@
+{extend name="base"}
+
+{block name="body"}
+<div class="layui-body">
+    <div class="layui-tab layui-tab-brief">
+        <ul class="layui-tab-title">
+            <li class="layui-this">会员套餐管理</li>
+            <li><a href="{:url('/admin/member/add')}">添加套餐</a></li>
+        </ul>
+    </div>
+    <div class="laui-tab-content">
+        <div class="layui-tab-item layui-show">
+            <table class="layui-table">
+                <thead>
+                <tr>
+                    <th>#</th><!--id-->
+                    <th>套餐标题</th><!--title-->
+                    <th>时间长度(天数)</th><!--duration-->
+                    <th>价格</th><!--price-->
+                    <th>启用状态</th><!--is_active-->
+                    <td>排序</td>
+                    <th>创建时间</th><!--create_time-->
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                {foreach name="members" item="member"}
+                <tr>
+                    <td>{$member.id}</td>
+                    <td>{$member.title}</td>
+                    <td>{$member.duration}</td>
+                    <td>{$member.price}</td>
+                    <td>{$member.is_active ? '正在使用' : '未启用'}</td>
+                    <td>{$member.sort}</td>
+                    <td>{$member.create_time}</td>
+                    <td>
+                        <a href="{:url('/admin/member/edit',['id' => $member->id])}"
+                           class="layui-btn layui-btn-small layui-btn-normal"><i class="layui-icon">&#xe642;</i>
+                        </a>
+                        <a href="{:url('/admin/member/delete',['id' => $member->id])}"
+                           class="layui-btn layui-btn-danger layui-btn-small ajax-delete"><i
+                                class="layui-icon">&#xe640;</i>
+                        </a>
+                    </td>
+                </tr>
+                {/foreach}
+                </tbody>
+            </table>
+            {$members->render()}
+        </div>
+    </div>
+</div>
+{/block}
+
+{block name="script"}
+<script type="text/javascript">
+
+</script>
+{/block}

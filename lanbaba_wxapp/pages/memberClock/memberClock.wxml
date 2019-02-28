@@ -1,0 +1,44 @@
+<!--pages/memberClock/memberClock.wxml-->
+<view class='banner'>
+    <image src='/images/in.png' mode='widthFix'></image>
+</view>
+<view class='handle'>
+    <view class='handleBar'>
+        <image src='/images/clockIn.png' mode='widthFix'></image>
+        <view>打卡天数:
+            <text>{{signDays}}</text>
+            天
+        </view>
+        <button wx:if="{{hasSignToday}}">今日已打卡</button>
+        <button class="button-hover" bindtap="signEventHandler" wx:else>立即打卡</button>
+    </view>
+    <view class='handleBar'>
+        <image src='/images/audition.png' mode='widthFix'></image>
+        <view>试听人数:
+            <text>0</text>
+            人
+        </view>
+        <button class="button-hover" open-type="share">邀请好友</button>
+    </view>
+    <view class='toOpen' bindtap="buyMember">
+        <button>直接开通</button>
+    </view>
+    <view class='rules'>
+        <view class='ruleTitle'>
+            <text>活动规则</text>
+        </view>
+        <view class='ruleBox'>
+            <view class='ruleDet'>任务1</view>
+            <view class='details'>
+                <view>开启条件：进入小程序即开启</view>
+                <view>连续打卡7天(如漏打卡，将清空历史签到)，并邀请
+                    <text>5</text>
+                    个好友进入小程序，即可获得
+                    <text>30</text>
+                    天免费会员。
+                </view>
+            </view>
+        </view>
+    </view>
+
+</view>

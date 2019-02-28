@@ -1,0 +1,110 @@
+<!--pages/indexSearch/indexSearch.wxml-->
+<view class='indexHeader'>
+    <form>
+        <view class='searchBox'>
+            <view class='inputBox'>
+                <image src='/images/icon-search.png' mode='widthFix'></image>
+                <input placeholder='搜索音频、专辑' value="{{searchContent}}" confirm-type="search" focus
+                       bindconfirm="inputSearchHandler" bindfocus="searchFocusHandler" bindblur="searchBlurHandler"/>
+                <!--<view class="input-search" bindtap="clearSearchContent">-->
+                <!--<image class="input-icon" src="/images/wrong.png"></image>-->
+                <!--</view>-->
+            </view>
+            <button class='searchBtn' bindtap="backToIndex">取消</button>
+        </view>
+    </form>
+</view>
+<block wx:if="{{!hideRecommend}}">
+    <view class='recommend'>
+        <view class='hotRecommend flex'>
+            <view class="hot-search">热门搜索</view>
+        </view>
+        <view class='hotRecommendList'>
+            <block wx:for='{{recommends}}'>
+                <view bindtap="recommendSearchHistory" data-content="{{item}}" style='background: #EDE8C0;'>{{item}}
+                </view>
+            </block>
+        </view>
+        <view class="hotRecommend flex">
+            <view class="hot-search">历史搜索</view>
+            <view class="hot-pic" bindtap="clearSearchHistory">
+                <image class="hot-icon" src="/images/trash.png"></image>
+            </view>
+        </view>
+        <view class="searchHistoryList">
+            <block wx:for="{{searchHistory}}">
+                <view>
+                    <view bindtap="recommendSearchHistory" data-content="{{item}}" class="hot-item">
+                        {{item}}
+                    </view>
+                    <image bindtap="clearSpecifiedSearchHistory" data-index="{{index}}" class="wrong-icon"
+                           src="/images/wrong.png"></image>
+                </view>
+            </block>
+        </view>
+    </view>
+</block>
+<block wx:if="{{!hideProduct}}">
+    <view class='product'>
+        <block wx:if="{{albums.total}}">
+            <view class='hotRecommend flex'>
+                <view class="hot-search">专辑</view>
+                <!--<view class="hot-history">-->
+                <!--<view class="hot-search more">更多</view>-->
+                <!--<view class="hot-all">-->
+                <!--<image class="hot-return" src="/images/return.png"></image>-->
+                <!--</view>-->
+                <!--</view>-->
+            </view>
+            <view class='list'>
+                <block wx:for="{{albums.data}}" wx:key="{{index}}" wx:for-item="album">
+                    <view class='item' bindtap="albumDetailTap" data-id="{{album.id}}"
+                          data-is_vip="{{album.is_vip}}" data-title="{{album.title}}">
+                        <view class='produPic'>
+                            <image class='pImg' src='{{_host + album.thumb}}' mode='widthFix'></image>
+                            <view class='tag' wx:if="{{album.is_vip}}">会员</view>
+                            <view class='audioLe'>
+                                <image src='/images/icon-disc.png'></image>
+                                <text>{{12}}首</text>
+                            </view>
+                        </view>
+                        <view class='itemBottom'>
+                            <view class='lName'>{{album.title}}</view>
+                            <view class='listen'>{{album.breif}}</view>
+                        </view>
+                    </view>
+                </block>
+            </view>
+        </block>
+        <block wx:if="{{audios.total}}">
+            <view class="hotRecommend flex">
+                <view class="hot-search">音频</view>
+                <!--<view class="hot-history">-->
+                <!--<view class="hot-search more">更多</view>-->
+                <!--<view class="hot-all">-->
+                <!--<image class="hot-return" src="/images/return.png"></image>-->
+                <!--</view>-->
+                <!--</view>-->
+            </view>
+            <view class="list">
+                <block wx:for="{{audios.data}}" wx:key="{{index}}" wx:for-item="audio">
+                    <view class='item' bindtap="audioDetailTap" data-is_vip="{{audio.is_vip}}"
+                          data-title="{{audio.title}}" data-index="{{index}}">
+                        <view class='produPic'>
+                            <image class='pImg' src='{{_host + audio.thumb}}' mode='widthFix'></image>
+                            <view class='tag' wx:if="{{audio.is_vip}}">会员</view>
+                            <view class='audioLe'>
+                                <image src='/images/icon-clock.png'></image>
+                                <text>{{audio.duration}}</text>
+                            </view>
+                        </view>
+                        <view class='itemBottom'>
+                            <view class='lName'>{{audio.title}}</view>
+                            <view class='listen'>{{audio.breif}}</view>
+                        </view>
+                    </view>
+                </block>
+            </view>
+        </block>
+    </view>
+</block>

@@ -1,0 +1,158 @@
+/* pages/indexSearch/indexSearch.wxss */
+/* 搜索框 */
+page{
+  background: #FEFEFE;
+}
+.indexHeader{
+  background: #3B90F3;
+  padding: 0 32rpx 20rpx;
+}
+.searchBox{
+  padding: 14rpx 0 0;
+  display: flex;
+  justify-content: space-around;
+}
+.inputBox{
+  background: #fff;
+  width: 575rpx;
+  height: 62rpx;
+  line-height: 62rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 20rpx;
+  border-radius: 31rpx;
+}
+.inputBox image{
+  width: 36rpx;
+  height: 36rpx;
+}
+.inputBox input{
+  width: 500rpx;
+  margin-left: 30rpx;
+  font-size: 24rpx;
+}
+.searchBtn{
+  padding: 0;
+  margin: 0;
+  font-size: 28rpx;
+  color: #fff;
+  height: 62rpx;
+  line-height: 62rpx;
+  background: transparent;
+  border: 0;
+}
+.searchBtn::after{
+  border: 0;
+}
+/* 热门搜索 */
+.recommend{
+  padding: 0 32rpx;
+}
+.hotRecommend{
+  font-size: 28rpx;
+  color: #2b2a2a;
+  height: 86rpx;
+  line-height: 86rpx;
+}
+.hotRecommendList {
+  overflow: hidden;
+}
+.hotRecommendList view{
+  float: left;
+  width: 214rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  font-size: 22rpx;
+  color: #252525;
+  margin: 0 22rpx 30rpx 0;
+  background: #E2E2E2;
+  border-radius: 20rpx;
+}
+.hotRecommendList view:nth-child(3n){
+  margin-right: 0;
+}
+
+.product{
+  padding: 32rpx;
+  background: #fff;
+}
+.list{
+  overflow: hidden;
+  border-bottom: 1rpx solid #DADADA;
+}
+.product:last-child .list{
+  border: 0;
+}
+.item{
+  width: 327rpx;
+  float: left;
+}
+.list .item:nth-child(2n+1){
+  margin-right: 32rpx;
+}
+.produPic{
+  width: 327rpx;
+  height: 327rpx;
+  border-radius: 30rpx;
+  overflow: hidden;
+  position: relative;
+}
+.produPic .pImg{
+  display: block;
+  width: 100%;
+}
+.audioLe{
+  padding: 0 10rpx;
+  height: 38rpx;
+  line-height: 38rpx;
+  font-size: 22rpx;
+  color: #ffffff;
+  background: rgba(0,0,0,0.5);
+  border-radius: 19rpx;
+  position: absolute;
+  left: 20rpx;
+  bottom: 20rpx;
+}
+.audioLe image{
+  width: 27rpx;
+  height: 27rpx;
+  margin-right: 8rpx;
+  vertical-align: middle;
+  margin-top: -6rpx;
+}
+.produPic .tag{
+  width: 150rpx;
+  height: 36rpx;
+  line-height: 36rpx;
+  font-size: 22rpx;
+  color: #fff;
+  text-align: center;
+  background:linear-gradient(to right, #2892f5,#00d2ff);
+  transform: rotate(-45deg);
+  transform-origin: 50% 50%;
+  position: absolute;
+  top:13rpx;
+  left:-47rpx;
+}
+.itemBottom{
+  padding: 24rpx 0 23rpx;
+}
+.itemBottom .lName{
+  font-size: 28rpx;
+  line-height: 38rpx;
+  height: 38rpx;
+  color: #000000;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space:nowrap;
+}
+.itemBottom .listen{
+  font-size: 24rpx;
+  line-height: 36rpx;
+  height: 36rpx;
+  color: #777777;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space:nowrap;
+}

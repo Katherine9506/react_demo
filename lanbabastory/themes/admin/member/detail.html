@@ -1,0 +1,68 @@
+{extend name="base"}
+
+{block name="body"}
+<div class="layui-body">
+    <div class="layui-tab layui-tab-brief">
+        <ul class="layui-tab-title">
+            <li><a href="{:url('/admin/member/index')}">会员套餐管理</a></li>
+            <li class="layui-this"><a href="{:url('/admin/member/add')}">
+                {if(request()->action() == 'add')}添加套餐
+                {else/}修改套餐
+                {/if}
+            </a></li>
+        </ul>
+    </div>
+    <div class="laui-tab-content">
+        <div class="layui-tab-item layui-show">
+            {if(request()->action() == 'add')}
+            <form action="{:url('/admin/member/save')}" class="layui-form form-container" method="post">
+                {else/}
+                <form action="{:url('/admin/member/edit')}" class="layui-form form-container" method="post">
+                    {/if}
+                    <input type="text" hidden name="id" value="{$member->id|default=''}">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">套餐标题</label>
+                        <div class="layui-input-block">
+                            <input type="text" class="layui-input" name="title" required lay-verify="required"
+                                   placeholder="输入合适的套餐标题" value="{$member->title|default=''}">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">套餐时长</label>
+                        <div class="layui-input-block">
+                            <input type="text" class="layui-input" name="duration" required lay-verify="required"
+                                   placeholder="套餐时长为天数，最好和套餐标题相对应" value="{$member->duration|default=''}">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">套餐价格</label>
+                        <div class="layui-input-block">
+                            <input type="text" class="layui-input" name="price" required lay-verify="required"
+                                   placeholder="套餐价格" value="{$member->price|default=''}">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">启用状态</label>
+                        <div class="layui-input-block">
+                            <input type="radio" name="is_active" value="1" title="启用" {if(!isset($member) || $member->is_active)}checked{/if}>
+                            <input type="radio" name="is_active" value="0" title="暂不启用" {if(isset($member) && !$member->is_active)}checked{/if}>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">排序</label>
+                        <div class="layui-input-block">
+                            <input type="text" class="layui-input" name="sort" required lay-verify="required"
+                                   placeholder="数字越靠后，排序越靠后" value="{$member->sort|default=0}">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <button class="layui-btn" lay-submit lay-filter="*">立即提交</button>
+                            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                        </div>
+                    </div>
+                </form>
+        </div>
+    </div>
+</div>
+{/block}

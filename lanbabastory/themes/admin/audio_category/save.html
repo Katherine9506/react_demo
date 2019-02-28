@@ -1,0 +1,58 @@
+{extend name="base" /}
+{block name="body"}
+<div class="layui-body">
+    <!--tab标签-->
+    <div class="layui-tab layui-tab-brief">
+        <ul class="layui-tab-title">
+            <li class=""><a href="{:url('admin/audio_category/index')}">音频分类</a></li>
+            <li class="layui-this">
+                {if request()->action() == "add"}
+                添加分类
+                {else}
+                编辑分类
+                {/if}
+            </li>
+        </ul>
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show">
+                {if request()->action() == "add"}
+                <form class="layui-form form-container" action="{:url('admin/audio_category/add')}" method="post">
+                {else/}
+                <form class="layui-form form-container" action="{:url('admin/audio_category/edit')}" method="post">
+                <input type="hidden" name="id" value="{$detail['id']}">
+                {/if}
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">分类名称</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="title" value="{$detail['title']|default=''}" required lay-verify="required" placeholder="请输入音频分类名称" class="layui-input">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">降序排序</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="sort" value="{$detail['sort']|default='0'}" required  lay-verify="sort" class="layui-input">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">状态</label>
+                        <div class="layui-input-block">
+                            {foreach $statusList as $k => $v}
+                            <input type="radio" name="status" value="{$k}" title="{$v}" {if (!isset($detail['status']) && $k==1) || (isset($detail['status']) && $detail['status'] == $k)}checked="true"{/if}>
+                            {/foreach}
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <button class="layui-btn" lay-submit lay-filter="*">保存</button>
+                            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}

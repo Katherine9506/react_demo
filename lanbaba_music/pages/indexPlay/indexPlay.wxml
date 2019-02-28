@@ -1,0 +1,88 @@
+<!--pages/indexPlay/indexPlay.wxml-->
+<view>
+    <view class='audioOpacity'>
+        <audio src='{{_host + currentAudio.audio}}' id='myaudio' bindended="audioEndHandler"
+               bindtimeupdate="audioTimeUpdateHandler"></audio>
+    </view>
+    <swiper style='height:{{switchBoxH}}rpx'>
+        <swiper-item>
+            <view class='swiperBox' style='height:{{switchBoxH}}rpx'>
+                <view class='singInfor'>
+                    <view class='singName'>{{currentAudio.title}}</view>
+                    <view class='lb'>- 歌曲 -</view>
+                </view>
+                <view class='playImg'>
+                    <image src='{{_host + currentAudio.thumb}}' mode='widthFix'></image>
+                </view>
+            </view>
+        </swiper-item>
+        <swiper-item>
+            <view class='swiperBox' style='height:{{switchBoxH}}rpx;'>
+                <view class='toBeMember' wx:if='{{!member}}'>
+                    <text>整首试听中,成为会员可收听相关音频</text>
+                    <button bindtap="buyMember">立即开通</button>
+                </view>
+                <view class='lyricsTop' style='padding-top:{{member?"81":"15"}}rpx;'>
+                    <view>{{currentAudio.title}}</view>
+                    <!--<view>演唱：李悦儿</view>-->
+                    <view>歌曲介绍</view>
+                </view>
+                <view class='lyricsMain'>
+                    <view>{{currentAudio.introduce}}</view>
+                </view>
+            </view>
+        </swiper-item>
+    </swiper>
+    <view class='audioBtn'>
+        <view>
+            <view class='progress'>
+                <view class='playtime'>{{currentAudio.duration}}</view>
+                <view class='progressBox'>
+                    <view class='disc' style="left: {{audioPercent}}%"></view>
+                    <progress percent='{{audioPercent}}' stroke-width='4rpx' backgroundColor='#CBCBCB'
+                              activeColor='#3B90F3'></progress>
+                </view>
+            </view>
+            <view class='operaBtn'>
+                <button bindtap="switchPlayType">
+                    <image src='/images/icon-opera1.png' mode='widthFix' wx:if="{{audioCycling}}"></image>
+                    <image src='/images/icon_cycle.png' mode='widthFix' wx:else></image>
+                </button>
+                <button bindtap="switchPrevAudio">
+                    <image src='/images/icon-opera2.png' mode='widthFix'></image>
+                </button>
+                <button bindtap='playTap' class='playBtn'>
+                    <image src='/images/{{status?"icon-opera32.png":"icon-opera3.png"}}' mode='widthFix'></image>
+                </button>
+                <button bindtap="switchNextAudio">
+                    <image src='/images/icon-opera4.png' mode='widthFix'></image>
+                </button>
+                <button bindtap='modelShowTap'>
+                    <image src='/images/icon-opera5.png' mode='widthFix'></image>
+                </button>
+            </view>
+        </view>
+    </view>
+</view>
+<view class='modelBg' wx:if='{{modelSh}}'></view>
+<view class='modelMain' style='bottom:{{modelSh?"0":"-800"}}rpx;'>
+    <view class='modelTitle'>
+        <image src='/images/icon-opera1.png' mode='widthFix'></image>
+        <view>列表循环({{audioCycles.length}})</view>
+    </view>
+    <view class='singBox'>
+        <view class='singList'>
+            <!-- 循环歌曲 -->
+            <block wx:for="{{audioCycles}}" wx:for-item="audio">
+                <view bindtap="switchAudio" data-index="{{index}}"
+                      class="{{index==currentIndex ?'selected':''}} {{audio.is_vip?'memberAudio':''}}">
+                    {{audio.title}}
+                    <text>-歌曲{{audio.is_vip?'-会员专享':''}}{{index==currentIndex?'-当前播放':''}}</text>
+                </view>
+            </block>
+        </view>
+    </view>
+    <view class='modelCloseBtn'>
+        <button bindtap='closeModelTap'>关闭</button>
+    </view>
+</view>

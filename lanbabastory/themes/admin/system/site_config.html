@@ -1,0 +1,90 @@
+{extend name="base"/}
+{block name="body"}
+<!--可使用规则:required,phone,url,number,date,identity,email-->
+<form class="layui-form form-container" action="{:url('admin/system/updateSiteConfig')}" method="post">
+<div class="layui-body">
+    <!--tab标签-->
+    <div class="layui-tab layui-tab-brief">
+        {php}
+            $tabList =
+            [
+                "base" => "基础配置",
+                "number" => "数字配置",
+                "pay" => "支付配置",
+                "seo" => "SEO优化",
+                "sms" => "短信配置",
+                "media" => "媒体配置"
+            ];
+
+            $tabName = array_keys($items);
+        {/php}
+        <ul class="layui-tab-title">
+            {foreach $tabName as $name}
+            {if isset($tabList[$name])}
+            <li {if $name=="base"}class="layui-this"{/if}>{$tabList[$name]}</li>
+            {/if}
+            {/foreach}
+        </ul>
+        <div class="layui-tab-content">
+            {foreach $items as $name => $item}
+                <div class="layui-tab-item{if $name=='base'} layui-show{/if}">
+                {foreach $item as $row}
+                <?php $extra = [];if(in_array($row['type'], [4,5,6]) && $row['extra'] != '')foreach(explode(',', $row['extra']) as $v){ list($k, $v) = explode(':', $v);$extra[$k] = $v; }; ?>
+                <div class="layui-form-item">
+                    <h2 style="font-weight:normal;font-size:14px;line-height:40px;color:#555;">
+                        {$row['title']}
+                    </h2>
+                    <div class="layui-input-block" style="margin-left:0;">
+                        {switch name="row['type']"}
+
+                        {case value="1"}
+                        <input type="text" name="{$row['name']}" value="{$row['value']}" autocomplete="off" class="layui-input" {if '' != $row['rule']}lay-verify="{$row['rule']}"{/if}>
+                        {/case}
+
+                        {case value="7"}
+                        <input type="password" name="{$row['name']}" value="{$row['value']}" autocomplete="off" class="layui-input" {if '' != $row['rule']}lay-verify="{$row['rule']}"{/if}>
+                        {/case}
+
+                        {case value="2"}
+                        <textarea name="{$row['name']}" class="layui-textarea">{$row['value']}</textarea>
+                        {/case}
+
+                        {case value="3"}
+                        <input type="text" class="layui-input" style="width:300px;display:inline-block;" readonly="true" name="{$row['name']}" value="{$row['value']}">
+                        <input type="file" class="layui-upload-file" name="{$row['name']}">
+                        {if $row['value']}
+                        <br><br>
+                        <img src="{$row['value']}" width="120">
+                        {/if}
+                        {php}if('' != $row['value']):{/php}
+
+                        {php}endif;{/php}
+                        {/case}
+
+                        {case value="4"}
+                        {foreach $extra as $k => $v}
+                        <label>
+                            <input type="radio" name="{$row['name']}" value="{$k}" {php}if($row['value'] == $k)echo "checked='true'";{/php}>
+                            {$v}
+                        </label>
+                        {/foreach}
+                        {/case}
+
+                        {/switch}
+                    </div>
+                </div>
+                {/foreach}
+            </div>
+            {/foreach}
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <div class="layui-input-block" style="margin-left:10px;">
+            <button class="layui-btn" lay-submit lay-filter="*">提交</button>
+            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+        </div>
+    </div>
+</div>
+</form>
+{/block}

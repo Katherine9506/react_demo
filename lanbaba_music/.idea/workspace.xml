@@ -1,0 +1,687 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4002bbec-293d-4eee-9537-285b64973099" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1380372115">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.30" value="1" />
+          <entry key="project.opened" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="js" value="44" />
+          <entry key="json" value="2" />
+          <entry key="md" value="1" />
+          <entry key="png" value="1" />
+          <entry key="ts" value="5" />
+          <entry key="wxml" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Image" value="1" />
+          <entry key="JSON" value="2" />
+          <entry key="JavaScript" value="44" />
+          <entry key="Markdown" value="1" />
+          <entry key="TypeScript" value="5" />
+          <entry key="Vue.js" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="js" value="5084" />
+          <entry key="json" value="3" />
+          <entry key="wxml" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JSON" value="3" />
+          <entry key="JavaScript" value="5084" />
+          <entry key="Vue.js" value="2" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="704205020">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="js" value="1945" />
+          <entry key="wxml" value="742" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JavaScript" value="1945" />
+          <entry key="Vue.js" value="742" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="js" value="11" />
+          <entry key="json" value="4" />
+          <entry key="png" value="4" />
+          <entry key="wxml" value="13" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Image" value="4" />
+          <entry key="JSON" value="4" />
+          <entry key="JavaScript" value="11" />
+          <entry key="Vue.js" value="13" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="-1119996029">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="5" />
+          <entry key="project.open.time.1" value="3" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.18" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.22" value="1" />
+          <entry key="project.opened" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="js" value="87" />
+          <entry key="json" value="9" />
+          <entry key="png" value="31" />
+          <entry key="rnc" value="1" />
+          <entry key="wxml" value="36" />
+          <entry key="wxss" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Image" value="31" />
+          <entry key="JSON" value="9" />
+          <entry key="JavaScript" value="87" />
+          <entry key="RNG Compact" value="1" />
+          <entry key="Vue.js" value="42" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="js" value="18428" />
+          <entry key="json" value="6" />
+          <entry key="rnc" value="1" />
+          <entry key="wxml" value="2967" />
+          <entry key="wxss" value="132" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JSON" value="6" />
+          <entry key="JavaScript" value="18428" />
+          <entry key="RNG Compact" value="1" />
+          <entry key="Vue.js" value="3099" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/indexRank2/indexRank2.wxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/member/member.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-8">
+              <caret line="65" column="38" selection-start-line="65" selection-start-column="38" selection-end-line="65" selection-end-column="38" />
+              <folding>
+                <element signature="e#26#72#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pages/mine/mine.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="679">
+              <caret line="52" column="62" lean-forward="true" selection-start-line="52" selection-start-column="62" selection-end-line="52" selection-end-column="62" />
+              <folding>
+                <element signature="e#22#72#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/index/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="77" selection-start-line="77" selection-end-line="77" />
+              <folding>
+                <element signature="e#11#61#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/api.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/indexRank/indexRank.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="139" column="55" selection-start-line="139" selection-start-column="55" selection-end-line="139" selection-end-column="55" />
+              <folding>
+                <element signature="e#32#82#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>icon-o</find>
+      <find>switchPlayType</find>
+      <find>整首试听</find>
+      <find>member</find>
+      <find>mark</find>
+      <find>pages/indexRank2/indexRank2</find>
+      <find>audio_categories</find>
+      <find>rangBarTap</find>
+      <find>musicTap</find>
+      <find>showModal</find>
+      <find>.member</find>
+      <find>this.showm</find>
+      <find>appid</find>
+      <find>onload</find>
+      <find>getus</find>
+      <find>phoneBind</find>
+      <find>kb.png</find>
+      <find>listtop</find>
+      <find>logo.</find>
+      <find>playimg2</find>
+      <find>playimg.p</find>
+      <find>totalA</find>
+      <find>audios</find>
+      <find>audioList</find>
+      <find>totalAudios</find>
+      <find>wx.set</find>
+      <find>wx.navigateTo</find>
+      <find>onreach</find>
+      <find>index.</find>
+      <find>会员已过期</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>.png</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/pages/index/index.json" />
+        <option value="$PROJECT_DIR$/lib/session/constants.js" />
+        <option value="$PROJECT_DIR$/lib/session/errors.js" />
+        <option value="$PROJECT_DIR$/lib/session/session.js" />
+        <option value="$PROJECT_DIR$/lib/session/promisify.js" />
+        <option value="$PROJECT_DIR$/lib/session/index.js" />
+        <option value="$PROJECT_DIR$/lib/page.auth.js" />
+        <option value="$PROJECT_DIR$/lib/page.data.js" />
+        <option value="$PROJECT_DIR$/lib/session/request.js" />
+        <option value="$PROJECT_DIR$/pages/welcome/welcome.wxml" />
+        <option value="$PROJECT_DIR$/lib/session/login.js" />
+        <option value="$PROJECT_DIR$/pages/member/member.wxml" />
+        <option value="$PROJECT_DIR$/pages/indexMbOpen/indexMbOpen.wxml" />
+        <option value="$PROJECT_DIR$/pages/welcome/welcome.js" />
+        <option value="$PROJECT_DIR$/pages/phone/phone.wxml" />
+        <option value="$PROJECT_DIR$/pages/memberClock/memberClock.wxml" />
+        <option value="$PROJECT_DIR$/app.json" />
+        <option value="$PROJECT_DIR$/pages/index/index.wxml" />
+        <option value="$PROJECT_DIR$/pages/indexRank2/indexRank2.js" />
+        <option value="$PROJECT_DIR$/pages/indexPlay/indexPlay.js" />
+        <option value="$PROJECT_DIR$/pages/indexPlay/indexPlay.wxss" />
+        <option value="$PROJECT_DIR$/pages/mine/mine.wxss" />
+        <option value="$PROJECT_DIR$/pages/mine/mine.wxml" />
+        <option value="$PROJECT_DIR$/pages/indexRank/indexRank.wxml" />
+        <option value="$PROJECT_DIR$/pages/indexMbOpen/indexMbOpen.js" />
+        <option value="$PROJECT_DIR$/project.config.json" />
+        <option value="$PROJECT_DIR$/pages/memberClock/memberClock.js" />
+        <option value="$PROJECT_DIR$/utils/util.js" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/pages/mine/mine.js" />
+        <option value="$PROJECT_DIR$/pages/indexPlay/indexPlay.wxml" />
+        <option value="$PROJECT_DIR$/pages/indexRank/indexRank.js" />
+        <option value="$PROJECT_DIR$/pages/indexList2/indexList2.wxml" />
+        <option value="$PROJECT_DIR$/pages/indexMore/indexMore.wxml" />
+        <option value="$PROJECT_DIR$/pages/indexMore/indexMore.js" />
+        <option value="$PROJECT_DIR$/pages/indexList/indexList.wxml" />
+        <option value="$PROJECT_DIR$/pages/phone/phone.js" />
+        <option value="$PROJECT_DIR$/pages/indexList/indexList.js" />
+        <option value="$PROJECT_DIR$/utils/api.js" />
+        <option value="$PROJECT_DIR$/pages/indexList2/indexList2.js" />
+        <option value="$PROJECT_DIR$/pages/indexRank2/indexRank2.wxml" />
+        <option value="$PROJECT_DIR$/pages/index/index.js" />
+        <option value="$PROJECT_DIR$/pages/member/member.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="489" />
+    <option name="y" value="59" />
+    <option name="width" value="1541" />
+    <option name="height" value="1100" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lanbaba-wxapp" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\repository\lanbaba_music\images" />
+      <recent name="E:\repository\lanbaba_music\pages" />
+      <recent name="E:\repository\lanbabastory\children-music\lib" />
+      <recent name="E:\repository\lanbabastory\children-music\lib\regenerator" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4002bbec-293d-4eee-9537-285b64973099" name="Default Changelist" comment="" />
+      <created>1542677526969</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1542677526969</updated>
+      <workItem from="1542677528350" duration="1593000" />
+      <workItem from="1542682621903" duration="6814000" />
+      <workItem from="1542761584120" duration="56000" />
+      <workItem from="1542761697540" duration="678000" />
+      <workItem from="1542959322785" duration="692000" />
+      <workItem from="1543392482126" duration="20000" />
+      <workItem from="1543392917153" duration="898000" />
+      <workItem from="1543453768582" duration="17807000" />
+      <workItem from="1543481369534" duration="10178000" />
+      <workItem from="1543540018148" duration="4841000" />
+      <workItem from="1543563002195" duration="9305000" />
+      <workItem from="1543626865934" duration="19334000" />
+      <workItem from="1543801013581" duration="30963000" />
+      <workItem from="1543886549030" duration="22546000" />
+      <workItem from="1543973122734" duration="23537000" />
+      <workItem from="1544063712527" duration="1007000" />
+      <workItem from="1544068305200" duration="2254000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="152523000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.1913646" />
+      <window_info id="Favorites" order="1" side_tool="true" />
+      <window_info id="Structure" order="2" weight="0.24963716" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/pages/indexList2/indexList2.wxml</url>
+          <line>3</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/lib/session/session.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/arrow.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/audition.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/banner.png" />
+    <entry file="file://$PROJECT_DIR$/images/banner2.png" />
+    <entry file="file://$PROJECT_DIR$/images/clockIn.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/delete.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/emotion.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/icon-book.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/icon-disc2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/icon-ear.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/icon-index1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/in.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/invit.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/kB.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/indexKnowledge/indexKnowledge.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-729">
+          <caret line="3" column="56" lean-forward="true" selection-start-line="3" selection-start-column="56" selection-end-line="3" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/icon-mb.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/list-top.png" />
+    <entry file="file://$PROJECT_DIR$/images/logo.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/welcome/welcome.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/mbOpen-banner.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/member-img1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/member-img2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/memberT.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/nav1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/playImg.png" />
+    <entry file="file://$PROJECT_DIR$/images/playImg2.png" />
+    <entry file="file://$PROJECT_DIR$/images/product01.png" />
+    <entry file="file://$PROJECT_DIR$/images/tx.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/show.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/indexPlay/indexPlay.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/indexMbOpen/indexMbOpen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="54" column="9" lean-forward="true" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="5" column="32" lean-forward="true" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/indexRank2/indexRank2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="64" column="35" lean-forward="true" selection-start-line="64" selection-start-column="35" selection-end-line="64" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/indexMore/indexMore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="35" column="23" lean-forward="true" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/indexMore/indexMore.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="5" column="91" selection-start-line="5" selection-start-column="91" selection-end-line="5" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/session/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1004">
+          <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/phone/phone.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="41" column="41" lean-forward="true" selection-start-line="41" selection-start-column="41" selection-end-line="41" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/indexList/indexList.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="12" column="55" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/indexList2/indexList2.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/indexList2/indexList2.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="209" column="9" selection-start-line="209" selection-start-column="9" selection-end-line="209" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/indexList2/indexList2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="133" column="16" lean-forward="true" selection-start-line="133" selection-start-column="16" selection-end-line="133" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/indexList/indexList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="179" lean-forward="true" selection-start-line="179" selection-end-line="179" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/indexRank2/indexRank2.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/index/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="77" selection-start-line="77" selection-end-line="77" />
+          <folding>
+            <element signature="e#11#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/indexRank/indexRank.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="139" column="55" selection-start-line="139" selection-start-column="55" selection-end-line="139" selection-end-column="55" />
+          <folding>
+            <element signature="e#32#82#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/member/member.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="65" column="38" selection-start-line="65" selection-start-column="38" selection-end-line="65" selection-end-column="38" />
+          <folding>
+            <element signature="e#26#72#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/mine/mine.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="679">
+          <caret line="52" column="62" lean-forward="true" selection-start-line="52" selection-start-column="62" selection-end-line="52" selection-end-column="62" />
+          <folding>
+            <element signature="e#22#72#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

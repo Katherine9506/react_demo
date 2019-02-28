@@ -1,0 +1,64 @@
+{extend name="base" /}
+{block name="body"}
+<div class="layui-body">
+    <!--tab专辑-->
+    <div class="layui-tab layui-tab-brief">
+        <ul class="layui-tab-title">
+            <li class="layui-this">专辑列表</li>
+            <li class=""><a href="{:url('admin/album/add')}">添加专辑</a></li>
+        </ul>
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show">
+                <table class="layui-table">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>分类</th>
+                        <th>名称</th>
+                        <th>封面</th>
+                        <th>横幅</th>
+                        <th>曲数</th>
+                        <th>排序</th>
+                        <th>VIP</th>
+                        <th>状态</th>
+                        <th style="width:150px;">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {if count($list)}
+                    {foreach $list as $item}
+                    <tr>
+                        <td style="width: 30px;">{$item["id"]}</td>
+                        <td width="80">{$category[$item['cid']]}</td>
+                        <td>{$item['title']}</td>
+                        <td width="80"><img src="{$item['thumb']}" width="70"/></td>
+                        <td width="80"><img src="{$item['banner']}" width="120"/></td>
+                        <td width="50">{$item["number"]}</td>
+                        <td>{$item["sort"]}</td>
+                        <td style="color:{$item['is_vip'] == 0 ? 'green' : 'red'}">
+                            {$vipList[$item["is_vip"]]}
+                        </td>
+                        <td>{$statusList[$item["status"]]}</td>
+                        <td width="80">
+                            <a href="{:url('admin/album/edit', ['id' => $item['id']])}"
+                               class="layui-btn layui-btn-normal layui-btn-mini">编辑</a>
+                            <a href="{:url('admin/album/del', ['id' => $item['id']])}"
+                               class="layui-btn layui-btn-danger layui-btn-mini ajax-delete">删除</a>
+                            <a href="{:url('admin/album/audios',['id' => $item['id']])}"
+                               class="layui-btn layui-btn-mini">绑定音频</a>
+                        </td>
+                    </tr>
+                    {/foreach}
+                    {else/}
+                    <tr>
+                        <td colspan="20" align="middle">Sorry, 暂无数据</td>
+                    </tr>
+                    {/if}
+                    </tbody>
+                </table>
+                {$list->render()}
+            </div>
+        </div>
+    </div>
+</div>
+{/block}

@@ -1,0 +1,84 @@
+/* pages/phone/phone.wxss */
+.box{
+  padding:22rpx 32rpx;
+}
+.enter{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 88rpx;
+  padding-top: 69rpx;
+  border-bottom: 1rpx solid #DADADA;
+}
+.enterBox{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.enterBox text{
+  display: block;
+  font-size: 28rpx;
+  width: 70rpx;
+  line-height: 88rpx;
+  color: #3890f3;
+}
+.enterBox input{
+  width: 510rpx;
+  font-size: 28rpx;
+  line-height: 88rpx;
+  height: 88rpx;
+}
+.deleteBtn{
+  width: 35rpx;
+  height: 35rpx;
+  padding: 0 ;
+  margin: 0;
+  background: #fff;
+  border: 0;
+  border-radius: 0;
+}
+.deleteBtn::after{
+  border: 0;
+}
+.deleteBtn image{
+  display: block;
+  width: 100%;
+}
+.codeEnter input{
+  width:460rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 28rpx;
+}
+.codeEnter button{
+  width:150rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  background: transparent;
+  color: #3890f3;
+  margin: 0;
+  font-size: 28rpx;
+  padding: 0;
+  text-align: right;
+}
+.codeEnter button[disabled]{
+  background: transparent !important;
+}
+.codeEnter button::after{
+  border: 0;
+}
+.submitBtn{
+  width: 564rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 36rpx;
+  color: #ffffff;
+  padding: 0;
+  margin-top: 100rpx;
+  border-radius: 50rpx;
+  background: #3B90F3;
+  box-shadow: 1rpx 1rpx 32rpx #3890f3;
+}
+.submitBtn::after{
+border:none;
+}

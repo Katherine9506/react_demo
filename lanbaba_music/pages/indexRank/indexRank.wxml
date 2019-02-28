@@ -1,0 +1,33 @@
+<!--pages/indexRank/indexRank.wxml-->
+<view>
+    <view class='rangBar'>
+        <scroll-view scroll-x>
+            <block wx:for='{{categories}}' wx:key="{{index}}" wx:for-item="category">
+                <view bindtap='rangBarTap' class='{{rangOn==index?"on":""}}' data-index="{{index}}"
+                      data-id='{{category.id}}'>
+                    {{category.title}}
+                </view>
+            </block>
+        </scroll-view>
+    </view>
+    <view class='product'>
+        <view class='list'>
+            <block wx:for="{{audioList}}" wx:key="{{index}}" wx:for-item="audio">
+                <view class='item' bindtap='musicTap' data-index="{{index}}" data-vip="{{audio.is_vip}}">
+                    <view class='produPic'>
+                        <image class='pImg' src='{{_host + audio.thumb}}' mode='widthFix'></image>
+                        <view class='tag' wx:if="{{audio.is_vip}}">会员</view>
+                    </view>
+                    <view class='itemBottom'>
+                        <view class='lName'>{{audio.title}}</view>
+                        <view class='listen'>{{audio.breif}}</view>
+                        <view class='audioLe'>
+                            <image src='/images/icon-clock.png'></image>
+                            <text>{{audio.duration}}</text>
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,9 @@
+<!--pages/member/member.wxml-->
+<view>
+    <view class='kaBox' bindtap='dakaTap'>
+        <image src='/images/member-img2.png' mode='widthFix'></image>
+    </view>
+    <view class='kaBox' bindtap='inviteTap'>
+        <image src='/images/member-img1.png' mode='widthFix'></image>
+    </view>
+</view>

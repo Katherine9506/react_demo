@@ -1,0 +1,50 @@
+<!--pages/indexList/indexList.wxml-->
+<view>
+    <view class='innerBox'>
+        <view class='listBanner'>
+            <image class='listImg' src='{{_host + album.banner}}' mode='widthFix'></image>
+            <view class='listIntro'>
+                <view>{{album.title}}</view>
+                <view>{{album.breif}}</view>
+            </view>
+        </view>
+        <view class='listBox'>
+            <view class='listBar'>
+                <view class='{{tabId==0?"active":""}}' data-id='0' bindtap='tabTap'>简介</view>
+                <view class='{{tabId==1?"active":""}}' data-id='1' bindtap='tabTap'>音频({{totalAudios}})</view>
+            </view>
+            <view class='intro' wx:if="{{tabId==0}}">
+                <view class='introIn'>{{album.introduce}}</view>
+                <view class='tags'>
+                    <view class='tagsT'>标签</view>
+                    <view class='tagsList'>
+                        <block wx:for="{{album.tags}}" wx:key="{{index}}">
+                            <text>{{item}}</text>
+                        </block>
+                    </view>
+                </view>
+            </view>
+            <view class='product' wx:if="{{tabId==1}}">
+                <view class='list'>
+                    <block wx:for="{{audioList}}" wx:key="{{index}}" wx:for-item="audio">
+                        <view class='item' bindtap='musicTap' data-audio_id="{{audio.id}}" data-index="{{index}}"
+                              data-is_vip="{{audio.is_vip}}">
+                            <view class='produPic'>
+                                <image class='pImg' src='{{_host + audio.thumb}}' mode='widthFix'></image>
+                                <!--<view class='tag'>会员</view>-->
+                            </view>
+                            <view class='itemBottom'>
+                                <view class='lName'>{{audio.title}} -歌曲</view>
+                                <view class='listen'>{{audio.breif}}</view>
+                                <view class='audioLe'>
+                                    <image src='/images/icon-clock.png'></image>
+                                    <text>{{audio.duration}}</text>
+                                </view>
+                            </view>
+                        </view>
+                    </block>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

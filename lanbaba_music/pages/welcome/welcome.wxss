@@ -1,0 +1,24 @@
+/* pages/welcome/welcome.wxss */
+.logo{
+  width: 258rpx;
+  height: 225rpx;
+  overflow: hidden;
+  margin: 220rpx auto 0;
+}
+.logo image{
+  display: block;
+  width: 100%
+}
+.loginBtn{
+  position: fixed;
+  bottom: 122rpx;
+  left: 93rpx;
+  width:564rpx;
+  height: 90rpx;
+  font-size: 36rpx;
+  color: #fff;
+  padding: 0;
+  background: #3B90F3;
+  border-radius: 45rpx;
+  box-shadow: 1rpx 1rpx 32rpx #0078ff
+}

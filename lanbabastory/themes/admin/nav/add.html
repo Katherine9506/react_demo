@@ -1,0 +1,79 @@
+{extend name="base" /}
+{block name="body"}
+<div class="layui-body">
+    <!--tab标签-->
+    <div class="layui-tab layui-tab-brief">
+        <ul class="layui-tab-title">
+            <li class=""><a href="{:url('admin/nav/index')}">导航管理</a></li>
+            <li class="layui-this">添加导航</li>
+        </ul>
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show">
+                <form class="layui-form form-container" action="{:url('admin/nav/save')}" method="post">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">菜单位置</label>
+                        <div class="layui-input-block">
+                            <select name="type" required lay-verify="required">
+                                {foreach [0 => "顶部菜单", 1=>"脚部菜单"] as $key => $value}
+                                    <option value="{$key}">{$value}</option>
+                                {/foreach}
+                            </select>
+                        </div>
+                    </div>
+                    <input type="hidden" name="pid" value="0"/>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">导航名称</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="name" value="" required  lay-verify="required" placeholder="请输入导航名称" class="layui-input">
+                        </div>
+                    </div>
+                    <!-- <div class="layui-form-item">
+                        <label class="layui-form-label">别名</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="alias" value="" placeholder="（选填）请输入导航别名" class="layui-input">
+                        </div>
+                    </div> -->
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">链接</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="link" value="" placeholder="（选填）请输入导航链接" class="layui-input">
+                        </div>
+                    </div>
+                    <!-- <div class="layui-form-item">
+                        <label class="layui-form-label">图标</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="icon" value="" placeholder="（选填）如：fa fa-home" class="layui-input">
+                        </div>
+                    </div> -->
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">状态</label>
+                        <div class="layui-input-block">
+                            <input type="radio" name="status" value="1" title="显示" checked="checked">
+                            <input type="radio" name="status" value="0" title="隐藏">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">打开方式</label>
+                        <div class="layui-input-block">
+                            <input type="radio" name="target" value="_self" title="默认" checked="checked">
+                            <input type="radio" name="target" value="_blank" title="新窗口">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">排序</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="sort" value="0" required  lay-verify="required" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <button class="layui-btn" lay-submit lay-filter="*">保存</button>
+                            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}

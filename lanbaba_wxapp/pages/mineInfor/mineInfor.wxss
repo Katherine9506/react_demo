@@ -1,0 +1,58 @@
+/* pages/mineInfor/mineInfor.wxss */
+page{
+  background: #F8F8F8;
+}
+.same{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 32rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 28rpx;
+  color: #000000;
+  border-radius: 50rpx;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+.same .iconArrow{
+  width: 15rpx;
+  height: 26rpx;
+}
+.same view .icon{
+  width:28rpx;
+  height: 28rpx;
+  margin-right: 16rpx;
+  vertical-align: middle;
+  margin-top: -6rpx;
+}
+.tx{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.tx .txBox{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 30rpx;
+}
+.txBox image{
+  display: block;
+  width: 100%;
+}
+.pb{
+  margin-bottom: 60rpx;
+}
+.saveBox button{
+  width: 564rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  border-radius: 45rpx;
+  background: #3B90F3;
+  font-size: 36rpx;
+  color: #ffffff;
+  margin-top: 110rpx;
+  box-shadow: 1rpx 1rpx 32rpx rgba(0,120,255,0.55);
+}

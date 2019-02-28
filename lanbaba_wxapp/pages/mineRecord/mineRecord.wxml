@@ -1,0 +1,21 @@
+<!--pages/mineRecord/mineRecord.wxml-->
+<view>
+    <view class='orderBar'>
+        <view class='{{current==0?"active":""}}' bindtap='tabTap' data-id='0'>购买记录</view>
+        <view class='{{current==1?"active":""}}' bindtap='tabTap' data-id='1'>活动记录</view>
+    </view>
+    <view>
+        <view class="flex">
+            <view class="img-icon">
+                <image class="img-pic" src="/images/icon-order.png"></image>
+            </view>
+            <view class="img-txt flex">
+                <view class="list-all">
+                    <view class="price-sale">套餐优惠</view>
+                    <view class="price-date">11-3008:20</view>
+                </view>
+                <view class="list-price">99.8元</view>
+            </view>
+        </view>
+    </view>
+</view>

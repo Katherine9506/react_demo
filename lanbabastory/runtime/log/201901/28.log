@@ -1,0 +1,280 @@
+---------------------------------------------------------------
+[ 2019-01-28T13:01:19+08:00 ] 127.0.0.1 127.0.0.1 GET /api/login/isLogin
+[ info ] lanbaba.cc/api/login/isLogin [运行时间：1.182615s][吞吐率：0.85req/s] [内存消耗：1,678.34kb] [文件加载：43]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'login',
+    2 => 'isLogin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx7cb91c99c4667f6b/devtools/page-frame.html',
+  'content-type' => 'application/json',
+  'x-wx-flag' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1810250 MicroMessenger/6.5.7 Language/zh_CN webview/ token/b2cb918e57112cc3bf73e72e1c0b6fe2',
+  'x-wx-skey' => '103d27a13454fed73a518ff49dab4e5ed70b3afb',
+  'accept' => 'application/json',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Login->isLogin[ E:\repository\lanbabastory\application\api\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.053654s ] mysql:host=47.96.105.245;port=3306;dbname=lanbaba;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_session` [ RunTime:0.035592s ]
+[ sql ] [ SQL ] SELECT `openid` FROM `mus_session` WHERE  `skey` = '103d27a13454fed73a518ff49dab4e5ed70b3afb' LIMIT 1 [ RunTime:0.035435s ]
+---------------------------------------------------------------
+[ 2019-01-28T13:01:19+08:00 ] 127.0.0.1 127.0.0.1 GET /api/slide/getall
+[ info ] lanbaba.cc/api/slide/getall [运行时间：0.299261s][吞吐率：3.34req/s] [内存消耗：1,885.96kb] [文件加载：45]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'slide',
+    2 => 'getall',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx7cb91c99c4667f6b/devtools/page-frame.html',
+  'content-type' => 'application/json',
+  'x-wx-flag' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1810250 MicroMessenger/6.5.7 Language/zh_CN webview/ token/b2cb918e57112cc3bf73e72e1c0b6fe2',
+  'x-wx-skey' => '103d27a13454fed73a518ff49dab4e5ed70b3afb',
+  'accept' => 'application/json',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Slide->getAll[ E:\repository\lanbabastory\application\api\controller\Slide.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.048528s ] mysql:host=47.96.105.245;port=3306;dbname=lanbaba;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_session` [ RunTime:0.032457s ]
+[ sql ] [ SQL ] SELECT `openid` FROM `mus_session` WHERE  `skey` = '103d27a13454fed73a518ff49dab4e5ed70b3afb' LIMIT 1 [ RunTime:0.034473s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_slide` [ RunTime:0.039417s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`image`,`link` FROM `mus_slide` WHERE  `status` = 1 ORDER BY `sort`  ASC [ RunTime:0.032964s ]
+---------------------------------------------------------------
+[ 2019-01-28T13:01:19+08:00 ] 127.0.0.1 127.0.0.1 GET /api/album_tag/getall
+[ info ] lanbaba.cc/api/album_tag/getall [运行时间：0.274304s][吞吐率：3.65req/s] [内存消耗：1,888.29kb] [文件加载：45]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'album_tag',
+    2 => 'getall',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx7cb91c99c4667f6b/devtools/page-frame.html',
+  'content-type' => 'application/json',
+  'x-wx-flag' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1810250 MicroMessenger/6.5.7 Language/zh_CN webview/ token/b2cb918e57112cc3bf73e72e1c0b6fe2',
+  'x-wx-skey' => '103d27a13454fed73a518ff49dab4e5ed70b3afb',
+  'accept' => 'application/json',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\AlbumTag->getAll[ E:\repository\lanbabastory\application\api\controller\AlbumTag.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.052203s ] mysql:host=47.96.105.245;port=3306;dbname=lanbaba;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_session` [ RunTime:0.034169s ]
+[ sql ] [ SQL ] SELECT `openid` FROM `mus_session` WHERE  `skey` = '103d27a13454fed73a518ff49dab4e5ed70b3afb' LIMIT 1 [ RunTime:0.033314s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_album_tags` [ RunTime:0.032328s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`image` FROM `mus_album_tags` WHERE  `status` = 1 ORDER BY `sort`  ASC [ RunTime:0.031816s ]
+---------------------------------------------------------------
+[ 2019-01-28T13:01:20+08:00 ] 127.0.0.1 127.0.0.1 GET /api/album_category/allWithAlbums
+[ info ] lanbaba.cc/api/album_category/allWithAlbums [运行时间：0.447060s][吞吐率：2.24req/s] [内存消耗：2,012.95kb] [文件加载：48]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'album_category',
+    2 => 'allWithAlbums',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx7cb91c99c4667f6b/devtools/page-frame.html',
+  'content-type' => 'application/json',
+  'x-wx-flag' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1810250 MicroMessenger/6.5.7 Language/zh_CN webview/ token/b2cb918e57112cc3bf73e72e1c0b6fe2',
+  'x-wx-skey' => '103d27a13454fed73a518ff49dab4e5ed70b3afb',
+  'accept' => 'application/json',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\AlbumCategory->allWithAlbums[ E:\repository\lanbabastory\application\api\controller\AlbumCategory.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.047591s ] mysql:host=47.96.105.245;port=3306;dbname=lanbaba;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_session` [ RunTime:0.031756s ]
+[ sql ] [ SQL ] SELECT `openid` FROM `mus_session` WHERE  `skey` = '103d27a13454fed73a518ff49dab4e5ed70b3afb' LIMIT 1 [ RunTime:0.034515s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_album_category` [ RunTime:0.031851s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `mus_album_category` [ RunTime:0.031515s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_album` [ RunTime:0.033687s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`breif`,`thumb`,`is_vip`,`number` FROM `mus_album` WHERE  `cid` = 1 LIMIT 4 [ RunTime:0.031716s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`breif`,`thumb`,`is_vip`,`number` FROM `mus_album` WHERE  `cid` = 2 LIMIT 4 [ RunTime:0.032068s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`breif`,`thumb`,`is_vip`,`number` FROM `mus_album` WHERE  `cid` = 3 LIMIT 4 [ RunTime:0.032339s ]
+---------------------------------------------------------------
+[ 2019-01-28T13:01:20+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20181210/e0c88b03eea49279822cdd28268b8c9a.jpg
+[ info ] lanbaba.cc/uploads/20181210/e0c88b03eea49279822cdd28268b8c9a.jpg [运行时间：0.273315s][吞吐率：3.66req/s] [内存消耗：981.51kb] [文件加载：32]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploads',
+    1 => '20181210',
+    2 => 'e0c88b03eea49279822cdd28268b8c9a.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx7cb91c99c4667f6b/devtools/page-frame.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1810250 MicroMessenger/6.5.7 Language/zh_CN webview/1 port/49477 token/b2cb918e57112cc3bf73e72e1c0b6fe2',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-28T13:01:20+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20181205/712f4509e0b19797a055cc8e29fb368a.jpg
+[ info ] lanbaba.cc/uploads/20181205/712f4509e0b19797a055cc8e29fb368a.jpg [运行时间：0.026580s][吞吐率：37.62req/s] [内存消耗：981.51kb] [文件加载：32]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploads',
+    1 => '20181205',
+    2 => '712f4509e0b19797a055cc8e29fb368a.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx7cb91c99c4667f6b/devtools/page-frame.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1810250 MicroMessenger/6.5.7 Language/zh_CN webview/1 port/49477 token/b2cb918e57112cc3bf73e72e1c0b6fe2',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-28T13:01:20+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20181205/97d8bf12ae138c183037cc5b52557bcd.jpg
+[ info ] lanbaba.cc/uploads/20181205/97d8bf12ae138c183037cc5b52557bcd.jpg [运行时间：0.026157s][吞吐率：38.23req/s] [内存消耗：981.51kb] [文件加载：32]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploads',
+    1 => '20181205',
+    2 => '97d8bf12ae138c183037cc5b52557bcd.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx7cb91c99c4667f6b/devtools/page-frame.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1810250 MicroMessenger/6.5.7 Language/zh_CN webview/1 port/49477 token/b2cb918e57112cc3bf73e72e1c0b6fe2',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-28T13:01:21+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20181205/d533abb1ca59dedc1d6c363b8411876e.jpg
+[ info ] lanbaba.cc/uploads/20181205/d533abb1ca59dedc1d6c363b8411876e.jpg [运行时间：0.032722s][吞吐率：30.56req/s] [内存消耗：981.51kb] [文件加载：32]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploads',
+    1 => '20181205',
+    2 => 'd533abb1ca59dedc1d6c363b8411876e.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx7cb91c99c4667f6b/devtools/page-frame.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1810250 MicroMessenger/6.5.7 Language/zh_CN webview/1 port/49477 token/b2cb918e57112cc3bf73e72e1c0b6fe2',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-28T13:01:21+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20181205/484c5e23fffc69bcb6408d6bcc12316c.jpg
+[ info ] lanbaba.cc/uploads/20181205/484c5e23fffc69bcb6408d6bcc12316c.jpg [运行时间：0.030613s][吞吐率：32.67req/s] [内存消耗：981.51kb] [文件加载：32]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploads',
+    1 => '20181205',
+    2 => '484c5e23fffc69bcb6408d6bcc12316c.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx7cb91c99c4667f6b/devtools/page-frame.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1810250 MicroMessenger/6.5.7 Language/zh_CN webview/1 port/49477 token/b2cb918e57112cc3bf73e72e1c0b6fe2',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File

@@ -1,0 +1,9 @@
+<!--pages/welcome/welcome.wxml-->
+<view class='logo'>
+    <image src='/images/logo.png' mode='widthFix'></image>
+</view>
+
+<!--<button class='loginBtn' open-type="getUserInfo" bindgetuserinfo="getUserInfo" bindtap='toIndex'>-->
+<button class='loginBtn' open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+    微信登录
+</button>

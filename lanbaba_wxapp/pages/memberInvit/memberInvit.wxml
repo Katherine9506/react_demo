@@ -1,0 +1,39 @@
+<!--pages/memberInvit/memberInvit.wxml-->
+<view class='banner'>
+  <image src='/images/invit.png' mode='widthFix'></image>
+</view>
+<view class='handle'>
+  <view class='toOpen'>
+    <button bindtap='showTap'>秀海报邀请好友</button>
+  </view>
+  <view>
+  <view class='invited'>
+    <view class='box'>
+      <view>还没有人通过您的邀请进入小程序</view>
+      <image src='/images/emotion.png' mode='widthFix'></image>
+    </view>
+  </view>
+  <view class='invited'>
+    <view class='box'>
+      <view>您已经成功邀请了<text>5</text>位好友，再接再厉！</view>
+      <image src='/images/emotion2.png' mode='widthFix'></image>
+    </view>
+  </view>
+  </view>
+  <view class='rules'>
+    <view class='ruleTitle'><text>活动规则</text></view>
+    <view class='ruleBox'>
+      <view class='ruleDet'>任务1</view>
+      <view class='details'>
+        <view>开启条件：完成任务1 <text class='gray'> (任务1在打卡活动页面）</text></view>
+        <view>连续打卡7天(连续打卡，有漏打卡，需要重新来)，并邀请<text>5</text>个好友进入小程序，即可获得<text>30</text>天免费会员。</view>
+      </view>
+      <view class='ruleDet'>任务2</view>
+      <view class='details'>
+        <view>开启条件：完成任务2</view>
+        <view>在邀请<text>20</text>个好友进入小程序，即获得<text>365</text>天免费会员</view>
+      </view>
+    </view>
+  </view>
+
+</view>

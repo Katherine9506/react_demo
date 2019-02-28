@@ -1,0 +1,24 @@
+<!--pages/indexRank/indexRank.wxml-->
+<view>
+    <view class='product'>
+        <view class='list'>
+            <block wx:for="{{albumList}}" wx:key="{{index}}" wx:for-item="album">
+                <view class='item' bindtap='albumTap' data-album_id="{{album.id}}" data-is_vip="{{album.is_vip}}"
+                      data-title="{{album.title}}">
+                    <view class='produPic'>
+                        <image class='pImg' src='{{_host + album.thumb}}' mode='widthFix'></image>
+                        <view class='tag' wx:if="{{album.is_vip}}">会员</view>
+                    </view>
+                    <view class='itemBottom'>
+                        <view class='lName'>{{album.title}}</view>
+                        <view class='listen'>{{album.breif}}</view>
+                        <view class='audioLe'>
+                            <image src='/images/icon-disc2.png'></image>
+                            <text>{{album.number}}首</text>
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </view>
+    </view>
+</view>

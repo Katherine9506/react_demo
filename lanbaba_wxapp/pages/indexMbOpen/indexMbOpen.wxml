@@ -1,0 +1,48 @@
+<!--pages/indexList/indexList.wxml-->
+<view style='height:{{heightRpx}}rpx;overflow:hidden;'>
+    <view class='innerBox'>
+        <view class='openB'>
+            <image src='/images/mbOpen-banner.png' mode='widthFix'></image>
+        </view>
+        <view class='intro'>
+            <view class='title'>金卡会员简介</view>
+            <view class='introduce1'>
+                <view>父母的能力和格局才是孩子最好的起跑线，父母提供给孩子的教育资源和自身的育儿理念将可能影响宝贝一生的成长。</view>
+                <view>因为我们只追求俩个目标：</view>
+                <view class='orange'>提供最优质的育儿资源，普及科学权威的育儿理念。</view>
+                <view>为了这俩个目标我们做了几件事:</view>
+                <view class='litterBox'>
+                    <view class='littleTit'>
+                        <text></text>
+                        精心制作了近千首音频
+                    </view>
+                    <view>· 20本经典英文绘本详细讲解</view>
+                    <view>· 近30本中文童话，寓言的朗读</view>
+                    <view>· 近30首国学作品的朗读、律动和哄睡</view>
+                    <view>· 20多瘦唐诗的朗读，律动和哄睡</view>
+                    <view>· 近100首的英文儿歌</view>
+                </view>
+                <view>
+                    所有音频都是我们精心制作的。绘本儿歌的谱曲编曲，由中央音乐学院的作曲家完成；英文的演唱由美国/澳大利亚的专业歌手来唱；中文故事，找的是北京人民广播电视台的王牌儿童节目主持人录制的；英文经典儿歌也是美国最专业的Twin
+                    Sisters公司授权正版使用·····
+                </view>
+                <view class='orange'>我们不能代替你陪伴孩子，但是会保证在你陪伴的时间里给孩子最好的声音。</view>
+            </view>
+            <view class='title'>成为会员您可以：</view>
+            <view class='introduce1'>
+                <view>1、所有音频都是我们精心制作的。绘本儿歌的谱曲编曲，由中央音乐学院的作曲家完成；</view>
+                <view>2、英文的演唱由美国/澳大利亚的专业歌手来唱；中文故事，找的是北京人民广播电视台的王牌儿童节目主持人录制</view>
+                <view>3、英文经典儿歌也是美国最专业的Twin Sisters公司授权正版使用·····</view>
+            </view>
+        </view>
+
+    </view>
+</view>
+<view class='member'>
+    <picker bindchange="memberTap" value="{{member_index}}" range="{{memberTypes}}" range-key="{{'desc'}}">
+        <view class="picker">
+            <button>开通会员</button>
+        </view>
+    </picker>
+
+</view>

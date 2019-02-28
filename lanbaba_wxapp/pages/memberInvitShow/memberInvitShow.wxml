@@ -1,0 +1,17 @@
+<!--pages/memberInvitShow/memberInvitShow.wxml-->
+<view>
+  <swiper indicator-dots>
+    <swiper-item>
+      <image src='/images/show.png' mode='widthFix'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='/images/show.png' mode='widthFix'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='/images/show.png' mode='widthFix'></image>
+    </swiper-item>
+  </swiper>
+</view>
+<view class='showBtn'>
+  <button>我要秀一秀</button>
+</view>

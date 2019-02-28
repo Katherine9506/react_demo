@@ -1,0 +1,24 @@
+/* pages/memberInvitShow/memberInvitShow.wxss */
+swiper{
+height: 1050rpx;
+}
+swiper image{
+display: block;
+width: 100%;
+}
+.showBtn{
+padding: 30rpx 62rpx;
+}
+.showBtn button{
+height: 80rpx;
+line-height: 80rpx;
+font-size: 32rpx;
+color: #fff;
+border-radius: 40rpx;
+background: #3B90F3;
+}
+.showBtn button::after{
+border:none;
+}
+
+

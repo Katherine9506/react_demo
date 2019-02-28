@@ -1,0 +1,11 @@
+/* pages/member/member.wxss */
+.kaBox{
+  width:686rpx;
+  margin:32rpx auto;
+  border-radius: 32rpx;
+  overflow: hidden;
+}
+.kaBox image{
+  display: block;
+  width: 100%;
+}

@@ -1,0 +1,23 @@
+<!--pages/phone/phone.wxml-->
+<view class='box'>
+    <form bindsubmit="bindPhoneFormSubmitHandler">
+        <view class='enter'>
+            <view class='enterBox'>
+                <text>+86</text>
+                <input type='text' placeholder='请输入手机号' name="phone" value="{{phone}}" focus="{{phoneFocus}}"
+                       bindblur="phoneBlur" bindchange="phoneChange"/>
+            </view>
+            <button class='deleteBtn' bindtap="clearPhone">
+                <image src='/images/delete.png' mode='widthFix'></image>
+            </button>
+        </view>
+        <view class='enter codeEnter'>
+            <input placeholder='请输入短信验证码' name="captcha" bindchange="captchaChange" />
+            <button bindtap='getCode' disabled="{{disabled}}">{{txt}}</button>
+        </view>
+
+        <button class='submitBtn' form-type='submit'>绑定</button>
+    </form>
+
+
+</view>

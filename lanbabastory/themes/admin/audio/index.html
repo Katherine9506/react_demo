@@ -1,0 +1,86 @@
+{extend name="base" /}
+{block name="body"}
+<div class="layui-body">
+    <!--tab标签-->
+    <div class="layui-tab layui-tab-brief">
+        <ul class="layui-tab-title">
+            <li class="layui-this">音频列表</li>
+            <li class=""><a href="{:url('admin/audio/add')}">添加音频</a></li>
+        </ul>
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show">
+                <form action="{:url('/admin/audio/search')}" class="layui-form" method="post">
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">搜索类型：</label>
+                            <div class="layui-input-inline" style="width: 120px;">
+                                <select name="searchType" lay-verify="required">
+                                    {volist name="search_types" id="vo"}
+                                    <option value="{$key}" {if(isset($searchType) && $searchType== $key)}selected{
+                                    /if}>{$vo}</option>
+                                    {/volist}
+                                </select>
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <div class="layui-input-inline" style="width:350px;">
+                                <input type="text" value="{$searchKey|default=''}" name="searchKey" class="layui-input"
+                                       placeholder="输入搜索内容">
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <div class="layui-input-inline">
+                                <button class="layui-btn" lay-summit lay-filter="*">
+                                    <icon class="layui-icon">&#xe615;</icon>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <table class="layui-table">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>名称</th>
+                        <th>封面</th>
+                        <th>VIP</th>
+                        <th>时长</th>
+                        <th>大小</th>
+                        <th>排序</th>
+                        <th>状态</th>
+                        <th style="width:90px;">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {if count($list)}
+                    {foreach $list as $item}
+                    <tr>
+                        <td style="width: 30px;">{$item["id"]}</td>
+                        <td>{$item['title']}</td>
+                        <td><img src="{$item['thumb']}" width="40" height="40"/></td>
+                        <td>{$vipList[$item["is_vip"]]}</td>
+                        <td>{$item["duration"]}</td>
+                        <td>{$item["size"]}B</td>
+                        <td>{$item["sort"]}</td>
+                        <td>{$statusList[$item["status"]]}</td>
+                        <td>
+                            <a href="{:url('admin/audio/edit', ['id' => $item['id']])}"
+                               class="layui-btn layui-btn-normal layui-btn-mini">编辑</a>
+                            <a href="{:url('admin/audio/del', ['id' => $item['id']])}"
+                               class="layui-btn layui-btn-danger layui-btn-mini ajax-delete">删除</a>
+                        </td>
+                    </tr>
+                    {/foreach}
+                    {else/}
+                    <tr>
+                        <td colspan="20" align="middle">Sorry, 暂无数据</td>
+                    </tr>
+                    {/if}
+                    </tbody>
+                </table>
+                {$list->render()}
+            </div>
+        </div>
+    </div>
+</div>
+{/block}

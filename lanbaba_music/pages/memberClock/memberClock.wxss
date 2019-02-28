@@ -1,0 +1,92 @@
+/* pages/memberClock/memberClock.wxss */
+.banner image{
+  display: block;
+  width: 100%;
+}
+.handle{
+  padding: 58rpx 62rpx;
+}
+.handleBar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 49rpx;
+  line-height: 49rpx;
+  font-size: 28rpx;
+  color: #1b1b1b;
+  margin-bottom: 36rpx;
+}
+.handleBar image{
+  width: 52rpx;
+  margin-right: 20rpx;
+}
+.handleBar view text{
+  color: #ed7102;
+}
+.handleBar button{
+  width: 160rpx;
+  height: 49rpx;
+  line-height: 49rpx;
+  color: #fff;
+  border-radius: 25rpx;
+  font-size: 24rpx;
+  background: #3B90F3;
+  padding: 0;
+  margin: 0 0 0 42rpx;
+}
+.toOpen{
+  margin: 70rpx 0 60rpx;
+}
+.toOpen button{
+  width: 626rpx;
+  height: 86rpx;
+  line-height: 86rpx;
+  font-size: 32rpx;
+  color: #fff;
+  background: #3B90F3;
+  border-radius: 43rpx;
+}
+.ruleTitle{
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 32rpx;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 54rpx;
+  position: relative;
+  font-weight: bold;
+}
+.ruleTitle::after{
+  position: absolute;
+  left: 0;
+  top: 26rpx;
+  display: block;
+  content: '';
+  width: 100%;
+  height: 1rpx;
+  background: #707070;
+  z-index: -1
+}
+.ruleTitle text{
+  padding: 0 30rpx;
+  background: #fff;
+}
+.ruleDet{
+  font-size: 32rpx;
+  color: #464646;
+  line-height: 42rpx;
+}
+.details{
+  font-size: 28rpx;
+  color: #464646;
+  line-height: 38rpx;
+}
+.details view{
+  margin-bottom: 38rpx;
+}
+.details view text{
+  color: #ff8d30;
+  font-size: 32rpx;
+  /* font-weight: 600; */
+}
+

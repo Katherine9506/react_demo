@@ -1,0 +1,60 @@
+{extend name="base"}
+
+{block name="body"}
+<div class="layui-body">
+    <div class="layui-tab layui-tab-brief">
+        <ul class="layui-tab-title">
+            <li class="layui-this">订单管理</li>
+        </ul>
+    </div>
+    <div class="laui-tab-content">
+        <div class="layui-tab-item layui-show">
+            <table class="layui-table">
+                <thead>
+                <tr>
+                    <th>订单唯一标志</th>
+                    <th>订单编号</th><!--order_no-->
+                    <th>支付流水号</th><!--transaction_id-->
+                    <th>购买人</th><!--user_id-->
+                    <th>套餐类型</th><!--member_id-->
+                    <th>订单金额</th><!--amount-->
+                    <th>支付金额</th><!--pay-->
+                    <th>过期时间</th><!--expire_date-->
+                    <th>创建时间</th><!--create_time-->
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                {if count($orders)}
+                {foreach name="orders" item="order"}
+                <tr>
+                    <td>{$order.id}</td>
+                    <td>{$order.order_no}</td>
+                    <td>{$order.transaction_id}</td>
+                    <td>{$order.user_id}</td>
+                    <td>{$order.member_id}</td>
+                    <td>{$order.amount}</td>
+                    <td>{$order.pay}</td>
+                    <td>{$order.expire_date}</td>
+                    <td>{$order.create_time}</td>
+                    <td></td>
+                </tr>
+                {/foreach}
+                {else/}
+                <tr>
+                    <td colspan="20" align="middle">Sorry, 暂无数据</td>
+                </tr>
+                {/if}
+                </tbody>
+            </table>
+            {$orders->render()}
+        </div>
+    </div>
+</div>
+{/block}
+
+{block name="script"}
+<script type="text/javascript">
+
+</script>
+{/block}

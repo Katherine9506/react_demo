@@ -1,0 +1,47 @@
+{extend name="base" /}
+{block name="body"}
+<div class="layui-body">
+    <!--tab标签-->
+    <div class="layui-tab layui-tab-brief">
+        <ul class="layui-tab-title">
+            <li class="layui-this">专辑分类</li>
+            <li class=""><a href="{:url('admin/album_category/add')}">添加分类</a></li>
+        </ul>
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show">
+                <table class="layui-table">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>分类名称</th>
+                        <th>排序</th>
+                        <th>状态</th>
+                        <th style="width:90px;">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        {if count($list)}
+                        {foreach $list as $item}
+                        <tr>
+                            <td style="width: 30px;">{$item["id"]}</td>
+                            <td>{$item['title']}</td>
+                            <td>{$item["sort"]}</td>
+                            <td>{$statusList[$item["status"]]}</td>
+                            <td>
+                                <a href="{:url('admin/album_category/edit', ['id' => $item['id']])}" class="layui-btn layui-btn-normal layui-btn-mini">编辑</a>
+                                <a href="{:url('admin/album_category/del', ['id' => $item['id']])}" class="layui-btn layui-btn-danger layui-btn-mini ajax-delete">删除</a>
+                            </td>
+                        </tr>
+                        {/foreach}
+                        {else/}
+                        <tr>
+                            <td colspan="8" align="middle">Sorry, 暂无数据</td>
+                        </tr>
+                        {/if}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}

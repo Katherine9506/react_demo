@@ -1,0 +1,2448 @@
+---------------------------------------------------------------
+[ 2019-01-09T11:04:16+08:00 ] 127.0.0.1 127.0.0.1 GET /api/login/isLogin
+[ info ] lanbaba.cc/api/login/isLogin [运行时间：1.007334s][吞吐率：0.99req/s] [内存消耗：1,678.38kb] [文件加载：43]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'login',
+    2 => 'isLogin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx7cb91c99c4667f6b/devtools/page-frame.html',
+  'content-type' => 'application/json',
+  'x-wx-flag' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1810250 MicroMessenger/6.5.7 Language/zh_CN webview/ token/8c4b19eecceda14b8ee73853a5b6554d',
+  'x-wx-skey' => '103d27a13454fed73a518ff49dab4e5ed70b3afb',
+  'accept' => 'application/json',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Login->isLogin[ E:\repository\lanbabastory\application\api\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.051415s ] mysql:host=47.96.105.245;port=3306;dbname=lanbaba;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_session` [ RunTime:0.034261s ]
+[ sql ] [ SQL ] SELECT `openid` FROM `mus_session` WHERE  `skey` = '103d27a13454fed73a518ff49dab4e5ed70b3afb' LIMIT 1 [ RunTime:0.033287s ]
+---------------------------------------------------------------
+[ 2019-01-09T11:04:26+08:00 ] 127.0.0.1 127.0.0.1 GET /api/login/isLogin
+[ info ] lanbaba.cc/api/login/isLogin [运行时间：0.155511s][吞吐率：6.43req/s] [内存消耗：1,678.35kb] [文件加载：43]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'login',
+    2 => 'isLogin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx7cb91c99c4667f6b/devtools/page-frame.html',
+  'content-type' => 'application/json',
+  'x-wx-flag' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1810250 MicroMessenger/6.5.7 Language/zh_CN webview/ token/8c4b19eecceda14b8ee73853a5b6554d',
+  'x-wx-skey' => '103d27a13454fed73a518ff49dab4e5ed70b3afb',
+  'accept' => 'application/json',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Login->isLogin[ E:\repository\lanbabastory\application\api\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.059483s ] mysql:host=47.96.105.245;port=3306;dbname=lanbaba;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_session` [ RunTime:0.035079s ]
+[ sql ] [ SQL ] SELECT `openid` FROM `mus_session` WHERE  `skey` = '103d27a13454fed73a518ff49dab4e5ed70b3afb' LIMIT 1 [ RunTime:0.032418s ]
+---------------------------------------------------------------
+[ 2019-01-09T11:04:26+08:00 ] 127.0.0.1 127.0.0.1 GET /api/slide/getall
+[ info ] lanbaba.cc/api/slide/getall [运行时间：0.266431s][吞吐率：3.75req/s] [内存消耗：1,885.96kb] [文件加载：45]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'slide',
+    2 => 'getall',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx7cb91c99c4667f6b/devtools/page-frame.html',
+  'content-type' => 'application/json',
+  'x-wx-flag' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1810250 MicroMessenger/6.5.7 Language/zh_CN webview/ token/8c4b19eecceda14b8ee73853a5b6554d',
+  'x-wx-skey' => '103d27a13454fed73a518ff49dab4e5ed70b3afb',
+  'accept' => 'application/json',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Slide->getAll[ E:\repository\lanbabastory\application\api\controller\Slide.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.044307s ] mysql:host=47.96.105.245;port=3306;dbname=lanbaba;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_session` [ RunTime:0.030253s ]
+[ sql ] [ SQL ] SELECT `openid` FROM `mus_session` WHERE  `skey` = '103d27a13454fed73a518ff49dab4e5ed70b3afb' LIMIT 1 [ RunTime:0.031187s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_slide` [ RunTime:0.031118s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`image`,`link` FROM `mus_slide` WHERE  `status` = 1 ORDER BY `sort`  ASC [ RunTime:0.029920s ]
+---------------------------------------------------------------
+[ 2019-01-09T11:04:27+08:00 ] 127.0.0.1 127.0.0.1 GET /api/album_tag/getall
+[ info ] lanbaba.cc/api/album_tag/getall [运行时间：0.341380s][吞吐率：2.93req/s] [内存消耗：1,888.29kb] [文件加载：45]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'album_tag',
+    2 => 'getall',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx7cb91c99c4667f6b/devtools/page-frame.html',
+  'content-type' => 'application/json',
+  'x-wx-flag' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1810250 MicroMessenger/6.5.7 Language/zh_CN webview/ token/8c4b19eecceda14b8ee73853a5b6554d',
+  'x-wx-skey' => '103d27a13454fed73a518ff49dab4e5ed70b3afb',
+  'accept' => 'application/json',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\AlbumTag->getAll[ E:\repository\lanbabastory\application\api\controller\AlbumTag.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.049065s ] mysql:host=47.96.105.245;port=3306;dbname=lanbaba;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_session` [ RunTime:0.032920s ]
+[ sql ] [ SQL ] SELECT `openid` FROM `mus_session` WHERE  `skey` = '103d27a13454fed73a518ff49dab4e5ed70b3afb' LIMIT 1 [ RunTime:0.032583s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_album_tags` [ RunTime:0.031464s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`image` FROM `mus_album_tags` WHERE  `status` = 1 ORDER BY `sort`  ASC [ RunTime:0.032389s ]
+---------------------------------------------------------------
+[ 2019-01-09T11:04:27+08:00 ] 127.0.0.1 127.0.0.1 GET /api/album_category/allWithAlbums
+[ info ] lanbaba.cc/api/album_category/allWithAlbums [运行时间：0.530696s][吞吐率：1.88req/s] [内存消耗：2,012.95kb] [文件加载：48]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'album_category',
+    2 => 'allWithAlbums',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx7cb91c99c4667f6b/devtools/page-frame.html',
+  'content-type' => 'application/json',
+  'x-wx-flag' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1810250 MicroMessenger/6.5.7 Language/zh_CN webview/ token/8c4b19eecceda14b8ee73853a5b6554d',
+  'x-wx-skey' => '103d27a13454fed73a518ff49dab4e5ed70b3afb',
+  'accept' => 'application/json',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\AlbumCategory->allWithAlbums[ E:\repository\lanbabastory\application\api\controller\AlbumCategory.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.049476s ] mysql:host=47.96.105.245;port=3306;dbname=lanbaba;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_session` [ RunTime:0.032949s ]
+[ sql ] [ SQL ] SELECT `openid` FROM `mus_session` WHERE  `skey` = '103d27a13454fed73a518ff49dab4e5ed70b3afb' LIMIT 1 [ RunTime:0.033714s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_album_category` [ RunTime:0.033628s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `mus_album_category` [ RunTime:0.033230s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_album` [ RunTime:0.033421s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`breif`,`thumb`,`is_vip`,`number` FROM `mus_album` WHERE  `cid` = 1 LIMIT 4 [ RunTime:0.033937s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`breif`,`thumb`,`is_vip`,`number` FROM `mus_album` WHERE  `cid` = 2 LIMIT 4 [ RunTime:0.033389s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`breif`,`thumb`,`is_vip`,`number` FROM `mus_album` WHERE  `cid` = 3 LIMIT 4 [ RunTime:0.033954s ]
+---------------------------------------------------------------
+[ 2019-01-09T11:04:29+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20181205/712f4509e0b19797a055cc8e29fb368a.jpg
+[ info ] lanbaba.cc/uploads/20181205/712f4509e0b19797a055cc8e29fb368a.jpg [运行时间：0.448470s][吞吐率：2.23req/s] [内存消耗：981.51kb] [文件加载：32]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploads',
+    1 => '20181205',
+    2 => '712f4509e0b19797a055cc8e29fb368a.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx7cb91c99c4667f6b/devtools/page-frame.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1810250 MicroMessenger/6.5.7 Language/zh_CN webview/15 port/56951 token/8c4b19eecceda14b8ee73853a5b6554d',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-09T11:04:29+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20181210/e0c88b03eea49279822cdd28268b8c9a.jpg
+[ info ] lanbaba.cc/uploads/20181210/e0c88b03eea49279822cdd28268b8c9a.jpg [运行时间：0.022474s][吞吐率：44.50req/s] [内存消耗：981.51kb] [文件加载：32]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploads',
+    1 => '20181210',
+    2 => 'e0c88b03eea49279822cdd28268b8c9a.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx7cb91c99c4667f6b/devtools/page-frame.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1810250 MicroMessenger/6.5.7 Language/zh_CN webview/15 port/56951 token/8c4b19eecceda14b8ee73853a5b6554d',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-09T11:04:29+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20181205/97d8bf12ae138c183037cc5b52557bcd.jpg
+[ info ] lanbaba.cc/uploads/20181205/97d8bf12ae138c183037cc5b52557bcd.jpg [运行时间：0.021018s][吞吐率：47.58req/s] [内存消耗：981.51kb] [文件加载：32]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploads',
+    1 => '20181205',
+    2 => '97d8bf12ae138c183037cc5b52557bcd.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx7cb91c99c4667f6b/devtools/page-frame.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1810250 MicroMessenger/6.5.7 Language/zh_CN webview/15 port/56951 token/8c4b19eecceda14b8ee73853a5b6554d',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-09T11:04:29+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20181205/484c5e23fffc69bcb6408d6bcc12316c.jpg
+[ info ] lanbaba.cc/uploads/20181205/484c5e23fffc69bcb6408d6bcc12316c.jpg [运行时间：0.022764s][吞吐率：43.93req/s] [内存消耗：981.51kb] [文件加载：32]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploads',
+    1 => '20181205',
+    2 => '484c5e23fffc69bcb6408d6bcc12316c.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx7cb91c99c4667f6b/devtools/page-frame.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1810250 MicroMessenger/6.5.7 Language/zh_CN webview/15 port/56951 token/8c4b19eecceda14b8ee73853a5b6554d',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-09T11:04:29+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20181205/d533abb1ca59dedc1d6c363b8411876e.jpg
+[ info ] lanbaba.cc/uploads/20181205/d533abb1ca59dedc1d6c363b8411876e.jpg [运行时间：0.020380s][吞吐率：49.07req/s] [内存消耗：981.51kb] [文件加载：32]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploads',
+    1 => '20181205',
+    2 => 'd533abb1ca59dedc1d6c363b8411876e.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx7cb91c99c4667f6b/devtools/page-frame.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1810250 MicroMessenger/6.5.7 Language/zh_CN webview/15 port/56951 token/8c4b19eecceda14b8ee73853a5b6554d',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-09T11:04:41+08:00 ] 127.0.0.1 127.0.0.1 GET /api/user/checkExpireDate?uuid=88e52144c69d45786f88b1d1d959aef6
+[ info ] lanbaba.cc/api/user/checkExpireDate?uuid=88e52144c69d45786f88b1d1d959aef6 [运行时间：0.280243s][吞吐率：3.57req/s] [内存消耗：1,906.73kb] [文件加载：45]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'checkExpireDate',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx7cb91c99c4667f6b/devtools/page-frame.html',
+  'content-type' => 'application/json',
+  'x-wx-flag' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1810250 MicroMessenger/6.5.7 Language/zh_CN webview/ token/8c4b19eecceda14b8ee73853a5b6554d',
+  'x-wx-skey' => '103d27a13454fed73a518ff49dab4e5ed70b3afb',
+  'accept' => 'application/json',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'uuid' => '88e52144c69d45786f88b1d1d959aef6',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\User->checkExpireDate[ E:\repository\lanbabastory\application\api\controller\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.047898s ] mysql:host=47.96.105.245;port=3306;dbname=lanbaba;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_session` [ RunTime:0.033426s ]
+[ sql ] [ SQL ] SELECT `openid` FROM `mus_session` WHERE  `skey` = '103d27a13454fed73a518ff49dab4e5ed70b3afb' LIMIT 1 [ RunTime:0.034836s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_user` [ RunTime:0.034618s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_user` WHERE  `id` = '88e52144c69d45786f88b1d1d959aef6' LIMIT 1 [ RunTime:0.036104s ]
+---------------------------------------------------------------
+[ 2019-01-09T11:04:42+08:00 ] 127.0.0.1 127.0.0.1 GET /api/user/checkExpireDate?uuid=88e52144c69d45786f88b1d1d959aef6
+[ info ] lanbaba.cc/api/user/checkExpireDate?uuid=88e52144c69d45786f88b1d1d959aef6 [运行时间：0.223396s][吞吐率：4.48req/s] [内存消耗：1,906.73kb] [文件加载：45]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'checkExpireDate',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx7cb91c99c4667f6b/devtools/page-frame.html',
+  'content-type' => 'application/json',
+  'x-wx-flag' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1810250 MicroMessenger/6.5.7 Language/zh_CN webview/ token/8c4b19eecceda14b8ee73853a5b6554d',
+  'x-wx-skey' => '103d27a13454fed73a518ff49dab4e5ed70b3afb',
+  'accept' => 'application/json',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'uuid' => '88e52144c69d45786f88b1d1d959aef6',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\User->checkExpireDate[ E:\repository\lanbabastory\application\api\controller\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.049528s ] mysql:host=47.96.105.245;port=3306;dbname=lanbaba;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_session` [ RunTime:0.033117s ]
+[ sql ] [ SQL ] SELECT `openid` FROM `mus_session` WHERE  `skey` = '103d27a13454fed73a518ff49dab4e5ed70b3afb' LIMIT 1 [ RunTime:0.033481s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_user` [ RunTime:0.033520s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_user` WHERE  `id` = '88e52144c69d45786f88b1d1d959aef6' LIMIT 1 [ RunTime:0.034862s ]
+---------------------------------------------------------------
+[ 2019-01-09T11:08:11+08:00 ] 127.0.0.1 127.0.0.1 GET /api/user/members
+[ info ] lanbaba.cc/api/user/members [运行时间：0.233948s][吞吐率：4.27req/s] [内存消耗：1,973.47kb] [文件加载：46]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'members',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx7cb91c99c4667f6b/devtools/page-frame.html',
+  'content-type' => 'application/json',
+  'x-wx-flag' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1810250 MicroMessenger/6.5.7 Language/zh_CN webview/ token/8c4b19eecceda14b8ee73853a5b6554d',
+  'x-wx-skey' => '103d27a13454fed73a518ff49dab4e5ed70b3afb',
+  'accept' => 'application/json',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\User->members[ E:\repository\lanbabastory\application\api\controller\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.046734s ] mysql:host=47.96.105.245;port=3306;dbname=lanbaba;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_session` [ RunTime:0.033373s ]
+[ sql ] [ SQL ] SELECT `openid` FROM `mus_session` WHERE  `skey` = '103d27a13454fed73a518ff49dab4e5ed70b3afb' LIMIT 1 [ RunTime:0.033225s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_member` [ RunTime:0.034923s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`price` FROM `mus_member` WHERE  `is_active` = 1 ORDER BY `sort`  ASC [ RunTime:0.033593s ]
+---------------------------------------------------------------
+[ 2019-01-09T11:08:30+08:00 ] 127.0.0.1 127.0.0.1 GET /api/user/members
+[ info ] lanbaba.cc/api/user/members [运行时间：0.218510s][吞吐率：4.58req/s] [内存消耗：1,973.47kb] [文件加载：46]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'members',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx7cb91c99c4667f6b/devtools/page-frame.html',
+  'content-type' => 'application/json',
+  'x-wx-flag' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1810250 MicroMessenger/6.5.7 Language/zh_CN webview/ token/8c4b19eecceda14b8ee73853a5b6554d',
+  'x-wx-skey' => '103d27a13454fed73a518ff49dab4e5ed70b3afb',
+  'accept' => 'application/json',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\User->members[ E:\repository\lanbabastory\application\api\controller\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.049739s ] mysql:host=47.96.105.245;port=3306;dbname=lanbaba;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_session` [ RunTime:0.034302s ]
+[ sql ] [ SQL ] SELECT `openid` FROM `mus_session` WHERE  `skey` = '103d27a13454fed73a518ff49dab4e5ed70b3afb' LIMIT 1 [ RunTime:0.033735s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_member` [ RunTime:0.033584s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`price` FROM `mus_member` WHERE  `is_active` = 1 ORDER BY `sort`  ASC [ RunTime:0.034657s ]
+---------------------------------------------------------------
+[ 2019-01-09T11:08:34+08:00 ] 127.0.0.1 127.0.0.1 GET /api/user/members
+[ info ] lanbaba.cc/api/user/members [运行时间：0.214999s][吞吐率：4.65req/s] [内存消耗：1,973.47kb] [文件加载：46]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'members',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx7cb91c99c4667f6b/devtools/page-frame.html',
+  'content-type' => 'application/json',
+  'x-wx-flag' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1810250 MicroMessenger/6.5.7 Language/zh_CN webview/ token/8c4b19eecceda14b8ee73853a5b6554d',
+  'x-wx-skey' => '103d27a13454fed73a518ff49dab4e5ed70b3afb',
+  'accept' => 'application/json',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\User->members[ E:\repository\lanbabastory\application\api\controller\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.047904s ] mysql:host=47.96.105.245;port=3306;dbname=lanbaba;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_session` [ RunTime:0.032836s ]
+[ sql ] [ SQL ] SELECT `openid` FROM `mus_session` WHERE  `skey` = '103d27a13454fed73a518ff49dab4e5ed70b3afb' LIMIT 1 [ RunTime:0.033281s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_member` [ RunTime:0.033206s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`price` FROM `mus_member` WHERE  `is_active` = 1 ORDER BY `sort`  ASC [ RunTime:0.034368s ]
+---------------------------------------------------------------
+[ 2019-01-09T11:08:40+08:00 ] 127.0.0.1 127.0.0.1 GET /api/user/freeMemberCheck?uuid=88e52144c69d45786f88b1d1d959aef6
+[ info ] lanbaba.cc/api/user/freeMemberCheck?uuid=88e52144c69d45786f88b1d1d959aef6 [运行时间：0.373866s][吞吐率：2.67req/s] [内存消耗：2,012.95kb] [文件加载：48]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'freeMemberCheck',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx7cb91c99c4667f6b/devtools/page-frame.html',
+  'content-type' => 'application/json',
+  'x-wx-flag' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1810250 MicroMessenger/6.5.7 Language/zh_CN webview/ token/8c4b19eecceda14b8ee73853a5b6554d',
+  'x-wx-skey' => '103d27a13454fed73a518ff49dab4e5ed70b3afb',
+  'accept' => 'application/json',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'uuid' => '88e52144c69d45786f88b1d1d959aef6',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\User->freeMemberCheck[ E:\repository\lanbabastory\application\api\controller\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.049554s ] mysql:host=47.96.105.245;port=3306;dbname=lanbaba;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_session` [ RunTime:0.034358s ]
+[ sql ] [ SQL ] SELECT `openid` FROM `mus_session` WHERE  `skey` = '103d27a13454fed73a518ff49dab4e5ed70b3afb' LIMIT 1 [ RunTime:0.034039s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_user` [ RunTime:0.040508s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_user` WHERE  `id` = '88e52144c69d45786f88b1d1d959aef6' LIMIT 1 [ RunTime:0.034804s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_sign` [ RunTime:0.033621s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `mus_sign` WHERE  `user_id` = '88e52144c69d45786f88b1d1d959aef6' LIMIT 1 [ RunTime:0.033951s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_sign` WHERE  `user_id` = '88e52144c69d45786f88b1d1d959aef6'  AND `sign_at` BETWEEN '2019-01-09 00:00:00' AND '2019-01-10 00:00:00' [ RunTime:0.034471s ]
+---------------------------------------------------------------
+[ 2019-01-09T11:08:43+08:00 ] 127.0.0.1 127.0.0.1 GET /api/user/checkSign?uuid=88e52144c69d45786f88b1d1d959aef6
+[ info ] lanbaba.cc/api/user/checkSign?uuid=88e52144c69d45786f88b1d1d959aef6 [运行时间：0.325627s][吞吐率：3.07req/s] [内存消耗：2,010.41kb] [文件加载：48]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'checkSign',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx7cb91c99c4667f6b/devtools/page-frame.html',
+  'content-type' => 'application/json',
+  'x-wx-flag' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1810250 MicroMessenger/6.5.7 Language/zh_CN webview/ token/8c4b19eecceda14b8ee73853a5b6554d',
+  'x-wx-skey' => '103d27a13454fed73a518ff49dab4e5ed70b3afb',
+  'accept' => 'application/json',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'uuid' => '88e52144c69d45786f88b1d1d959aef6',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\User->checkSign[ E:\repository\lanbabastory\application\api\controller\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.054847s ] mysql:host=47.96.105.245;port=3306;dbname=lanbaba;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_session` [ RunTime:0.033899s ]
+[ sql ] [ SQL ] SELECT `openid` FROM `mus_session` WHERE  `skey` = '103d27a13454fed73a518ff49dab4e5ed70b3afb' LIMIT 1 [ RunTime:0.033894s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_user` [ RunTime:0.034482s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_user` WHERE  `id` = '88e52144c69d45786f88b1d1d959aef6' LIMIT 1 [ RunTime:0.035040s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_sign` [ RunTime:0.031823s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_sign` WHERE  `user_id` = '88e52144c69d45786f88b1d1d959aef6'  AND `sign_at` BETWEEN '2019-01-08 00:00:00' AND '2019-01-09 00:00:00' [ RunTime:0.034098s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `mus_sign` WHERE  `user_id` = '88e52144c69d45786f88b1d1d959aef6' LIMIT 1 [ RunTime:0.034534s ]
+---------------------------------------------------------------
+[ 2019-01-09T11:08:43+08:00 ] 127.0.0.1 127.0.0.1 GET /api/user/sign?uuid=88e52144c69d45786f88b1d1d959aef6&signStatus=3
+[ info ] lanbaba.cc/api/user/sign?uuid=88e52144c69d45786f88b1d1d959aef6&signStatus=3 [运行时间：0.393469s][吞吐率：2.54req/s] [内存消耗：2,010.75kb] [文件加载：48]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'sign',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx7cb91c99c4667f6b/devtools/page-frame.html',
+  'content-type' => 'application/json',
+  'x-wx-flag' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1810250 MicroMessenger/6.5.7 Language/zh_CN webview/ token/8c4b19eecceda14b8ee73853a5b6554d',
+  'x-wx-skey' => '103d27a13454fed73a518ff49dab4e5ed70b3afb',
+  'accept' => 'application/json',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'uuid' => '88e52144c69d45786f88b1d1d959aef6',
+  'signStatus' => '3',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\User->sign[ E:\repository\lanbabastory\application\api\controller\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.046797s ] mysql:host=47.96.105.245;port=3306;dbname=lanbaba;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_session` [ RunTime:0.034530s ]
+[ sql ] [ SQL ] SELECT `openid` FROM `mus_session` WHERE  `skey` = '103d27a13454fed73a518ff49dab4e5ed70b3afb' LIMIT 1 [ RunTime:0.035677s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_user` [ RunTime:0.033631s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_user` WHERE  `id` = '88e52144c69d45786f88b1d1d959aef6' LIMIT 1 [ RunTime:0.049970s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_sign` [ RunTime:0.037610s ]
+[ sql ] [ SQL ] DELETE FROM `mus_sign`    WHERE  `user_id` = '88e52144c69d45786f88b1d1d959aef6' [ RunTime:0.036653s ]
+[ sql ] [ SQL ] INSERT INTO `mus_sign` (`user_id`) VALUES ('88e52144c69d45786f88b1d1d959aef6') [ RunTime:0.040734s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `mus_sign` WHERE  `user_id` = '88e52144c69d45786f88b1d1d959aef6' LIMIT 1 [ RunTime:0.037435s ]
+---------------------------------------------------------------
+[ 2019-01-09T11:08:50+08:00 ] 127.0.0.1 127.0.0.1 GET /api/user/freeMemberCheck?uuid=88e52144c69d45786f88b1d1d959aef6
+[ info ] lanbaba.cc/api/user/freeMemberCheck?uuid=88e52144c69d45786f88b1d1d959aef6 [运行时间：0.300850s][吞吐率：3.32req/s] [内存消耗：2,013.13kb] [文件加载：48]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'freeMemberCheck',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx7cb91c99c4667f6b/devtools/page-frame.html',
+  'content-type' => 'application/json',
+  'x-wx-flag' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 wechatdevtools/1.02.1810250 MicroMessenger/6.5.7 Language/zh_CN webview/ token/8c4b19eecceda14b8ee73853a5b6554d',
+  'x-wx-skey' => '103d27a13454fed73a518ff49dab4e5ed70b3afb',
+  'accept' => 'application/json',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'uuid' => '88e52144c69d45786f88b1d1d959aef6',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\User->freeMemberCheck[ E:\repository\lanbabastory\application\api\controller\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.045873s ] mysql:host=47.96.105.245;port=3306;dbname=lanbaba;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_session` [ RunTime:0.031850s ]
+[ sql ] [ SQL ] SELECT `openid` FROM `mus_session` WHERE  `skey` = '103d27a13454fed73a518ff49dab4e5ed70b3afb' LIMIT 1 [ RunTime:0.031434s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_user` [ RunTime:0.031849s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_user` WHERE  `id` = '88e52144c69d45786f88b1d1d959aef6' LIMIT 1 [ RunTime:0.031014s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_sign` [ RunTime:0.031387s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `mus_sign` WHERE  `user_id` = '88e52144c69d45786f88b1d1d959aef6' LIMIT 1 [ RunTime:0.031477s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_sign` WHERE  `user_id` = '88e52144c69d45786f88b1d1d959aef6'  AND `sign_at` BETWEEN '2019-01-09 00:00:00' AND '2019-01-10 00:00:00' [ RunTime:0.031218s ]
+---------------------------------------------------------------
+[ 2019-01-09T11:09:31+08:00 ] 127.0.0.1 127.0.0.1 GET /admin
+[ info ] lanbaba.cc/admin [运行时间：0.171492s][吞吐率：5.83req/s] [内存消耗：1,171.52kb] [文件加载：38]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-09T11:09:31+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index.html
+[ info ] lanbaba.cc/admin/login/index.html [运行时间：0.070514s][吞吐率：14.18req/s] [内存消耗：1,218.44kb] [文件加载：39]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=r13skcm9gasajotb4s6hvjgos2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ E:\repository\lanbabastory\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] E:\repository\lanbabastory\/themes/admin/login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-09T11:09:32+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/image.html
+[ info ] lanbaba.cc/admin/login/image.html [运行时间：0.107967s][吞吐率：9.26req/s] [内存消耗：1,219.99kb] [文件加载：38]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'image',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=r13skcm9gasajotb4s6hvjgos2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lanbaba.cc/admin/login/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->image[ E:\repository\lanbabastory\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-09T11:09:37+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/image.html?time=0.18110860354125524
+[ info ] lanbaba.cc/admin/login/image.html?time=0.18110860354125524 [运行时间：0.039443s][吞吐率：25.35req/s] [内存消耗：1,220.52kb] [文件加载：38]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'image',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=r13skcm9gasajotb4s6hvjgos2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lanbaba.cc/admin/login/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'time' => '0.18110860354125524',
+)
+[ info ] [ RUN ] app\admin\controller\Login->image[ E:\repository\lanbabastory\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-09T11:09:39+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/image.html?time=0.9156884299341017
+[ info ] lanbaba.cc/admin/login/image.html?time=0.9156884299341017 [运行时间：0.031414s][吞吐率：31.83req/s] [内存消耗：1,220.52kb] [文件加载：38]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'image',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=r13skcm9gasajotb4s6hvjgos2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lanbaba.cc/admin/login/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'time' => '0.9156884299341017',
+)
+[ info ] [ RUN ] app\admin\controller\Login->image[ E:\repository\lanbabastory\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-09T11:09:40+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/image.html?time=0.10847805438056302
+[ info ] lanbaba.cc/admin/login/image.html?time=0.10847805438056302 [运行时间：0.046172s][吞吐率：21.66req/s] [内存消耗：1,220.52kb] [文件加载：38]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'image',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=r13skcm9gasajotb4s6hvjgos2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lanbaba.cc/admin/login/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'time' => '0.10847805438056302',
+)
+[ info ] [ RUN ] app\admin\controller\Login->image[ E:\repository\lanbabastory\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-09T11:09:45+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/login/login.html
+[ info ] lanbaba.cc/admin/login/login.html [运行时间：0.323634s][吞吐率：3.09req/s] [内存消耗：1,814.85kb] [文件加载：48]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=r13skcm9gasajotb4s6hvjgos2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lanbaba.cc/admin/login/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'upgrade-insecure-requests' => '1',
+  'origin' => 'http://lanbaba.cc',
+  'cache-control' => 'max-age=0',
+  'content-length' => '42',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => '123456',
+  'verify' => 'yhtx',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ E:\repository\lanbabastory\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT redis
+[ info ] [ VIEW ] E:\repository\lanbabastory\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.049740s ] mysql:host=47.96.105.245;port=3306;dbname=lanbaba;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_admin_user` [ RunTime:0.034427s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`status` FROM `mus_admin_user` WHERE  `username` = 'admin'  AND `password` = '7b79e788e94c1c41b6d4e1b1280c4bdb' LIMIT 1 [ RunTime:0.035119s ]
+[ sql ] [ SQL ] UPDATE `mus_admin_user`  SET `last_login_time`='2019-01-09 11:09:45',`last_login_ip`='127.0.0.1'  WHERE  `id` = 1 [ RunTime:0.034826s ]
+---------------------------------------------------------------
+[ 2019-01-09T11:09:48+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/index.html
+[ info ] lanbaba.cc/admin/index/index.html [运行时间：0.551257s][吞吐率：1.81req/s] [内存消耗：1,831.41kb] [文件加载：46]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=r13skcm9gasajotb4s6hvjgos2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lanbaba.cc/admin/login/login.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Index->index[ E:\repository\lanbabastory\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] E:\repository\lanbabastory\/themes/admin/index\index.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.052638s ] mysql:host=47.96.105.245;port=3306;dbname=lanbaba;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.034236s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.083514s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.041703s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.033791s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37,120,125,124,123,122,129,132,131,130,133,121,128,127,126,134,135,136,137,138,139,140,141,142,143,144,145)  AND `type` = 1 [ RunTime:0.038851s ]
+[ sql ] [ SQL ] SELECT VERSION() AS ver [ RunTime:0.033542s ]
+---------------------------------------------------------------
+[ 2019-01-09T11:10:29+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/admin_user/index.html
+[ info ] lanbaba.cc/admin/admin_user/index.html [运行时间：0.572694s][吞吐率：1.75req/s] [内存消耗：2,103.19kb] [文件加载：50]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'admin_user',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=r13skcm9gasajotb4s6hvjgos2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lanbaba.cc/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\AdminUser->index[ E:\repository\lanbabastory\application\admin\controller\AdminUser.php ]
+[ info ] [ VIEW ] E:\repository\lanbabastory\/themes/admin/admin_user\index.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'admin_user_list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.047649s ] mysql:host=47.96.105.245;port=3306;dbname=lanbaba;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.031901s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.032844s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.031904s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37,120,125,124,123,122,129,132,131,130,133,121,128,127,126,134,135,136,137,138,139,140,141,142,143,144,145)  AND `type` = 1 [ RunTime:0.034731s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.033532s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_admin_user` [ RunTime:0.032561s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_admin_user` [ RunTime:0.031523s ]
+---------------------------------------------------------------
+[ 2019-01-09T11:10:32+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/auth_group/index.html
+[ info ] lanbaba.cc/admin/auth_group/index.html [运行时间：1.378117s][吞吐率：0.73req/s] [内存消耗：2,091.60kb] [文件加载：49]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth_group',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=r13skcm9gasajotb4s6hvjgos2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lanbaba.cc/admin/admin_user/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\AuthGroup->index[ E:\repository\lanbabastory\application\admin\controller\AuthGroup.php ]
+[ info ] [ VIEW ] E:\repository\lanbabastory\/themes/admin/auth_group\index.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'auth_group_list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.054807s ] mysql:host=47.96.105.245;port=3306;dbname=lanbaba;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.031888s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.033552s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.032844s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37,120,125,124,123,122,129,132,131,130,133,121,128,127,126,134,135,136,137,138,139,140,141,142,143,144,145)  AND `type` = 1 [ RunTime:0.035023s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.032926s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group` [ RunTime:0.031734s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_group` [ RunTime:0.031802s ]
+---------------------------------------------------------------
+[ 2019-01-09T11:10:37+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/auth_group/auth/id/1.html
+[ info ] lanbaba.cc/admin/auth_group/auth/id/1.html [运行时间：2.026622s][吞吐率：0.49req/s] [内存消耗：2,097.63kb] [文件加载：49]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth_group',
+    2 => 'auth',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=r13skcm9gasajotb4s6hvjgos2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lanbaba.cc/admin/auth_group/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\AuthGroup->auth[ E:\repository\lanbabastory\application\admin\controller\AuthGroup.php ]
+[ info ] [ VIEW ] E:\repository\lanbabastory\/themes/admin/auth_group\auth.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'id',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.046715s ] mysql:host=47.96.105.245;port=3306;dbname=lanbaba;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.033910s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.034977s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.034667s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37,120,125,124,123,122,129,132,131,130,133,121,128,127,126,134,135,136,137,138,139,140,141,142,143,144,145)  AND `type` = 1 [ RunTime:0.037277s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.035487s ]
+---------------------------------------------------------------
+[ 2019-01-09T11:10:37+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/auth_group/getjson.html
+[ info ] lanbaba.cc/admin/auth_group/getjson.html [运行时间：0.353108s][吞吐率：2.83req/s] [内存消耗：2,004.10kb] [文件加载：46]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth_group',
+    2 => 'getjson',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=r13skcm9gasajotb4s6hvjgos2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lanbaba.cc/admin/auth_group/auth/id/1.html',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://lanbaba.cc',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '4',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\AuthGroup->getJson[ E:\repository\lanbabastory\application\admin\controller\AuthGroup.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.045271s ] mysql:host=47.96.105.245;port=3306;dbname=lanbaba;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.030149s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.032625s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.031297s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.032228s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37,120,125,124,123,122,129,132,131,130,133,121,128,127,126,134,135,136,137,138,139,140,141,142,143,144,145)  AND `type` = 1 [ RunTime:0.032806s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group` [ RunTime:0.030744s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_group` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.031034s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title` FROM `mus_auth_rule` [ RunTime:0.031597s ]
+---------------------------------------------------------------
+[ 2019-01-09T11:10:54+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/audio/index.html
+[ info ] lanbaba.cc/admin/audio/index.html [运行时间：0.780521s][吞吐率：1.28req/s] [内存消耗：2,237.39kb] [文件加载：53]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'audio',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=r13skcm9gasajotb4s6hvjgos2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lanbaba.cc/admin/auth_group/auth/id/1.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Audio->index[ E:\repository\lanbabastory\application\admin\controller\Audio.php ]
+[ info ] [ VIEW ] E:\repository\lanbabastory\/themes/admin/audio\index.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'vipList',
+  3 => 'statusList',
+  4 => 'category',
+  5 => 'search_types',
+  6 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.048969s ] mysql:host=47.96.105.245;port=3306;dbname=lanbaba;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.033922s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.034462s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.032128s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37,120,125,124,123,122,129,132,131,130,133,121,128,127,126,134,135,136,137,138,139,140,141,142,143,144,145)  AND `type` = 1 [ RunTime:0.035796s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.035122s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_audio_category` [ RunTime:0.041219s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`sort`,`status` FROM `mus_audio_category` ORDER BY `sort`  ASC [ RunTime:0.053501s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_audio` [ RunTime:0.034025s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `mus_audio` LIMIT 1 [ RunTime:0.033147s ]
+[ sql ] [ SQL ] SELECT `id`,`cid`,`title`,`thumb`,`breif`,`introduce`,`audio`,`duration`,`size`,`is_vip`,`status`,`sort`,`seconds` FROM `mus_audio` LIMIT 0,15 [ RunTime:0.035135s ]
+---------------------------------------------------------------
+[ 2019-01-09T11:10:55+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20181207/ed062df84ec9361309230dd9d92c25af.jpg
+[ info ] lanbaba.cc/uploads/20181207/ed062df84ec9361309230dd9d92c25af.jpg [运行时间：0.487699s][吞吐率：2.05req/s] [内存消耗：981.44kb] [文件加载：32]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploads',
+    1 => '20181207',
+    2 => 'ed062df84ec9361309230dd9d92c25af.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=r13skcm9gasajotb4s6hvjgos2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lanbaba.cc/admin/audio/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-09T11:10:55+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20181207/37691a8469933021f5912d144b0250a1.jpg
+[ info ] lanbaba.cc/uploads/20181207/37691a8469933021f5912d144b0250a1.jpg [运行时间：0.056041s][吞吐率：17.84req/s] [内存消耗：981.44kb] [文件加载：32]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploads',
+    1 => '20181207',
+    2 => '37691a8469933021f5912d144b0250a1.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=r13skcm9gasajotb4s6hvjgos2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lanbaba.cc/admin/audio/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-09T11:10:55+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20181207/889d355900676cac698a4ab21ec79ccf.jpg
+[ info ] lanbaba.cc/uploads/20181207/889d355900676cac698a4ab21ec79ccf.jpg [运行时间：0.024635s][吞吐率：40.59req/s] [内存消耗：981.44kb] [文件加载：32]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploads',
+    1 => '20181207',
+    2 => '889d355900676cac698a4ab21ec79ccf.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=r13skcm9gasajotb4s6hvjgos2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lanbaba.cc/admin/audio/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-09T11:10:55+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20181207/39c8c45360f9e1bef838c51faf271850.jpg
+[ info ] lanbaba.cc/uploads/20181207/39c8c45360f9e1bef838c51faf271850.jpg [运行时间：0.023841s][吞吐率：41.94req/s] [内存消耗：981.44kb] [文件加载：32]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploads',
+    1 => '20181207',
+    2 => '39c8c45360f9e1bef838c51faf271850.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=r13skcm9gasajotb4s6hvjgos2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lanbaba.cc/admin/audio/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-09T11:10:55+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20181207/03784e620132e7042493d1ac33744b27.jpg
+[ info ] lanbaba.cc/uploads/20181207/03784e620132e7042493d1ac33744b27.jpg [运行时间：0.067910s][吞吐率：14.73req/s] [内存消耗：981.44kb] [文件加载：32]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploads',
+    1 => '20181207',
+    2 => '03784e620132e7042493d1ac33744b27.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=r13skcm9gasajotb4s6hvjgos2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lanbaba.cc/admin/audio/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-09T11:10:55+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20181207/b63bba3ac8f42a7c8c1e191c7b0a5447.jpg
+[ info ] lanbaba.cc/uploads/20181207/b63bba3ac8f42a7c8c1e191c7b0a5447.jpg [运行时间：0.077922s][吞吐率：12.83req/s] [内存消耗：981.44kb] [文件加载：32]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploads',
+    1 => '20181207',
+    2 => 'b63bba3ac8f42a7c8c1e191c7b0a5447.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=r13skcm9gasajotb4s6hvjgos2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lanbaba.cc/admin/audio/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-09T11:10:55+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20181218/6af8970b554211b1a0dc52d3ce157d86.jpg
+[ info ] lanbaba.cc/uploads/20181218/6af8970b554211b1a0dc52d3ce157d86.jpg [运行时间：0.021462s][吞吐率：46.59req/s] [内存消耗：981.44kb] [文件加载：32]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploads',
+    1 => '20181218',
+    2 => '6af8970b554211b1a0dc52d3ce157d86.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=r13skcm9gasajotb4s6hvjgos2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lanbaba.cc/admin/audio/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-09T11:10:55+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20181207/589718018316122021b51aff482139a1.jpg
+[ info ] lanbaba.cc/uploads/20181207/589718018316122021b51aff482139a1.jpg [运行时间：0.023188s][吞吐率：43.13req/s] [内存消耗：981.44kb] [文件加载：32]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploads',
+    1 => '20181207',
+    2 => '589718018316122021b51aff482139a1.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=r13skcm9gasajotb4s6hvjgos2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lanbaba.cc/admin/audio/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-09T11:10:58+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/audio_category/index.html
+[ info ] lanbaba.cc/admin/audio_category/index.html [运行时间：0.460770s][吞吐率：2.17req/s] [内存消耗：2,095.63kb] [文件加载：48]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'audio_category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=r13skcm9gasajotb4s6hvjgos2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lanbaba.cc/admin/audio/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\AudioCategory->index[ E:\repository\lanbabastory\application\admin\controller\AudioCategory.php ]
+[ info ] [ VIEW ] E:\repository\lanbabastory\/themes/admin/audio_category\index.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'statusList',
+  3 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.046006s ] mysql:host=47.96.105.245;port=3306;dbname=lanbaba;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.031131s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.031638s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.031338s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37,120,125,124,123,122,129,132,131,130,133,121,128,127,126,134,135,136,137,138,139,140,141,142,143,144,145)  AND `type` = 1 [ RunTime:0.033851s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.031678s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_audio_category` [ RunTime:0.052415s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`sort`,`status` FROM `mus_audio_category` ORDER BY `sort`  ASC [ RunTime:0.042083s ]
+---------------------------------------------------------------
+[ 2019-01-09T11:11:00+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/album/index.html
+[ info ] lanbaba.cc/admin/album/index.html [运行时间：0.557114s][吞吐率：1.79req/s] [内存消耗：2,213.00kb] [文件加载：52]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'album',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=r13skcm9gasajotb4s6hvjgos2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lanbaba.cc/admin/audio_category/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Album->index[ E:\repository\lanbabastory\application\admin\controller\Album.php ]
+[ info ] [ VIEW ] E:\repository\lanbabastory\/themes/admin/album\index.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'vipList',
+  3 => 'statusList',
+  4 => 'category',
+  5 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.060759s ] mysql:host=47.96.105.245;port=3306;dbname=lanbaba;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.032774s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.030935s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.033499s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37,120,125,124,123,122,129,132,131,130,133,121,128,127,126,134,135,136,137,138,139,140,141,142,143,144,145)  AND `type` = 1 [ RunTime:0.033954s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.031903s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_album_category` [ RunTime:0.031827s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `mus_album_category` WHERE  `status` = 1 ORDER BY `sort`  ASC [ RunTime:0.030237s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_album` [ RunTime:0.032257s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `mus_album` LIMIT 1 [ RunTime:0.031760s ]
+[ sql ] [ SQL ] SELECT `id`,`cid`,`title`,`breif`,`introduce`,`number`,`thumb`,`banner`,`sort`,`status`,`is_vip`,`create_time` FROM `mus_album` ORDER BY `sort`  ASC LIMIT 0,20 [ RunTime:0.032931s ]
+---------------------------------------------------------------
+[ 2019-01-09T11:11:01+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20181205/65a5b176dce5a6a2cc5cf2ba2d2a033c.jpg
+[ info ] lanbaba.cc/uploads/20181205/65a5b176dce5a6a2cc5cf2ba2d2a033c.jpg [运行时间：0.029266s][吞吐率：34.17req/s] [内存消耗：981.44kb] [文件加载：32]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploads',
+    1 => '20181205',
+    2 => '65a5b176dce5a6a2cc5cf2ba2d2a033c.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=r13skcm9gasajotb4s6hvjgos2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lanbaba.cc/admin/album/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-09T11:11:01+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20181205/484c5e23fffc69bcb6408d6bcc12316c.jpg
+[ info ] lanbaba.cc/uploads/20181205/484c5e23fffc69bcb6408d6bcc12316c.jpg [运行时间：0.058196s][吞吐率：17.18req/s] [内存消耗：981.44kb] [文件加载：32]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploads',
+    1 => '20181205',
+    2 => '484c5e23fffc69bcb6408d6bcc12316c.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=r13skcm9gasajotb4s6hvjgos2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lanbaba.cc/admin/album/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-09T11:11:01+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20181205/2bf5109fd6d7ec64a329fb413e679b9b.jpg
+[ info ] lanbaba.cc/uploads/20181205/2bf5109fd6d7ec64a329fb413e679b9b.jpg [运行时间：0.119857s][吞吐率：8.34req/s] [内存消耗：981.44kb] [文件加载：32]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploads',
+    1 => '20181205',
+    2 => '2bf5109fd6d7ec64a329fb413e679b9b.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=r13skcm9gasajotb4s6hvjgos2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lanbaba.cc/admin/album/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-09T11:11:01+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20181205/712f4509e0b19797a055cc8e29fb368a.jpg
+[ info ] lanbaba.cc/uploads/20181205/712f4509e0b19797a055cc8e29fb368a.jpg [运行时间：0.062242s][吞吐率：16.07req/s] [内存消耗：981.44kb] [文件加载：32]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploads',
+    1 => '20181205',
+    2 => '712f4509e0b19797a055cc8e29fb368a.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=r13skcm9gasajotb4s6hvjgos2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lanbaba.cc/admin/album/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-09T11:11:01+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20181205/97d8bf12ae138c183037cc5b52557bcd.jpg
+[ info ] lanbaba.cc/uploads/20181205/97d8bf12ae138c183037cc5b52557bcd.jpg [运行时间：0.050022s][吞吐率：19.99req/s] [内存消耗：981.44kb] [文件加载：32]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploads',
+    1 => '20181205',
+    2 => '97d8bf12ae138c183037cc5b52557bcd.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=r13skcm9gasajotb4s6hvjgos2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lanbaba.cc/admin/album/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-09T11:11:01+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20181205/d6b1608d4ad33d232f0f026694b819fa.jpg
+[ info ] lanbaba.cc/uploads/20181205/d6b1608d4ad33d232f0f026694b819fa.jpg [运行时间：0.088967s][吞吐率：11.24req/s] [内存消耗：981.44kb] [文件加载：32]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploads',
+    1 => '20181205',
+    2 => 'd6b1608d4ad33d232f0f026694b819fa.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=r13skcm9gasajotb4s6hvjgos2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lanbaba.cc/admin/album/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-09T11:11:01+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20181205/c7a19471f9b525793a29aa3144669820.jpg
+[ info ] lanbaba.cc/uploads/20181205/c7a19471f9b525793a29aa3144669820.jpg [运行时间：0.028515s][吞吐率：35.07req/s] [内存消耗：981.44kb] [文件加载：32]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploads',
+    1 => '20181205',
+    2 => 'c7a19471f9b525793a29aa3144669820.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=r13skcm9gasajotb4s6hvjgos2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lanbaba.cc/admin/album/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-09T11:11:01+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20181205/d533abb1ca59dedc1d6c363b8411876e.jpg
+[ info ] lanbaba.cc/uploads/20181205/d533abb1ca59dedc1d6c363b8411876e.jpg [运行时间：0.029399s][吞吐率：34.01req/s] [内存消耗：981.44kb] [文件加载：32]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploads',
+    1 => '20181205',
+    2 => 'd533abb1ca59dedc1d6c363b8411876e.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=r13skcm9gasajotb4s6hvjgos2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lanbaba.cc/admin/album/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-09T11:11:10+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/album_tags/index.html
+[ info ] lanbaba.cc/admin/album_tags/index.html [运行时间：0.442385s][吞吐率：2.26req/s] [内存消耗：2,097.28kb] [文件加载：48]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'album_tags',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=r13skcm9gasajotb4s6hvjgos2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lanbaba.cc/admin/album/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\AlbumTags->index[ E:\repository\lanbabastory\application\admin\controller\AlbumTags.php ]
+[ info ] [ VIEW ] E:\repository\lanbabastory\/themes/admin/album_tags\index.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'statusList',
+  3 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.045567s ] mysql:host=47.96.105.245;port=3306;dbname=lanbaba;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.030845s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.030921s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.031955s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37,120,125,124,123,122,129,132,131,130,133,121,128,127,126,134,135,136,137,138,139,140,141,142,143,144,145)  AND `type` = 1 [ RunTime:0.041402s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.036392s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_album_tags` [ RunTime:0.031071s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`sort`,`status`,`image` FROM `mus_album_tags` ORDER BY `status`  DESC,`sort`  ASC [ RunTime:0.031531s ]
+---------------------------------------------------------------
+[ 2019-01-09T11:11:12+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/album_category/index.html
+[ info ] lanbaba.cc/admin/album_category/index.html [运行时间：0.492155s][吞吐率：2.03req/s] [内存消耗：2,090.42kb] [文件加载：48]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'album_category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=r13skcm9gasajotb4s6hvjgos2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lanbaba.cc/admin/album_tags/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\AlbumCategory->index[ E:\repository\lanbabastory\application\admin\controller\AlbumCategory.php ]
+[ info ] [ VIEW ] E:\repository\lanbabastory\/themes/admin/album_category\index.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'statusList',
+  3 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.047224s ] mysql:host=47.96.105.245;port=3306;dbname=lanbaba;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.032010s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.032529s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.032635s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37,120,125,124,123,122,129,132,131,130,133,121,128,127,126,134,135,136,137,138,139,140,141,142,143,144,145)  AND `type` = 1 [ RunTime:0.034764s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.033521s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_album_category` [ RunTime:0.032635s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`sort`,`status` FROM `mus_album_category` ORDER BY `status`  DESC,`sort`  ASC [ RunTime:0.039753s ]
+---------------------------------------------------------------
+[ 2019-01-09T11:11:15+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/user/index.html
+[ info ] lanbaba.cc/admin/user/index.html [运行时间：0.545079s][吞吐率：1.83req/s] [内存消耗：2,189.93kb] [文件加载：52]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=r13skcm9gasajotb4s6hvjgos2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lanbaba.cc/admin/album_category/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\User->index[ E:\repository\lanbabastory\application\admin\controller\User.php ]
+[ info ] [ VIEW ] E:\repository\lanbabastory\/themes/admin/user\index.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'search_types',
+  3 => 'users',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.050667s ] mysql:host=47.96.105.245;port=3306;dbname=lanbaba;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.033190s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.034076s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.034077s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37,120,125,124,123,122,129,132,131,130,133,121,128,127,126,134,135,136,137,138,139,140,141,142,143,144,145)  AND `type` = 1 [ RunTime:0.035837s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.035458s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_user` [ RunTime:0.035825s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `mus_user` LIMIT 1 [ RunTime:0.031655s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_user` LIMIT 0,15 [ RunTime:0.034918s ]
+---------------------------------------------------------------
+[ 2019-01-09T11:13:02+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/order/index.html
+[ info ] lanbaba.cc/admin/order/index.html [运行时间：0.996319s][吞吐率：1.00req/s] [内存消耗：2,154.20kb] [文件加载：52]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=r13skcm9gasajotb4s6hvjgos2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lanbaba.cc/admin/user/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->index[ E:\repository\lanbabastory\application\admin\controller\Order.php ]
+[ info ] [ VIEW ] E:\repository\lanbabastory\/themes/admin/order\index.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'orders',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.049409s ] mysql:host=47.96.105.245;port=3306;dbname=lanbaba;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.032380s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.033660s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.033672s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37,120,125,124,123,122,129,132,131,130,133,121,128,127,126,134,135,136,137,138,139,140,141,142,143,144,145)  AND `type` = 1 [ RunTime:0.034030s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.037226s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_order` [ RunTime:0.033409s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `mus_order` LIMIT 1 [ RunTime:0.034467s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_order` LIMIT 0,15 [ RunTime:0.033184s ]
+---------------------------------------------------------------
+[ 2019-01-09T11:13:03+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/user/index.html
+[ info ] lanbaba.cc/admin/user/index.html [运行时间：0.409544s][吞吐率：2.44req/s] [内存消耗：2,190.08kb] [文件加载：52]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=r13skcm9gasajotb4s6hvjgos2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lanbaba.cc/admin/order/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\User->index[ E:\repository\lanbabastory\application\admin\controller\User.php ]
+[ info ] [ VIEW ] E:\repository\lanbabastory\/themes/admin/user\index.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'search_types',
+  3 => 'users',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.070668s ] mysql:host=47.96.105.245;port=3306;dbname=lanbaba;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.032211s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.035484s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.034547s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37,120,125,124,123,122,129,132,131,130,133,121,128,127,126,134,135,136,137,138,139,140,141,142,143,144,145)  AND `type` = 1 [ RunTime:0.034696s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.038161s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_user` [ RunTime:0.037836s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `mus_user` LIMIT 1 [ RunTime:0.033887s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_user` LIMIT 0,15 [ RunTime:0.034812s ]
+---------------------------------------------------------------
+[ 2019-01-09T11:13:12+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/user/search.html
+[ info ] lanbaba.cc/admin/user/search.html [运行时间：0.380312s][吞吐率：2.63req/s] [内存消耗：2,192.55kb] [文件加载：52]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user',
+    2 => 'search',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=r13skcm9gasajotb4s6hvjgos2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lanbaba.cc/admin/user/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'upgrade-insecure-requests' => '1',
+  'origin' => 'http://lanbaba.cc',
+  'cache-control' => 'max-age=0',
+  'content-length' => '23',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+)
+[ info ] [ PARAM ] array (
+  'searchType' => '5',
+  'searchKey' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\User->search[ E:\repository\lanbabastory\application\admin\controller\User.php ]
+[ info ] [ VIEW ] E:\repository\lanbabastory\/themes/admin/user\index.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'search_types',
+  3 => 'users',
+  4 => 'searchKey',
+  5 => 'searchType',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.049910s ] mysql:host=47.96.105.245;port=3306;dbname=lanbaba;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.032440s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.033972s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.032666s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37,120,125,124,123,122,129,132,131,130,133,121,128,127,126,134,135,136,137,138,139,140,141,142,143,144,145)  AND `type` = 1 [ RunTime:0.037285s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.036111s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_user` [ RunTime:0.033934s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `mus_user` WHERE  `is_member` = 0 LIMIT 1 [ RunTime:0.033211s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_user` WHERE  `is_member` = 0 LIMIT 0,15 [ RunTime:0.033676s ]
+---------------------------------------------------------------
+[ 2019-01-09T11:13:21+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/user/search.html
+[ info ] lanbaba.cc/admin/user/search.html [运行时间：0.358815s][吞吐率：2.79req/s] [内存消耗：2,167.39kb] [文件加载：52]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user',
+    2 => 'search',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=r13skcm9gasajotb4s6hvjgos2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lanbaba.cc/admin/user/search.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'upgrade-insecure-requests' => '1',
+  'origin' => 'http://lanbaba.cc',
+  'cache-control' => 'max-age=0',
+  'content-length' => '23',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+)
+[ info ] [ PARAM ] array (
+  'searchType' => '4',
+  'searchKey' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\User->search[ E:\repository\lanbabastory\application\admin\controller\User.php ]
+[ info ] [ VIEW ] E:\repository\lanbabastory\/themes/admin/user\index.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'search_types',
+  3 => 'users',
+  4 => 'searchKey',
+  5 => 'searchType',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.063030s ] mysql:host=47.96.105.245;port=3306;dbname=lanbaba;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.031452s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.032520s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.032542s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37,120,125,124,123,122,129,132,131,130,133,121,128,127,126,134,135,136,137,138,139,140,141,142,143,144,145)  AND `type` = 1 [ RunTime:0.034340s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.033140s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_user` [ RunTime:0.032528s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `mus_user` WHERE  `is_member` = 1 LIMIT 1 [ RunTime:0.029305s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_user` WHERE  `is_member` = 1 LIMIT 0,15 [ RunTime:0.032025s ]
+---------------------------------------------------------------
+[ 2019-01-09T11:13:25+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/user/search.html
+[ info ] lanbaba.cc/admin/user/search.html [运行时间：0.386402s][吞吐率：2.59req/s] [内存消耗：2,192.55kb] [文件加载：52]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user',
+    2 => 'search',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=r13skcm9gasajotb4s6hvjgos2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lanbaba.cc/admin/user/search.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'upgrade-insecure-requests' => '1',
+  'origin' => 'http://lanbaba.cc',
+  'cache-control' => 'max-age=0',
+  'content-length' => '23',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+)
+[ info ] [ PARAM ] array (
+  'searchType' => '5',
+  'searchKey' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\User->search[ E:\repository\lanbabastory\application\admin\controller\User.php ]
+[ info ] [ VIEW ] E:\repository\lanbabastory\/themes/admin/user\index.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'search_types',
+  3 => 'users',
+  4 => 'searchKey',
+  5 => 'searchType',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.052532s ] mysql:host=47.96.105.245;port=3306;dbname=lanbaba;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.034365s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.033989s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.035016s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37,120,125,124,123,122,129,132,131,130,133,121,128,127,126,134,135,136,137,138,139,140,141,142,143,144,145)  AND `type` = 1 [ RunTime:0.036624s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.035868s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_user` [ RunTime:0.035431s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `mus_user` WHERE  `is_member` = 0 LIMIT 1 [ RunTime:0.034568s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_user` WHERE  `is_member` = 0 LIMIT 0,15 [ RunTime:0.035977s ]
+---------------------------------------------------------------
+[ 2019-01-09T11:13:33+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/member/index.html
+[ info ] lanbaba.cc/admin/member/index.html [运行时间：0.695741s][吞吐率：1.44req/s] [内存消耗：2,170.19kb] [文件加载：52]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'member',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=r13skcm9gasajotb4s6hvjgos2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lanbaba.cc/admin/user/search.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Member->index[ E:\repository\lanbabastory\application\admin\controller\Member.php ]
+[ info ] [ VIEW ] E:\repository\lanbabastory\/themes/admin/member\index.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'members',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.049980s ] mysql:host=47.96.105.245;port=3306;dbname=lanbaba;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.034205s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.034538s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.033640s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37,120,125,124,123,122,129,132,131,130,133,121,128,127,126,134,135,136,137,138,139,140,141,142,143,144,145)  AND `type` = 1 [ RunTime:0.036045s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.036608s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_member` [ RunTime:0.033772s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `mus_member` LIMIT 1 [ RunTime:0.039927s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_member` ORDER BY `sort`  ASC LIMIT 0,15 [ RunTime:0.034228s ]
+---------------------------------------------------------------
+[ 2019-01-09T11:13:37+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/member/edit/id/4.html
+[ info ] lanbaba.cc/admin/member/edit/id/4.html [运行时间：0.617273s][吞吐率：1.62req/s] [内存消耗：2,099.66kb] [文件加载：49]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'member',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=r13skcm9gasajotb4s6hvjgos2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lanbaba.cc/admin/member/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '4',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Member->edit[ E:\repository\lanbabastory\application\admin\controller\Member.php ]
+[ info ] [ VIEW ] E:\repository\lanbabastory\/themes/admin/member\detail.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'member',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.051319s ] mysql:host=47.96.105.245;port=3306;dbname=lanbaba;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.034826s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.035741s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.035392s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37,120,125,124,123,122,129,132,131,130,133,121,128,127,126,134,135,136,137,138,139,140,141,142,143,144,145)  AND `type` = 1 [ RunTime:0.037894s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.036019s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_member` [ RunTime:0.034944s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_member` WHERE  `id` = 4 LIMIT 1 [ RunTime:0.034670s ]
+---------------------------------------------------------------
+[ 2019-01-09T11:13:39+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/member/index.html
+[ info ] lanbaba.cc/admin/member/index.html [运行时间：0.353562s][吞吐率：2.83req/s] [内存消耗：2,170.35kb] [文件加载：52]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'member',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=r13skcm9gasajotb4s6hvjgos2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lanbaba.cc/admin/user/search.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Member->index[ E:\repository\lanbabastory\application\admin\controller\Member.php ]
+[ info ] [ VIEW ] E:\repository\lanbabastory\/themes/admin/member\index.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'members',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.045795s ] mysql:host=47.96.105.245;port=3306;dbname=lanbaba;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.031133s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.031728s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.031622s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37,120,125,124,123,122,129,132,131,130,133,121,128,127,126,134,135,136,137,138,139,140,141,142,143,144,145)  AND `type` = 1 [ RunTime:0.035510s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.032912s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_member` [ RunTime:0.031652s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `mus_member` LIMIT 1 [ RunTime:0.031313s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_member` ORDER BY `sort`  ASC LIMIT 0,15 [ RunTime:0.031617s ]
+---------------------------------------------------------------
+[ 2019-01-09T11:13:40+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/order/index.html
+[ info ] lanbaba.cc/admin/order/index.html [运行时间：0.370969s][吞吐率：2.70req/s] [内存消耗：2,154.37kb] [文件加载：52]
+[ info ] [ LANG ] E:\repository\lanbabastory\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=r13skcm9gasajotb4s6hvjgos2',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://lanbaba.cc/admin/member/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'lanbaba.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Order->index[ E:\repository\lanbabastory\application\admin\controller\Order.php ]
+[ info ] [ VIEW ] E:\repository\lanbabastory\/themes/admin/order\index.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'orders',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.050055s ] mysql:host=47.96.105.245;port=3306;dbname=lanbaba;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.034114s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.034532s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.034440s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37,120,125,124,123,122,129,132,131,130,133,121,128,127,126,134,135,136,137,138,139,140,141,142,143,144,145)  AND `type` = 1 [ RunTime:0.036919s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.035803s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_order` [ RunTime:0.034628s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `mus_order` LIMIT 1 [ RunTime:0.033570s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_order` LIMIT 0,15 [ RunTime:0.033641s ]

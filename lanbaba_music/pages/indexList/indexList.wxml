@@ -1,0 +1,70 @@
+<!--pages/indexList/indexList.wxml-->
+<view style='height:{{heightRpx}}rpx;overflow:hidden;'>
+    <view class='innerBox'>
+        <view class='listBanner'>
+            <image class='listImg' src='{{_host + album.banner}}' mode='widthFix'></image>
+            <view class='listIntro'>
+                <view>{{album.title}}</view>
+                <view>{{album.breif}}</view>
+            </view>
+        </view>
+        <view class='listBox'>
+            <view class='listBar'>
+                <view class='{{tabId==0?"active":""}}' data-id='0' bindtap='tabTap'>简介</view>
+                <view class='{{tabId==1?"active":""}}' data-id='1' bindtap='tabTap'>音频({{totalAudios}})</view>
+            </view>
+            <view class='intro' wx:if="{{tabId==0}}">
+                <view class='introIn'>{{album.introduce}}</view>
+                <view class='tags'>
+                    <view class='tagsT'>标签</view>
+                    <view class='tagsList'>
+                        <block wx:for="{{album.tags}}" wx:key="{{index}}">
+                            <text>{{item}}</text>
+                        </block>
+                    </view>
+                </view>
+            </view>
+            <view class='product' wx:if="{{tabId==1}}">
+                <view class='list'>
+                    <block wx:for="{{audioList}}" wx:key="{{index}}" wx:for-item="audio">
+                        <view class='item' bindtap='musicTap' data-audio_id="{{audio.id}}" data-index="{{index}}"
+                              data-is_vip="{{album.is_vip}}">
+                            <view class='produPic'>
+                                <image class='pImg' src='{{_host + audio.thumb}}' mode='widthFix'></image>
+                                <view class='tag' wx:if="{{audio.is_vip}}">会员</view>
+                            </view>
+                            <view class='itemBottom'>
+                                <view class='lName'>{{audio.title}} -歌曲</view>
+                                <view class='listen'>{{audio.breif}}</view>
+                                <view class='audioLe'>
+                                    <image src='/images/icon-clock.png'></image>
+                                    <text>{{audio.duration}}</text>
+                                </view>
+                            </view>
+                        </view>
+                    </block>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<block wx:if="{{album.is_vip && !user.is_member}}">
+    <view class='member'>
+        <button bindtap='memberTap'>开通会员免费听</button>
+    </view>
+    <view class='memberModal' wx:if='{{mbModal}}'>
+        <view class='modalMain'>
+            <view class='modalTit'>
+                <image src='/images/memberT.png' mode='widthFix'></image>
+            </view>
+            <view class='modalTs'>
+                <view class='txt1'>您还没有成为会员哦</view>
+                <view class='txt2'>开通会员将享有更多权益！</view>
+            </view>
+            <view class='btns'>
+                <button bindtap='cancelTap' class='cancel'>我再想想</button>
+                <button bindtap='confirmTap' class='confim' bindtap="buyMember">立即开通</button>
+            </view>
+        </view>
+    </view>
+</block>

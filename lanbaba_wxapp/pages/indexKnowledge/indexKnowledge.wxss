@@ -1,0 +1,107 @@
+/* pages/indexKnowledge/indexKnowledge.wxss */
+.banner image{
+  display: block;
+  width: 100%;
+  margin-bottom: 30rpx;
+}
+.product{
+  padding:0 32rpx 30rpx;
+  background: #fff;
+}
+.date{
+  font-size: 32rpx;
+  color: #000000;
+  height: 32rpx;
+  line-height: 32rpx;
+}
+.date text{
+  display: inline-block;
+  width: 16rpx;
+  height: 16rpx;
+  background: #3B90F3;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-top: -3rpx;
+  margin-right: 6rpx;
+}
+.list{
+  overflow: hidden;
+}
+.product:last-child .list{
+  border: 0;
+}
+.item{
+  /* width: 327rpx;
+  float: left; */
+  padding:30rpx 0;
+  overflow: hidden;
+  border-bottom: 1rpx solid #DADADA;
+}
+
+.produPic{
+  width: 152rpx;
+  height: 152rpx;
+  border-radius: 30rpx;
+  overflow: hidden;
+  position: relative;
+  float: left;
+  margin-right: 30rpx;
+}
+.produPic .pImg{
+  display: block;
+  width: 100%;
+}
+.audioLe{
+  height: 32rpx;
+  line-height: 32rpx;
+  font-size: 24rpx;
+  color: #9b9b9b;
+  margin-top: 21rpx;
+}
+.audioLe image{
+  width: 26rpx;
+  height: 26rpx;
+  margin-right: 8rpx;
+  vertical-align: middle;
+  margin-top: -6rpx;
+}
+.produPic .tag{
+  width: 150rpx;
+  height: 36rpx;
+  line-height: 36rpx;
+  font-size: 22rpx;
+  color: #fff;
+  text-align: center;
+  background:linear-gradient(to right, #2892f5,#00d2ff);
+  transform: rotate(-45deg);
+  transform-origin: 50% 50%;
+  position: absolute;
+  top:13rpx;
+  left:-47rpx;
+}
+.itemBottom{
+  float: left;
+  width: 500rpx;
+}
+.itemBottom .lName{
+  font-size: 28rpx;
+  line-height:56rpx;
+  height:56rpx;
+  color: #000000;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space:nowrap;
+  margin-bottom: 52rpx;
+}
+.itemBottom .lName text{
+  color: #9b9b9b;
+}
+.itemBottom .listen{
+  font-size: 24rpx;
+  line-height: 34rpx;
+  height: 34rpx;
+  color: #666666;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space:nowrap;
+}

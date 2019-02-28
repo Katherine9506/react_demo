@@ -1,0 +1,87 @@
+<!--pages/indexKnowledge/indexKnowledge.wxml-->
+<view>
+  <view class='banner'>
+    <image src='/images/kB.png' mode='widthFix'></image>
+  </view>
+  
+  <view class='product'>
+    <view class='date'>
+      <text></text>今天
+    </view>
+    <view class='list'>
+      <view class='item' bindtap='musicTap'>
+        <view class='produPic'>
+          <image class='pImg' src='/images/product01.png' mode='widthFix'></image>
+          <!-- <view class='tag'>会员</view> -->
+        </view>
+        <view class='itemBottom'>
+          <view class='lName'>小猴子的故事 <text>-脑洞百科</text></view>
+          <!-- <view class='listen'>聆听名家经典作品</view> -->
+          <view class='audioLe'><image src='/images/icon-clock.png'></image><text>17首/20首</text></view>
+        </view> 
+      </view>
+      <view class='item' bindtap='musicTap'>
+        <view class='produPic'>
+          <image class='pImg' src='/images/product02.png' mode='widthFix'></image>
+          <view class='tag'>会员</view>
+        </view>
+        <view class='itemBottom'>
+          <view class='lName'>英语语感启蒙儿歌40首 <text>-脑洞百科</text></view>
+          <!-- <view class='listen'>激发孩子英语启蒙有趣</view> -->
+          <view class='audioLe'><image src='/images/icon-clock.png'></image><text>17首</text></view>
+        </view> 
+      </view>
+    </view>
+  </view>
+  <view class='product'>
+    <view class='date'>
+      <text></text>今天
+    </view>
+    <view class='list'>
+      <view class='item' bindtap='musicTap'>
+        <view class='produPic'>
+          <image class='pImg' src='/images/product03.png' mode='widthFix'></image>
+          <view class='tag'>会员</view>
+        </view>
+        <view class='itemBottom'>
+          <view class='lName'>《古诗词》儿歌 <text>-脑洞百科</text></view>
+          <!-- <view class='listen'>边唱边学经典古诗词</view> -->
+          <view class='audioLe'><image src='/images/icon-clock.png'></image><text>93首</text></view>
+        </view> 
+      </view>
+      <view class='item' bindtap='musicTap'>
+        <view class='produPic'>
+          <image class='pImg' src='/images/product04.png' mode='widthFix'></image>
+          <view class='tag'>会员</view>
+        </view>
+        <view class='itemBottom'>
+          <view class='lName'>免费英文儿歌 <text>-脑洞百科</text></view>
+          <!-- <view class='listen'>点开才发现，原来都听过</view> -->
+          <view class='audioLe'><image src='/images/icon-clock.png'></image><text>20首</text></view>
+        </view> 
+      </view>
+      <view class='item' bindtap='musicTap'>
+        <view class='produPic'>
+          <image class='pImg' src='/images/product01.png' mode='widthFix'></image>
+          <view class='tag'>会员</view>
+        </view>
+        <view class='itemBottom'>
+          <view class='lName'>小猴子的故事 <text>-脑洞百科</text></view>
+          <!-- <view class='listen'>聆听名家经典作品</view> -->
+          <view class='audioLe'><image src='/images/icon-clock.png'></image><text>17首/20首</text></view>
+        </view> 
+      </view>
+      <view class='item' bindtap='musicTap'>
+        <view class='produPic'>
+          <image class='pImg' src='/images/product02.png' mode='widthFix'></image>
+          <view class='tag'>会员</view>
+        </view>
+        <view class='itemBottom'>
+          <view class='lName'>英语语感启蒙儿歌40首 <text>-脑洞百科</text></view>
+          <!-- <view class='listen'>激发孩子英语启蒙有趣</view> -->
+          <view class='audioLe'><image src='/images/icon-clock.png'></image><text>17首</text></view>
+        </view> 
+      </view>
+    </view>
+  </view>
+</view>

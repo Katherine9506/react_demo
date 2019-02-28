@@ -1,0 +1,53 @@
+<!--pages/mineInfor/mineInfor.wxml-->
+<view class='pb'>
+  <view class='same' bindtap='myAudioTap'>
+    <view>
+      <text>我的头像</text>
+    </view>
+    <view class='tx'>
+      <view class='txBox'><image src='/images/tx.png' mode='widthFix'></image></view>
+      <image class='iconArrow' src='/images/arrow.png' mode='widthFix'></image>
+    </view>
+  </view>
+  <view class='same' bindtap='memberTap'>
+    <view>
+      <text>我的昵称</text>
+    </view>
+    <view>
+      <image class='iconArrow' src='/images/arrow.png' mode='widthFix'></image>
+    </view>
+  </view>
+  <view class='same'>
+    <view>
+      <text>我的身份</text>
+    </view>
+    <image class='iconArrow' src='/images/arrow.png' mode='widthFix'></image>
+  </view>
+</view>
+<view class='pb'>
+  <view class='same' bindtap='myAudioTap'>
+    <view>
+      <text>宝宝昵称</text>
+    </view>
+    <view>
+      <image class='iconArrow' src='/images/arrow.png' mode='widthFix'></image>
+    </view>
+  </view>
+  <view class='same' bindtap='memberTap'>
+    <view>
+      <text>宝宝性别</text>
+    </view>
+    <view>
+      <image class='iconArrow' src='/images/arrow.png' mode='widthFix'></image>
+    </view>
+  </view>
+  <view class='same'>
+    <view>
+      <text>宝宝生日</text>
+    </view>
+    <image class='iconArrow' src='/images/arrow.png' mode='widthFix'></image>
+  </view>
+</view>
+<view class='saveBox'>
+  <button>保存</button>
+</view>

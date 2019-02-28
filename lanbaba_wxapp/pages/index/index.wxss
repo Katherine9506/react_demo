@@ -1,0 +1,268 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+
+
+
+.indexHeader{
+  background: #3B90F3;
+  padding: 0 32rpx 14rpx;
+}
+.playing{
+  background: rgba(255, 255, 255, 0.2);
+  padding: 4rpx;
+  border-radius: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+.audioInfor{
+  display: flex;
+  align-items: center;
+}
+.audioPic{
+  width: 77rpx;
+  height: 77rpx;
+  border:2rpx solid #fff;
+  border-radius: 10rpx;
+  overflow: hidden;
+  position: relative;
+  margin-right: 20rpx;
+}
+.audioPic image{
+  display: block;
+  width: 100%;
+}
+.audioPic audio{
+  position:absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.nameTime{
+  color: #fff;
+}
+.nameTime .name{
+  font-size: 24rpx;
+  line-height: 34rpx;
+  margin-bottom: 12rpx;
+}
+.nameTime .longtime{
+  font-size: 20rpx;
+  line-height: 24rpx;
+}
+.audioControl{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-right: 15px;
+}
+.audioControl button{
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  margin-right: 30rpx;
+}
+.audioControl button::after{
+  border: 0;
+}
+.audioControl button image{
+  display: block;
+  width: 100%;
+}
+.audioControl button.turn{
+  width:43rpx;
+  height: 43rpx; 
+}
+.audioControl button.play{
+  width:58rpx;
+  height: 58rpx; 
+}
+/* 搜索框 */
+.searchBox{
+  padding: 14rpx 0 0;
+}
+.inputBox{
+  background: #fff;
+  height: 62rpx;
+  line-height: 62rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 20rpx;
+  border-radius: 31rpx;
+}
+.inputBox image{
+  width: 36rpx;
+  height: 36rpx;
+}
+.inputBox input{
+  width: 570rpx;
+  margin-left: 30rpx;
+  font-size: 24rpx;
+}
+/* 轮播 */
+swiper{
+  height: 250rpx;
+}
+swiper swiper-item{
+  height: 250rpx;
+}
+swiper swiper-item image{
+  display: block;
+  width: 100%;
+  height: 250rpx;
+}
+.navigatorList{
+  padding: 59rpx 48rpx 31rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 20rpx solid #EEEEEE;
+}
+.navigatorList navigator{
+  width: 20%;
+  line-height: 80rpx;
+  font-size: 24rpx;
+  color:#474747;
+  text-align: center;
+}
+.navigatorList navigator image{
+  display: block;
+  width: 66rpx;
+  height: 66rpx;
+  margin: 0 auto;
+}
+/* 产品列表 */
+.product{
+  padding: 0 32rpx;
+  background: #fff;
+}
+.title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 92rpx;
+  line-height: 92rpx;
+  margin-bottom: 29rpx;
+}
+.title .txt{
+  font-size: 32rpx;
+  color: #000000;
+  line-height: 92rpx;
+}
+.title .txt text{
+  display: inline-block;
+  width: 16rpx;
+  height: 16rpx;
+  border-radius: 50%;
+  background: #3B90F3;
+  vertical-align: middle;
+  margin-right: 12rpx;
+  margin-top: -6rpx;
+}
+.title .more{
+  font-size: 28rpx;
+  color: #3890f3;
+}
+.list{
+  overflow: hidden;
+  border-bottom: 1rpx solid #DADADA;
+}
+.product:last-child .list{
+  border: 0;
+}
+.item{
+  width: 327rpx;
+  float: left;
+}
+.list .item:nth-child(2n+1){
+  margin-right: 32rpx;
+}
+.produPic{
+  width: 327rpx;
+  height: 327rpx;
+  border-radius: 30rpx;
+  overflow: hidden;
+  position: relative;
+}
+.produPic .pImg{
+  display: block;
+  width: 100%;
+}
+.audioLe{
+  padding: 0 10rpx;
+  height: 38rpx;
+  line-height: 38rpx;
+  font-size: 22rpx;
+  color: #ffffff;
+  background: rgba(0,0,0,0.5);
+  border-radius: 19rpx;
+  position: absolute;
+  left: 20rpx;
+  bottom: 20rpx;
+}
+.audioLe image{
+  width: 27rpx;
+  height: 27rpx;
+  margin-right: 8rpx;
+  vertical-align: middle;
+  margin-top: -6rpx;
+}
+.produPic .tag{
+  width: 150rpx;
+  height: 36rpx;
+  line-height: 36rpx;
+  font-size: 22rpx;
+  color: #fff;
+  text-align: center;
+  background:linear-gradient(to right, #2892f5,#00d2ff);
+  transform: rotate(-45deg);
+  transform-origin: 50% 50%;
+  position: absolute;
+  top:13rpx;
+  left:-47rpx;
+}
+.itemBottom{
+  padding: 24rpx 0 23rpx;
+}
+.itemBottom .lName{
+  font-size: 28rpx;
+  line-height: 38rpx;
+  height: 38rpx;
+  color: #000000;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space:nowrap;
+}
+.itemBottom .listen{
+  font-size: 24rpx;
+  line-height: 36rpx;
+  height: 36rpx;
+  color: #777777;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space:nowrap;
+}
+
+

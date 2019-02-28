@@ -1,0 +1,2715 @@
+---------------------------------------------------------------
+[ 2018-11-26T18:01:46+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/system/siteconfig.html
+[ info ] music.root.php/admin/system/siteconfig.html [运行时间：0.035412s][吞吐率：28.24req/s] [内存消耗：470.66kb] [文件加载：50]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'siteconfig',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/system/siteconfig.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\System->siteConfig[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/System.php ]
+[ info ] [ VIEW ] /home/deepin/Projects/php/waibao/Child-Music//themes/admin/system/site_config.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'items',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000317s ] mysql:host=127.0.0.1;port=3306;dbname=child_music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.000392s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000225s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.000317s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,57,68,69,70,71,72,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37)  AND `type` = 1 [ RunTime:0.000295s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000215s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_system` [ RunTime:0.000381s ]
+[ sql ] [ SQL ] SELECT `title`,`name`,`value`,`type`,`rule`,`classify`,`extra` FROM `mus_system` WHERE  `status` = 1 ORDER BY `sort`  DESC [ RunTime:0.000245s ]
+---------------------------------------------------------------
+[ 2018-11-26T18:01:47+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/system/siteconfig.html
+[ info ] music.root.php/admin/system/siteconfig.html [运行时间：0.006747s][吞吐率：148.21req/s] [内存消耗：435.30kb] [文件加载：48]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'siteconfig',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/system/siteconfig.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\System->siteConfig[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/System.php ]
+[ info ] [ VIEW ] /home/deepin/Projects/php/waibao/Child-Music//themes/admin/system/site_config.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'items',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000353s ] mysql:host=127.0.0.1;port=3306;dbname=child_music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.000457s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000234s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.000369s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,57,68,69,70,71,72,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37)  AND `type` = 1 [ RunTime:0.000362s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000241s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_system` [ RunTime:0.000414s ]
+[ sql ] [ SQL ] SELECT `title`,`name`,`value`,`type`,`rule`,`classify`,`extra` FROM `mus_system` WHERE  `status` = 1 ORDER BY `sort`  DESC [ RunTime:0.000255s ]
+---------------------------------------------------------------
+[ 2018-11-26T18:01:47+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/system/siteconfig.html
+[ info ] music.root.php/admin/system/siteconfig.html [运行时间：0.006560s][吞吐率：152.44req/s] [内存消耗：435.30kb] [文件加载：48]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'siteconfig',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/system/siteconfig.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\System->siteConfig[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/System.php ]
+[ info ] [ VIEW ] /home/deepin/Projects/php/waibao/Child-Music//themes/admin/system/site_config.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'items',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000373s ] mysql:host=127.0.0.1;port=3306;dbname=child_music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.000459s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000227s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.000338s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,57,68,69,70,71,72,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37)  AND `type` = 1 [ RunTime:0.000348s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000251s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_system` [ RunTime:0.000559s ]
+[ sql ] [ SQL ] SELECT `title`,`name`,`value`,`type`,`rule`,`classify`,`extra` FROM `mus_system` WHERE  `status` = 1 ORDER BY `sort`  DESC [ RunTime:0.000368s ]
+---------------------------------------------------------------
+[ 2018-11-26T18:01:48+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/system/siteconfig.html
+[ info ] music.root.php/admin/system/siteconfig.html [运行时间：0.007330s][吞吐率：136.43req/s] [内存消耗：435.33kb] [文件加载：48]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'siteconfig',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/system/siteconfig.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\System->siteConfig[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/System.php ]
+[ info ] [ VIEW ] /home/deepin/Projects/php/waibao/Child-Music//themes/admin/system/site_config.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'items',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000361s ] mysql:host=127.0.0.1;port=3306;dbname=child_music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.000398s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000241s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.000353s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,57,68,69,70,71,72,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37)  AND `type` = 1 [ RunTime:0.000343s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000231s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_system` [ RunTime:0.000591s ]
+[ sql ] [ SQL ] SELECT `title`,`name`,`value`,`type`,`rule`,`classify`,`extra` FROM `mus_system` WHERE  `status` = 1 ORDER BY `sort`  DESC [ RunTime:0.000285s ]
+---------------------------------------------------------------
+[ 2018-11-26T18:02:02+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/system/siteconfig.html
+[ info ] music.root.php/admin/system/siteconfig.html [运行时间：0.006107s][吞吐率：163.74req/s] [内存消耗：434.13kb] [文件加载：48]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'siteconfig',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/audio/add.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\System->siteConfig[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/System.php ]
+[ info ] [ VIEW ] /home/deepin/Projects/php/waibao/Child-Music//themes/admin/system/site_config.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'items',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000407s ] mysql:host=127.0.0.1;port=3306;dbname=child_music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.000446s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000250s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.000348s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,57,68,69,70,71,72,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37)  AND `type` = 1 [ RunTime:0.000352s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000273s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_system` [ RunTime:0.000388s ]
+[ sql ] [ SQL ] SELECT `title`,`name`,`value`,`type`,`rule`,`classify`,`extra` FROM `mus_system` WHERE  `status` = 1 ORDER BY `sort`  DESC [ RunTime:0.000212s ]
+---------------------------------------------------------------
+[ 2018-11-26T18:02:06+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/system/updatesiteconfig.html
+[ info ] music.root.php/admin/system/updatesiteconfig.html [运行时间：0.019348s][吞吐率：51.68req/s] [内存消耗：391.48kb] [文件加载：49]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'updatesiteconfig',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/system/siteconfig.html',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://music.root.php',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '459',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+)
+[ info ] [ PARAM ] array (
+  'copyright' => '10485760',
+  'icp' => '粤ICP 100000000',
+  'email' => 'office@eldarsto.com',
+  'contact' => '020-37581162',
+  'address' => '广州市越秀区先烈中路76号',
+  'company' => '埃尔大数据科技有限公司',
+  'company_en' => 'ELDAR BIG DATA TECHNOLOGY,.LTD',
+  'sina_weibo' => 'weibo.com/Eldarstudio',
+  'index_quota' => '601,764,203',
+  'latitude' => '31.835168',
+  'longitude' => '117.266786',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\System->updateSiteConfig[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/System.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000450s ] mysql:host=127.0.0.1;port=3306;dbname=child_music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.000576s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000321s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.000547s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,57,68,69,70,71,72,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37)  AND `type` = 1 [ RunTime:0.000505s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000290s ]
+[ sql ] [ SQL ] UPDATE `mus_system` SET `value`=CASE `name` WHEN 'copyright' THEN '10485760' WHEN 'icp' THEN '粤ICP 100000000' WHEN 'email' THEN 'office@eldarsto.com' WHEN 'contact' THEN '020-37581162' WHEN 'address' THEN '广州市越秀区先烈中路76号' WHEN 'company' THEN '埃尔大数据科技有限公司' WHEN 'company_en' THEN 'ELDAR BIG DATA TECHNOLOGY,.LTD' WHEN 'sina_weibo' THEN 'weibo.com/Eldarstudio' WHEN 'index_quota' THEN '601,764,203' WHEN 'latitude' THEN '31.835168' WHEN 'longitude' THEN '117.266786' END WHERE `name` IN ('copyright','icp','email','contact','address','company','company_en','sina_weibo','index_quota','latitude','longitude') [ RunTime:0.000220s ]
+---------------------------------------------------------------
+[ 2018-11-26T18:02:08+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/system/siteconfig.html
+[ info ] music.root.php/admin/system/siteconfig.html [运行时间：0.006200s][吞吐率：161.29req/s] [内存消耗：434.20kb] [文件加载：48]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'siteconfig',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/audio/add.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\System->siteConfig[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/System.php ]
+[ info ] [ VIEW ] /home/deepin/Projects/php/waibao/Child-Music//themes/admin/system/site_config.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'items',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000358s ] mysql:host=127.0.0.1;port=3306;dbname=child_music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.000421s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000257s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.000351s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,57,68,69,70,71,72,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37)  AND `type` = 1 [ RunTime:0.000342s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000271s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_system` [ RunTime:0.000400s ]
+[ sql ] [ SQL ] SELECT `title`,`name`,`value`,`type`,`rule`,`classify`,`extra` FROM `mus_system` WHERE  `status` = 1 ORDER BY `sort`  DESC [ RunTime:0.000291s ]
+---------------------------------------------------------------
+[ 2018-11-26T18:02:08+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/system/siteconfig.html
+[ info ] music.root.php/admin/system/siteconfig.html [运行时间：0.006332s][吞吐率：157.93req/s] [内存消耗：434.20kb] [文件加载：48]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'siteconfig',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/audio/add.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\System->siteConfig[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/System.php ]
+[ info ] [ VIEW ] /home/deepin/Projects/php/waibao/Child-Music//themes/admin/system/site_config.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'items',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000321s ] mysql:host=127.0.0.1;port=3306;dbname=child_music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.000469s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000279s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.000407s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,57,68,69,70,71,72,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37)  AND `type` = 1 [ RunTime:0.000396s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000233s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_system` [ RunTime:0.000398s ]
+[ sql ] [ SQL ] SELECT `title`,`name`,`value`,`type`,`rule`,`classify`,`extra` FROM `mus_system` WHERE  `status` = 1 ORDER BY `sort`  DESC [ RunTime:0.000351s ]
+---------------------------------------------------------------
+[ 2018-11-26T18:02:08+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/system/siteconfig.html
+[ info ] music.root.php/admin/system/siteconfig.html [运行时间：0.005512s][吞吐率：181.42req/s] [内存消耗：434.20kb] [文件加载：48]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'siteconfig',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/audio/add.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\System->siteConfig[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/System.php ]
+[ info ] [ VIEW ] /home/deepin/Projects/php/waibao/Child-Music//themes/admin/system/site_config.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'items',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000329s ] mysql:host=127.0.0.1;port=3306;dbname=child_music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.000403s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000211s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.000323s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,57,68,69,70,71,72,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37)  AND `type` = 1 [ RunTime:0.000329s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000214s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_system` [ RunTime:0.000345s ]
+[ sql ] [ SQL ] SELECT `title`,`name`,`value`,`type`,`rule`,`classify`,`extra` FROM `mus_system` WHERE  `status` = 1 ORDER BY `sort`  DESC [ RunTime:0.000212s ]
+---------------------------------------------------------------
+[ 2018-11-26T18:02:08+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/system/siteconfig.html
+[ info ] music.root.php/admin/system/siteconfig.html [运行时间：0.009627s][吞吐率：103.88req/s] [内存消耗：434.20kb] [文件加载：48]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'siteconfig',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/audio/add.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\System->siteConfig[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/System.php ]
+[ info ] [ VIEW ] /home/deepin/Projects/php/waibao/Child-Music//themes/admin/system/site_config.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'items',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000607s ] mysql:host=127.0.0.1;port=3306;dbname=child_music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.000847s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000454s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.000646s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,57,68,69,70,71,72,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37)  AND `type` = 1 [ RunTime:0.000675s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000630s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_system` [ RunTime:0.000474s ]
+[ sql ] [ SQL ] SELECT `title`,`name`,`value`,`type`,`rule`,`classify`,`extra` FROM `mus_system` WHERE  `status` = 1 ORDER BY `sort`  DESC [ RunTime:0.000240s ]
+---------------------------------------------------------------
+[ 2018-11-26T18:02:23+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/system/siteconfig.html
+[ info ] music.root.php/admin/system/siteconfig.html [运行时间：0.006105s][吞吐率：163.80req/s] [内存消耗：434.17kb] [文件加载：48]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'siteconfig',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/system/siteconfig.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\System->siteConfig[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/System.php ]
+[ info ] [ VIEW ] /home/deepin/Projects/php/waibao/Child-Music//themes/admin/system/site_config.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'items',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000314s ] mysql:host=127.0.0.1;port=3306;dbname=child_music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.000406s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000239s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.000388s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,57,68,69,70,71,72,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37)  AND `type` = 1 [ RunTime:0.000348s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000246s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_system` [ RunTime:0.000443s ]
+[ sql ] [ SQL ] SELECT `title`,`name`,`value`,`type`,`rule`,`classify`,`extra` FROM `mus_system` WHERE  `status` = 1 ORDER BY `sort`  DESC [ RunTime:0.000250s ]
+---------------------------------------------------------------
+[ 2018-11-26T18:02:24+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/system/siteconfig.html
+[ info ] music.root.php/admin/system/siteconfig.html [运行时间：0.006403s][吞吐率：156.18req/s] [内存消耗：434.17kb] [文件加载：48]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'siteconfig',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/system/siteconfig.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\System->siteConfig[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/System.php ]
+[ info ] [ VIEW ] /home/deepin/Projects/php/waibao/Child-Music//themes/admin/system/site_config.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'items',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000441s ] mysql:host=127.0.0.1;port=3306;dbname=child_music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.000423s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000238s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.000377s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,57,68,69,70,71,72,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37)  AND `type` = 1 [ RunTime:0.000409s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000291s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_system` [ RunTime:0.000426s ]
+[ sql ] [ SQL ] SELECT `title`,`name`,`value`,`type`,`rule`,`classify`,`extra` FROM `mus_system` WHERE  `status` = 1 ORDER BY `sort`  DESC [ RunTime:0.000334s ]
+---------------------------------------------------------------
+[ 2018-11-26T18:02:24+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/system/siteconfig.html
+[ info ] music.root.php/admin/system/siteconfig.html [运行时间：0.007542s][吞吐率：132.59req/s] [内存消耗：434.17kb] [文件加载：48]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'siteconfig',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/system/siteconfig.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\System->siteConfig[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/System.php ]
+[ info ] [ VIEW ] /home/deepin/Projects/php/waibao/Child-Music//themes/admin/system/site_config.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'items',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000372s ] mysql:host=127.0.0.1;port=3306;dbname=child_music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.000474s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000367s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.000568s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,57,68,69,70,71,72,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37)  AND `type` = 1 [ RunTime:0.000395s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000254s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_system` [ RunTime:0.000417s ]
+[ sql ] [ SQL ] SELECT `title`,`name`,`value`,`type`,`rule`,`classify`,`extra` FROM `mus_system` WHERE  `status` = 1 ORDER BY `sort`  DESC [ RunTime:0.000315s ]
+---------------------------------------------------------------
+[ 2018-11-26T18:02:24+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/system/siteconfig.html
+[ info ] music.root.php/admin/system/siteconfig.html [运行时间：0.005417s][吞吐率：184.61req/s] [内存消耗：434.17kb] [文件加载：48]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'siteconfig',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/system/siteconfig.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\System->siteConfig[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/System.php ]
+[ info ] [ VIEW ] /home/deepin/Projects/php/waibao/Child-Music//themes/admin/system/site_config.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'items',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000323s ] mysql:host=127.0.0.1;port=3306;dbname=child_music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.000368s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000203s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.000348s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,57,68,69,70,71,72,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37)  AND `type` = 1 [ RunTime:0.000312s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000217s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_system` [ RunTime:0.000339s ]
+[ sql ] [ SQL ] SELECT `title`,`name`,`value`,`type`,`rule`,`classify`,`extra` FROM `mus_system` WHERE  `status` = 1 ORDER BY `sort`  DESC [ RunTime:0.000214s ]
+---------------------------------------------------------------
+[ 2018-11-26T18:02:24+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/system/siteconfig.html
+[ info ] music.root.php/admin/system/siteconfig.html [运行时间：0.007320s][吞吐率：136.61req/s] [内存消耗：434.17kb] [文件加载：48]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'siteconfig',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/system/siteconfig.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\System->siteConfig[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/System.php ]
+[ info ] [ VIEW ] /home/deepin/Projects/php/waibao/Child-Music//themes/admin/system/site_config.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'items',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000469s ] mysql:host=127.0.0.1;port=3306;dbname=child_music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.000532s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000268s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.000404s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,57,68,69,70,71,72,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37)  AND `type` = 1 [ RunTime:0.000458s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000324s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_system` [ RunTime:0.000380s ]
+[ sql ] [ SQL ] SELECT `title`,`name`,`value`,`type`,`rule`,`classify`,`extra` FROM `mus_system` WHERE  `status` = 1 ORDER BY `sort`  DESC [ RunTime:0.000223s ]
+---------------------------------------------------------------
+[ 2018-11-26T18:02:24+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/system/siteconfig.html
+[ info ] music.root.php/admin/system/siteconfig.html [运行时间：0.005543s][吞吐率：180.41req/s] [内存消耗：434.17kb] [文件加载：48]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'siteconfig',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/system/siteconfig.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\System->siteConfig[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/System.php ]
+[ info ] [ VIEW ] /home/deepin/Projects/php/waibao/Child-Music//themes/admin/system/site_config.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'items',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000312s ] mysql:host=127.0.0.1;port=3306;dbname=child_music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.000443s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000221s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.000342s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,57,68,69,70,71,72,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37)  AND `type` = 1 [ RunTime:0.000306s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000223s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_system` [ RunTime:0.000346s ]
+[ sql ] [ SQL ] SELECT `title`,`name`,`value`,`type`,`rule`,`classify`,`extra` FROM `mus_system` WHERE  `status` = 1 ORDER BY `sort`  DESC [ RunTime:0.000216s ]
+---------------------------------------------------------------
+[ 2018-11-26T18:02:25+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/system/siteconfig.html
+[ info ] music.root.php/admin/system/siteconfig.html [运行时间：0.006436s][吞吐率：155.37req/s] [内存消耗：434.17kb] [文件加载：48]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'siteconfig',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/system/siteconfig.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\System->siteConfig[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/System.php ]
+[ info ] [ VIEW ] /home/deepin/Projects/php/waibao/Child-Music//themes/admin/system/site_config.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'items',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000344s ] mysql:host=127.0.0.1;port=3306;dbname=child_music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.000417s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000308s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.000346s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,57,68,69,70,71,72,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37)  AND `type` = 1 [ RunTime:0.000352s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000321s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_system` [ RunTime:0.000416s ]
+[ sql ] [ SQL ] SELECT `title`,`name`,`value`,`type`,`rule`,`classify`,`extra` FROM `mus_system` WHERE  `status` = 1 ORDER BY `sort`  DESC [ RunTime:0.000285s ]
+---------------------------------------------------------------
+[ 2018-11-26T18:02:38+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/system/siteconfig.html
+[ info ] music.root.php/admin/system/siteconfig.html [运行时间：0.009497s][吞吐率：105.29req/s] [内存消耗：434.17kb] [文件加载：48]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'siteconfig',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/system/siteconfig.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\System->siteConfig[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/System.php ]
+[ info ] [ VIEW ] /home/deepin/Projects/php/waibao/Child-Music//themes/admin/system/site_config.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'items',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000433s ] mysql:host=127.0.0.1;port=3306;dbname=child_music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.000676s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000647s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.000686s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,57,68,69,70,71,72,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37)  AND `type` = 1 [ RunTime:0.000683s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000512s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_system` [ RunTime:0.000541s ]
+[ sql ] [ SQL ] SELECT `title`,`name`,`value`,`type`,`rule`,`classify`,`extra` FROM `mus_system` WHERE  `status` = 1 ORDER BY `sort`  DESC [ RunTime:0.000286s ]
+---------------------------------------------------------------
+[ 2018-11-26T18:03:14+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/system/siteconfig.html
+[ info ] music.root.php/admin/system/siteconfig.html [运行时间：0.007779s][吞吐率：128.55req/s] [内存消耗：424.86kb] [文件加载：48]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'siteconfig',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/system/siteconfig.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\System->siteConfig[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/System.php ]
+[ info ] [ VIEW ] /home/deepin/Projects/php/waibao/Child-Music//themes/admin/system/site_config.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'items',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000416s ] mysql:host=127.0.0.1;port=3306;dbname=child_music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.000694s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000290s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.000572s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,57,68,69,70,71,72,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37)  AND `type` = 1 [ RunTime:0.000484s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000332s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_system` [ RunTime:0.000446s ]
+[ sql ] [ SQL ] SELECT `title`,`name`,`value`,`type`,`rule`,`classify`,`extra` FROM `mus_system` WHERE  `status` = 1 ORDER BY `sort`  DESC [ RunTime:0.000221s ]
+---------------------------------------------------------------
+[ 2018-11-26T18:03:39+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/system/siteconfig.html
+[ info ] music.root.php/admin/system/siteconfig.html [运行时间：0.006520s][吞吐率：153.37req/s] [内存消耗：426.34kb] [文件加载：48]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'siteconfig',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/system/siteconfig.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\System->siteConfig[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/System.php ]
+[ info ] [ VIEW ] /home/deepin/Projects/php/waibao/Child-Music//themes/admin/system/site_config.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'items',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000501s ] mysql:host=127.0.0.1;port=3306;dbname=child_music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.000617s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000204s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.000293s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,57,68,69,70,71,72,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37)  AND `type` = 1 [ RunTime:0.000274s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000253s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_system` [ RunTime:0.000391s ]
+[ sql ] [ SQL ] SELECT `title`,`name`,`value`,`type`,`rule`,`classify`,`extra` FROM `mus_system` WHERE  `status` = 1 ORDER BY `sort`  DESC [ RunTime:0.000191s ]
+---------------------------------------------------------------
+[ 2018-11-26T18:04:00+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/system/siteconfig.html
+[ info ] music.root.php/admin/system/siteconfig.html [运行时间：0.005407s][吞吐率：184.95req/s] [内存消耗：426.36kb] [文件加载：48]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'siteconfig',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/system/siteconfig.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\System->siteConfig[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/System.php ]
+[ info ] [ VIEW ] /home/deepin/Projects/php/waibao/Child-Music//themes/admin/system/site_config.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'items',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000314s ] mysql:host=127.0.0.1;port=3306;dbname=child_music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.000400s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000211s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.000327s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,57,68,69,70,71,72,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37)  AND `type` = 1 [ RunTime:0.000299s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000214s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_system` [ RunTime:0.000349s ]
+[ sql ] [ SQL ] SELECT `title`,`name`,`value`,`type`,`rule`,`classify`,`extra` FROM `mus_system` WHERE  `status` = 1 ORDER BY `sort`  DESC [ RunTime:0.000209s ]
+---------------------------------------------------------------
+[ 2018-11-26T18:06:19+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/system/siteconfig.html
+[ info ] music.root.php/admin/system/siteconfig.html [运行时间：0.005724s][吞吐率：174.70req/s] [内存消耗：426.38kb] [文件加载：48]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'siteconfig',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/audio/add.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\System->siteConfig[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/System.php ]
+[ info ] [ VIEW ] /home/deepin/Projects/php/waibao/Child-Music//themes/admin/system/site_config.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'items',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000323s ] mysql:host=127.0.0.1;port=3306;dbname=child_music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.000413s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000225s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.000346s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,57,68,69,70,71,72,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37)  AND `type` = 1 [ RunTime:0.000297s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000212s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_system` [ RunTime:0.000368s ]
+[ sql ] [ SQL ] SELECT `title`,`name`,`value`,`type`,`rule`,`classify`,`extra` FROM `mus_system` WHERE  `status` = 1 ORDER BY `sort`  DESC [ RunTime:0.000192s ]
+---------------------------------------------------------------
+[ 2018-11-26T18:08:17+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/audio/index.html
+[ info ] music.root.php/admin/audio/index.html [运行时间：0.008582s][吞吐率：116.52req/s] [内存消耗：540.31kb] [文件加载：54]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'audio',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/system/siteconfig.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Audio->index[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/Audio.php ]
+[ info ] [ VIEW ] /home/deepin/Projects/php/waibao/Child-Music//themes/admin/audio/index.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'vipList',
+  3 => 'statusList',
+  4 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000361s ] mysql:host=127.0.0.1;port=3306;dbname=child_music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.000456s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000269s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.000420s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,57,68,69,70,71,72,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37)  AND `type` = 1 [ RunTime:0.000494s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000352s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_audio` [ RunTime:0.000637s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `mus_audio` LIMIT 1 [ RunTime:0.000194s ]
+[ sql ] [ SQL ] SELECT `id`,`cid`,`title`,`thumb`,`breif`,`introduce`,`audio`,`duration`,`size`,`is_vip`,`status` FROM `mus_audio` LIMIT 0,20 [ RunTime:0.000183s ]
+---------------------------------------------------------------
+[ 2018-11-26T18:08:19+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/audio_category/index.html
+[ info ] music.root.php/admin/audio_category/index.html [运行时间：0.006210s][吞吐率：161.03req/s] [内存消耗：461.19kb] [文件加载：50]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'audio_category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/audio/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\AudioCategory->index[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/AudioCategory.php ]
+[ info ] [ VIEW ] /home/deepin/Projects/php/waibao/Child-Music//themes/admin/audio_category/index.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'statusList',
+  3 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000428s ] mysql:host=127.0.0.1;port=3306;dbname=child_music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.000469s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000226s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.000352s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,57,68,69,70,71,72,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37)  AND `type` = 1 [ RunTime:0.000305s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000208s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_audio_category` [ RunTime:0.000309s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`sort`,`status` FROM `mus_audio_category` ORDER BY `sort`  ASC [ RunTime:0.000154s ]
+---------------------------------------------------------------
+[ 2018-11-26T18:08:21+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/audio/index.html
+[ info ] music.root.php/admin/audio/index.html [运行时间：0.007885s][吞吐率：126.82req/s] [内存消耗：446.46kb] [文件加载：52]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'audio',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/audio_category/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Audio->index[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/Audio.php ]
+[ info ] [ VIEW ] /home/deepin/Projects/php/waibao/Child-Music//themes/admin/audio/index.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'vipList',
+  3 => 'statusList',
+  4 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000339s ] mysql:host=127.0.0.1;port=3306;dbname=child_music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.000454s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000412s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.000442s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,57,68,69,70,71,72,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37)  AND `type` = 1 [ RunTime:0.000426s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000329s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_audio` [ RunTime:0.000504s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `mus_audio` LIMIT 1 [ RunTime:0.000139s ]
+[ sql ] [ SQL ] SELECT `id`,`cid`,`title`,`thumb`,`breif`,`introduce`,`audio`,`duration`,`size`,`is_vip`,`status` FROM `mus_audio` LIMIT 0,20 [ RunTime:0.000150s ]
+---------------------------------------------------------------
+[ 2018-11-26T18:08:22+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/audio/add.html
+[ info ] music.root.php/admin/audio/add.html [运行时间：0.008637s][吞吐率：115.78req/s] [内存消耗：468.28kb] [文件加载：50]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'audio',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/audio/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Audio->add[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/Audio.php ]
+[ info ] [ VIEW ] /home/deepin/Projects/php/waibao/Child-Music//themes/admin/audio/save.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'vipList',
+  3 => 'statusList',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000386s ] mysql:host=127.0.0.1;port=3306;dbname=child_music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.000453s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000280s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.000441s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,57,68,69,70,71,72,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37)  AND `type` = 1 [ RunTime:0.000339s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000244s ]
+---------------------------------------------------------------
+[ 2018-11-26T18:09:24+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/menu/index.html
+[ info ] music.root.php/admin/menu/index.html [运行时间：0.014480s][吞吐率：69.06req/s] [内存消耗：639.94kb] [文件加载：50]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'menu',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/system/siteconfig.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Menu->index[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/Menu.php ]
+[ info ] [ VIEW ] /home/deepin/Projects/php/waibao/Child-Music//themes/admin/menu/index.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'admin_menu_level_list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000361s ] mysql:host=127.0.0.1;port=3306;dbname=child_music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.000505s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000265s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.000371s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,57,68,69,70,71,72,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37)  AND `type` = 1 [ RunTime:0.000423s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000271s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000398s ]
+---------------------------------------------------------------
+[ 2018-11-26T18:09:25+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/slide/index.html
+[ info ] music.root.php/admin/slide/index.html [运行时间：0.007871s][吞吐率：127.05req/s] [内存消耗：454.70kb] [文件加载：50]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'slide',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|1; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/menu/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Slide->index[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/Slide.php ]
+[ info ] [ VIEW ] /home/deepin/Projects/php/waibao/Child-Music//themes/admin/slide/index.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000382s ] mysql:host=127.0.0.1;port=3306;dbname=child_music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.000456s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000267s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.000418s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,57,68,69,70,71,72,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37)  AND `type` = 1 [ RunTime:0.000459s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000265s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_slide` [ RunTime:0.000631s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`image`,`link`,`status`,`sort` FROM `mus_slide` ORDER BY `status`  DESC,`sort`  ASC [ RunTime:0.000241s ]
+---------------------------------------------------------------
+[ 2018-11-26T18:09:26+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/menu/index.html
+[ info ] music.root.php/admin/menu/index.html [运行时间：0.014130s][吞吐率：70.77req/s] [内存消耗：567.85kb] [文件加载：48]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'menu',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/slide/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Menu->index[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/Menu.php ]
+[ info ] [ VIEW ] /home/deepin/Projects/php/waibao/Child-Music//themes/admin/menu/index.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'admin_menu_level_list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000337s ] mysql:host=127.0.0.1;port=3306;dbname=child_music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.000426s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000273s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.000375s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,57,68,69,70,71,72,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37)  AND `type` = 1 [ RunTime:0.000405s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000343s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000357s ]
+---------------------------------------------------------------
+[ 2018-11-26T18:09:27+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/system/siteconfig.html
+[ info ] music.root.php/admin/system/siteconfig.html [运行时间：0.006905s][吞吐率：144.83req/s] [内存消耗：426.34kb] [文件加载：48]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'siteconfig',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/menu/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\System->siteConfig[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/System.php ]
+[ info ] [ VIEW ] /home/deepin/Projects/php/waibao/Child-Music//themes/admin/system/site_config.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'items',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000326s ] mysql:host=127.0.0.1;port=3306;dbname=child_music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.000525s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000277s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.000407s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,57,68,69,70,71,72,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37)  AND `type` = 1 [ RunTime:0.000389s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000310s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_system` [ RunTime:0.000566s ]
+[ sql ] [ SQL ] SELECT `title`,`name`,`value`,`type`,`rule`,`classify`,`extra` FROM `mus_system` WHERE  `status` = 1 ORDER BY `sort`  DESC [ RunTime:0.000275s ]
+---------------------------------------------------------------
+[ 2018-11-26T18:09:33+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/system/clear.html
+[ info ] music.root.php/admin/system/clear.html [运行时间：0.004129s][吞吐率：242.19req/s] [内存消耗：364.70kb] [文件加载：44]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'clear',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/system/siteconfig.html',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://music.root.php',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '0',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\System->clear[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/System.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000319s ] mysql:host=127.0.0.1;port=3306;dbname=child_music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.000421s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000261s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.000305s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000185s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,57,68,69,70,71,72,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37)  AND `type` = 1 [ RunTime:0.000282s ]
+---------------------------------------------------------------
+[ 2018-11-26T18:09:34+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/system/siteconfig.html
+[ info ] music.root.php/admin/system/siteconfig.html [运行时间：0.005358s][吞吐率：186.64req/s] [内存消耗：426.34kb] [文件加载：48]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'siteconfig',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/system/siteconfig.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\System->siteConfig[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/System.php ]
+[ info ] [ VIEW ] /home/deepin/Projects/php/waibao/Child-Music//themes/admin/system/site_config.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'items',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000344s ] mysql:host=127.0.0.1;port=3306;dbname=child_music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.000411s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000213s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.000326s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,57,68,69,70,71,72,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37)  AND `type` = 1 [ RunTime:0.000309s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000214s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_system` [ RunTime:0.000340s ]
+[ sql ] [ SQL ] SELECT `title`,`name`,`value`,`type`,`rule`,`classify`,`extra` FROM `mus_system` WHERE  `status` = 1 ORDER BY `sort`  DESC [ RunTime:0.000178s ]
+---------------------------------------------------------------
+[ 2018-11-26T18:09:39+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/album/index.html
+[ info ] music.root.php/admin/album/index.html [运行时间：0.010390s][吞吐率：96.25req/s] [内存消耗：554.48kb] [文件加载：54]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'album',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/system/siteconfig.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Album->index[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/Album.php ]
+[ info ] [ VIEW ] /home/deepin/Projects/php/waibao/Child-Music//themes/admin/album/index.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'vipList',
+  3 => 'statusList',
+  4 => 'category',
+  5 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000408s ] mysql:host=127.0.0.1;port=3306;dbname=child_music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.000408s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000198s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.000507s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,57,68,69,70,71,72,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37)  AND `type` = 1 [ RunTime:0.000421s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000391s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_album_category` [ RunTime:0.000505s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `mus_album_category` WHERE  `status` = 1 ORDER BY `sort`  ASC [ RunTime:0.000207s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_album` [ RunTime:0.000435s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `mus_album` LIMIT 1 [ RunTime:0.000140s ]
+[ sql ] [ SQL ] SELECT `id`,`cid`,`title`,`breif`,`introduce`,`number`,`thumb`,`banner`,`sort`,`status`,`is_vip`,`create_time`,`tags` FROM `mus_album` ORDER BY `sort`  ASC LIMIT 0,20 [ RunTime:0.000248s ]
+---------------------------------------------------------------
+[ 2018-11-26T18:09:44+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/album_category/index.html
+[ info ] music.root.php/admin/album_category/index.html [运行时间：0.008156s][吞吐率：122.61req/s] [内存消耗：454.90kb] [文件加载：50]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'album_category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/album/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\AlbumCategory->index[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/AlbumCategory.php ]
+[ info ] [ VIEW ] /home/deepin/Projects/php/waibao/Child-Music//themes/admin/album_category/index.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'statusList',
+  3 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000383s ] mysql:host=127.0.0.1;port=3306;dbname=child_music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.000461s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000298s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.000376s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,57,68,69,70,71,72,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37)  AND `type` = 1 [ RunTime:0.000472s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000422s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_album_category` [ RunTime:0.000574s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`sort`,`status` FROM `mus_album_category` ORDER BY `status`  DESC,`sort`  ASC [ RunTime:0.000247s ]
+---------------------------------------------------------------
+[ 2018-11-26T18:09:48+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/album_tags/index.html
+[ info ] music.root.php/admin/album_tags/index.html [运行时间：0.009592s][吞吐率：104.26req/s] [内存消耗：461.51kb] [文件加载：50]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'album_tags',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/album_category/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\AlbumTags->index[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/AlbumTags.php ]
+[ info ] [ VIEW ] /home/deepin/Projects/php/waibao/Child-Music//themes/admin/album_tags/index.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'statusList',
+  3 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000378s ] mysql:host=127.0.0.1;port=3306;dbname=child_music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.000510s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000293s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.000528s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,57,68,69,70,71,72,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37)  AND `type` = 1 [ RunTime:0.000490s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000386s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_album_tags` [ RunTime:0.000662s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`sort`,`status`,`image` FROM `mus_album_tags` ORDER BY `status`  DESC,`sort`  ASC [ RunTime:0.000352s ]
+---------------------------------------------------------------
+[ 2018-11-26T18:09:55+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/audio/index.html
+[ info ] music.root.php/admin/audio/index.html [运行时间：0.007668s][吞吐率：130.41req/s] [内存消耗：445.34kb] [文件加载：52]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'audio',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/album_tags/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Audio->index[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/Audio.php ]
+[ info ] [ VIEW ] /home/deepin/Projects/php/waibao/Child-Music//themes/admin/audio/index.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'vipList',
+  3 => 'statusList',
+  4 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000365s ] mysql:host=127.0.0.1;port=3306;dbname=child_music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.000503s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000349s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.000404s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,57,68,69,70,71,72,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37)  AND `type` = 1 [ RunTime:0.000427s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000316s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_audio` [ RunTime:0.000615s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `mus_audio` LIMIT 1 [ RunTime:0.000181s ]
+[ sql ] [ SQL ] SELECT `id`,`cid`,`title`,`thumb`,`breif`,`introduce`,`audio`,`duration`,`size`,`is_vip`,`status` FROM `mus_audio` LIMIT 0,20 [ RunTime:0.000168s ]
+---------------------------------------------------------------
+[ 2018-11-26T18:09:56+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/audio_category/index.html
+[ info ] music.root.php/admin/audio_category/index.html [运行时间：0.006877s][吞吐率：145.41req/s] [内存消耗：427.84kb] [文件加载：48]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'audio_category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/audio/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\AudioCategory->index[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/AudioCategory.php ]
+[ info ] [ VIEW ] /home/deepin/Projects/php/waibao/Child-Music//themes/admin/audio_category/index.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'statusList',
+  3 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000328s ] mysql:host=127.0.0.1;port=3306;dbname=child_music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.000467s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000245s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.000365s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,57,68,69,70,71,72,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37)  AND `type` = 1 [ RunTime:0.000479s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000367s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_audio_category` [ RunTime:0.000507s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`sort`,`status` FROM `mus_audio_category` ORDER BY `sort`  ASC [ RunTime:0.000272s ]
+---------------------------------------------------------------
+[ 2018-11-26T18:09:59+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/audio/index.html
+[ info ] music.root.php/admin/audio/index.html [运行时间：0.005775s][吞吐率：173.16req/s] [内存消耗：445.34kb] [文件加载：52]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'audio',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/audio_category/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Audio->index[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/Audio.php ]
+[ info ] [ VIEW ] /home/deepin/Projects/php/waibao/Child-Music//themes/admin/audio/index.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'vipList',
+  3 => 'statusList',
+  4 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000352s ] mysql:host=127.0.0.1;port=3306;dbname=child_music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.000412s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000223s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.000344s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,57,68,69,70,71,72,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37)  AND `type` = 1 [ RunTime:0.000308s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000221s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_audio` [ RunTime:0.000402s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `mus_audio` LIMIT 1 [ RunTime:0.000122s ]
+[ sql ] [ SQL ] SELECT `id`,`cid`,`title`,`thumb`,`breif`,`introduce`,`audio`,`duration`,`size`,`is_vip`,`status` FROM `mus_audio` LIMIT 0,20 [ RunTime:0.000142s ]
+---------------------------------------------------------------
+[ 2018-11-26T18:10:04+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/system/siteconfig.html
+[ info ] music.root.php/admin/system/siteconfig.html [运行时间：0.008564s][吞吐率：116.77req/s] [内存消耗：426.34kb] [文件加载：48]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'siteconfig',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/audio/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\System->siteConfig[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/System.php ]
+[ info ] [ VIEW ] /home/deepin/Projects/php/waibao/Child-Music//themes/admin/system/site_config.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'items',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000445s ] mysql:host=127.0.0.1;port=3306;dbname=child_music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.000576s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000305s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.000464s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,57,68,69,70,71,72,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37)  AND `type` = 1 [ RunTime:0.000534s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000410s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_system` [ RunTime:0.000806s ]
+[ sql ] [ SQL ] SELECT `title`,`name`,`value`,`type`,`rule`,`classify`,`extra` FROM `mus_system` WHERE  `status` = 1 ORDER BY `sort`  DESC [ RunTime:0.000369s ]
+---------------------------------------------------------------
+[ 2018-11-26T18:16:26+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/audio/add.html
+[ info ] music.root.php/admin/audio/add.html [运行时间：0.005316s][吞吐率：188.11req/s] [内存消耗：424.11kb] [文件加载：48]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'audio',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/audio/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Audio->add[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/Audio.php ]
+[ info ] [ VIEW ] /home/deepin/Projects/php/waibao/Child-Music//themes/admin/audio/save.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'vipList',
+  3 => 'statusList',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000317s ] mysql:host=127.0.0.1;port=3306;dbname=child_music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.000391s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000245s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.000401s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,57,68,69,70,71,72,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37)  AND `type` = 1 [ RunTime:0.000358s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000256s ]
+---------------------------------------------------------------
+[ 2018-11-26T18:16:29+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/system/siteconfig.html
+[ info ] music.root.php/admin/system/siteconfig.html [运行时间：0.008261s][吞吐率：121.05req/s] [内存消耗：458.85kb] [文件加载：50]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'siteconfig',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/audio/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\System->siteConfig[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/System.php ]
+[ info ] [ VIEW ] /home/deepin/Projects/php/waibao/Child-Music//themes/admin/system/site_config.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'items',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000482s ] mysql:host=127.0.0.1;port=3306;dbname=child_music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.000375s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000195s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.000299s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,57,68,69,70,71,72,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37)  AND `type` = 1 [ RunTime:0.000312s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000243s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_system` [ RunTime:0.000383s ]
+[ sql ] [ SQL ] SELECT `title`,`name`,`value`,`type`,`rule`,`classify`,`extra` FROM `mus_system` WHERE  `status` = 1 ORDER BY `sort`  DESC [ RunTime:0.000257s ]
+---------------------------------------------------------------
+[ 2018-11-26T18:16:30+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/system/siteconfig.html
+[ info ] music.root.php/admin/system/siteconfig.html [运行时间：0.006858s][吞吐率：145.82req/s] [内存消耗：427.50kb] [文件加载：48]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'siteconfig',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/audio/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\System->siteConfig[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/System.php ]
+[ info ] [ VIEW ] /home/deepin/Projects/php/waibao/Child-Music//themes/admin/system/site_config.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'items',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000413s ] mysql:host=127.0.0.1;port=3306;dbname=child_music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.000620s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000396s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.000436s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,57,68,69,70,71,72,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37)  AND `type` = 1 [ RunTime:0.000324s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000204s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_system` [ RunTime:0.000355s ]
+[ sql ] [ SQL ] SELECT `title`,`name`,`value`,`type`,`rule`,`classify`,`extra` FROM `mus_system` WHERE  `status` = 1 ORDER BY `sort`  DESC [ RunTime:0.000183s ]
+---------------------------------------------------------------
+[ 2018-11-26T18:16:30+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/system/siteconfig.html
+[ info ] music.root.php/admin/system/siteconfig.html [运行时间：0.008977s][吞吐率：111.40req/s] [内存消耗：427.50kb] [文件加载：48]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'siteconfig',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/audio/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\System->siteConfig[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/System.php ]
+[ info ] [ VIEW ] /home/deepin/Projects/php/waibao/Child-Music//themes/admin/system/site_config.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'items',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000470s ] mysql:host=127.0.0.1;port=3306;dbname=child_music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.000913s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000513s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.000426s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,57,68,69,70,71,72,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37)  AND `type` = 1 [ RunTime:0.000466s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000323s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_system` [ RunTime:0.000579s ]
+[ sql ] [ SQL ] SELECT `title`,`name`,`value`,`type`,`rule`,`classify`,`extra` FROM `mus_system` WHERE  `status` = 1 ORDER BY `sort`  DESC [ RunTime:0.000280s ]
+---------------------------------------------------------------
+[ 2018-11-26T18:16:58+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/system/siteconfig.html
+[ info ] music.root.php/admin/system/siteconfig.html [运行时间：0.008502s][吞吐率：117.62req/s] [内存消耗：427.53kb] [文件加载：48]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'siteconfig',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/audio/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\System->siteConfig[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/System.php ]
+[ info ] [ VIEW ] /home/deepin/Projects/php/waibao/Child-Music//themes/admin/system/site_config.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'items',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000388s ] mysql:host=127.0.0.1;port=3306;dbname=child_music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.000562s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000305s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.000460s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,57,68,69,70,71,72,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37)  AND `type` = 1 [ RunTime:0.000426s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000314s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_system` [ RunTime:0.000691s ]
+[ sql ] [ SQL ] SELECT `title`,`name`,`value`,`type`,`rule`,`classify`,`extra` FROM `mus_system` WHERE  `status` = 1 ORDER BY `sort`  DESC [ RunTime:0.000406s ]
+---------------------------------------------------------------
+[ 2018-11-26T18:16:59+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/system/siteconfig.html
+[ info ] music.root.php/admin/system/siteconfig.html [运行时间：0.005429s][吞吐率：184.19req/s] [内存消耗：426.41kb] [文件加载：48]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'siteconfig',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/audio/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\System->siteConfig[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/System.php ]
+[ info ] [ VIEW ] /home/deepin/Projects/php/waibao/Child-Music//themes/admin/system/site_config.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'items',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000315s ] mysql:host=127.0.0.1;port=3306;dbname=child_music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.000441s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000222s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.000328s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,57,68,69,70,71,72,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37)  AND `type` = 1 [ RunTime:0.000316s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000212s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_system` [ RunTime:0.000328s ]
+[ sql ] [ SQL ] SELECT `title`,`name`,`value`,`type`,`rule`,`classify`,`extra` FROM `mus_system` WHERE  `status` = 1 ORDER BY `sort`  DESC [ RunTime:0.000175s ]
+---------------------------------------------------------------
+[ 2018-11-26T18:16:59+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/system/siteconfig.html
+[ info ] music.root.php/admin/system/siteconfig.html [运行时间：0.007977s][吞吐率：125.36req/s] [内存消耗：426.41kb] [文件加载：48]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'siteconfig',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/audio/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\System->siteConfig[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/System.php ]
+[ info ] [ VIEW ] /home/deepin/Projects/php/waibao/Child-Music//themes/admin/system/site_config.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'items',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000500s ] mysql:host=127.0.0.1;port=3306;dbname=child_music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.000661s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000318s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.000573s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,57,68,69,70,71,72,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37)  AND `type` = 1 [ RunTime:0.000603s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000209s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_system` [ RunTime:0.000426s ]
+[ sql ] [ SQL ] SELECT `title`,`name`,`value`,`type`,`rule`,`classify`,`extra` FROM `mus_system` WHERE  `status` = 1 ORDER BY `sort`  DESC [ RunTime:0.000271s ]
+---------------------------------------------------------------
+[ 2018-11-26T18:16:59+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/system/siteconfig.html
+[ info ] music.root.php/admin/system/siteconfig.html [运行时间：0.007490s][吞吐率：133.51req/s] [内存消耗：426.41kb] [文件加载：48]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'siteconfig',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/audio/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\System->siteConfig[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/System.php ]
+[ info ] [ VIEW ] /home/deepin/Projects/php/waibao/Child-Music//themes/admin/system/site_config.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'items',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000506s ] mysql:host=127.0.0.1;port=3306;dbname=child_music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.000558s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000281s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.000480s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,57,68,69,70,71,72,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37)  AND `type` = 1 [ RunTime:0.000537s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000242s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_system` [ RunTime:0.000401s ]
+[ sql ] [ SQL ] SELECT `title`,`name`,`value`,`type`,`rule`,`classify`,`extra` FROM `mus_system` WHERE  `status` = 1 ORDER BY `sort`  DESC [ RunTime:0.000246s ]
+---------------------------------------------------------------
+[ 2018-11-26T18:32:51+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/audio/add.html
+[ info ] music.root.php/admin/audio/add.html [运行时间：0.006091s][吞吐率：164.18req/s] [内存消耗：422.98kb] [文件加载：48]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'audio',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/audio/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Audio->add[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/Audio.php ]
+[ info ] [ VIEW ] /home/deepin/Projects/php/waibao/Child-Music//themes/admin/audio/save.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'vipList',
+  3 => 'statusList',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000357s ] mysql:host=127.0.0.1;port=3306;dbname=child_music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.000400s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000318s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.000473s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,57,68,69,70,71,72,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37)  AND `type` = 1 [ RunTime:0.000460s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000311s ]
+---------------------------------------------------------------
+[ 2018-11-26T19:24:26+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/system/siteconfig.html
+[ info ] music.root.php/admin/system/siteconfig.html [运行时间：0.001109s][吞吐率：901.81req/s] [内存消耗：154.66kb] [文件加载：38]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'siteconfig',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/audio/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-11-26T19:24:26+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index.html
+[ info ] music.root.php/admin/login/index.html [运行时间：0.029736s][吞吐率：33.63req/s] [内存消耗：226.59kb] [文件加载：41]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/audio/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/Login.php ]
+[ info ] [ VIEW ] /home/deepin/Projects/php/waibao/Child-Music//themes/admin/login/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-11-26T19:24:26+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/image.html
+[ info ] music.root.php/admin/login/image.html [运行时间：0.004082s][吞吐率：244.98req/s] [内存消耗：153.72kb] [文件加载：38]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'image',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/login/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->image[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-11-26T19:24:36+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/login/login.html
+[ info ] music.root.php/admin/login/login.html [运行时间：0.005859s][吞吐率：170.68req/s] [内存消耗：349.77kb] [文件加载：50]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/login/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'upgrade-insecure-requests' => '1',
+  'origin' => 'http://music.root.php',
+  'cache-control' => 'max-age=0',
+  'content-length' => '42',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => '123456',
+  'verify' => 'l8xw',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000378s ] mysql:host=127.0.0.1;port=3306;dbname=child_music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_admin_user` [ RunTime:0.000579s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`status` FROM `mus_admin_user` WHERE  `username` = 'admin'  AND `password` = '7b79e788e94c1c41b6d4e1b1280c4bdb' LIMIT 1 [ RunTime:0.000240s ]
+[ sql ] [ SQL ] UPDATE `mus_admin_user`  SET `last_login_time`='2018-11-26 19:24:36',`last_login_ip`='127.0.0.1'  WHERE  `id` = 1 [ RunTime:0.000301s ]
+---------------------------------------------------------------
+[ 2018-11-26T19:24:39+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/index.html
+[ info ] music.root.php/admin/index/index.html [运行时间：0.007665s][吞吐率：130.46req/s] [内存消耗：440.60kb] [文件加载：48]
+[ info ] [ LANG ] /home/deepin/Projects/php/waibao/Child-Music/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=cgqc0belhd7s6vioc3jprl2an2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://music.root.php/admin/login/login.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'music.root.php',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Index->index[ /home/deepin/Projects/php/waibao/Child-Music/application/admin/controller/Index.php ]
+[ info ] [ VIEW ] /home/deepin/Projects/php/waibao/Child-Music//themes/admin/index/index.html [ array (
+  0 => 'menu',
+  1 => 'controller',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000682s ] mysql:host=127.0.0.1;port=3306;dbname=child_music;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_rule` [ RunTime:0.000527s ]
+[ sql ] [ SQL ] SELECT * FROM `mus_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  DESC,`id`  ASC [ RunTime:0.000340s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mus_auth_group_access` [ RunTime:0.000414s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`title`,`AuthGroup`.`rules` FROM `mus_auth_group_access` `AuthGroupAccess` LEFT JOIN `mus_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='1' ) [ RunTime:0.000222s ]
+[ sql ] [ SQL ] SELECT `condition`,`name` FROM `mus_auth_rule` WHERE  `id` IN (1,2,3,6,7,8,9,10,11,12,39,40,42,43,57,68,69,70,71,72,73,74,116,18,49,50,51,52,53,19,31,32,33,34,35,36,37)  AND `type` = 1 [ RunTime:0.000320s ]
+[ sql ] [ SQL ] SELECT VERSION() AS ver [ RunTime:0.000121s ]

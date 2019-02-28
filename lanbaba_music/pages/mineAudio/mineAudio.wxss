@@ -1,0 +1,97 @@
+/* pages/mineAudio/mineAudio.wxss */
+.top{
+  padding: 0 32rpx;
+}
+.top .tabBar{
+  border-bottom: 1rpx solid #DADADA;
+  padding: 16rpx 0;
+  overflow: hidden;
+}
+.top .tabBar view{
+  float: left;
+  font-size: 28rpx;
+  line-height: 55rpx;
+  color: #888888;
+  margin-left: 28rpx;
+}
+.top .tabBar view.on{
+  color: #3890f3;
+}
+.product{
+  padding:0 32rpx 32rpx;
+  background: #fff;
+}
+.list{
+  overflow: hidden;
+}
+.product:last-child .list{
+  border: 0;
+}
+.item{
+  padding:30rpx 0;
+  overflow: hidden;
+  border-bottom: 1rpx solid #DADADA;
+}
+.produPic{
+  width: 152rpx;
+  height: 152rpx;
+  border-radius: 30rpx;
+  overflow: hidden;
+  position: relative;
+  float: left;
+  margin-right: 30rpx;
+}
+.produPic .pImg{
+  display: block;
+  width: 100%;
+}
+.audioLe{
+  height: 32rpx;
+  line-height: 32rpx;
+  font-size: 24rpx;
+  color: #9b9b9b;
+  margin-top: 21rpx;
+}
+.audioLe image{
+  width: 26rpx;
+  height: 26rpx;
+  margin-right: 8rpx;
+  vertical-align: middle;
+  margin-top: -6rpx;
+}
+.produPic .tag{
+  width: 150rpx;
+  height: 36rpx;
+  line-height: 36rpx;
+  font-size: 22rpx;
+  color: #fff;
+  text-align: center;
+  background:linear-gradient(to right, #2892f5,#00d2ff);
+  transform: rotate(-45deg);
+  transform-origin: 50% 50%;
+  position: absolute;
+  top:13rpx;
+  left:-47rpx;
+}
+.itemBottom{
+  float: left;
+  width: 500rpx;
+}
+.itemBottom .lName{
+  font-size: 28rpx;
+  line-height:56rpx;
+  height:56rpx;
+  color: #252525;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space:nowrap;
+}
+.itemBottom .listen{
+  font-size: 24rpx;
+  line-height: 34rpx;
+  height: 34rpx;
+  color: #adadad;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space:nowrap;
+}

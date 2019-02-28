@@ -1,0 +1,66 @@
+{extend name="base" /}
+{block name="body"}
+<div class="layui-body">
+    <!--tab标签-->
+    <div class="layui-tab layui-tab-brief">
+        <ul class="layui-tab-title">
+            <li class=""><a href="{:url('admin/album_tags/index')}">专辑标签</a></li>
+            <li class="layui-this">
+                {if request()->action() == "add"}
+                添加标签
+                {else}
+                编辑标签
+                {/if}
+            </li>
+        </ul>
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show">
+                {if request()->action() == "add"}
+                <form class="layui-form form-container" action="{:url('admin/album_tags/add')}" method="post">
+                {else/}
+                <form class="layui-form form-container" action="{:url('admin/album_tags/edit')}" method="post">
+                <input type="hidden" name="id" value="{$detail['id']}">
+                {/if}
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">标签名称</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="title" value="{$detail['title']|default=''}" required lay-verify="required" placeholder="请输入音频分类名称" class="layui-input">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">图标</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="image" value="{$detail['image']|default=''}" required lay-verify="required" placeholder="请上传图标" class="layui-input layui-input-inline" id="thumb">
+                            <input type="file" name="file" class="layui-upload-file">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">降序排序</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="sort" value="{$detail['sort']|default='0'}" required lay-verify="sort" class="layui-input">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">状态</label>
+                        <div class="layui-input-block">
+                            {foreach $statusList as $k => $v}
+                            <input type="radio" name="status" value="{$k}" title="{$v}" {if (!isset($detail['status']) && $k==1) || (isset($detail['status']) && $detail['status'] == $k)}checked="true"{/if}>
+                            {/foreach}
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <button class="layui-btn" lay-submit lay-filter="*">保存</button>
+                            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}

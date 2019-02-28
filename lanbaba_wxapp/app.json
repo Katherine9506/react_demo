@@ -1,0 +1,65 @@
+{
+  "pages": [
+    "pages/welcome/welcome",
+    "pages/index/index",
+    "pages/indexMbOpen/indexMbOpen",
+    "pages/indexList2/indexList2",
+    "pages/indexList/indexList",
+    "pages/indexSearch/indexSearch",
+    "pages/indexPlay/indexPlay",
+    "pages/indexRank/indexRank",
+    "pages/indexRank2/indexRank2",
+    "pages/indexMore/indexMore",
+    "pages/indexKnowledge/indexKnowledge",
+    "pages/mine/mine",
+    "pages/mineAudio/mineAudio",
+    "pages/mineRecord/mineRecord",
+    "pages/mineInfor/mineInfor",
+    "pages/member/member",
+    "pages/memberClock/memberClock",
+    "pages/memberInvit/memberInvit",
+    "pages/memberInvitShow/memberInvitShow",
+    "pages/shop/shop",
+    "pages/phone/phone",
+    "pages/logs/logs"
+  ],
+  "requiredBackgroundModes": [
+    "audio"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3B90F3",
+    "navigationBarTitleText": "儿歌",
+    "navigationBarTextStyle": "light"
+  },
+  "tabBar": {
+    "color": "#888888",
+    "selectedColor": "#3890f3",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "儿童时光",
+        "iconPath": "/images/icon-index1.png",
+        "selectedIconPath": "/images/icon-index2.png"
+      },
+      {
+        "pagePath": "pages/shop/shop",
+        "text": "优选商城",
+        "iconPath": "/images/icon-product1.png",
+        "selectedIconPath": "/images/icon-product2.png"
+      },
+      {
+        "pagePath": "pages/member/member",
+        "text": "免费会员",
+        "iconPath": "/images/icon-menber1.png",
+        "selectedIconPath": "/images/icon-menber2.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "/images/icon-my1.png",
+        "selectedIconPath": "/images/icon-my2.png"
+      }
+    ]
+  }
+}

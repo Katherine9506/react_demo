@@ -1,0 +1,83 @@
+{extend name="base" /}
+
+<style>
+    .layui-input-block {
+        margin-left: 0px;
+    }
+</style>
+
+{block name="body"}
+<div class="layui-body">
+    <!--tab专辑-->
+    <div class="layui-tab layui-tab-brief">
+        <ul class="layui-tab-title">
+            <li class=""><a href="{:url('admin/album/index')}">专辑列表</a></li>
+            <li class="layui-this">绑定音频</li>
+        </ul>
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show">
+                <blockquote class="layui-elem-quote">
+                    当前专辑
+                    <p>专辑名称：{$detail['title']}&nbsp;&nbsp;专辑类别：{$detail['is_vip'] ? '会员制' : '免费试听'}</p>
+                    <p>专辑简介：{$detail['breif']}</p>
+                </blockquote>
+            </div>
+            <table class="layui-table">
+                <thead>
+                <tr>
+                    <th>选择</th>
+                    <th>#</th>
+                    <th>音乐标题</th>
+                    <th>音乐试听</th>
+                    <th>类别</th>
+                    <th>时长</th>
+                </tr>
+                </thead>
+                <tbody>
+                {if(count($audios))}
+                {foreach $audios as $item}
+                <tr>
+                    <td width="20px">
+                        <form class="layui-form {if(in_array($item->id,$selected_audio_ids))}selected{/if}">
+                            <input type="checkbox" name="audios[{$item->id}]" data-id="{$item->id}">
+                        </form>
+                    </td>
+                    <td width="30px">{$item->id}</td>
+                    <td>{$item->title}</td>
+                    <td width="320px">
+                        <audio src="{$item->audio}" controls="controls" type="audio/mpeg">您的浏览器不支持</audio>
+                    </td>
+                    <td>{$item->is_vip ? '会员' : '免费试听'}</td>
+                    <td>{$item->duration}</td>
+                </tr>
+                {/foreach}
+                {else/}
+                <tr>
+                    <td colspan="20" align="middle">Sorry, 暂无数据</td>
+                </tr>
+                {/if}
+                </tbody>
+            </table>
+            {$audios->render()}
+        </div>
+    </div>
+</div>
+{/block}
+
+{block name="script"}
+<script type="text/javascript">
+    var album_id = '{$detail["id"]}';
+    $(function () {
+        $('.layui-form-checkbox').on('click', function () {
+            var id = $(this).prev().data('id');
+            var status = $(this).hasClass('layui-form-checked') ? 1 : 0;
+            console.log(status);
+            $.post("/admin/album/audios", {id: album_id, audio_id: id, status: status}, function (res) {
+                console.log(res);
+            });
+        });
+
+        $('.layui-form.selected').find('.layui-form-checkbox').addClass('layui-form-checked');
+    })
+</script>
+{/block}

@@ -1,0 +1,137 @@
+{extend name="base" /}
+{block name="body"}
+<div class="layui-body">
+    <!--tab标签-->
+    <div class="layui-tab layui-tab-brief">
+        <ul class="layui-tab-title">
+            <li class=""><a href="{:url('admin/album/index')}">专辑列表</a></li>
+            <li class="layui-this">
+                {if request()->action() == "add"}
+                添加专辑
+                {else}
+                编辑专辑
+                {/if}
+            </li>
+        </ul>
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show">
+                {if request()->action() == "add"}
+                <form class="layui-form form-container" action="{:url('admin/album/add')}" method="post">
+                    {else/}
+                    <form class="layui-form form-container" action="{:url('admin/album/edit')}" method="post">
+                        <input type="hidden" name="id" value="{$detail['id']}">
+                        {/if}
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">专辑分类</label>
+                            <div class="layui-input-block">
+                                <select class="layui-select" name="cid" lay-verify="required">
+                                    <option value="">选择分类</option>
+                                    {foreach $category as $cid => $cv}
+                                    <option value="{$cid}" {if isset($detail[
+                                    'cid']) && $detail['cid'] == $cid}selected='true'{/if}>{$cv}</option>
+                                    {/foreach}
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">专辑名称</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" value="{$detail['title']|default=''}" required
+                                       lay-verify="required" placeholder="请输入专辑名称" width="300" class="layui-input">
+                            </div>
+                        </div>
+
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">专辑封面</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="thumb" value="{$detail['thumb']|default=''}" required
+                                       lay-verify="required" placeholder="请上传专辑封面,推荐尺寸180X180"
+                                       class="layui-input layui-input-inline" style="width:300px;">
+                                <input type="file" name="file" class="layui-upload-file">
+                            </div>
+                        </div>
+
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">专辑横幅</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="banner" value="{$detail['banner']|default=''}" required
+                                       lay-verify="required" placeholder="请上传专辑横幅"
+                                       class="layui-input layui-input-inline" style="width:300px;">
+                                <input type="file" name="file" class="layui-upload-file">
+                            </div>
+                        </div>
+
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">专辑简介</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="breif" value="{$detail['breif']|default=''}" required
+                                       lay-verify="required" placeholder="专辑简介(20字以内)" class="layui-input">
+                            </div>
+                        </div>
+
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">专辑描述</label>
+                            <div class="layui-input-block">
+                                <textarea name="introduce" required lay-verify="required" placeholder="专辑描述"
+                                          class="layui-textarea">{$detail['introduce']|default=''}</textarea>
+                            </div>
+                        </div>
+
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">降序排序</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="sort" value="{$detail['sort']|default='0'}" required
+                                       lay-verify="sort" class="layui-input">
+                            </div>
+                        </div>
+
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">关联标签</label>
+                            <div class="layui-input-block">
+                                {foreach $tags as $tid => $tag}
+                                <input type="checkbox" name="tags[]" value="{$tid}"
+                                       title="{$tag.title}" lay-skin="primary" required lay-verify="required" {if
+                                       isset($selected_tags) && in_array($tid, $selected_tags)}checked{/if}>
+                                {/foreach}
+                            </div>
+                        </div>
+
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">播放权限</label>
+                            <div class="layui-input-block">
+                                {foreach $vipList as $k => $v}
+                                <input type="radio" name="is_vip" value="{$k}" title="{$v}" {if (!isset($detail['is_vip'])
+                                && $k==0) || (isset($detail['is_vip']) && $detail['is_vip'] == $k)}checked="true"{/if}>
+                                {/foreach}
+                            </div>
+                        </div>
+
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">发布状态</label>
+                            <div class="layui-input-block">
+                                {foreach $statusList as $k => $v}
+                                <input type="radio" name="status" value="{$k}" title="{$v}" {if (!isset($detail['status'])
+                                && $k==1) || (isset($detail['status']) && $detail['status'] == $k)}checked="true"{/if}>
+                                {/foreach}
+                            </div>
+                        </div>
+
+                        <div class="layui-form-item">
+                            <div class="layui-input-block">
+                                <button class="layui-btn" lay-submit lay-filter="*">保存</button>
+                                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                            </div>
+                        </div>
+                    </form>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}
+
+{block name = script}
+<script type="text/javascript">
+
+</script>
+{/block}

@@ -1,0 +1,85 @@
+/* pages/mine/mine.wxss */
+page{
+background: #F8F8F8;
+}
+.header{
+height: 404rpx;
+position: relative;
+overflow: hidden;
+}
+.header .bg{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 404rpx;
+z-index: -1;
+}
+.bed{
+height:404rpx;
+background: rgba(0, 0, 0, 0.5);
+box-sizing: border-box;
+padding-top: 69rpx;
+}
+.txBox{
+width:142rpx;
+height: 142rpx;
+border-radius: 50%;
+overflow: hidden;
+margin: 0 auto 0;
+border:4rpx solid #fff;
+}
+.txBox image{
+width: 100%;
+}
+.name{
+font-size: 28rpx;
+color: #ffffff;
+text-align: center;
+line-height: 46rpx;
+height: 46rpx;
+overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+margin-bottom: 50rpx;
+}
+.member button{
+width: 160rpx;
+height: 50rpx;
+line-height: 46rpx;
+font-size: 24rpx;
+color: #ffcc30;
+border-radius: 25rpx;
+background: transparent;
+border: 2rpx solid #FFCC32;
+}
+.member button.expire-date{
+width: 360rpx;
+}
+.same{
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0 32rpx;
+height: 100rpx;
+line-height: 100rpx;
+font-size: 32rpx;
+color: #000000;
+border-radius: 50rpx;
+background: #fff;
+margin-bottom: 20rpx;
+}
+.same::after{
+border:none;
+}
+.same .iconArrow{
+width: 15rpx;
+height: 26rpx;
+}
+.same view .icon{
+width:28rpx;
+height: 28rpx;
+margin-right: 16rpx;
+vertical-align: middle;
+margin-top: -6rpx;
+}

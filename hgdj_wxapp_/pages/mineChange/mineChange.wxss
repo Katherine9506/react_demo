@@ -1,0 +1,43 @@
+/* pages/mineChange/mineChange.wxss */
+page{
+background: #F7F7F7;
+}
+.changeTap{
+height: 93rpx;
+line-height: 93rpx;
+display: flex;
+justify-content: space-around;
+padding: 0 24rpx;
+background: #fff;
+margin-bottom: 20rpx;
+}
+.changeTap view{
+width: 25%;
+font-size: 30rpx;
+color: #333333;
+text-align: center;
+}
+.detailList{
+padding: 0 24rpx;
+background: #fff;
+}
+.detailItem{
+display: flex;
+height:60rpx;
+align-items: center;
+border-bottom: 1rpx solid #EEEEEE;
+padding: 28rpx 0 26rpx;
+line-height: 30rpx;
+}
+.detailItem .time{
+width: 150rpx;
+}
+.detailItem> view{
+width: 25%;
+text-align: center;
+font-size: 24rpx;
+color: #555555;
+}
+.detailList .detailItem:last-child{
+border: 0;
+}

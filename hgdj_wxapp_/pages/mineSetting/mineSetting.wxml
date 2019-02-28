@@ -1,0 +1,87 @@
+<!--pages/mineSetting/mineSetting.wxml-->
+<view class='setPic'>
+    <view>头像</view>
+    <view class='pic' bindtap='avatarChange'>
+        <image src='{{avatar}}' mode='widthFix'></image>
+    </view>
+</view>
+<view class='settingList'>
+    <form>
+        <view class='ite'>
+            <view class='left'>昵称</view>
+            <view class='right'>
+                <input bindchange="nicknameChange" value="{{user.name}}"/>
+                <!--<image src='/images/icon-arrow.png'></image>-->
+            </view>
+        </view>
+        <view class='ite'>
+            <view class='left'>性别</view>
+            <view class='right'>
+                <picker bindchange="genderChange" range="{{sex}}" value="{{user.gender - 1}}">
+                    <view class="picker">
+                        {{sex[user.gender - 1]}}
+                    </view>
+                </picker>
+                <image src='/images/icon-arrow.png'></image>
+            </view>
+        </view>
+        <view class='ite'>
+            <view class='left'>生日</view>
+            <view class='right'>
+                <picker mode="date" value="{{user.birth}}" bindchange="bindDateChange">
+                    <view class="picker">
+                        {{user.birth}}
+                    </view>
+                </picker>
+                <image src='/images/icon-arrow.png'></image>
+            </view>
+        </view>
+        <view class='ite'>
+            <view class='left'>星座</view>
+            <view class='right'>
+                <picker bindchange="constellChange" value="{{user.constell}}" range="{{constell}}">
+                    <view class="picker">
+                        {{constell[user.constell]}}
+                    </view>
+                </picker>
+                <image src='/images/icon-arrow.png'></image>
+            </view>
+        </view>
+        <view class='ite'>
+            <view class='left'>所在地</view>
+            <view class='right'>
+                <picker mode="region" bindchange="regionChange" value="{{region}}" custom-item="{{customItem}}">
+                    <view class="picker">
+                        {{region[0]}} {{region[1]}} {{region[2]}}
+                    </view>
+                </picker>
+                <image src='/images/icon-arrow.png'></image>
+            </view>
+        </view>
+        <view class='ite'>
+            <view class='left'>手机</view>
+            <view class='right noarrow'>
+                <text>{{user.mobile}}</text>
+            </view>
+        </view>
+    </form>
+</view>
+<view>
+    <button disabled="{{btnDisabled}}" type="primary" bindtap="formSubmitHandler">保存</button>
+</view>
+<view class='modal' wx:if='{{modalShow}}'>
+    <view class='modalMain'>
+        <form bindsubmit='confirmTap'>
+            <view class='title'>修改手机号</view>
+            <view class='inputbtn'>
+                <input name='name' value='{{nickname}}'/>
+            </view>
+            <view class='btn'>
+                <button bindtap='cancelTap' class='cancel'>取消</button>
+                <button formType="submit" class='confirm'>确定</button>
+            </view>
+        </form>
+    </view>
+</view>
+
+

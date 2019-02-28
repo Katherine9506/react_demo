@@ -1,0 +1,10 @@
+<import src="../../wxParse/wxParse/wxParse.wxml"/> 
+<view class='wrap'>
+    <view class='detailsBox'>
+        <view class='details'>
+            <view>
+                <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+            </view>
+        </view>
+    </view>
+</view>

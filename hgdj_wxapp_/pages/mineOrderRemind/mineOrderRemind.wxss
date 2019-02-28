@@ -1,0 +1,181 @@
+/* pages/mineOrderRemind/mineOrderRemind.wxss */
+page{
+    background: #F7F7F7;
+    padding-bottom: 98rpx;
+}
+.box{
+    padding: 21rpx 34rpx 0 14rpx;
+    background: #fff;
+    margin-bottom: 20rpx;
+}
+.orderNum{
+    color: #999999;
+    font-size: 30rpx;
+    line-height: 78rpx;
+    padding-left: 21rpx;
+}
+.playInfor{
+    font-size: 30rpx;
+    color: #333333;
+    line-height: 90rpx;
+    height: 90rpx;
+    display: flex;
+    margin-bottom: 16rpx;
+    padding-left: 23rpx;
+}
+.playerPic{
+    width: 90rpx;
+    height: 90rpx;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 16rpx;
+}
+.playerPic image{
+    display: block;
+    width: 100%;
+}
+.contact{
+    height: 72rpx;
+    line-height: 72rpx;
+    color: #333333;
+    font-size: 30rpx;
+    padding-left: 23rpx;
+    display: flex;
+    align-items: center;
+}
+.contact image{
+    width: 42rpx;
+    height: 42rpx;
+    margin: 0 10rpx;
+}
+.contact button{
+    font-size: 30rpx;
+    line-height: 72rpx;
+    margin: 0 0 0 35rpx;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color:#0362dc;
+}
+.contact button::after{
+    border: 0;
+    border-radius: 0;
+}
+.nnp{
+    display: flex;
+    justify-content: space-between;
+    height: 72rpx;
+    line-height: 72rpx;
+    font-size: 30rpx;
+    color: #333333;
+    padding-bottom: 24rpx;
+    padding-left: 23rpx;
+    border-bottom: 1rpx solid #EEEEEE;
+}
+.money{
+    color: #0362dc;
+}
+.payM{
+    font-size: 30rpx;
+    color: #0362dc;
+    text-align:right;
+    line-height: 92rpx;
+    padding-bottom: 3rpx;
+}
+.payM text{
+    font-size: 40rpx;
+}
+.state{
+    padding: 25rpx 34rpx 29rpx;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    background: #fff;
+    margin-bottom: 20rpx;
+}
+.state .status{
+    font-size: 34rpx;
+    line-height: 64rpx;
+    color: #0362dc;
+}
+.state .ts{
+    font-size: 26rpx;
+    line-height: 56rpx;
+    color: #010101;
+}
+.state .ts2{
+    font-size: 24rpx;
+    line-height:36rpx;
+    color: #999999;
+}
+.state .sLeft{
+    width: 390rpx;
+}
+.state .sRight{
+    width: 286rpx;
+    height: 119rpx;
+    box-sizing: border-box;
+    background: #81B0ED;
+    padding: 10rpx 16rpx;
+    border-radius: 10rpx;
+}
+.state .sRight .sy{
+    font-size: 18rpx;
+    color: #333333;
+    line-height: 24rpx;
+}
+.state .sRight .time{
+    font-size: 52rpx;
+    line-height: 66rpx;
+    text-align: center;
+    color: #fff; 
+}
+.before{
+    background: #fff;
+    padding: 14rpx 36rpx;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20rpx;
+}
+.buyer{
+    font-size: 30rpx;
+    color: #333333;
+    height: 68rpx;
+    line-height: 68rpx;
+    display: flex;
+
+}
+.buyerPic{
+    width: 68rpx;
+    height: 68rpx;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 30rpx;
+}
+.buyerPic image{
+    display: block;
+    width: 100%;
+}
+.timeB{
+    font-size: 30rpx;
+    color: #999999;
+    line-height: 68rpx;
+}
+.payBtn{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width:100%;
+    height: 98rpx;
+}
+.payBtn button{
+    width: 100%;
+    height: 98rpx;
+    line-height: 98rpx;
+    border:0;
+    border-radius: 0;
+    background: #0766DC;
+    font-size: 34rpx;
+    color: #fff;
+    padding: 0;
+}

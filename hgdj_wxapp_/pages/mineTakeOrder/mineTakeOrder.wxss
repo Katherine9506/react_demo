@@ -1,0 +1,199 @@
+/* pages/mineTakeOrder/mineTakeOrder.wxss */
+page{
+    background: #F7F7F7;
+}
+.takeTop{
+    background-repeat: repeat;
+    background-position: center center;
+    background-size:cover;
+    height: 360rpx;
+    margin-bottom: 20rpx;
+}
+.topCircle{
+    padding: 21rpx 24rpx 0;
+}
+.topCircle .cricle{
+    width: 151rpx;
+    height: 151rpx;
+    background: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height:129rpx;
+    margin: 0 auto;
+    border: 11rpx solid #599AE7;
+    position: relative;
+    color:#0362dc;
+    font-size: 52rpx;
+    box-sizing: border-box;
+}
+.topCircle .cricle text{
+    font-size: 26rpx;
+    position: absolute;
+    left: 178rpx;
+    color: #fff;
+}
+.topCircle > text{
+    display: block;
+    height: 34rpx;
+    line-height: 34rpx;
+    font-size: 24rpx;
+    color: #ffffff;
+    text-align: center;
+    margin: 18rpx 0 10rpx;
+}
+.topDe{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    color: #fff;
+}
+.topDe .top{
+    font-size: 48rpx;
+    line-height: 62rpx
+}
+.topDe .top text{
+    font-size: 24rpx;
+}
+.topDe .bottom{
+    font-size: 24rpx;
+    line-height: 42rpx;
+}
+.formBox{
+    background:#fff;
+    padding: 0 24rpx;
+    margin-bottom: 30rpx;
+}
+.formTop{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    padding: 20rpx 24rpx;
+    border-bottom: 1rpx solid #EEEEEE;
+}
+.gameName{
+    display: flex;
+    align-items: center;
+    font-size: 30rpx;
+    color: #333333;
+}
+.gameName view{
+    width:72rpx;
+    height: 72rpx;
+    overflow: hidden;
+    border-radius: 50%; 
+    margin-right: 30rpx;
+}
+.gameName view image{
+    display: block;
+    width: 100%;
+}
+.arrow{
+    width: 16rpx;
+    height: 30rpx;
+    display: block;
+}
+.formBottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 83rpx;
+    border-bottom: 1rpx solid #EEEEEE;
+    padding: 0 24rpx;
+    font-size: 32rpx;
+    color: #999999;
+}
+.formBottom .bright{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.formBottom .bright input{
+    text-align: right;
+    color: #333333;
+    width: 300rpx;
+    height: 83rpx;
+    line-height: 83rpx;
+    padding-right: 30rpx;
+}
+.formBox .formBottom:last-child{
+    border-bottom: 0;
+}
+.formBtn{
+    padding: 28rpx 28rpx;
+}
+.formBtn button{
+    width: 620rpx;
+    height: 80rpx;
+    border-radius: 40rpx;
+    background: #0063DB;
+    font-size: 34rpx;
+    color: #fff;
+}
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+.modalMain{
+    position: absolute;
+    top: calc(50% - 200rpx);
+    left: 75rpx;
+    width: 600rpx;
+    height: 242rpx;
+    background: #fff;
+    border-radius: 10rpx;
+    overflow: hidden;
+}
+.modal .btn{
+    height: 98rpx;
+    display: flex;
+    border-top: 1rpx solid #F7F7F7;
+}
+.modal .btn button{
+    margin: 0;
+    padding: 0;
+    height: 98rpx;
+    line-height: 98rpx;
+    width: 50%;
+    border: 0;
+    border-radius:0;
+    background: #fff;
+    font-size: 32rpx;
+    color: #333;
+}
+.modal .btn button::after{
+    border: 0;
+    border-radius: 0;
+}
+.modal .inputbtn{
+    height: 143rpx;
+}
+.modal .inputbtn input{
+    display: block;
+    padding:0 40rpx;
+    height:143rpx;
+    line-height:143rpx;
+    color: #666;
+    font-size: 28rpx;
+    text-align: center;
+}
+.modal .btn .confirm{
+    color:#0362dc;
+    border-left: 1rpx solid #F7F7F7;
+}
+.checkGame checkbox .wx-checkbox-input {
+    border-radius: 50%;
+    height: 44rpx;
+    width: 44rpx;
+    margin-top: -4rpx;
+    border: 1rpx solid #999;
+    /* background-color: #999; */
+}
+.checkGame checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+    background-color: #0063DB;
+    border: 1rpx solid #0063DB;
+}

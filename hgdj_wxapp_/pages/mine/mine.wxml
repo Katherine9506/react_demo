@@ -1,0 +1,104 @@
+<!--pages/mine/mine.wxml-->
+<view>
+    <view class='header' style='background-image:url({{domain}}upload/wxapp/mine-bbg.png)'>
+        <view class='memberInfor'>
+            <view class='box'>
+                <view class='parentPic' bindtap='settingBtn'><image src='{{user.thumb}}' mode='widthFix'></image></view>
+                <view class='parentTxt'>
+                    <view class='userName'>
+                        <text class='myName'>{{user.name}}</text>
+                        <view class='rz' wx:if="{{user.is_cert}}"><image src='/images/rz.png'></image>认证</view>
+                        <view class='rz' wx:else><image src='/images/rz.png'></image>未认证</view>
+                    </view>
+                    <view wx:if="{{user.mobile}}" class='code'>{{user.mobile}}</view>
+                </view>
+            </view>
+            <view class='settingBtn' bindtap='settingBtn'><image src='/images/setting.png' mode='widthFix'></image></view>
+        </view>
+    </view>
+    <view class='fnList'>
+        <view class='roughB sameStyle'>
+            <view wx:if="{{user.mobile}}" class='box-same' bindtap='skilsRz'>
+                <view class='box-left'>
+                    <image class='icon-fn' src='/images/mine-rz.png' mode='widthFix'></image>
+                    <text>技能认证</text>
+                </view>
+                <image class='more' src="/images/icon-arrow.png" mode='widthFix'></image>
+            </view>
+            <button wx:else class='box-same' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">
+                <view class='box-left'>
+                    <image class='icon-fn'  src='/images/mine-rz.png' mode='widthFix'></image>
+                    <text>技能认证</text>
+                </view>
+                <image class='more' src="/images/icon-arrow.png" mode='widthFix'></image>
+            </button>
+            <form bindsubmit="orderSetTap" report-submit="true" class="form-view">
+                <button form-type="submit" class="form-view-button">
+                    <view class='box-same' bindtap='' wx:if="{{user.is_cert}}">
+                        <view class='box-left'>
+                            <image class='icon-fn' src='/images/mine-setting.png' mode='widthFix'></image>
+                            <text>接单设置</text>
+                        </view>
+                        <image class='more' src="/images/icon-arrow.png" mode='widthFix'></image>
+                    </view>
+                </button>
+            </form>
+        </view>
+        <view class='roughB sameStyle'>
+            <view wx:if="{{user.mobile}}" class='box-same' bindtap='walletTap'>
+                <view class='box-left'>
+                    <image class='icon-fn'  src='/images/mine-purse.png' mode='widthFix'></image>
+                    <text>我的钱包</text>
+                </view>
+                <image class='more' src="/images/icon-arrow.png" mode='widthFix'></image>
+            </view>
+            <button wx:else class='box-same' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">
+                <view class='box-left'>
+                    <image class='icon-fn'  src='/images/mine-purse.png' mode='widthFix'></image>
+                    <text>我的钱包</text>
+                </view>
+                <image class='more' src="/images/icon-arrow.png" mode='widthFix'></image>
+            </button>
+            <form bindsubmit="toOrderTap" report-submit="true" class="form-view">
+                <button form-type="submit" class="form-view-button">
+                    <view class='box-same' bindtap=''>
+                        <view class='box-left'>
+                            <image class='icon-fn' src='/images/mine-order.png' mode='widthFix'></image>
+                            <text>订单管理</text>
+                        </view>
+                        <image class='more' src="/images/icon-arrow.png" mode='widthFix'></image>
+                    </view>
+                </button>
+            </form>
+        </view>
+        <view class='roughB sameStyle'>
+            <view class='box-same' bindtap='feedback'>
+                <view class='box-left'>
+                    <image class='icon-fn'  src='/images/mine-advice.png' mode='widthFix'></image>
+                    <text>意见反馈</text>
+                </view>
+                <image class='more' src="/images/icon-arrow.png" mode='widthFix'></image>
+            </view>
+            <button open-type="contact" hover-class="button-hover">
+                <view class='box-same'>
+                    <view class='box-left'>
+                        <image class='icon-fn' src='/images/mine-client.png' mode='widthFix'></image>
+                        <text>联系客服</text>
+
+                        <!-- <contact-button type="default-light" size="20" session-from="weapp" ><text>联系客服</text></contact-button> -->
+                    </view>
+                    <image class='more' src="/images/icon-arrow.png" mode='widthFix'></image>
+                </view>
+            </button>
+        </view>
+        <view class='sameStyle'>
+            <view class='box-same'>
+                <view class='box-left'>
+                    <image class='icon-fn' src='/images/mine-about.png' mode='widthFix'></image>
+                    <text>版本号</text>
+                </view>
+                <text class='edit'>V{{version}}</text>
+            </view>
+        </view>
+    </view>
+</view>

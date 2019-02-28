@@ -1,0 +1,126 @@
+/* pages/myOrder/myOrder.wxss */
+page{
+    background: #F7F7F7;
+}
+.tabBox{
+    height: 98rpx;
+    line-height: 98rpx;
+    width: 100%;
+    z-index: 80;
+    overflow: hidden;
+    font-size: 30rpx;
+    display: flex;
+    justify-content: space-around;
+    background: #FFF;
+    border-bottom:20rpx solid #F7F7F7;
+    color: #999999;
+}
+.tabBox view.tabBar{
+    position: relative;
+    padding: 0 20rpx;
+}
+.tabBox view.active{
+    color:#0362dc;
+}
+.tabBox view.active::after{
+    position: absolute;
+    bottom:0;
+    left: 50%;
+    display: block;
+    content: "";
+    width: 68rpx;
+    height:4rpx;
+    margin-left: -34rpx;
+    background:#0362DC;
+}
+.contentBox{
+    position: relative;
+    z-index: 1;
+}
+.contentBox scroll-view{
+    position: relative;
+    z-index: 1;
+}
+.scrollView{
+    height: 100%;
+}
+.orderItem{
+    padding: 0 24rpx;
+    background: #fff;
+    margin-bottom: 20rpx;
+    font-size: 30rpx;
+}
+.orderItem .top{
+    padding: 23rpx 14rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1rpx solid #EEEEEE;
+}
+.orderItem .left{
+    display: flex;
+    align-items: center;
+    color: #333333;
+}
+.orderItem .left view{
+    width: 90rpx;
+    height: 90rpx;
+    border-radius: 50%;
+    overflow: hidden;
+    margin:0 20rpx;
+}
+.orderItem .left text{
+    display: block;
+    line-height: 90rpx;
+}
+.orderItem .left view image{
+    display: block;
+    width: 100%;
+}
+.orderItem .right{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #999999;
+}
+.orderItem .right .unfinished{
+    color: #0362dc;
+}
+.orderItem .right image{
+    width: 16rpx;
+    height: 30rpx;
+    margin-left: 18rpx;
+}
+.orderItem .moddle{
+    display: flex;
+    justify-content: space-between;
+    height: 92rpx;
+    line-height: 92rpx;
+    padding: 0 14rpx;
+}
+.orderItem .moddle .lt{
+    color: #333333;
+}
+.orderItem .moddle .rmb{
+    color: #0362dc;
+}
+.orderItem .bottom{
+    height: 54rpx;
+    line-height: 54rpx;
+    color: #999999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 14rpx 26rpx;
+}
+.orderItem .bottom button{
+    width: 155rpx;
+    height: 54rpx;
+    line-height: 54rpx;
+    color: #fff;
+    background: #0362DC;
+    border-radius: 27rpx;
+    font-size: 26rpx;
+    margin: 0;
+    padding:0;
+}

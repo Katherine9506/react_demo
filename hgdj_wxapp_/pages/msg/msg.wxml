@@ -1,0 +1,24 @@
+<!--pages/msg/msg.wxml-->
+<view class='msgList'>
+    <block wx:for="{{chaters}}" wx:key="{{index}}">
+        <view class='msgItem' bindtap='msgDetailTap' data-chater_id="{{item.pivot.chater_id}}"
+              data-chater_name="{{item.name}}" data-chater_thumb="{{item.thumb}}">
+            <view class='friendPic'>
+                <image src='{{item.thumb}}' mode='widthFix'></image>
+                <text wx:if="{{item.unRead}}">{{item.unRead}}</text>
+            </view>
+            <view class='lastnews'>
+                <view class='friendName'>{{item.name}}</view>
+                <view class='lastMsg' wx:if="{{item.lastMsgType == 1}}">
+                    <!--{{item.lastMessage}}-->
+                    <rich-text class="emojiMstText" nodes="{{item.lastMessage}}"></rich-text>
+                </view>
+                <view class='lastMsg' wx:if="{{item.lastMsgType == 2}}">[图片]</view>
+                <view class='lastMsg' wx:if="{{item.lastMsgType == 3}}">[语音]</view>
+            </view>
+            <view class="time">
+                <view class="lastTime">{{item.timeShown}}</view>
+            </view>
+        </view>
+    </block>
+</view>

@@ -1,0 +1,105 @@
+<!--pages/indexBuyOrder/indexBuyOrder.wxml-->
+<view>
+    <view class='orderTop'>
+        <view class='goodPic'><image src='{{user_info.thumb?user_info.thumb:"/images/user1.jpg"}}' mode='widthFix'></image></view>
+        <view class='goodTxt'>
+            <view class='nameSex'>
+                <text class='name'>{{user_info.name}}</text>
+                <view class='sex'>
+                    <image wx:if='{{user_info.gender==0}}' src='/images/sex-bm.png'></image>
+                    <image wx:if='{{user_info.gender==1}}' src='/images/sex-male.png'></image>
+                    <image wx:if='{{user_info.gender==2}}' src='/images/sex-female.png'></image>
+                    <text wx:if='{{user_info.gender==0}}'>保密</text>
+                    <text wx:if='{{user_info.gender==1}}'>男</text>
+                    <text wx:if='{{user_info.gender==2}}'>女</text>
+                </view>
+            </view>
+            <view class='addrScore'>
+                <view class='address'>
+                    <image src='/images/address.png'></image>
+                    <text>{{user_info.city?user_info.city:"保密"}}</text>
+                </view>
+                <view class='star'>
+                    <!-- <view> -->
+                        <image src='{{userStar>=1?"/images/star-orange.png":"/images/star-gray.png"}}' mode='widthFix'></image>
+                        <image src='{{userStar>=2?"/images/star-orange.png":"/images/star-gray.png"}}' mode='widthFix'></image>
+                        <image src='{{userStar>=3?"/images/star-orange.png":"/images/star-gray.png"}}' mode='widthFix'></image>
+                        <image src='{{userStar>=4?"/images/star-orange.png":"/images/star-gray.png"}}' mode='widthFix'></image>
+                        <image src='{{userStar==5?"/images/star-orange.png":"/images/star-gray.png"}}' mode='widthFix'></image>
+                    <!-- </view> -->
+                    <text>{{userStar}}分</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class='formBox'>
+        <form bindsubmit="formSubmit" report-submit="true">
+            <view class='formTop'>
+                <view class='formsame'>
+                    <view class='left'>服务类型</view>
+                    <view class='right serverType'>
+                        <input value='{{order_price.skill_name}}' disabled/>
+                    </view>
+                </view>
+                <view class='formsame'>
+                    <view class='left'>单位</view>
+                    <view class='right unit'>
+                        <button>{{order_price.unit}}</button>
+                    </view>
+                </view>
+                <view class='formsame'>
+                    <view class='left'>单数</view>
+                    <view class='right longTime'>
+                        <button bindtap='releseTap'>-</button>
+                        <input type='number' value='{{num}}'/>
+                        <button bindtap='addTap' class='add'>+</button>
+                    </view>
+                </view>
+                <view class='formsame'>
+                    <view class='left'>备注</view>
+                    <view class='right note'>
+                        <input type='text' name="remark" placeholder='请输入备注' placeholder-class='ph'/>
+                    </view>
+                </view>
+                <view class='formsame'>
+                    <view class='left'>联系方式</view>
+                    <view class='right contact'>
+                        <picker bindchange="contactChange" value="{{index}}" range="{{array}}">
+                            <view class="picker">
+                                {{array[index]}}
+                            </view>
+                        </picker>
+                    </view>
+                </view>
+                <view class='formsame' wx:if="{{index==0}}">
+                    <view class='left'>微信号</view>
+                    <view class='right contNum'>
+                        <input name="contact" value='' placeholder="请输入微信号" />
+                    </view>
+                </view>
+                <view class='formsame' wx:if="{{index==1}}">
+                    <view class='left'>QQ</view>
+                    <view class='right contNum'>
+                        <input name="contact" value='' placeholder="请输入QQ号"/>
+                    </view>
+                </view>
+                <view class='formsame' wx:if="{{index==2}}">
+                    <view class='left'>YY号码</view>
+                    <view class='right contNum'>
+                        <input name="contact" value='' placeholder="请输入YY号码"/>
+                    </view>
+                </view>
+            </view>
+            <view class='formBottom'>
+                <view class='priceT'>费用</view>
+                <view class='priceD'>
+                    <view>总价：<text>￥{{total}}</text></view>
+                    <view>优惠券：<text>- ￥{{coupons}}</text></view>
+                    <view class='needPay'>应付金额：<text>￥{{needPay}}</text></view>
+                </view>
+            </view>
+            <view class='submitBox'><button form-type='submit' disabled="{{submitEnable}}">提交订单</button></view>
+        </form>
+    </view>
+
+</view>

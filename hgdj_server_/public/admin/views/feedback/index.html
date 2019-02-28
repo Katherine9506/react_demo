@@ -1,0 +1,257 @@
+<style>
+    .layui-table-cell {
+        max-height: 100px;
+        height: 100%;
+    }
+</style>
+
+<div class="tplay-body">
+    <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+        <ul class="layui-tab-title">
+            <li class="layui-this">全部反馈</li>
+            <li>已处理</li>
+            <li>未处理</li>
+        </ul>
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show tplay-btn">
+                <button class="layui-btn layui-btn-warm" data-type="all" data-events="unsolve">
+                    批量设置未解决
+                </button>
+                <button class="layui-btn" data-type="all" data-events="solve">
+                    <i class="layui-icon layui-icon-ok"></i>批量解决
+                </button>
+                <button class="layui-btn layui-btn-danger" data-type="all" data-events="delete">
+                    <i class="layui-icon layui-icon-delete"></i>批量删除
+                </button>
+                <table id="table-feedback-all" lay-filter="table-feedback-all">
+                    <script type="text/html" id="feedback_status">
+                        {{#  if(d.status == 1){ }}
+                        <span style="color:#1E9FFF">已处理 </span>
+                        {{#  } else { }}
+                        <span style="color:#FF5722">等待处理 </span>
+                        {{#  } }}
+                    </script>
+                    <script type="text/html" id="feedback_menu">
+                        <div class="layui-btn-group">
+                            {{# if(d.status == 1){ }}
+                            <button class="layui-btn layui-btn-xs layui-btn-warm" data-type="all" lay-event="unsolve">
+                                设置未解决
+                            </button>
+                            {{# } else { }}
+                            <button class="layui-btn layui-btn-xs" data-type="all" lay-event="solve">设置已解决</button>
+                            {{# } }}
+                            <button class="layui-btn layui-btn-xs layui-btn-danger" lay-event="delete">删除
+                            </button>
+                        </div>
+                    </script>
+                    <script type="text/html" id="images">
+                        <div style="max-height: 100px;height: 100%;">
+                            {{# for(var i = 0,images = d.images,len = images.length;i < len;i++){ }}
+                            <img class="seeimg" src="{{ images[i].path }}" alt="">
+                            {{# } }}
+                        </div>
+                    </script>
+                </table>
+            </div>
+            <div class="layui-tab-item tplay-btn">
+                <button class="layui-btn layui-btn-warm" data-type="solved" data-events="delete">
+                    批量设置未解决
+                </button>
+                <button class="layui-btn layui-btn-danger" data-type="solved" data-events="delete">
+                    <i class="layui-icon layui-icon-delete"></i>批量删除
+                </button>
+                <table id="table-feedback-solved" lay-filter="tplay-admin-group">
+
+                </table>
+            </div>
+            <div class="layui-tab-item tplay-btn">
+                <button class="layui-btn" data-type="unsolved" data-events="delete">
+                    <i class="layui-icon layui-icon-ok"></i>批量解决
+                </button>
+                <button class="layui-btn layui-btn-warm" data-type="unsolved" data-events="delete">
+                    <i class="layui-icon layui-icon-delete"></i>批量删除
+                </button>
+                <table id="table-feedback-unsolved" lay-filter="tplay-admin-group"></table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    layui.use(['table', 'element', 'tplay', 'apiconfig'], function () {
+        var $ = layui.$
+            , table = layui.table
+            , element = layui.element
+            , tplay = layui.tplay
+            , config = layui.apiconfig;
+
+        //全部反馈
+        table.render({
+            elem: '#table-feedback-all',
+            url: config.domain + '/admin/feedback/index',
+            where: {access_token: layui.data('tplay').access_token},
+            page: true,
+            limit: 15,
+            cols: [[
+                {type: 'checkbox',},
+                {field: 'id', width: 60, title: '#'},
+                {field: 'uid', title: '反馈用户ID'},
+                {field: 'uname', title: '反馈用户'},
+                {field: 'content', title: '反馈内容'},
+                {field: 'images', width: '30%', title: '附加图片', templet: '#images',},
+                {field: 'contact', title: '联系方式'},
+                {field: 'status', title: '状态', toolbar: '#feedback_status'},
+                {field: 'right', title: '操作', toolbar: '#feedback_menu'}
+            ]],
+            skin: 'line'
+        });
+
+        //已解决
+        table.render({
+            elem: '#table-feedback-solved',
+            url: config.domain + '/admin/feedback/index?status=1',
+            page: true,
+            limit: 15,
+            cols: [[
+                {type: 'checkbox',},
+                {field: 'id', width: 60, title: '#'},
+                {field: 'uid', title: '反馈用户ID'},
+                {field: 'uname', title: '反馈用户'},
+                {field: 'content', title: '反馈内容'},
+                {field: 'images', title: '附加图片', width: '30%', templet: '#images',},
+                {field: 'contact', title: '联系方式'}
+            ]], skin: 'line'
+        });
+        //未解决
+        table.render({
+            elem: '#table-feedback-unsolved',
+            url: config.domain + '/admin/feedback/index?status=0',
+            page: true,
+            limit: 15,
+            cols: [[
+                {type: 'checkbox',},
+                {field: 'id', width: 60, title: '#'},
+                {field: 'uid', title: '反馈用户ID'},
+                {field: 'uname', title: '反馈用户'},
+                {field: 'content', title: '反馈内容'},
+                {field: 'images', title: '附加图片', width: '30%', templet: '#images',},
+                {field: 'contact', title: '联系方式'}
+            ]],
+            skin: 'line'
+        });
+
+        //事件处理
+        var events = {
+            delete: function (othis, type) {
+                var thisTabs = tabs[type],
+                    checkStatus = table.checkStatus(thisTabs.id),
+                    data = checkStatus.data;
+                console.log(data);
+                console.log(data.length);
+                if (data.length === 0) {
+                    return layer.msg('请选择至少一条记录');
+                }
+                var array = [];
+                for (var i = 0; i < data.length; i++) {
+                    array.push(data[i].id);
+                }
+                layer.confirm('确定删除选中的数据吗？', function () {
+                    $.ajax({
+                        url: config.domain + '/admin/feedback/deletes',
+                        type: 'post',
+                        data: {ids: array},
+                        success: function (res) {
+                            layer.msg(res.msg);
+                            if (res.code == 1) {
+                                table.reload(thisTabs.id); //刷新表格
+                            }
+                        }
+                    })
+                })
+            },
+            solve: function (othis, type) {
+                var thisTabs = tabs[type],
+                    checkStatus = table.checkStatus(thisTabs.id),
+                    data = checkStatus.data;
+                console.log(data);
+                if (data.length === 0) {
+                    layer.msg('请至少选择一条数据');
+                }
+                var array = [];
+                for (var i = 0; i < data.length; i++) {
+                    array.push(data[i].id);
+                }
+                layer.confirm('确定设置当前选中记录为已处理状态吗？', function () {
+                    $.ajax({
+                        url: config.domain + '/admin/feedback/status',
+                        type: 'post',
+                        data: {ids: array, status: 1},
+                        success: function (res) {
+                            layer.msg(res.msg);
+                            if (res.code == 1) {
+                                table.reload(thisTabs.id); //刷新表格
+                            }
+                        }
+                    })
+                })
+            },
+            unsolve: function (othis, type) {
+                var thisTabs = tabs[type],
+                    checkStatus = table.checkStatus(thisTabs.id),
+                    data = checkStatus.data;
+                console.log(data);
+                if (data.length === 0) {
+                    layer.msg('请至少选择一条数据');
+                }
+                var array = [];
+                for (var i = 0; i < data.length; i++) {
+                    array.push(data[i].id);
+                }
+                layer.confirm('确定设置当前选中记录为等待处理状态吗？', function () {
+                    $.ajax({
+                        url: config.domain + '/admin/feedback/status',
+                        type: 'post',
+                        data: {ids: array, status: 0},
+                        success: function (res) {
+                            layer.msg(res.msg);
+                            if (res.code == 1) {
+                                table.reload(thisTabs.id); //刷新表格
+                            }
+                        }
+                    })
+                })
+            }
+        };
+
+        //区分各选项卡中的表格
+        var tabs = {
+            all: {
+                text: '全部反馈',
+                id: 'table-feedback-all'
+            },
+            solved: {
+                text: '已处理',
+                id: 'table-feedback-solved'
+            },
+            unsolved: {
+                text: '未处理',
+                id: 'table-feedback-unsolved'
+            }
+        };
+
+        $('.tplay-btn .layui-btn').on('click', function () {
+            var othis = $(this)
+                , thisEvent = othis.data('events')
+                , type = othis.data('type');
+            events[thisEvent] && events[thisEvent].call(this, othis, type);
+        });
+
+        table.on('tool(table-feedback-all)', function (obj) { //注：tool是工具条事件名，test是table原始容器的属性 lay-filter="对应的值"
+            var data = obj.data; //获得当前行数据
+            var layEvent = obj.event; //获得 lay-event 对应的值（也可以是表头的 event 参数对应的值）
+            var trElement = $(obj.tr);
+            trElement.find('.layui-form-checkbox').click();
+            events[layEvent] && events[layEvent].call(this, trElement, 'all');
+        });
+    });
+</script>

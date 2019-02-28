@@ -1,0 +1,43 @@
+<!--pages/playEvaluateDetail/playEvaluateDetail.wxml-->
+<view class='wrap'>
+    <view class='userInfor'>
+        <view class='userImg'>
+            <image src='{{thumb}}' mode='widthFix'></image>
+        </view>
+        <view class='userName'>{{name}}</view>
+        <button class='contact'>联系TA</button>
+    </view>
+    <view class='toScole'>
+        <text>为大神服务打分</text>
+    </view>
+    <view>
+        <form bindsubmit="formSubmit" report-submit="true">
+            <view class='starBox'>
+                <image bindtap='changeStar' data-id='1'
+                       src='{{star>=1? "/images/icon-star1.png":"/images/icon-star2.png"}}' mode='widthFix'></image>
+                <image bindtap='changeStar' data-id='2'
+                       src='{{star>=2? "/images/icon-star1.png":"/images/icon-star2.png"}}' mode='widthFix'></image>
+                <image bindtap='changeStar' data-id='3'
+                       src='{{star>=3? "/images/icon-star1.png":"/images/icon-star2.png"}}' mode='widthFix'></image>
+                <image bindtap='changeStar' data-id='4'
+                       src='{{star>=4? "/images/icon-star1.png":"/images/icon-star2.png"}}' mode='widthFix'></image>
+                <image bindtap='changeStar' data-id='5'
+                       src='{{star==5? "/images/icon-star1.png":"/images/icon-star2.png"}}' mode='widthFix'></image>
+            </view>
+            <view class='txtBox'>
+                <textarea name="content" placeholder='请输入评价内容...'></textarea>
+            </view>
+            <view class='agreement'>
+                <label>
+                    <checkbox-group bindchange="anonyTab">
+                        <checkbox color='#fff' value="1"></checkbox>
+                    </checkbox-group>
+                    <text>匿名评价</text>
+                </label>
+            </view>
+            <view class='submitBtn'>
+                <button form-type='submit' disabled="{{submitEnable}}">提交审核</button>
+            </view>
+        </form>
+    </view>
+</view>

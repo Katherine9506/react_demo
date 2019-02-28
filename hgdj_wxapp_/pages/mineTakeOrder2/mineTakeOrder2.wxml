@@ -1,0 +1,101 @@
+<!--pages/mineTakeOrder/mineTakeOrder.wxml-->
+<view>
+    <view class='takeTop' style='background-image:url(/images/orderBg.jpg)'>
+        <view class='topCircle'>
+            <view class='cricle'>4<text>分</text></view>
+            <text class='txt'>零钱明细</text>
+        </view>
+        <view class='topDe'>
+            <view>
+                <view class='top'>1<text>单</text></view>
+                <view class='bottom'>本周成功订单</view>
+            </view>
+            <view>
+                <view class='top'>0.9<text>元</text></view>
+                <view class='bottom'>本周收入</view>
+            </view>
+        </view>
+    </view>
+    <view>
+        <form bindsubmit='startTakeOrder'>
+            <view class='formBox'>
+                <view class='formTop'>
+                    <view class='gameName'>
+                        <view><image src='/images/user4.jpg' mode='widthFix'></image></view>
+                        <text>王者荣耀</text>
+                    </view>
+                    <image class='arrow' src='/images/icon-arrow.png' mode='widthFix'></image>
+                </view>
+                <view class='formBottom'>
+                    <view>小时</view>
+                    <view class='bright'>
+                        <input name='longTime' bindtap='timesetTap' value='{{severTime}}'></input>
+                       <image class='arrow' src='/images/icon-arrow.png' mode='widthFix'></image> 
+                    </view>
+                </view>
+                <view class='formBottom'>
+                    <view>价格</view>
+                    <view class='bright'>
+                        <input name='price' bindtap='setpriceTap' value='{{severPrice}}' ></input>
+                       <image class='arrow' src='/images/icon-arrow.png' mode='widthFix'></image> 
+                    </view>
+                </view>
+            </view>
+            <view class='formBtn'><button formType='submit'>{{btnTxt}}</button></view>
+        </form>
+    </view>
+    <view>
+        <form>
+            <view class='formBox'>
+                <view class='formTop'>
+                    <view class='gameName'>
+                        <view><image src='/images/user2.jpg' mode='widthFix'></image></view>
+                        <text>一键匹配玩伴</text>
+                    </view>
+                    <image class='arrow' src='/images/icon-arrow.png' mode='widthFix'></image>
+                </view>
+                <view class='formBottom'>
+                    <view>小时</view>
+                    <view class='bright'>
+                        <input data-id='tt' bindtap='timesetTap' name='longTime' value='{{severTime}}' disabled></input>
+                       <image class='arrow' src='/images/icon-arrow.png' mode='widthFix'></image> 
+                    </view>
+                </view>
+                <view class='formBottom'>
+                    <view>价格</view>
+                    <view class='bright'>
+                        <input name='longTime'  value='未设置'></input>
+                       <image class='arrow' src='/images/icon-arrow.png' mode='widthFix'></image> 
+                    </view>
+                </view>
+            </view>
+            <view class='formBtn'><button formType='submit'>闪约接单</button></view>
+        </form>
+    </view>
+</view>
+<view class='modal' wx:if='{{modalShow}}'>
+    <view class='modalMain'>
+        <form bindsubmit='confirmTap'>
+            <view class='inputbtn'>
+                <input name='time'  placeholder='请输入时间...'/>
+            </view>
+            <view class='btn'>
+                <button bindtap='cancelTap' class='cancel'>取消</button>
+                <button formType="submit" class='confirm'>确定</button>
+            </view>
+        </form>
+    </view>
+</view>
+<view class='modal' wx:if='{{modal2Show}}'>
+    <view class='modalMain'>
+        <form bindsubmit='priceTap'>
+            <view class='inputbtn'>
+                <input name='price'  placeholder='请输入价格...'/>
+            </view>
+            <view class='btn'>
+                <button bindtap='cancelTap' class='cancel'>取消</button>
+                <button formType="submit" class='confirm'>确定</button>
+            </view>
+        </form>
+    </view>
+</view>

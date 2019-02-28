@@ -1,0 +1,154 @@
+/* pages/mineOrderAccep/mineOrderAccep.wxss */
+
+.wrap{
+    background: #fff;
+    padding: 0 24rpx;
+    margin-bottom: 20rpx;
+}
+.title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24rpx 14rpx 0;
+    height: 48rpx;
+    line-height: 48rpx;
+    color: #333333;
+    font-size: 32rpx;
+}
+.title view text{
+    color: #999999;
+    font-size: 24rpx;
+}
+.title button{
+    width: 140rpx;
+    height: 48rpx;
+    line-height: 46rpx;
+    border-radius: 24rpx;
+    border:1rpx solid #BFBFBF;
+    background: #F8F8F8;
+    font-size: 26rpx;
+    color: #999999;
+    padding: 0;
+    margin: 0;
+}
+.updateImg{
+    margin-top: 24rpx;
+    padding: 0 6rpx 20rpx;
+    display: flex;
+    flex-wrap: wrap;
+}
+.updateImg>view{
+    margin-bottom: 7rpx;
+}
+.imgBox{
+    width: 290rpx;
+    height: 290rpx;
+    position: relative;
+    margin-right: 24rpx;
+}
+.imgBox view{
+    width: 290rpx;
+    height: 290rpx;
+    border-radius: 10rpx;
+    overflow: hidden;
+}
+.imgBox image{
+    display: block;
+    width: 100%;
+}
+.imgBox button.close{
+    position: absolute;
+    top: -14rpx;
+    right: -14rpx;
+    width: 42rpx;
+    height: 42rpx;
+    border-radius: 50%;
+    padding: 0;
+    border: 4rpx solid #fff;
+}
+.imgBox button.close image{
+    display: block;
+    width: 100%;
+}
+.imgBox button.edit{
+    width: 100rpx;
+    height: 38rpx;
+    line-height: 38rpx;
+    font-size: 20rpx;
+    color: #fff;
+    padding: 0;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 19rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 14rpx;
+    right: 14rpx;
+}
+.imgBox button.edit image{
+    display: block;
+    width: 22rpx;
+    height: 22rpx;
+    margin-top: -3rpx;
+    margin-right: 6rpx;
+}
+.updateBtn{
+    box-sizing: border-box;
+    width: 290rpx;
+    height: 290rpx;
+    padding-top: 98rpx;
+    background: #F5F5F5;
+    font-size: 26rpx;
+    line-height: 36rpx;
+    color: #999999;
+    text-align: center;
+    border-radius: 10rpx;
+}
+.updateBtn image{
+    display: block;
+    width: 52rpx;
+    height: 52rpx;
+    margin: 0 auto 46rpx;
+}
+.textBox{
+    border-top: 1rpx solid #EEEEEE;
+    padding: 25rpx 6rpx;
+}
+.textBox view{
+    height: 290rpx;
+    background: #F5F5F5;
+    border-radius: 10rpx;
+}
+.textBox view textarea{
+    display: block;
+    width: 100%;
+    height: 290rpx;
+    box-sizing: border-box;
+    font-size: 24rpx;
+    color: #333;
+    padding: 24rpx;
+    line-height: 34rpx;
+}
+.formSubbmit{
+    padding: 15rpx 30rpx 100rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.formSubbmit button{
+    width: 318rpx;
+    height: 88rpx;
+    line-height: 88rpx;
+    border-radius: 44rpx;
+    font-size: 34rpx;
+    margin: 0;
+}
+.formSubbmit button.cancel{
+    background: #EAEAEA;
+    color: #999999;
+}
+.formSubbmit button.confirm{
+    background: #0063DB;
+    color: #fff;
+}

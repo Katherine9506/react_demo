@@ -1,0 +1,176 @@
+/* pages/mineToCash/mineToCash.wxss */
+page{
+background: #F7F7F7;
+}
+.wrap{
+background: #fff;
+margin-bottom:20rpx;
+padding: 0 24rpx;
+}
+.wrap>view{
+padding: 0 14rpx;
+border-bottom: 1rpx solid #EEEEEE;
+}
+.wrap .notice{
+padding: 20rpx 14rpx 14rpx;
+}
+.notice view{
+font-size: 26rpx;
+color: #333333;
+line-height: 46rpx;
+}
+.notice text{
+display:block;
+font-size: 20rpx;
+color: #999999;
+line-height: 38rpx;
+}
+.withdrawal .ts{
+font-size: 26rpx;
+color: #333333;
+line-height: 70rpx;
+}
+.withdrawal .ts text{
+font-size: 22rpx;
+color: #999999;
+}
+.withdrawal .inputNum{
+padding: 26rpx 0 20rpx;
+height: 64rpx;
+display: flex;
+align-items: flex-end;
+}
+.withdrawal .inputNum text{
+display: block;
+font-size: 72rpx;
+line-height: 64rpx;
+margin-right: 30rpx;
+color: #333333;
+}
+.withdrawal .inputNum input{
+width: 390rpx;
+font-size: 32rpx;
+color: #333333;
+}
+.withdrawal .inputNum .ph{
+color: #cfcfcf;
+}
+.withdrawal .remain{
+padding-top: 4rpx;
+height: 76rpx;
+line-height: 76rpx;
+display: flex;
+justify-content: space-between;
+font-size: 26rpx;
+color: #999999;
+}
+.withdrawal .remain .max{
+color: #0362dc;
+}
+
+.withdrawal button::after {
+border: none;
+}
+
+.withdrawal button {
+background-color: #fff;
+padding:0;
+height:76rpx;
+font-size:28rpx;
+border:1px solid #ddd;
+padding:18rpx;
+line-height:40rpx;
+}
+.wrap>view:last-child{
+border: 0;
+}
+.zhanghu>view{
+display: flex;
+justify-content: space-between;
+height: 94rpx;
+line-height: 94rpx;
+font-size: 32rpx;
+color: #333333;
+}
+.zhanghu view input{
+width: 350rpx;
+height: 94rpx;
+line-height: 94rpx;
+font-size: 32rpx;
+text-align: right;
+}
+.zhanghu text.bz{
+display: block;
+padding: 0 14rpx;
+line-height: 50rpx;
+padding-top: 3rpx;
+font-size: 20rpx;
+color: #999999;
+}
+.btnBox{
+padding:0 24rpx;
+}
+.btnBox button{
+font-size: 34rpx;
+height: 88rpx;
+line-height: 88rpx;
+margin-bottom: 36rpx;
+border: 0;
+border-radius: 44rpx;
+padding: 0;
+text-align: center;
+}
+.btnBox button.confirm{
+background: #0063DB;
+color: #fff;
+margin-top: 48rpx;
+}
+.btnBox button.cancel{
+background: #fff;
+color: #0063DB;
+}
+.btnBox button::after{
+border: 0;
+border-radius: 44rpx;
+}
+
+.table {
+border: 0px solid darkgray;
+font-size:16px
+}
+.tr {
+display: flex;
+width: 100%;
+justify-content: center;
+height: 3rem;
+align-items: center;
+}
+.td {
+width:40%;
+justify-content: center;
+text-align: center;
+}
+.bg-w{
+background: snow;
+}
+.bg-g{
+background: #E6F3F9;
+}
+.th {
+width: 40%;
+justify-content: center;
+background: #3366FF;
+color: #fff;
+display: flex;
+height: 3rem;
+align-items: center;
+}
+
+.table text.bz{
+display: block;
+padding: 0 14rpx;
+line-height: 50rpx;
+padding-top: 3rpx;
+font-size: 20rpx;
+color: #999999;
+}

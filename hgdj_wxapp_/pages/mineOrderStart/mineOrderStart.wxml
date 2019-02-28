@@ -1,0 +1,53 @@
+<!--pages/mineOrderStart/mineOrderStart.wxml-->
+<view>
+    <view class='box'>
+        <view class='orderNum'>编号：{{order.order_no}}</view>
+        <view class='playInfor'>
+            <view class='playerTxt'>老板：</view>
+            <view class='playerPic'>
+                <image src='{{order.boss.thumb}}' mode='widthFix'></image>
+            </view>
+            <view class='playerTxt'>{{order.boss.name}}</view>
+        </view>
+        <view class='contact'>
+            <text>联系方式：</text>
+            <image src='/images/weixin.png' mode='widthFix'></image>
+            <text>{{order.contact}}</text>
+            <button bindtap='clipboardTap'>点击复制</button>
+        </view>
+        <view class='nnp'>
+            <view>{{order.label}}</view>
+            <view class='money'>￥{{order.total_price}}</view>
+        </view>
+        <view class='payM'>实付：￥
+            <text>{{order.total_price}}</text>
+        </view>
+    </view>
+    <!--<view class='state'>-->
+    <!--<view class='sLeft'>-->
+    <!--<view class='status'>待付款</view>-->
+    <!--<view class='ts'>尽快付款享受服务</view>-->
+    <!--<view class='ts2'>超过24小时未付款，订单将会关闭</view>-->
+    <!--</view>-->
+    <!--<view class='sRight'>-->
+    <!--<view class='sy'>剩余</view>-->
+    <!--<view class='time'>-->
+    <!--{{hour<10? "0" + hour:hour}}:{{minute<10?"0"+minute:minute}}:{{second<10?"0"+second:second}}-->
+    <!--</view>-->
+    <!--</view>-->
+    <!--</view>-->
+    <view class='before'>
+        <view class='buyer'>
+            <view class='buyerPic'>
+                <image src='{{order.boss.thumb}}' mode='widthFix'></image>
+            </view>
+            <text>{{order.boss.name}}</text>
+        </view>
+        <view class='timeB'>
+            下单时间:{{order.create_time}}
+        </view>
+    </view>
+    <view bindtap='startTap' class='payBtn'>
+        <button>确认开始</button>
+    </view>
+</view>

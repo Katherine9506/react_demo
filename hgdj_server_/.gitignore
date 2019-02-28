@@ -1,0 +1,25 @@
+.idea
+composer.lock
+composer.json
+*.log
+
+# Windows
+[Dd]esktop.ini
+Thumbs.db
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+
+hgdj/
+extend/pay_log/
+runtime/
+public/upload/
+hgdj.conf
+hgdj_https.conf
+
+application/config.php

@@ -1,0 +1,5 @@
+/* pages/mineSkillCerDemo/mineSkillCerDemo.wxss */
+.demoImg image{
+    display: block;
+    width: 100%;
+}

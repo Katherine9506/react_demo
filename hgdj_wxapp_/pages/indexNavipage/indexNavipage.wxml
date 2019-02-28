@@ -1,0 +1,55 @@
+<!--pages/indexNavipage/indexNavipage.wxml-->
+<view>
+    <view class='navPicker'>
+        <view class='pickerBox'>
+            <picker bindchange="picker1Change" value="{{index}}" range="{{array}}">
+                <view class="picker">
+                    {{array[index]}}
+                </view>
+            </picker>
+        </view>
+        <view class='pickerBox'>
+            <picker bindchange="picker2Change" value="{{index2}}" range="{{array2}}">
+                <view class="picker">
+                    {{array2[index2]}}
+                </view>
+            </picker>
+        </view>
+    </view>
+    <view>
+        <view class='beautyList'>
+            <block wx:for="{{priceList}}" wx:key="key">
+                <view class='beauty' bindtap='lookDetail' data-id="{{item.id}}">
+                    <view class='beauty-pic'>
+                        <image class='b-pic' src='{{item.user_info.cover}}' mode='widthFix'></image>
+                        <view class='topAb'>
+                            <text></text>
+                            求单ing
+                        </view>
+                        <view class='bottomAb'>
+                            <image class='zan' src='/images/zuanshi.png' mode='widthFix'></image>
+                            <text>{{item.user_info.paragraph}}</text>
+                        </view>
+                    </view>
+                    <view class='beauty-txt'>
+                        <view class='b-name'>
+                            <text class='name'>{{item.user_info.name}}</text>
+                            <block wx:for='{{item.tags}}' wx:for-item='tags' wx:key="key">
+                                <text class='xg'>{{tags}}</text>
+                            </block>
+                        </view>
+                        <view class='b-price'>
+                            <view class='price'>￥{{item.price}}
+                                <text>起</text>
+                            </view>
+                            <view class='addr'>
+                                <image class='b-addr' src='/images/address.png'></image>
+                                <text>{{item.user_info.city}}</text>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,74 @@
+/* pages/mineWallet/mineWallet.wxss */
+page{
+    background: #F7F7F7;
+}
+.content{
+    background-position: center center;
+    background-size:cover; 
+    background-repeat: no-repeat;
+    height: 200rpx;
+    margin-bottom: 20rpx;
+}
+.walletTop{
+    display: flex;
+    justify-content: space-between;
+    padding: 36rpx 50rpx 0 65rpx;
+    height: 42rpx;
+    line-height: 42rpx;
+}
+.walletTop view image{
+    width: 26rpx;
+    height: 29rpx;
+    vertical-align: middle;
+}
+.walletTop view text{
+    font-size: 26rpx;
+    line-height: 42rpx;
+    color: #fff;
+    padding-left: 12rpx;
+}
+.walletTop view button{
+    width: 156rpx;
+    height: 42rpx;
+    line-height: 42rpx;
+    font-size: 26rpx;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 21rpx;
+}
+.yue{
+    margin-top: 40rpx;
+    padding-left: 65rpx;
+    font-size: 48rpx;
+    line-height: 48rpx;
+    color: #fff;
+}
+.wallet{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    height: 93rpx;
+    line-height: 93rpx;
+    padding: 0 35rpx;
+    margin-bottom: 20rpx;
+}
+.wallet .w-icon{
+    display: flex;
+    align-items: center;
+    font-size: 32rpx;
+    color: #333333;
+}
+.wallet .w-icon image{
+    display: block;
+    width: 49rpx;
+    height: 44rpx;
+    margin-right: 25rpx;
+}
+.wallet .w-arrow image{
+    display: block;
+    width: 16rpx;
+    height: 30rpx;
+}

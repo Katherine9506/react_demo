@@ -1,0 +1,240 @@
+/* pages/indexBuyOrder/indexBuyOrder.wxss */
+page{
+    background: #F7F7F7;
+}
+.orderTop{
+    padding: 26rpx 30rpx 16rpx;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 20rpx solid #F7F7F7;
+    background: #fff;
+}
+.goodPic{
+    width: 118rpx;
+    height: 118rpx;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.goodPic image{
+    display: block;
+    width: 100%;
+}
+.goodTxt{
+    width: 530rpx;
+}
+.nameSex{
+    display: flex;
+    align-items: center;
+    height: 62rpx;
+}
+.nameSex .name{
+    font-size: 34rpx;
+    color: #333333;
+    margin-right: 18rpx;
+}
+.nameSex .sex{
+    display: flex;
+    align-items: center;
+    font-size: 22rpx;
+    height: 40rpx;
+    background: #0362DC;
+    padding: 0 16rpx;
+    border-radius: 20rpx;
+    color: #fff;
+}
+.nameSex .sex image{
+    display: block;
+    width: 22rpx;
+    height: 22rpx;
+    margin-right: 8rpx;
+}
+.addrScore{
+    display: flex;
+    justify-content: space-between;
+    height: 42rpx;
+}
+.addrScore .star{
+    display: flex;
+    align-items: center;
+}
+/* .addrScore .star view{
+    display: flex
+} */
+.addrScore .star image{
+    display: block;
+    width: 22rpx;
+    /* height: 22rpx; */
+    margin: 0 6rpx;
+}
+.addrScore .star text{
+    margin-left: 10rpx;
+    font-size: 28rpx;
+    color: #333333;
+}
+.address{
+    display: flex;
+    height: 42rpx;
+    align-items: center;
+    font-size: 24rpx;
+    color: #999999;
+}
+.address image{
+    display: block;
+    width: 16rpx;
+    height: 24rpx;
+    margin-right: 14rpx;
+}
+.formBox{
+    background: #fff;
+}
+.formTop,.formBottom{
+    padding:0 24rpx ;
+    border-bottom: 20rpx solid #F7F7F7;
+}
+.formTop .formsame:last-child{
+    border: 0;
+}
+.formsame{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 92rpx;
+    padding: 3rpx 11rpx 0;
+    font-size: 30rpx;
+    color: #333333;
+    line-height: 92rpx;
+    border-bottom: 1rpx solid #EEEEEE;
+}
+.formsame .right{
+    text-align: right;
+    width:  350rpx;
+}
+.priceT{
+    height: 92rpx;
+    padding: 3rpx 11rpx 0;
+    font-size: 30rpx;
+    color: #333333;
+    line-height: 92rpx;
+    border-bottom: 1rpx solid #EEEEEE;
+}
+.priceD{
+    text-align: right;
+    line-height: 68rpx;
+    font-size: 30rpx;
+    color: #999999;
+    padding-bottom: 12rpx;
+}
+.priceD text{
+    display: inline-block;
+    width: 164rpx;
+}
+.needPay{
+    color: #0362dc;
+}
+.serverType input,.note input,.contNum input{
+    color: #999999;
+    height: 92rpx;
+    line-height: 92rpx;
+    width: 350rpx;
+}
+.unit{
+    display: flex;
+    justify-content: flex-end;
+}
+.unit button{
+    width: 120rpx;
+    height: 56rpx;
+    line-height: 56rpx;
+    text-align: center;
+    color: #fff;
+    background: #0362DC;
+    font-size: 30rpx;
+    padding: 0;
+    margin:0;
+}
+.longTime{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 0;
+}
+.longTime button{
+    width: 95rpx;
+    height: 95rpx;
+    line-height: 95rpx;
+    margin:0;
+    margin-top: -1rpx;
+    border: 0;
+    background: #F7F7F7;
+    border-radius: 0;
+    font-size: 48rpx;
+    color: #333333;
+    padding: 0;
+}
+.longTime button::after{
+    border: none;
+    border-radius: 0;
+}
+.longTime input{
+    display: block;
+    font-size: 30rpx;
+    width: 95rpx;
+    height: 95rpx;
+    line-height: 95rpx;
+    text-align: center;
+}
+.longTime button.add{
+    margin-right: -11rpx;
+}
+.formsame .ph{
+    color: #999999;
+}
+.contact{
+    font-size: 30rpx;
+    color: #333333;
+    position: relative;
+    padding-right:40rpx; 
+}
+.contact ::after{
+    position:absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    content: ">";
+    height: 95rpx;
+    line-height: 95rpx;
+    font-size: 40rpx;
+    color: #C5C5C5;
+}
+.submitBox{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 98rpx;
+    width: 100%;
+}
+.submitBox button{
+    width: 100%;
+    height: 98rpx;
+    background: #267FDD;
+    color: #fff;
+    font-size: 34rpx;
+    line-height: 98rpx;
+    padding: 0;
+    margin:0;
+    border:0;
+    border-radius: 0;
+}
+
+.submitBox button[disabled]
+{
+    width: 100%;
+    height: 98rpx;
+    background: #267FDD;
+    color: #fff;
+    font-size: 34rpx;
+    line-height: 98rpx;
+    padding: 0;
+    margin:0;
+    border:0;
+    border-radius: 0;
+}

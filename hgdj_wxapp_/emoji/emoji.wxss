@@ -1,0 +1,58 @@
+.emoji_container{
+background: #fff;
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+padding: 54rpx 40rpx 26rpx;
+}
+
+.emoji_content{
+display: none;
+padding: 5rpx;
+border: 1px solid #bfbfbf;
+}
+
+.emoji_content  .show{
+display: block;
+}
+
+.emoji_item{
+width: 54;
+height: 54px;
+border: 1px solid #e3e3e3;
+}
+
+.emoji_item image{
+vertical-align: middle;
+max-width: 52px;
+max-height: 52px;
+}
+
+.emoji_tab{
+background-color: #f7f7f7;
+border-top: 1px solid #e3e3e3;
+color: #666;
+height: 32px;
+position: relative;
+}
+
+.emoji_tab .type{
+border-top: 0 none;
+cursor: pointer;
+float: left;
+height: 22px;
+line-height: 22px;
+margin: 5px 4px 0 0;
+font-size: 12px;
+border-radius: 3px;
+text-align: center;
+width: 68px;
+overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+}
+
+.emoji_tab .type .iconTypeSelect{
+color: #fff;
+background: steelblue;
+}

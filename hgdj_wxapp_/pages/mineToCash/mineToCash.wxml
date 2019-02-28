@@ -1,0 +1,87 @@
+<!--pages/mineToCash/mineToCash.wxml-->
+<view>
+    <form>
+        <view class='wrap'>
+            <view class='notice'>
+                <view>每周二、周五进行打款</view>
+                <text>注：周二办理周四至周日的提现申请，周五办理周一至周三的提现申请。</text>
+                <text>提现金额至少为{{floor}}元，提现将收取提现金额的{{interest * 100}}%。</text>
+            </view>
+            <view class='withdrawal'>
+                <view class='ts'>提现金额
+                    <text>实际可提现金额(含手续费) ￥{{withdrawWithInterest}}</text>
+                </view>
+                <view class='inputNum'>
+                    <text>￥</text>
+                    <view><input type="number" bindblur="withdrawBlur" value="{{withdrawWithInterest}}" disabled
+                                 placeholder='请输入提现金额' placeholder-class='ph'/></view>
+                </view>
+            </view>
+            <view class='withdrawal'>
+                <view class='remain'>
+                    <!--<view>余额0.9元</view>-->
+                    <view class='max'>最多可提现总金额(不含手续费) ￥{{amount}}</view>
+                    <view>
+                        <button type="defalut" bindtap="withdrawAll">全部提现</button>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class='wrap zhanghu'>
+            <view>
+                <text>企业微信账号</text>
+                <view><input placeholder='请输入企业微信账号' bindblur="accountBlurHandler"/></view>
+            </view>
+            <view>
+                <text>设置提现账户</text>
+                <view><input placeholder='请输入真实姓名' bindblur="nameBlurHandler"/></view>
+            </view>
+            <view>
+                <text>陪玩分组</text>
+                <view><input placeholder='请输入陪玩分组' bindblur="groupBlurHandler"/></view>
+            </view>
+            <!--<view>-->
+            <!--<text>姓名</text>-->
+            <!-- <view><input placeholder='请输入您的姓名'/></view> -->
+            <!--</view>-->
+            <text class='bz'>姓名必须是企业微信账户的真实姓名，否则将打款失败</text>
+        </view>
+        <view class="wrap table">
+            <text class="bz">您可提现的服务订单如下：(默认全部选中提现，如果您暂时不想提现某些订单的话，您可以点击右边的“红叉”)</text>
+            <view class="tr bg-w">
+                <view class="th">陪玩服务</view>
+                <view class="th">雇主</view>
+                <view class="th ">可提现金额</view>
+                <view class="th ">操作</view>
+            </view>
+            <block wx:for="{{playList}}" wx:key="{{index}}">
+                <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+                    <view class="td">{{item.service}}</view>
+                    <view class="td">{{item.boss_uname}}</view>
+                    <view class="td">{{item.total_price}}</view>
+                    <view class="td">
+                        <button type="default" bindtap="cancelWithdraw" data-id="{{index}}"
+                                data-price="{{item.total_price}}">
+                            <icon type="cancel" color="#e92d2a"></icon>
+                        </button>
+                    </view>
+                </view>
+                <view class="tr" wx:else>
+                    <view class="td">{{item.service}}</view>
+                    <view class="td">{{item.boss_uname}}</view>
+                    <view class="td">{{item.total_price}}</view>
+                    <view class="td">
+                        <button type="default" bindtap="cancelWithdraw" data-id="{{index}}"
+                                data-price="{{item.total_price}}">
+                            <icon type="cancel" color="#e92d2a"></icon>
+                        </button>
+                    </view>
+                </view>
+            </block>
+        </view>
+        <view class='btnBox'>
+            <button bindtap='confirmTap' form-type='submit' class='confirm'>确定</button>
+            <button bindtap='cancelTap' class='cancel'>取消</button>
+        </view>
+    </form>
+</view>

@@ -1,0 +1,124 @@
+/* pages/mineSetting/mineSetting.wxss */
+page{
+    background: #F7F7F7;
+}
+.setPic{
+    padding: 14rpx 38rpx 12rpx;
+    display: flex;
+    justify-content: space-between;
+    font-size: 32rpx;
+    color: #333333;
+    height: 100rpx;
+    line-height: 100rpx;
+    background: #fff;
+    margin-bottom: 20rpx;
+}
+.setPic .pic{
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.setPic .pic image{
+    display: block;
+    width: 100%;
+}
+.settingList{
+    background: #fff;
+    padding: 4rpx 24rpx 0;
+}
+.settingList .ite{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15rpx;
+    height: 94rpx;
+    line-height: 94rpx;
+    border-bottom: 1rpx solid #EEEEEE;
+}
+.settingList .ite:last-child{
+    border: 0;
+}
+.settingList .ite .left{
+    color: #333333;
+    font-size: 32rpx;
+}
+.settingList .ite .right{
+    color: #999999;
+    font-size: 32rpx;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.settingList .ite .right input{
+    width: 350rpx;
+    height: 94rpx;
+    line-height: 94rpx;
+    text-align: right;
+}
+.settingList .ite .right image{
+    width: 16rpx;
+    height: 30rpx;
+    margin-left: 24rpx;
+}
+.settingList .ite .right.noarrow{
+    padding-right:40rpx; 
+}
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+.modalMain{
+    position: absolute;
+    top: calc(50% - 200rpx);
+    left: 75rpx;
+    width: 600rpx;
+    height: 300rpx;
+    background: #fff;
+    border-radius: 10rpx;
+}
+.modal .btn{
+    height: 100rpx;
+    display: flex;
+    border-top: 1rpx solid #F7F7F7;
+}
+.modal .btn button{
+    margin: 0;
+    padding: 0;
+    height: 100rpx;
+    line-height: 100rpx;
+    width: 50%;
+    border: 0;
+    border-radius:0;
+    background: #fff;
+    font-size: 32rpx;
+    color: #333;
+}
+.modal .btn button::after{
+    border: 0;
+    border-radius: 0;
+}
+.modal .title{
+    height: 100rpx;
+    line-height: 100rpx;
+    font-size: 28rpx;
+    padding-left: 40rpx;
+}
+.modal .inputbtn{
+    height: 99rpx;
+}
+.modal .inputbtn input{
+    display: block;
+    padding:0 80rpx;
+    height: 99rpx;
+    line-height: 99rpx;color: #666;
+    font-size: 28rpx;
+}
+.modal .btn .confirm{
+    color:#3CC51F;
+    border-left: 1rpx solid #F7F7F7;
+}

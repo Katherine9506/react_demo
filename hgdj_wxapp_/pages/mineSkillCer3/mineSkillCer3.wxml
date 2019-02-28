@@ -1,0 +1,87 @@
+<!--pages/mineSkillCer3/mineSkillCer3.wxml-->
+<view>
+    <form>
+        <view class='wrap'>
+            <view class='pickerBox'>
+                <view>王者荣耀段位</view>
+                <picker bindchange="sexChange" value="{{idx}}" range="{{dan}}">
+                    <view class="picker">{{dan[idx]?dan[idx]:"请选择"}}
+                        <image src='/images/icon-arrow.png' mode='widthFix'></image>
+                    </view>
+                </picker>
+            </view>
+            <view class='pickerBox'>
+                <view>大区</view>
+                <picker bindchange="regChange" value="{{reg}}" range="{{regional}}">
+                    <view class="picker">{{regional[reg]}}
+                        <image src='/images/icon-arrow.png' mode='widthFix'></image>
+                    </view>
+                </picker>
+            </view>
+        </view>
+        <view class='wrap'>
+            <view class='title'>
+                <view>上传最高实力截图</view>
+                <button bindtap='showDemo'>查看样例</button>
+            </view>
+            <view class='updateImg'>
+                <block wx:for="{{personalPic}}">
+                    <view class='imgBox'>
+                        <view>
+                            <image src='{{item}}' mode='widthFix'></image>
+                        </view>
+                        <button data-id='{{index}}' bindtap='deleteTap' class='close'>
+                            <image src='/images/close.png' mode='widthFix'></image>
+                        </button>
+                        <button bindtap='editPersonal' class='edit'>
+                            <image src='/images/edit.png' mode='widthFix'></image>
+                            <text>修改</text>
+                        </button>
+                    </view>
+                </block>
+                <view class='updateBtn' bindtap='personalImg' hidden="{{personalPic.length==1}}">
+                    <image class='' src='/images/addImg.png' mode='widthFix'></image>
+                    <view>上传图片</view>
+                </view>
+            </view>
+        </view>
+        <view class='wrap'>
+            <view class='title'>
+                <view>王者荣耀标签组
+                    <text>（1-3个标签）</text>
+                </view>
+            </view>
+            <view class='tags'>
+                <checkbox-group class='free-radios' bindchange="checkChange">
+                    <block wx:for="{{items}}" wx:key="{{items}}">
+                        <label bindtap="click" class="free-radio {{item.checked?'is_checked':''}}">
+                            <checkbox value="{{item.name}}" name="{{item.value}}" checked="{{item.checked}}" hidden='true' disabled='{{}}'></checkbox>
+                            <text class="free-text">{{item.value}}</text>
+                        </label>
+                    </block>
+                </checkbox-group>
+            </view>
+        </view>
+        <view class='wrap msgwap'>
+            <view class='title'>
+                <view>陪玩游戏介绍
+                    <text>（说下你的游戏心得，让用户更了解你）</text>
+                </view>
+            </view>
+            <view class='msgBox'>
+                <textarea placeholder='请输入陪玩游戏介绍...' name='msg' value='{{msg}}'></textarea>
+            </view>
+        </view>
+        <view class='wrap agreement'>
+            <view class='xieyi'>
+                <checkbox color='#fff' checked='{{agreementCheck}}'></checkbox>
+                <text>勾选即同意</text>
+                <view>陪玩条款</view>
+            </view>
+        </view>
+        <view class='formSubbmit' bindtap='submitAgain'>
+            <button>重新提交审核</button>
+        </view>
+
+    </form>
+</view>

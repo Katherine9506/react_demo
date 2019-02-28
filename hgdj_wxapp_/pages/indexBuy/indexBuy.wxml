@@ -1,0 +1,181 @@
+<!--pages/indexBuy/indexBuy.wxml-->
+<view class='wrap'>
+    <view class='banner'>
+        <swiper current='{{current}}' bindchange='bannerChange' circular>
+            <block wx:for="{{bannerUrl}}" wx:key="key">
+                <swiper-item>
+                    <image src='{{item}}' mode='widthFix'></image>
+                </swiper-item>
+            </block>
+        </swiper>
+        <view class='current'>
+            <text>{{current+1}}</text>
+            /{{bannerList}}
+        </view>
+    </view>
+    <view class='userTxt'>
+        <view class='userName'>
+            <view>{{skill.name}}</view>
+            <text>{{skill.paragraph}}</text>
+            <block wx:for="{{skill.label}}" wx:key="key">
+                <text>{{item}}</text>
+            </block>
+        </view>
+        <view class='user-intro'>
+            {{skill.intro}}
+        </view>
+        <view class='price'>
+            <view class='price-left'>
+                <text>￥{{price_detail.price}}</text>
+                元/小时
+            </view>
+            <view class='price-right'>
+                <view class='num'>
+                    <image src='/images/order-num.png'></image>
+                    <text>{{price_detail.order_count}}单</text>
+                </view>
+                <view>
+                    <image src='/images/access.png'></image>
+                    <text>{{price_detail.score}}分</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class='beautySoundBox'>
+        <view class='beautyPic'>
+            <image src='{{user_info.thumb}}' mode='widthFix'></image>
+        </view>
+        <view class='beautySound'>
+            <view class='beautyName'>
+                <text class='mc'>{{user_info.name}}</text>
+                <view class='sex'>
+                    <image src='/images/sex.png' mode='widthFix'></image>
+                    <text>保密</text>
+                </view>
+            </view>
+            <view class='beautyAddr'>
+                <image src='/images/address.png' mode='widthFix'></image>
+                <text>{{user_info.province}} {{user_info.city}} {{user_info.area ? user_info.area :''}}</text>
+            </view>
+            <view class='soundbox'>
+                <view class='audio' bindtap="audioPlay" wx:if="{{user_info.audio}}">
+                    <audio id='voice' src='{{user_info.audio}}'></audio>
+                    <image class='lb' src='/images/sound.png' mode='widthFix'></image>
+                    <!--<image class='wave' src='/images/sound-wave.png' mode='widthFix'></image>-->
+                    <!--<text>语音介绍</text>-->
+                </view>
+                <block wx:for="{{user_info.label}}" wx:key="key">
+                    <text class='tags'>{{item}}</text>
+                </block>
+            </view>
+        </view>
+    </view>
+    <view class='allJn'>
+        <view class='title'>
+            <text>全部技能</text>
+        </view>
+        <view class='skillList'>
+            <block wx:for="{{prices}}" wx:key="key">
+                <view class='skill' bindtap="userSkillDetailNav" data-id="{{item.id}}" data-uid="{{item.uid}}">
+                    <view class='skill-left'>
+                        <view class='skillLogo'>
+                            <image src='{{item.icon}}' mode='widthFix'></image>
+                        </view>
+                        <view class='skillInfor'>
+                            <view class='skillTxt'>
+                                <view>{{item.name}}</view>
+                                <block wx:for="{{item.label}}" wx:key="key" wx:for-item='tag'>
+                                    <text>{{tag}}</text>
+                                </block>
+                            </view>
+                            <view class='skillPrice'>
+                                <text>￥{{item.price}}</text>
+                                /小时
+                            </view>
+                        </view>
+                    </view>
+                    <view class='arrow'>
+                        <image src='/images/icon-arrow.png' mode='widthFix'></image>
+                    </view>
+                </view>
+            </block>
+        </view>
+    </view>
+
+    <view class='allJn'>
+        <view class='title'>
+            <text>全部评价({{evaluate_total}})</text>
+        </view>
+        <view class='evaluList'>
+            <block wx:for="{{evaluation}}" wx:key="key">
+                <view class='evalu'>
+                    <view class='userPic'>
+                        <image wx:if="{{item.is_anony == 1}}" src='/images/user5.png' mode='widthFix'></image>
+                        <image wx:else src='{{item.avatar}}' mode='widthFix'></image>
+                    </view>
+                    <view class='evaluTxt'>
+                        <view class='top'>
+                            <view class='name' wx:if="{{item.is_anony == 1}}">匿名用户</view>
+                            <view class='name' wx:else>{{item.name}}</view>
+                            <view class='star'>
+                                <image src='{{item.score>=1?"/images/star-orange.png":"/images/star-gray.png"}}'
+                                       mode='widthFix'></image>
+                                <image src='{{item.score>=2?"/images/star-orange.png":"/images/star-gray.png"}}'
+                                       mode='widthFix'></image>
+                                <image src='{{item.score>=3?"/images/star-orange.png":"/images/star-gray.png"}}'
+                                       mode='widthFix'></image>
+                                <image src='{{item.score>=4?"/images/star-orange.png":"/images/star-gray.png"}}'
+                                       mode='widthFix'></image>
+                                <image src='{{item.score==5?"/images/star-orange.png":"/images/star-gray.png"}}'
+                                       mode='widthFix'></image>
+                                <text>{{item.score}}分</text>
+                            </view>
+                        </view>
+                        <view class='evaluDetail'>
+                            {{item.content}}
+                        </view>
+                        <view class='addTime'>{{item.create_time}}</view>
+                    </view>
+                </view>
+            </block>
+        </view>
+    </view>
+
+    <view>
+        <view class='title'>
+            <text>说明</text>
+        </view>
+        <view class='other'>
+            <view>
+                <image src='/images/weixin.png' mode='widthFix'></image>
+                <text>秒加微信</text>
+            </view>
+            <view>
+                <image src='/images/online.png' mode='widthFix'></image>
+                <text>在线陪玩</text>
+            </view>
+            <view>
+                <image src='/images/good.png' mode='widthFix'></image>
+                <text>不爽投诉</text>
+            </view>
+        </view>
+        <view class='terms'>
+            <view>1、成功支付后，在陪玩师接单之前可以取消订单</view>
+            <view>2、服务和描述不一致，投诉即可全额退款</view>
+            <view>3、支付下单成功后，默认同意《嗨狗电竞用户守则》</view>
+        </view>
+    </view>
+</view>
+<view class='fixBottom'>
+    <view class='share' bindtap='shareBtn'>
+        <image src='/images/icon-share.png'></image>
+        <button open-type="share" class="share-button">分享</button>
+    </view>
+    <view class='wx' bindtap='contactTap'>
+        <image src='/images/icon-wx.png'></image>
+        <text>联系TA</text>
+    </view>
+    <view class='nowBoy' bindtap='buyNow'>
+        <button>立即下单</button>
+    </view>
+</view>

@@ -1,0 +1,404 @@
+<div class="tplay-body">
+    <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+        <ul class="layui-tab-title">
+            <li class="layui-this">会员列表</li>
+        </ul>
+        <div class="layui-tab-content">
+            <div class="tplay-btn">
+                <div class="layui-form demoTable" lay-filter="component-form-data" style="margin-right:10px;float:left">
+                    <div class="layui-inline">
+                        <select id="status">
+                            <option value="">请选用户状态</option>
+                            <option value="0">未提交</option>
+                            <option value="1">待审核</option>
+                            <option value="2">已审核</option>
+                            <option value="3">已驳回</option>
+                        </select>
+                    </div>
+
+                    <div class="layui-inline">
+                        <button class="layui-btn" data-type="admin" data-events="reload"><i class="layui-icon layui-icon-search"></i>搜索</button>
+                    </div>
+                </div>
+
+                <button class="layui-btn layui-btn-danger" data-type="admin" data-events="shielding">批量拉黑</button>
+                <table id="data-list" lay-filter="data-list">
+                    <script type="text/html" id="op_user">
+                        {{# if (d.is_cert == 0){ }}
+                        <a class="layui-btn layui-btn-xs layui-btn-warm" lay-event="">
+                            <i class="layui-icon"></i>未提交
+                        </a>
+                        {{# }else if(d.is_cert == 1){ }}
+                        <a class="layui-btn layui-btn-xs layui-btn-normal" lay-event="edit">
+                            <i class="layui-icon layui-icon-edit"></i>认证信息
+                        </a>
+                        {{# }else if(d.is_cert == 2){ }}
+                        <a class="layui-btn layui-btn-xs layui-btn-normal" lay-event="">
+                            <i class="layui-icon"></i>已认证
+                        </a>
+                        {{# }else if(d.is_cert == 3){ }}
+                        <a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="">
+                            <i class="layui-icon"></i>已驳回
+                        </a>
+                        {{# } }}
+
+                        <!-- <a class="layui-btn layui-btn-xs layui-btn-normal" lay-event="edit">
+                            <i class="layui-icon layui-icon-edit"></i>修改
+                        </a> -->
+                        {{# if (d.status == 1){ }}
+                        <a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="del">
+                            <i class="layui-icon layui-icon-delete"></i>拉黑
+                        </a>
+                        {{# }else{ }}
+                        <a class="layui-btn layui-btn-xs layui-btn-normal" lay-event="reverse">
+                            <i class="layui-icon layui-icon-delete"></i>恢复
+                        </a>
+                        {{# } }}
+                    </script>
+                    <script type="text/html" id="admin_group_status">
+                        {{#  if(d.status == 1){ }}
+                            <span style="color:#1E9FFF">正常 </span>  
+                        {{#  } else { }}
+                            <span style="color:#FF5722">禁止登录 </span> 
+                        {{#  } }}
+                    </script>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style type="text/css">
+    tbody tr td .layui-table-cell{
+        height:54px;
+        line-height: 54px;
+    }
+    tbody tr td .layui-table-cell img {
+        width: 50px;
+        border-radius: 50px;
+    }
+</style>
+
+<script id="editDataTpl" type="text/html">
+    <form class="layui-form" lay-filter="edit-data" id="edit-data" style="padding-right: 30px">
+        <div style="margin-top:20px;"></div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">出生年月</label>
+            <div class="layui-input-block">
+                <input type="text" required value="{{d.user.birth}}" readonly="true" autocomplete="off" class="layui-input">
+                <input type="hidden" id="user_id" name="id" value="{{ d.user.id }}">
+                <input type="hidden" id="open_id" name="open_id" value="{{ d.user.openid }}">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">语音介绍</label>
+            <div class="layui-input-block">
+                <audio src="{{d.user.audio}}" controls="controls">
+                Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">封面图</label>
+            <div class="layui-input-block">
+                {{# if(d.user.cover) { }}
+                <div class="layui-upload-drag" id="cover" style="width:33%;padding:0px">
+                    <img style="width:100%" class="seeimg" src="{{ d.user.cover }}">
+                </div>
+                {{# }else{ }}
+                <span style="line-height: 38px">未上传图片</span>
+                {{# } }}
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">轮播图</label>
+            <div class="layui-input-block">
+                {{# if(d.user.images.length) { }}
+                <div class="layui-upload-drag" id="cover" style="width:33%;padding:0px">
+                    {{# for(var i = 0;i< d.user.images.length;i++){ }}
+                        <img style="width:100%" class="seeimg" src="{{ d.user.images[i] }}">
+                    {{# } }}
+                </div>
+                {{# }else{ }}
+                <span style="line-height: 38px">未上传图片</span>
+                {{# } }}
+            </div>
+        </div>
+
+        <div class="layui-form-item" pane="">
+            <label class="layui-form-label">标签</label>
+            <div class="layui-input-block">
+                {{# for(var i = 0;i< d.user.labels.length;i++){ }}
+                    <button class="layui-btn layui-btn-xs layui-btn-normal">{{ d.user.labels[i] }}</button>
+                {{# } }}
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">原因</label>
+            <div class="layui-input-block">
+                <textarea id="reason" class="layui-textarea" placeholder="请填写通过或者未通过原因"></textarea>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit="" lay-filter="data-edit-submit">通过认证</button>
+                <button class="layui-btn layui-btn-danger" lay-submit="" lay-filter="data-edit-bohui">驳回</button>
+            </div>
+        </div>
+    </form>
+</script>
+
+<script type="text/javascript">
+layui.use(['form','table', 'laytpl', 'element','tplay','apiconfig'], function(){
+  var $ = layui.$
+  ,form = layui.form
+  ,table = layui.table
+  ,element = layui.element
+  ,tplay = layui.tplay
+  ,laytpl = layui.laytpl
+  ,config = layui.apiconfig;
+
+    form.render(null, 'component-form-data');
+
+    dataList();
+    function dataList()
+    {
+        //会员
+        table.render({
+            elem: '#data-list'
+            ,url: config.domain+'/admin/user/index'
+            ,page: true
+            ,limit:10
+            ,cols: [[
+                {type: 'checkbox', fixed: 'left'}
+                ,{field: 'id', title: 'ID', width:50, align:'center'}
+                ,{field: 'avatar', title: '用户头像', width:100, align:'center'}
+                ,{field: 'name', title: '用户昵称', width:150, align:'center'}
+                ,{field: 'balance', title: '余额(￥)', width:150, align:'center'}
+                ,{field: 'mobile', title: '手机', width:150, align:'center'}
+                ,{field: 'gender', title: '性别', width:80, align:'center'}
+                ,{field: 'address', title: '地址', width:200, align:'center'}
+                // ,{field: 'cert', title: '认证状态', width:100, align:'center'}
+                // ,{field: 'check', title: '审核状态', width:100, align:'center'}
+                ,{field: 'create_time', title: '注册时间'}
+                // ,{field: 'last_login_time', title: '最后登录时间'}
+                // ,{field: 'last_login_ip', title: '最后登录IP'}
+                // ,{field: 'status', title: '状态',toolbar: '#admin_group_status'}
+                // ,{field: 'login_num', title: '登录次数'}
+                ,{fixed: 'right', title: '操作', width:230, align:'center', toolbar: '#op_user'}
+            ]]
+            // ,skin: 'line'
+        });
+    }
+
+    //事件处理
+    var events = {
+        shielding: function(othis, type){
+          var thisTabs = tabs[type]
+          ,checkStatus = table.checkStatus(thisTabs.id)
+          ,data = checkStatus.data; //获得选中的数据
+          if(data.length === 0) return layer.msg('未选中行');
+          var array = [];
+          for (var i = 0; i < data.length; i++) {
+             array.push(data[i].id);
+          }
+          layer.confirm('确定拉黑选中的用户吗？', function(){
+            tplay.ajax({
+              url:config.domain+"/admin/user/shielding",
+              type:'post',
+              data:{id:array},
+              success:function(res){
+                layer.msg(res.msg);
+                if(res.code == 1){
+                  table.reload(thisTabs.id); //刷新表格
+                }
+              }
+            })
+            
+          });
+        }
+        ,reload:function()
+        {
+            var status = $("#status").val();
+            //执行重载
+            table.reload('data-list', {
+                page: {
+                    curr: 1 //重新从第 1 页开始
+                }
+                ,where: {
+                    key: {
+                        is_cert: status,
+                    }
+                }
+            });
+        }
+    };
+
+  //区分各选项卡中的表格
+  var tabs = {
+    admin: {
+      text: '管理员'
+      ,id: 'data-list'
+    }
+  };
+  
+  $('.tplay-btn .layui-btn').on('click', function(){
+    var othis = $(this)
+    ,thisEvent = othis.data('events')
+    ,type = othis.data('type');
+    events[thisEvent] && events[thisEvent].call(this, othis, type);
+  });
+
+    var edit_layer;
+
+    //监听工具条
+    table.on('tool(data-list)', function(obj){ //注：tool是工具条事件名，test是table原始容器的属性 lay-filter="对应的值"
+        var data = obj.data; //获得当前行数据
+        var layEvent = obj.event; //获得 lay-event 对应的值（也可以是表头的 event 参数对应的值）
+        var tr = obj.tr; //获得当前行 tr 的DOM对象
+        if(layEvent === 'edit')
+        { //修改
+            // location.hash = '#/user/checkCert?id='+data.id;
+            // return;
+            tplay.ajax({
+                url:config.domain+"/admin/user/checkCert",
+                type:'get',
+                // data:{id:route.params().id},
+                data:data,
+                async:false,
+                success:function(res)
+                {
+                    console.log(res)
+                    if(res.code == 1)
+                    {
+                        var editTpl = $('#editDataTpl').html();
+                        laytpl(editTpl).render(res.data, function(html)
+                        {
+                            // view.innerHTML = html;
+                            edit_layer = layer.open({
+                                title: '认证信息',
+                                type: 1,
+                                skin: 'layui-layer-demo',
+                                // skin: 'layui-layer-rim', //加上边框
+                                area: ['460px', 'atuo'], //宽高
+                                content: html,
+                            });
+                        });
+
+                        form.render(null, 'edit-data');
+                    } 
+                    else 
+                    {
+                        layer.msg(res.msg);
+                    }
+                }
+            });
+            
+        }
+        else if(layEvent === 'del')
+        {
+            layer.confirm('确定拉黑该用户吗？', function(){
+                tplay.ajax({
+                    url:config.domain+"/admin/user/shielding",
+                    type:'post',
+                    data:{id:data.id},
+                    success:function(res){
+                        layer.msg(res.msg);
+                        if(res.code == 1){
+                            table.reload("data-list"); //刷新表格
+                        }
+                    }
+                })
+            });
+        }
+        else if(layEvent === 'reverse')
+        {
+            layer.confirm('确定恢复该用户吗？', function(){
+                tplay.ajax({
+                    url:config.domain+"/admin/user/reverse",
+                    type:'post',
+                    data:{id:data.id},
+                    success:function(res){
+                        layer.msg(res.msg);
+                        if(res.code == 1){
+                            table.reload("data-list"); //刷新表格
+                        }
+                    }
+                })
+            });
+        }
+    });
+
+    form.on('submit(data-edit-submit)', function(data){
+        var reason = $("#reason").val();
+        if (reason.length < 10) 
+        {
+            layer.msg('通过理由不少于10个字符！');
+            return false;
+        }
+        var data = {
+            id:$('#user_id').val(),
+            is_cert:2,
+            openid: $("#open_id").val(),
+            reason: reason
+        }
+        // var data = {
+        //     id:$('#user_id').val(),
+        //     is_cert:2
+        // }
+        tplay.ajax({
+            url:config.domain+"/admin/user/checkCert",
+            type:"post",
+            data:data,
+            success:function(res)
+            {
+                layer.msg(res.msg);
+                if(res.code == 1)
+                {
+                    layer.close(edit_layer);
+                    table.reload("data-list")
+                }
+            }
+        })
+        return false;
+    });
+
+    form.on('submit(data-edit-bohui)', function(data){
+        var reason = $("#reason").val();
+        // alert(reason.length());return false;
+        if (reason.length < 10) 
+        {
+            layer.msg('驳回理由不少于10个字符！');
+            return false;
+        }
+        var data = {
+            id:$('#user_id').val(),
+            is_cert:3,
+            openid: $("#open_id").val(),
+            reason: reason
+        }
+        tplay.ajax({
+            url:config.domain+"/admin/user/checkCert",
+            type:"post",
+            data:data,
+            success:function(res)
+            {
+                layer.msg(res.msg);
+                if(res.code == 1)
+                {
+                    layer.close(edit_layer);
+                    table.reload("data-list")
+                }
+            }
+        })
+        return false;
+    });
+
+});
+</script>

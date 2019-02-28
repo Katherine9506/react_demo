@@ -1,0 +1,24 @@
+<template name="emojis">
+    <!--<view class="emoji_container" style="display: {{showEmoji ? 'block' : 'none'}}">-->
+    <view class="emoji_container" style="display:block;">
+        <scroll-view class="emoji_content" scroll-y>
+            <block wx:for="{{emojiIcons}}" wx:item="{{icons}}" wx:key="{{key}}">
+                <view class="{{type == icons.type ? 'show' : ''}}">
+                    <block class="emojiBlock" wx:for="{{icons}}" wx:item="{{icon}}"
+                           wx:key="{{key2}}">
+                        <view class="emoji_item">
+                            <image src="{{item.path + (key + 1) + item.file}}" mode="widthFix"></image>
+                        </view>
+                    </block>
+                </view>
+            </block>
+        </scroll-view>
+        <view class="emoji_tab">
+            <block wx:for="{{emojiIcons}}" wx:key="{{key}}">
+                <view class="type {{type == item.type ? 'iconTypeSelect' : ''}}" bindtap="switchIconType">
+                    {{item.name}}
+                </view>
+            </block>
+        </view>
+    </view>
+</template>

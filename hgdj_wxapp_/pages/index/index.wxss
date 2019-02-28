@@ -1,0 +1,264 @@
+@import "/wxSearch/wxSearch.wxss";
+
+/**index.wxss**/
+/* .userinfo {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.userinfo-avatar {
+width: 128rpx;
+height: 128rpx;
+margin: 20rpx;
+border-radius: 50%;
+}
+
+.userinfo-nickname {
+color: #aaa;
+}
+
+.usermotto {
+margin-top: 200px;
+} */
+.searchBox{
+padding: 20rpx 30rpx;
+}
+.searchBox view.box{
+height: 67rpx;
+display: flex;
+align-items: center;
+border:1px solid #DCDCDC;
+border-radius: 33rpx;
+background: #F6F6F6;
+box-sizing: border-box;
+padding-left: 30rpx;
+}
+.searchBox view.box image{
+width: 36rpx;
+height: 36rpx;
+margin-left: 18rpx;
+}
+.searchBox view.box input{
+width: 550rpx;
+height: 65rpx;
+font-size: 30rpx;
+margin-left: 14rpx;
+}
+.bannerBox{
+padding: 0 30rpx;
+}
+.bannerBox view{
+border-radius: 12rpx;
+overflow: hidden;
+}
+.bannerBox view image{
+display: flex;
+width: 100%;
+}
+.navigatorBox{
+display: flex;
+flex-wrap: wrap;
+padding: 0 24rpx;
+}
+.navigatorBox navigator{
+width: 25%;
+}
+.navigatorBox navigator image{
+width: 100rpx;
+height: 100rpx;
+display: block;
+margin: 0 auto 10rpx;
+}
+.navigatorBox navigator>view{
+display: flex;
+flex-direction: column;
+justify-content:center;
+font-size: 26rpx;
+color: #555555;
+text-align: center;
+padding-top: 26rpx;
+}
+.navigatorBox navigator view view{
+line-height: 44rpx;
+}
+.adImg{
+padding: 10rpx 28rpx 0;
+}
+.adImg image{
+display: block;
+width: 100%;
+}
+.sameTitle{
+padding: 17rpx 24rpx 0;
+position: relative;
+margin-bottom: 37rpx;
+}
+.sameTitle .titleTxt{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.sameTitle .titleTxt image{
+width: 48rpx;
+height: 26rpx;
+}
+.sameTitle .titleTxt text{
+display: block;
+font-size: 34rpx;
+color:#333333;
+line-height: 50rpx;
+padding: 0 14rpx;
+}
+.sameTitle text.more{
+position: absolute;
+top: 21rpx;
+right: 40rpx;
+font-size: 30rpx;
+line-height: 46rpx;
+color: #0362dc;
+}
+.beautyList{
+padding: 0 24rpx;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+.beauty{
+width: 330rpx;
+height: 469rpx;
+}
+.beauty .beauty-pic{
+width: 330rpx;
+height: 330rpx;
+border-radius: 10rpx;
+overflow: hidden;
+position: relative;
+}
+.beauty .beauty-pic .b-pic{
+display: block;
+width: 100%;
+height: 100%;
+}
+.beauty .beauty-pic .topAb{
+position: absolute;
+top: 25rpx;
+right: 0;
+font-size: 20rpx;
+line-height: 34rpx;
+color: #ffffff;
+background: rgba(0, 0,0,0.5);
+border-bottom-left-radius: 17rpx;
+border-top-left-radius: 17rpx;
+padding: 0 6rpx 0 12rpx;
+}
+.beauty .beauty-pic .topAb text{
+display: inline-block;
+width: 12rpx;
+height: 12rpx;
+background: #2886FF;
+border-radius: 50%;
+margin-right: 10rpx;
+}
+.beauty .beauty-pic .bottomAb{
+position: absolute;
+left: 0;
+bottom: 0;
+background: rgba(0, 0, 0, 0.3);
+font-size: 28rpx;
+line-height: 46rpx;
+width: 100%;
+box-sizing: border-box;
+padding-left:16rpx;
+color: #fff;
+display: flex;
+align-items: center;
+}
+.beauty .beauty-pic .bottomAb .zan{
+width: 28rpx;
+height: 24rpx;
+margin-right: 10rpx;
+}
+.beauty .beauty-txt .b-name{
+display: flex;
+height: 68rpx;
+align-items: center;
+padding:0 12rpx;
+}
+.beauty .beauty-txt .b-name .name{
+font-size: 28rpx;
+color: #333333;
+line-height: 32rpx;
+}
+.beauty .beauty-txt .b-name .xg{
+font-size: 24rpx;
+height: 32rpx;
+padding: 0 8rpx;
+border-radius: 16rpx;
+color:#fff;
+background: #0362DC;
+margin-left: 10rpx;
+}
+.beauty .beauty-txt .b-price{
+display: flex;
+justify-content: space-between;
+padding: 0 12rpx;
+}
+.beauty .beauty-txt .b-price .price{
+font-size: 30rpx;
+color: #da2121;
+line-height: 36rpx;
+}
+.beauty .beauty-txt .b-price .price text{
+font-size: 24rpx;
+color: #999999;
+padding-left: 6rpx;
+}
+.beauty .beauty-txt .b-price .addr .b-addr{
+width: 16rpx;
+height: 24rpx;
+margin-right: 15rpx;
+}
+.beauty .beauty-txt .b-price .addr{
+font-size: 24rpx;
+height: 36rpx;
+color: #999999;
+display: flex;
+align-items: center;
+}
+.beauty .beauty-txt .b-price .addr text{
+line-height: 36rpx;
+}
+
+/* pages/welcome/welcome.wxss */
+.logo{
+padding-top: 113rpx;
+}
+.logo .logoBox{
+width:200rpx;
+height: 200rpx;
+overflow: hidden;
+margin: 0 auto;
+}
+.logo .logoBox image{
+display: block;
+width: 100%;
+}
+.logo .wxName{
+font-size: 42rpx;
+color: #333333;
+text-align: center;
+line-height: 118rpx;
+font-family: '微软雅黑';
+}
+.impowerBtn button{
+width: 300rpx;
+height: 102rpx;
+line-height: 102rpx;
+display: block;
+margin: 120rpx auto 0;
+font-size: 30rpx;
+color: #ffffff;
+background: #0bb908;
+padding: 0;
+}

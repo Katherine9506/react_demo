@@ -1,0 +1,119 @@
+/* pages/news-detail/news-detail.wxss */
+.wrap{
+    border-top: 2rpx solid #F4F4F4;
+    padding-bottom: 110rpx;
+}
+.detailsBox{
+    padding: 0 35rpx;
+}
+.detailTitle{
+    font-size: 34rpx;
+    color: #333333;
+    line-height: 48rpx;
+    padding: 23rpx 0 6rpx;
+    margin-bottom:20rpx; 
+}
+.details image{
+    width: 100%;
+    border-radius:4rpx; 
+    margin: 34rpx 0;
+}
+.details{
+    font-size: 28rpx;
+    color: #555555;
+    padding-bottom: 30rpx;
+}
+.pjTop{
+    padding: 0 52rpx;
+    font-size: 34rpx;
+    line-height: 80rpx;
+    color: #555555;
+    background: #F4F4F4;
+}
+.userTx{
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: 14rpx;
+}
+.pjItem{
+    display: flex;
+    justify-content: space-between;
+    padding: 20rpx 30rpx 16rpx;
+    border-bottom: 2rpx solid #F4F4F4;
+}
+.userTx image{
+    display: block;
+    width: 100%;
+}
+.pjTxt{
+    width: 570rpx;
+}
+.nameTime{
+    font-size: 28rpx;
+    line-height: 44rpx;
+    color: #555555;
+}
+.pjTxt .zw{
+    font-size: 26rpx;
+    color: #333333;
+    line-height: 40rpx;
+}
+.bottom{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+    border-top: 1rpx solid #DCDCDC;
+    padding:11rpx 30rpx ;
+    background: #EEEEEE;
+    width: 100%;
+}
+.bottom .formBox{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.bottom .icon-msg image{
+    width: 68rpx;
+    height: 68rpx;
+}
+.formBox .inputBox{
+    width: 586rpx;
+    height: 86rpx;
+    box-sizing: border-box;
+    border:1rpx solid #DCDCDC;
+    background: #fff;
+    border-radius: 10rpx;
+    padding:0 20rpx;
+}
+.formBox .inputBox input{
+    height: 84rpx;
+    line-height: 84rpx;
+    font-size: 30rpx;
+    color: #333;
+}
+.icon-msg{
+    width: 68rpx;
+    height: 68rpx;
+    margin-right: 7rpx;
+    margin-top: 10rpx;
+    position: relative;
+}
+.icon-msg text{
+    position: absolute;
+    right: 0;
+    top: -3rpx;
+    width: 28rpx;
+    height: 28rpx;
+    background: #3191F2;
+    font-size: 20rpx;
+    line-height: 28rpx;
+    text-align: center;
+    color: #fff;
+    border-radius: 50%;
+}
+.subBtn{
+    display: none;
+}

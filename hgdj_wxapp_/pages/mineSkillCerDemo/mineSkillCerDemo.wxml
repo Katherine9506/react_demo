@@ -1,0 +1,4 @@
+<!--pages/mineSkillCerDemo/mineSkillCerDemo.wxml-->
+<view class='demoImg'>
+    <image src='/images/shili.jpg' mode='widthFix'></image>
+</view>

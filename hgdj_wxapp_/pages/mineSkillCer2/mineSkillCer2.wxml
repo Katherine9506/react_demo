@@ -1,0 +1,96 @@
+<!--pages/mineSkillCer2/mineSkillCer2.wxml-->
+<view>
+    <form bindsubmit="formSubmit" report-submit="true">
+        <view class='wrap'>
+            <view class='pickerBox'>
+                <view>{{skill_name}}段位</view>
+                <picker bindchange="sexChange" value="{{dan[idx].id}}" range="{{dan}}" range-key="{{'name'}}"
+                        name="paragraph_id">
+                    <view class="picker">{{dan[idx].name?dan[idx].name:"请选择"}}
+                        <image src='/images/icon-arrow.png' mode='widthFix'></image>
+                    </view>
+                </picker>
+            </view>
+            <view class='pickerBox' wx:if="{{regional}}">
+                <view>大区</view>
+                <picker bindchange="regChange" value="{{regional[reg].id}}" range="{{regional}}" range-key="{{'name'}}"
+                        name="largearea_id">
+                    <view class="picker">{{regional[reg].name?regional[reg].name:"请选择"}}
+                        <image src='/images/icon-arrow.png' mode='widthFix'></image>
+                    </view>
+                </picker>
+            </view>
+        </view>
+        <view class='wrap'>
+            <view class='title'>
+                <view>上传最高实力截图</view>
+                <button bindtap='showDemo'>查看样例</button>
+            </view>
+            <view class='updateImg'>
+                <block wx:for="{{personalPic}}" wx:key="key">
+                    <view class='imgBox'>
+                        <view>
+                            <image src='{{item}}' mode='widthFix'></image>
+                        </view>
+                        <button data-id='{{index}}' bindtap='deleteTap' class='close'>
+                            <image src='/images/close.png' mode='widthFix'></image>
+                        </button>
+                        <button bindtap='editPersonal' class='edit'>
+                            <image src='/images/edit.png' mode='widthFix'></image>
+                            <text>修改</text>
+                        </button>
+                    </view>
+                </block>
+                <view class='updateBtn' bindtap='personalImg' hidden="{{personalPic.length==1}}">
+                    <image class='' src='/images/addImg.png' mode='widthFix'></image>
+                    <view>上传图片</view>
+                </view>
+            </view>
+        </view>
+        <view class='wrap'>
+            <view class='title'>
+                <view>{{skill_name}}标签组
+                    <text>（1-3个标签）</text>
+                </view>
+            </view>
+            <view class='tags'>
+                <checkbox-group class='free-radios' bindchange="checkChange">
+                    <block wx:for="{{label}}" wx:key="key">
+                        <label bindtap="click" class="free-radio {{item.checked?'is_checked':''}}">
+                            <checkbox value="{{item.id}}" name="{{item.name}}" checked="{{item.checked}}" hidden='true'
+                                      disabled='{{}}'></checkbox>
+                            <text class="free-text">{{item.name}}</text>
+                        </label>
+                    </block>
+                </checkbox-group>
+            </view>
+        </view>
+        <view class='wrap msgwap'>
+            <view class='title'>
+                <view>陪玩游戏介绍
+                    <text>（说下你的游戏心得，让用户更了解你）</text>
+                </view>
+            </view>
+            <view class='msgBox'>
+                <textarea wx:if="{{user_skill.intro}}" name="intro">{{user_skill.intro}}</textarea>
+                <textarea wx:else name="intro" placeholder='请输入陪玩游戏介绍...'></textarea>
+            </view>
+        </view>
+        <view class='wrap agreement'>
+            <view class='xieyi'>
+                <!-- <checkbox color='#fff'></checkbox> -->
+                <checkbox-group bindchange="checkProcotol">
+                    <view class='check-box'>
+                        <checkbox color='#fff' value="1"></checkbox>
+                    </view>
+                </checkbox-group>
+                <text>勾选即同意</text>
+                <view bindtap='showProtocol'>陪玩条款</view>
+            </view>
+        </view>
+        <view class='formSubbmit'>
+            <button form-type='submit' disabled="{{submitEnable}}">提交审核</button>
+        </view>
+
+    </form>
+</view>

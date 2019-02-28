@@ -1,0 +1,345 @@
+/* pages/minePersonal/minePersonal.wxss */
+page{
+background: #F7F7F7;
+}
+.wrap{
+background: #fff;
+padding: 0 24rpx;
+margin-bottom: 20rpx;
+}
+.pickerBox{
+font-size: 32rpx;
+color: #333333;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 14rpx;
+height: 96rpx;
+border-bottom: 1rpx solid #EEEEEE;
+}
+.pickerBox picker{
+display: flex;
+align-items: center;
+color: #999999;
+font-size: 32rpx;
+}
+.pickerBox picker image{
+width: 16rpx;
+height: 30rpx;
+margin-left: 24rpx;
+}
+.wrap .pickerBox:last-child{
+border-bottom: 0;
+}
+.title{
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 24rpx 14rpx 0;
+height: 48rpx;
+line-height: 48rpx;
+color: #333333;
+font-size: 32rpx;
+}
+.title view text{
+color: #999999;
+font-size: 24rpx;
+}
+.title button{
+width: 140rpx;
+height: 48rpx;
+line-height: 46rpx;
+border-radius: 24rpx;
+border:1rpx solid #BFBFBF;
+background: #F8F8F8;
+font-size: 26rpx;
+color: #999999;
+padding: 0;
+margin: 0;
+}
+.updateImg{
+margin-top: 24rpx;
+padding: 0 14rpx 20rpx;
+display: flex;
+flex-wrap: wrap;
+}
+.updateImg>view{
+margin-bottom: 7rpx;
+}
+.imgBox{
+width: 290rpx;
+height: 290rpx;
+position: relative;
+margin-right: 24rpx;
+}
+.imgBox view{
+width: 290rpx;
+height: 290rpx;
+border-radius: 10rpx;
+overflow: hidden;
+}
+.imgBox image{
+display: block;
+width: 100%;
+}
+.imgBox button.close{
+position: absolute;
+top: -14rpx;
+right: -14rpx;
+width: 42rpx;
+height: 42rpx;
+border-radius: 50%;
+padding: 0;
+border: 4rpx solid #fff;
+}
+.imgBox button.close image{
+display: block;
+width: 100%;
+}
+.imgBox button.edit{
+width: 100rpx;
+height: 38rpx;
+line-height: 38rpx;
+font-size: 20rpx;
+color: #fff;
+padding: 0;
+background: rgba(0, 0, 0, 0.5);
+border-radius: 19rpx;
+display: flex;
+align-items: center;
+justify-content: center;
+position: absolute;
+bottom: 14rpx;
+right: 14rpx;
+}
+.imgBox button.edit image{
+display: block;
+width: 22rpx;
+height: 22rpx;
+margin-top: -3rpx;
+margin-right: 6rpx;
+}
+.updateBtn{
+box-sizing: border-box;
+width: 290rpx;
+height: 290rpx;
+padding-top: 98rpx;
+background: #F5F5F5;
+font-size: 26rpx;
+line-height: 36rpx;
+color: #999999;
+text-align: center;
+border-radius: 10rpx;
+}
+.updateBtn image{
+display: block;
+width: 52rpx;
+height: 52rpx;
+margin: 0 auto 46rpx;
+}
+.voice{
+width: 442rpx;
+height: 86rpx;
+background: #0063DB;
+border-radius: 43rpx;
+display: flex;
+justify-content: space-between;
+align-items: center;
+box-sizing: border-box;
+padding: 0 28rpx;
+}
+.voice image{
+display: block;
+width: 44rpx;
+height:44rpx;
+}
+.voice text{
+display: block;
+height: 2rpx;
+width: 244rpx;
+background: #fff;
+}
+.voice view{
+font-size: 36rpx;
+color: #fff;
+}
+.again{
+width: 244rpx;
+margin: 0;
+height: 86rpx;
+}
+.again button{
+border:2rpx solid #0362DC;
+width: 244rpx;
+height: 86rpx;
+box-sizing: border-box;
+border-radius: 43rpx;
+line-height: 82rpx;
+font-size: 36rpx;
+color: #0362dc;
+padding: 0;
+}
+.audioBox{
+display: flex;
+justify-content: space-between;
+align-items: center;
+height: 86rpx;
+margin-top: 53rpx;
+padding-bottom: 45rpx;
+}
+.tags{
+padding: 16rpx 0 6rpx;
+}
+.tags label{
+display: inline-block;
+width: 155rpx;
+height: 54rpx;
+line-height: 52rpx;
+box-sizing: border-box;
+border:1rpx solid #0362DC;
+border-radius: 27rpx;
+margin-right: 27rpx;
+position: relative;
+font-size: 26rpx;
+color: #0362dc;
+text-align: center;
+margin-bottom: 28rpx;
+}
+.tags label.checked{
+background: #0362dc;
+color: #fff;
+}
+.tags label checkbox{
+position: absolute;
+top: 0;
+left: 0;
+opacity: 0;
+}
+.tags label:nth-of-type(4n){
+margin: 0;
+}
+.formSubbmit{
+padding: 53rpx 24rpx 100rpx;
+}
+.formSubbmit button{
+height: 88rpx;
+line-height: 88rpx;
+border-radius: 44rpx;
+color: #ffffff;
+font-size: 34rpx;
+background: #0063DB;
+}
+.tags .is_checked{background: #0362dc;color: #fff;}
+
+/*2018-10-26新增*/
+
+.popBox{
+position: fixed;
+top: 100%;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.5);
+z-index:9999;
+transition: 0.5s;
+}
+.popBox2{
+top: 0 !important;
+}
+.popMain{
+position: absolute;
+left: 0;
+bottom: 0;
+height:466rpx;
+width: 100%;
+background: #fff;
+border-top-left-radius: 10rpx;
+border-top-right-radius: 10rpx;
+padding: 56rpx 0 26rpx;
+transition: 0.5s;
+}
+.popMain2{
+height: 330rpx;
+}
+.record{
+width:120rpx;
+height: 120rpx;
+border-radius: 50%;
+border-width: 20rpx;
+border-style: solid;
+border-color: #fff;
+}
+.border{
+border-color: rgba(36,124, 237, 0.3);
+}
+.record image{
+display: block;
+width: 100%;
+}
+.timelong{
+height: 70rpx;
+line-height: 70rpx;
+font-size: 48rpx;
+color: #0362DC;
+text-align: center;
+}
+.timets{
+font-size: 22rpx;
+line-height: 26rpx;
+color: #999;
+text-align: center;
+margin-bottom: 30rpx;
+}
+.tapTs{
+height: 84rpx;
+line-height: 84rpx;
+color: #000;
+font-size: 30rpx;
+padding: 0 0 8rpx;
+text-align: center;
+}
+.recordIcon{
+display: flex;
+padding:70rpx 50rpx 0;
+justify-content: space-around;
+align-items: center;
+
+}
+.iconBox{
+width: 116rpx;
+height: 116rpx;
+border: 2rpx solid #0362DC;
+border-radius: 50%;
+overflow: hidden;
+}
+.iconBox image{
+display: block;
+width: 100%;
+}
+
+.agreement {
+    padding: 25rpx 24rpx;
+    height: 44rpx;
+    line-height: 44rpx;
+    font-size: 32rpx;
+    color: #999;
+}
+.agreement view view {
+    color: #ffa467;
+}
+.agreement .xieyi {
+    display: flex;
+    align-items: center;
+    padding: 0 16rpx;
+}
+.agreement checkbox .wx-checkbox-input {
+    border-radius: 50%;
+    height: 44rpx;
+    width: 44rpx;
+    margin-top: -4rpx;
+}
+.agreement checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+    background-color: #ffa467;
+    border: 1rpx solid #ffa467;
+}
+/*.tags .is_checked{background: #0362dc;color: #fff;}*/

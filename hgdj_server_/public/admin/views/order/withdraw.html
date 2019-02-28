@@ -1,0 +1,222 @@
+<div class="tplay-body">
+    <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+        <ul class="layui-tab-title">
+            <li class="layui-this">提现管理</li>
+        </ul>
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show tplay-btn">
+                <div class="layui-form demoTable" lay-filter="component-form-course">
+                    <div class="layui-inline">
+                        <select id="status_query">
+                            <option value="-1">全部</option>
+                            <option value="0">发起提现</option>
+                            <option value="1">提现中</option>
+                            <option value="2">提现成功</option>
+                            <option value="3">提现失败</option>
+                        </select>
+                    </div>
+
+                    <div class="layui-inline">
+                        <button class="layui-btn" data-type="admin" data-events="reload">
+                            <i class="layui-icon layui-icon-search"></i>搜索
+                        </button>
+                    </div>
+
+                </div>
+                <table id="withdraw-list" lay-filter="withdraw-list">
+                    <script type="text/html" id="withdrawOptions">
+                        {{# if(d.status[0].id==0){ }}
+                        <a class="layui-btn layui-btn-xs layui-btn-normal" lay-event="start">
+                            <i class="layui-icon layui-icon-ok"></i>开始提现
+                        </a>
+                        <a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="disable">
+                            <i class="layui-icon layui-icon-close-fill"></i>不通过
+                        </a>
+                        {{# } else if(d.status[0].id==1){ }}
+                        <a class="layui-btn layui-btn-xs layui-btn-normal" lay-event="confirm">
+                            <i class="layui-icon layui-icon-ok"></i>确认提现成功
+                        </a>
+                        <a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="disable">
+                            <i class="layui-icon layui-icon-close-fill"></i>不通过
+                        </a>
+                        {{# } else if(d.status[0].id==2){ }}
+                        提现成功
+                        {{# } else { }}
+                        提现失败
+                        {{# } }}
+                    </script>
+                    <script type="text/html" id="orders">
+                        <a class="layui-btn layui-btn-sm" lay-event="detail">关联订单详情</a>
+                    </script>
+                    <script type="text/html" id="status">
+                        <a class="layui-btn layui-btn-sm" lay-event="timeline">提现时间线</a>
+                    </script>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 关联订单 -->
+<script id="relatedOrders" type="text/html">
+    <table class="layui-table">
+        <thead>
+        <tr>
+            <th>订单号</th>
+            <th>支付业务号</th>
+            <th>服务</th>
+            <th>订单总价</th>
+            <th>实际支付</th>
+            <th>订单状态</th>
+            <th>雇主评分</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% for(var i = 0;i < orders.length;i++) { %>
+        <tr>
+            <td><%= orders[i].order_no %></td>
+            <td><%= orders[i].transaction_id %></td>
+            <td><%= orders[i].skill_name %> <%= orders[i].unit_name %>*<%= orders[i].count %></td>
+            <td><%= orders[i].total_price %></td>
+            <td><%= orders[i].pay_total %></td>
+            <td><%= orders[i].status %></td>
+            <td><%= orders[i].rate %></td>
+        </tr>
+        <% } %>
+        </tbody>
+    </table>
+</script>
+<!-- 提现状态 -->
+<script type="text/html" id="withdrawStatus">
+    <ul class="layui-timeline" style="padding: 20px 0px 0px 20px;">
+        <% for(var i = 0;i < status.length;i++) { %>
+        <li class="layui-timeline-item">
+            <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+            <div class="layui-timeline-content layui-text">
+                <h3 class="layui-timeline-title"><%= status[i].timestamp %></h3>
+                <p>描述:<%= status[i].desc %></p>
+            </div>
+        </li>
+        <% } %>
+    </ul>
+</script>
+
+<script type="text/javascript">
+    layui.use(['form', 'upload', 'laytpl', 'table', 'element', 'tplay', 'route', 'apiconfig', 'layer'], function () {
+        var $ = layui.$,
+            table = layui.table,
+            form = layui.form,
+            element = layui.element,
+            tplay = layui.tplay,
+            route = layui.route,
+            laytpl = layui.laytpl,
+            upload = layui.upload,
+            config = layui.apiconfig,
+            layer = layui.layer;
+
+        form.render(null, 'component-form-course');
+
+        var withdrawTable = table.render({
+            elem: '#withdraw-list',
+            url: config.domain + '/admin/order/withdraw',
+            where: {access_token: layui.data('tplay').access_token},
+            page: true,
+            limit: 10,
+            cols: [[
+                {type: 'checkbox', fixed: 'left'},
+                {field: 'id', width: 12, title: '##', align: 'center'},
+                {field: 'uid', width: 100, title: '发起人ID', align: 'center'},
+                {field: 'uname', width: '10%', title: '发起人姓名', align: 'center'},
+                {field: 'amount', width: '15%', title: '提现金额(扣除提现费用后)', align: 'center'},
+                {field: 'orders', width: '10%', title: '关联订单', align: 'center', toolbar: '#orders'},
+                {field: 'group', width: '10%', title: '陪玩分组', align: 'center'},
+                {field: 'alipay_account', width: '10%', title: '微信账号', align: 'center'},
+                {field: 'alipay_name', width: '10%', title: '真实姓名', align: 'center'},
+                {field: 'status', width: '10%', title: '提现状态', align: 'center', toolbar: '#status'},
+                {field: 'created_at', width: 180, title: '发起时间', align: 'center'},
+                {fixed: 'right', title: '操作/状态', align: 'center', toolbar: '#withdrawOptions', width: '15%'}
+            ]], skin: 'line'
+        });
+
+        var toolEvent = {
+            detail: function (data) {
+                layer.open({
+                    type: 1,
+                    title: false,
+                    closeBtn: 0,
+                    area: ['1000px'],
+                    shadeClose: true,
+                    content: template('relatedOrders', {orders: data.orders})
+                })
+            },
+            timeline: function (data) {
+                layer.open({
+                    type: 1,
+                    title: false,
+                    closeBtn: 0,
+                    area: ['300px'],
+                    shadeClose: true,
+                    content: template('withdrawStatus', {status: data.status})
+                })
+            },
+            start: function (data) {
+                withdrawStatusChangeHandler(data.id, 1);
+            },
+            confirm: function (data) {
+                withdrawStatusChangeHandler(data.id, 2);
+            },
+            disable: function (data) {
+                var reason = '';
+                layer.prompt({
+                    formType: 2,
+                    title: '请填写不通过玩家提现操作的原因',
+                }, function (value, index, elem) {
+                    reason = $.trim(value);
+                    if (reason) {
+                        layer.close(index);
+                        withdrawStatusChangeHandler(data.id, 3, '提现失败--原因：' + reason);
+                    } else {
+                        layer.msg('请填入原因，方便玩家清楚为什么被拒绝了提现操作!', {icon: 3});
+                    }
+                });
+            }
+        };
+        var withdrawStatusChangeHandler = function (id, option, reason = null) {
+            $.post(config.domain + '/admin/order/withdrawHandler', {
+                id: id,
+                option: option,
+                reason: reason
+            }, function (res) {
+                if (res.code == 1) {
+                    withdrawTable.reload();
+                    layer.msg('操作成功');
+                } else {
+                    layer.msg('操作失败');
+                }
+            })
+        };
+        //table模块的工具条事件
+        table.on('tool(withdraw-list)', function (obj) {
+            var data = obj.data;
+            var layEvent = obj.event;
+            toolEvent[layEvent] && toolEvent[layEvent].call(this, data);
+        });
+
+        var events = {
+            reload: function () {
+                var status = $('#status_query').val();
+                table.reload('withdraw-list', {
+                    page: {curr: 1},
+                    where: {status: status}
+                });
+            }
+        };
+
+        $('.tplay-btn .layui-btn').on('click', function () {
+            var othis = $(this),
+                thisEvent = othis.data('events'),
+                type = othis.data('type');
+            events[thisEvent] && events[thisEvent].call(this, othis, type);
+        });
+
+    });
+</script>

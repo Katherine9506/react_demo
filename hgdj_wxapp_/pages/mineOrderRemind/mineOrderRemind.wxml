@@ -1,0 +1,46 @@
+<!--pages/mineOrderRemind/mineOrderRemind.wxml-->
+<view>
+    <view class='box'>
+        <view class='orderNum'>编号：18967540287</view>
+        <view class='playInfor'>
+            <view class='playerTxt'>陪玩师：</view>
+            <view class='playerPic'><image src='/images/user1.jpg' mode='widthFix'></image></view>
+            <view class='playerTxt'>罗格科技</view>
+        </view>
+        <view class='contact'>
+            <text>联系方式：</text>
+            <image src='/images/weixin.png' mode='widthFix'></image>
+            <text>阿迪多的 v</text>
+            <button bindtap='clipboardTap'>点击复制</button>
+        </view>
+        <view class='nnp'>
+            <view>声优聊天1*小时</view>
+            <view class='money'>￥15</view>
+        </view>
+        <view class='payM'>实付：￥<text>15</text></view>
+    </view>
+    <view class='state'>
+        <view class='sLeft'>
+            <view class='status'>待付款</view>
+            <view class='ts'>尽快付款享受服务</view>
+            <view class='ts2'>超过24小时未付款，订单将会关闭</view>
+        </view>
+        <view class='sRight'>
+            <view class='sy'>剩余</view>
+            <view class='time'>
+                {{hour<10? "0" + hour:hour}}:{{minute<10?"0"+minute:minute}}:{{second<10?"0"+second:second}}
+            </view>
+        </view>
+    </view>
+    <view class='before'>
+        <view class='buyer'>
+            <view class='buyerPic'><image src='/images/wh2.jpg' mode='widthFix'></image></view>
+            <text>罗格科技</text>
+        </view>
+        <view class='timeB'>
+            20小时前下单
+        </view>
+    </view>
+    <view bindtap='confirmTakeTap' class='payBtn'><button>提醒接单</button></view>
+</view>
+

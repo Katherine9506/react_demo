@@ -1,0 +1,118 @@
+/* pages/shanyue/shanyue.wxss */
+page{
+    background: #E6F8FC;
+}
+.poster image{
+    display: block;
+    width: 100%;
+}
+.tabBox{
+    width: 100%;
+    /* height: 96rpx; */
+    white-space: nowrap;
+    /* padding-bottom: 15rpx; */
+}
+.tabBox .tabbg{
+    background: #fff;
+    padding-bottom: 15rpx;
+    white-space: nowrap;
+}
+.tabBox .tabBar{
+    display: inline-block;
+    font-size: 28rpx;
+    /* line-height: 96rpx; */
+    color: #333333;
+    /* padding: 0 22rpx; */
+    position: relative;
+    /* background: #fff; */
+    padding-bottom: 15rpx;
+}
+.tabBox .tabBar text{
+    display: block;
+    padding: 0 22rpx;
+    line-height: 96rpx;
+    background: #fff;
+}
+.tabBox .tabBar.active{
+    color: #0063db;
+}
+.tabBox .tabBar.active::after{
+    position: absolute;
+    left:50%;
+    bottom: 11rpx;
+    display: block;
+    content:'';
+    width: 20rpx;
+    height: 20rpx;
+    background: #1672DD;
+    transform: rotate(45deg);
+    border-radius: 4rpx;
+    margin-left: -10rpx;
+}
+.formBox{
+    padding: 13rpx 50rpx 30rpx;
+
+}
+.formBox>view{
+    background: #fff;
+    border-radius: 9rpx;
+    padding: 55rpx 40rpx 40rpx;
+}
+.formBox radio-group{
+    display: flex;
+    justify-content: space-around;
+}
+.formBox .sexChoose{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction:column;
+}
+.formBox .sexChoose radio{
+    display:none;
+    position: absolute;
+    top:0;
+    left: 0; 
+}
+.formBox .sexChoose image{
+    display: block;
+    margin:0 auto;
+    width: 161rpx;
+    height: 199rpx;
+    opacity: 0.6;
+}
+.formBox .sexChoose view{
+    box-sizing: border-box;
+    height: 61rpx;
+    line-height: 61rpx;
+    font-size: 28rpx;
+    text-align: center;
+    color: #fff;
+    background: rgba(3, 98, 220, 0.4);
+    border:2rpx solid rgba(3, 98, 220, 0.4);
+    border-radius: 32rpx;
+    padding: 0 22rpx;
+}
+.formBox .sexChoose.active view{
+    border:2rpx solid #0362DC;
+    background: #fff;
+    color: #0063db;
+}
+.formBox .sexChoose.active image{
+    opacity: 1;
+}
+.submitBox{
+    margin:52rpx auto 0;
+    width: 425rpx;
+    height: 72rpx;
+    line-height: 72rpx;
+    color: #fff;
+    background-color: #0063DB;
+    border-radius: 36rpx;
+    font-size: 32rpx;
+    padding: 0;
+}
+.formBox button.type{
+    display: none;
+}
+

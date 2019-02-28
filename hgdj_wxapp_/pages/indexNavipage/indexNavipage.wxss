@@ -1,0 +1,146 @@
+/* pages/indexNavipage/indexNavipage.wxss */
+.navPicker{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: #fff;
+    padding-top:10rpx;
+    height: 88rpx;
+    font-size: 30rpx;
+    color: #999999;
+    border-bottom: 30rpx solid #F7F7F7;
+}
+.navPicker .pickerBox{
+    height: 88rpx;
+    line-height: 88rpx;
+    width:50%;
+    display: flex;
+    justify-content: center;
+}
+.navPicker .pickerBox .picker{
+    padding-right: 32rpx;
+    position: relative;
+}
+.navPicker .pickerBox .picker::after{
+    position: absolute;
+    top: 40rpx;
+    right: 0;
+    display: block;
+    content: '';
+    width: 0;
+    height: 0;
+    border-width: 11rpx 10rpx 0;
+    border-style: solid;
+    border-color: #C5C5C5 transparent transparent;
+}
+.beautyList{
+    padding: 30rpx 24rpx;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.beauty{
+    width: 330rpx;
+    height: 469rpx;
+}
+.beauty .beauty-pic{
+    width: 330rpx;
+    height: 330rpx;
+    border-radius: 10rpx;
+    overflow: hidden;
+    position: relative;
+}
+.beauty .beauty-pic .b-pic{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.beauty .beauty-pic .topAb{
+    position: absolute;
+    top: 25rpx;
+    right: 0;
+    font-size: 20rpx;
+    line-height: 34rpx;
+    color: #ffffff;
+    background: rgba(0, 0,0,0.5);
+    border-bottom-left-radius: 17rpx;
+    border-top-left-radius: 17rpx;
+    padding: 0 6rpx 0 12rpx;
+}
+.beauty .beauty-pic .topAb text{
+    display: inline-block;
+    width: 12rpx;
+    height: 12rpx;
+    background: #2886FF;
+    border-radius: 50%;
+    margin-right: 10rpx;
+}
+.beauty .beauty-pic .bottomAb{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    font-size: 28rpx;
+    line-height: 46rpx;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left:16rpx; 
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+.beauty .beauty-pic .bottomAb .zan{
+    width: 28rpx;
+    height: 24rpx;
+    margin-right: 10rpx;
+}
+.beauty .beauty-txt .b-name{
+    display: flex;
+    height: 68rpx;
+    align-items: center;
+    padding:0 12rpx;
+}
+.beauty .beauty-txt .b-name .name{
+    font-size: 28rpx;
+    color: #333333;
+    line-height: 32rpx;
+}
+.beauty .beauty-txt .b-name .xg{
+    font-size: 24rpx;
+    height: 32rpx;
+    padding: 0 8rpx;
+    border-radius: 16rpx;
+    color:#fff;
+    background: #0362DC;
+    margin-left: 10rpx;
+}
+.beauty .beauty-txt .b-price{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 12rpx;
+}
+.beauty .beauty-txt .b-price .price{
+    font-size: 30rpx;
+    color: #da2121;
+    line-height: 36rpx;
+}
+.beauty .beauty-txt .b-price .price text{
+    font-size: 24rpx;
+    color: #999999;
+    padding-left: 6rpx;
+}
+.beauty .beauty-txt .b-price .addr .b-addr{
+    width: 16rpx;
+    height: 24rpx;
+    margin-right: 15rpx;
+}
+.beauty .beauty-txt .b-price .addr{
+    font-size: 24rpx;
+    height: 36rpx;
+    color: #999999;
+    display: flex;
+    align-items: center;
+}
+.beauty .beauty-txt .b-price .addr text{
+    line-height: 36rpx;
+}

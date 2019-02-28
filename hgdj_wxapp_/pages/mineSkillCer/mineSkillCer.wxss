@@ -1,0 +1,103 @@
+/* pages/mineSkillCer/mineSkillCer.wxss */
+page{
+    background: #F7F7F7;
+}
+.perInfor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 32rpx;
+    color: #333333;
+    height: 96rpx;
+    background: #fff;
+    padding: 0 38rpx;
+    margin-bottom: 20rpx;
+}
+.perInfor .rigtt image{
+    width: 16rpx;
+    height: 30rpx;
+    margin-left: 15rpx;
+}
+.perInfor .rigtt text{
+    color: #999999;
+}
+.wrap{
+    padding: 0 24rpx 12rpx;
+    background: #fff;
+}
+.wrap .tt{
+    padding: 0 14rpx;
+    border-bottom: 1rpx solid #EEEEEE;
+    height: 70rpx;
+    line-height: 70rpx;
+    font-size: 30rpx;
+    color: #666666;
+}
+.skills{
+    border-bottom: 1rpx solid #EEEEEE;
+}
+.skills .title{
+    padding: 0 14rpx;
+    font-size: 32rpx;
+    color: #333333;
+    height: 86rpx;
+    line-height: 86rpx;
+}
+.skills .title text{
+    display: inline-block;
+    width: 6rpx;
+    height: 30rpx;
+    background: #0362DC;
+    vertical-align: middle;
+    margin-top: -3rpx;
+    margin-right: 14rpx;
+}
+.skillList{
+    display: flex;
+    flex-wrap: wrap;
+}
+.skillItem{
+    width: 25%;
+    padding: 14rpx 0 24rpx;
+    font-size: 26rpx;
+    color: #555555;
+    text-align: center;
+}
+.skillImg{
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 14rpx;
+}
+.skillImg image{
+    display: block;
+    width: 100%;
+}
+.skillTxt{
+    line-height: 36rpx;
+}
+.uncomplete .skillItem{
+    color: #999;
+    position: relative;
+}
+.uncomplete .skillImg{
+    opacity: 0.5;
+}
+.uncomplete .skillItem text{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    /* display: block;
+    content: '待认证'; */
+    width: 70rpx;
+    height: 26rpx;
+    font-size: 18rpx;
+    color: #999999;
+    border: 1rpx solid #CDCDCD;
+    background: rgba(255, 255, 255, 0.78);
+    border-radius: 35rpx;
+}
+.uncomplete{
+    border: 0;
+}

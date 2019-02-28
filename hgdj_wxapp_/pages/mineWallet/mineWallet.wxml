@@ -1,0 +1,27 @@
+<!--pages/mineWallet/mineWallet.wxml-->
+<view>
+    <view class='content' style='background-image:url({{domain}}upload/wxapp/walletBg.jpg)'>
+        <view class='walletTop'>
+            <view>
+                <image src='/images/wallet.png'></image>
+                <text>余额(可提现)</text>
+            </view>
+            <view>
+                <button bindtap='withdrawDetail'>提现明细</button>
+            </view>
+            <view>
+                <button bindtap='changeDetail'>零钱明细</button>
+            </view>
+        </view>
+        <view class='yue'>{{user.balance}}</view>
+    </view>
+    <view class='wallet' bindtap='cashTap'>
+        <view class='w-icon'>
+            <image src='/images/mine-wallet.png' mode='widthFix'></image>
+            <text>提现</text>
+        </view>
+        <view class='w-arrow'>
+            <image src='/images/icon-arrow.png' mode='widthFix'></image>
+        </view>
+    </view>
+</view>

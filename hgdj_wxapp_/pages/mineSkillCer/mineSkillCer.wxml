@@ -1,0 +1,36 @@
+<!--pages/mineSkillCer/mineSkillCer.wxml-->
+<view>
+    <view class='perInfor'>
+        <view>个人信息</view>
+        <view bindtap='editPersonal' class='rigtt'>
+            <text wx:if="{{user.is_cert == 1}}" style='color:red;'>审核中</text>
+            <text wx:elif="{{user.is_cert == 3}}" style='color:red;'>已驳回</text>
+            <text wx:elif="{{user.is_cert == 2}}">已认证</text>
+            <image src='/images/icon-arrow.png'></image>
+        </view>
+    </view>
+    <view class='wrap'>
+        <view class='tt'>技能认证</view>
+        <view class='skills complete' wx:if="{{haskill}}">
+            <view class='title'><text></text>已认证技能</view>
+            <view class='skillList'>
+                <view class='skillItem' bindtap='toRzTap' data-id="{{item.id}}" wx:for="{{skill_list.has_skill}}" wx:key="key">
+                    <view class='skillImg'><image src='{{item.icon}}' mode='widthFix'></image></view>
+                    <view class='skillTxt'>{{item.name}}</view>
+                    <text wx:if="{{item.status == 0}}" style="color:red">审核中</text>
+                </view>
+            </view>
+        </view>
+        <view class='skills uncomplete'>
+            <view class='title'><text></text>待认证技能</view>
+            <view class='skillList'>
+                <view class='skillItem' bindtap='toRzTap' data-id="{{item.id}}" wx:for="{{skill_list.hasno_skill}}" wx:key="key">
+                    <view class='skillImg'><image src='{{item.icon}}' mode='widthFix'></image></view>
+                    <view class='skillTxt'>{{item.name}}</view>
+                    <text wx:if="{{item.status == 0}}" style="color:red">审核中</text>
+                    <text wx:else>待认证</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

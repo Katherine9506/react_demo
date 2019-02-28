@@ -1,0 +1,35 @@
+<!--pages/shanyue/shanyue.wxml-->
+<view>
+    <view class='poster'>
+        <image src='/images/poster.jpg' mode='widthFix'></image>
+    </view>
+    <view>
+        <scroll-view scroll-x='true' class='tabBox' scroll-left="{{scrollLeft}}">
+            <block wx:for="{{navTab}}" wx:key="key">
+                <view class='tabBar {{currentTab==index?"active":""}}' bindtap='tabTap' data-index="{{index}}"
+                      data-id="{{item.id}}">
+                    <text>{{item.name}}</text>
+                </view>
+            </block>
+        </scroll-view>
+    </view>
+    <view class='formBox'>
+        <view>
+            <form bindsubmit='lookforFri'>
+                <button class='type'>{{formType}}</button>
+                <radio-group bindchange='radioChange'>
+                    <block wx:for="{{radioList}}" wx:for-index="rId" wx:key="key">
+                        <label class='sexChoose {{radioValue==item.name?"active":""}}'>
+                            <radio checked="{{item.checked}}" value='{{item.name}}'></radio>
+                            <image src='{{item.url}}' mode='widthFix'></image>
+                            <view>{{item.value}}</view>
+                        </label>
+                    </block>
+                </radio-group>
+                <button class='submitBox' form-type='submit'>寻找玩伴</button>
+            </form>
+        </view>
+
+
+    </view>
+</view>

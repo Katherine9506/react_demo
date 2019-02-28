@@ -1,0 +1,197 @@
+<!--index.wxml-->
+<view>
+    <view class='tabBox'>
+        <block wx:for="{{navTab}}" wx:key="key">
+            <view class='tabBar {{currentTab==index?"active":""}}' bindtap='tabTap' data-index="{{index}}">{{item}}
+            </view>
+        </block>
+    </view>
+    <swiper class='contentBox' current='{{currentTab}}' style='height:{{switchBoxH}}rpx' bindchange='swiperChange'>
+        <swiper-item>
+            <scroll-view scroll-y='true' class='scrollView'>
+                <view class='content'>
+                    <!-- 全部订单--start -->
+                    <block wx:for="{{currentOrderList}}" wx:key="key" wx:for-item="order">
+                        <view class='orderItem'>
+                            <view class='top' bindtap='detailTap' data-id="{{order.id}}">
+                                <block wx:if="{{uid == order.boss_uid}}">
+                                    <view class='left'>
+                                        <text>陪玩师：</text>
+                                        <view>
+                                            <image src='{{order.player.thumb}}' mode='widthFix'></image>
+                                        </view>
+                                        <text>{{order.player.name}}</text>
+                                    </view>
+                                    <view class='right'>
+                                        <text class='unfinished'>{{order_status[order.status]}}</text>
+                                        <image src='/images/icon-arrow.png' mode='widthFix'></image>
+                                    </view>
+                                </block>
+                                <block wx:else>
+                                    <view class='left'>
+                                        <text>老板：</text>
+                                        <view>
+                                            <image src='{{order.boss.thumb}}' mode='widthFix'></image>
+                                        </view>
+                                        <text>{{order.boss.name}}</text>
+                                    </view>
+                                    <view class='right'>
+                                        <text class='unfinished'>{{order_status[order.status]}}</text>
+                                        <image src='/images/icon-arrow.png' mode='widthFix'></image>
+                                    </view>
+                                </block>
+                            </view>
+                            <!-- 服务类型 支付款项 -->
+                            <view class='moddle'>
+                                <view class='lt'>{{order.label}}</view>
+                                <view class='rmb' wx:if="{{uid == order.play_uid}}">收款 ￥{{order.total_price}}</view>
+                                <view class='rmb' wx:else>支付 ￥{{order.pay_total}}</view>
+                            </view>
+                            <!-- 操作按钮 -->
+                            <view class="bottom"
+                                  wx:if="{{uid == order.play_uid && (order.status == 2 || order.status == 3 || order.status == 4)}}">
+
+                                <form report-submit="true" class="form-view"
+                                      bindsubmit="playerOpHandler"
+                                      data-oid="{{order.id}}" data-status="{{order.status}}" data-index="{{index}}">
+
+                                    <button form-type="submit">{{player_status[order.status]}}</button>
+                                </form>
+
+                            </view>
+                            <view class="bottom"
+                                  wx:if="{{uid == order.boss_uid && (order.status == 1 || order.status == 2 || order.status == 3 || order.cancelable || order.status == 5 || order.status == 6) || uid == order.boss_uid && order.valid}}">
+
+                                <form wx:if="{{uid == order.boss_uid && (order.status == 1 || order.status == 2 || order.status == 3 || order.status == 5 || order.status == 6)}}"
+                                      report-submit="true" class="form-view"
+                                      bindsubmit="bossOpHandler"
+                                      data-oid="{{order.id}}"
+                                      data-index="{{index}}"
+                                      data-openId="{{order.player.openid}}"
+                                      data-formId="{{order.form_id}}"
+                                      data-status="{{order.status}}">
+
+                                    <button form-type="submit">
+                                        {{boss_status[order.status]}}
+                                    </button>
+                                </form>
+                                
+
+                                <!-- 老板操作：当订单在可取消有效期内，设置取消订单按钮 -->
+                                <form wx:if="{{uid == order.boss_uid && order.cancelable}}" report-submit="true" class="form-view"
+                                    bindsubmit="bossOpHandler"  
+                                    data-oid="{{order.id}}"
+                                    data-index="{{index}}"
+                                    data-status="0">
+
+                                    <button form-type="submit">取消订单</button>
+                                </form>
+                            </view>
+                        </view>
+                    </block>
+                    <!-- 全部订单--end -->
+                </view>
+            </scroll-view>
+        </swiper-item>
+        <swiper-item>
+            <scroll-view scroll-y='true' class='scrollView'>
+                <view class='content'>
+                    <!-- 我是陪玩师--start -->
+                    <block wx:for="{{currentOrderList}}" wx:key="{{index}}">
+                        <!-- 陪玩师：不同状态不同 bindtap 绑定不同事件 -->
+                        <view class="orderItem">
+                            <view class="top" bindtap="detailTap" data-id="{{item.id}}">
+                                <view class="left">
+                                    <text>老板：</text>
+                                    <view>
+                                        <image src="{{item.boss.thumb}}" mode="widthFix"></image>
+                                    </view>
+                                    <text>{{item.boss.name}}</text>
+                                </view>
+                                <view class="right">
+                                    <text class="unfinished">{{order_status[item.status]}}</text>
+                                    <image src='/images/icon-arrow.png' mode='widthFix'></image>
+                                </view>
+                            </view>
+                            <view class="moddle">
+                                <view class="lt">{{item.label}}</view>
+                                <view class="rmb">收款 ￥{{item.total_price}}</view>
+                            </view>
+                            <view class="bottom"
+                                  wx:if="{{item.status == 2 || item.status == 3 || item.status == 4}}">
+
+                                <form report-submit="true" class="form-view"
+                                      data-oid="{{item.id}}" bindsubmit="playerOpHandler" data-index="{{index}}"
+                                      data-status="{{item.status}}">
+
+                                    <button form-type="submit">{{player_status[item.status]}}</button>
+                                </form>
+
+                                <!--<text>剩余时间:xxxx</text>-->
+                            </view>
+                        </view>
+                    </block>
+                    <!-- 我是陪玩师--end -->
+                </view>
+            </scroll-view>
+        </swiper-item>
+        <swiper-item>
+            <scroll-view scroll-y='true' class='scrollView'>
+                <view class='content'>
+                    <!-- 我是老板--start -->
+                    <block wx:for="{{currentOrderList}}" wx:key="{{index}}">
+                        <view class="orderItem">
+                            <view class="top" bindtap="detailTap" data-id="{{item.id}}">
+                                <view class="left">
+                                    <text>陪玩师：</text>
+                                    <view>
+                                        <image src="{{item.player.thumb}}" mode="widthFix"></image>
+                                    </view>
+                                    <text>{{item.player.name}}</text>
+                                </view>
+                                <view class="right">
+                                    <text class="unfinished">{{order_status[item.status]}}</text>
+                                    <image src='/images/icon-arrow.png' mode='widthFix'></image>
+                                </view>
+                            </view>
+                            <view class="moddle">
+                                <view class="lt">{{item.label}}</view>
+                                <view class="rmb">支付 ￥{{item.pay_total}}</view>
+                            </view>
+                            <!--<view class="bottom"-->
+                            <!--wx:if="{{item.status == 1 || item.status == 2 || item.status == 3 || item.status == 5 || item.status == 6}}">-->
+                            <!--<button data-oid="{{item.id}}" bindtap="bossOpHandler" data-index="{{index}}"-->
+                            <!--data-formId="{{item.form_id}}" data-status="{{item.status}}">-->
+                            <!--{{boss_status[item.status]}}-->
+                            <!--</button>-->
+                            <!--</view>-->
+                            <view class="bottom"
+                                  wx:if="{{uid == item.boss_uid && (item.status == 1 || item.status == 2 || item.status == 3 || item.status == 5 || item.status == 6) || uid == item.boss_uid && item.valid}}">
+
+                                <form report-submit="true" class="form-view"
+                                      wx:if="{{(item.status == 1 || item.status == 2 || item.status == 3 || item.status == 5 || item.status == 6)}}"
+                                      data-oid="{{item.id}}" bindsubmit="bossOpHandler" data-index="{{index}}"
+                                      data-openId="{{item.player.openid}}"
+                                      data-formId="{{item.form_id}}" data-status="{{item.status}}">
+
+                                    <button form-type="submit">{{boss_status[item.status]}}</button>
+                                </form>
+
+                                <!-- 老板操作：当订单在可取消有效期内，设置取消订单按钮 -->
+                                <form report-submit="true" class="form-view"
+                                      wx:if="{{item.cancelable}}" data-oid="{{item.id}}"
+                                      data-index="{{index}}"
+                                      bindsubmit="bossOpHandler" data-status="0">
+
+                                    <button form-type="submit">取消订单</button>
+                                </form>
+                            </view>
+                        </view>
+                    </block>
+                    <!-- 我是老板--end -->
+                </view>
+            </scroll-view>
+        </swiper-item>
+    </swiper>
+
+</view>

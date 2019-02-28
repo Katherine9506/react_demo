@@ -1,0 +1,235 @@
+/* pages/mineSkillCer2/mineSkillCer2.wxss */
+page {
+    background: #f7f7f7;
+}
+.wrap {
+    background: #fff;
+    padding: 0 24rpx;
+    margin-bottom: 20rpx;
+}
+.pickerBox {
+    font-size: 32rpx;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 14rpx;
+    height: 96rpx;
+    border-bottom: 1rpx solid #eee;
+}
+.pickerBox picker {
+    display: flex;
+    align-items: center;
+    color: #999;
+    font-size: 32rpx;
+}
+.pickerBox picker image {
+    width: 16rpx;
+    height: 30rpx;
+    margin-left: 24rpx;
+}
+.wrap .pickerBox:last-child {
+    border-bottom: 0;
+}
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24rpx 14rpx 0;
+    height: 48rpx;
+    line-height: 48rpx;
+    color: #333;
+    font-size: 32rpx;
+}
+.title view text {
+    color: #999;
+    font-size: 24rpx;
+}
+.title button {
+    width: 140rpx;
+    height: 48rpx;
+    line-height: 46rpx;
+    border-radius: 24rpx;
+    border: 1rpx solid #bfbfbf;
+    background: #f8f8f8;
+    font-size: 26rpx;
+    color: #999;
+    padding: 0;
+    margin: 0;
+}
+.updateImg {
+    margin-top: 24rpx;
+    padding: 0 14rpx 20rpx;
+    display: flex;
+    flex-wrap: wrap;
+}
+.updateImg>view {
+    margin-bottom: 7rpx;
+}
+.imgBox {
+    width: 660rpx;
+    height: 290rpx;
+    position: relative;
+    margin-right: 24rpx;
+}
+.imgBox view {
+    width: 660rpx;
+    height: 290rpx;
+    border-radius: 10rpx;
+    overflow: hidden;
+}
+.imgBox image {
+    display: block;
+    width: 100%;
+}
+.imgBox button.close {
+    position: absolute;
+    top: -14rpx;
+    right: -14rpx;
+    width: 42rpx;
+    height: 42rpx;
+    border-radius: 50%;
+    padding: 0;
+    border: 4rpx solid #fff;
+}
+.imgBox button.close image {
+    display: block;
+    width: 100%;
+}
+.imgBox button.edit {
+    width: 100rpx;
+    height: 38rpx;
+    line-height: 38rpx;
+    font-size: 20rpx;
+    color: #fff;
+    padding: 0;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 19rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 14rpx;
+    right: 14rpx;
+}
+.imgBox button.edit image {
+    display: block;
+    width: 22rpx;
+    height: 22rpx;
+    margin-top: -3rpx;
+    margin-right: 6rpx;
+}
+.updateBtn {
+    box-sizing: border-box;
+    width: 660rpx;
+    height: 290rpx;
+    padding-top: 98rpx;
+    background: #f5f5f5;
+    font-size: 26rpx;
+    line-height: 36rpx;
+    color: #999;
+    text-align: center;
+    border-radius: 10rpx;
+}
+.updateBtn image {
+    display: block;
+    width: 52rpx;
+    height: 52rpx;
+    margin: 0 auto 46rpx;
+}
+.audioBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 86rpx;
+    margin-top: 53rpx;
+    padding-bottom: 45rpx;
+}
+.tags {
+    padding: 16rpx 0 6rpx;
+}
+.tags label ,.free-radio{
+    display: inline-block;
+    width: 155rpx;
+    height: 54rpx;
+    line-height: 52rpx;
+    box-sizing: border-box;
+    border: 1rpx solid #0362dc;
+    border-radius: 27rpx;
+    margin-right: 27rpx;
+    position: relative;
+    font-size: 26rpx;
+    color: #0362dc;
+    text-align: center;
+    margin-bottom: 28rpx;
+}
+.tags label.checked {
+    background: #0362dc;
+    color: #fff;
+}
+.tags label checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+.tags label:nth-of-type(4n) {
+    margin: 0;
+}
+.formSubbmit {
+    padding: 53rpx 24rpx 100rpx;
+}
+.formSubbmit button {
+    height: 88rpx;
+    line-height: 88rpx;
+    border-radius: 44rpx;
+    color: #fff;
+    font-size: 34rpx;
+    background: #0063db;
+}
+.msgwap {
+    padding-bottom: 27rpx;
+}
+.msgBox {
+    width: 660rpx;
+    height: 290rpx;
+    background: #f5f5f5;
+    margin: 24rpx auto 0;
+    border-radius: 10rpx;
+}
+.msgBox textarea {
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 24rpx;
+    color: #333;
+    box-sizing: border-box;
+    padding: 18rpx 24rpx;
+    line-height: 34rpx;
+}
+.agreement {
+    padding: 25rpx 24rpx;
+    height: 44rpx;
+    line-height: 44rpx;
+    font-size: 32rpx;
+    color: #999;
+}
+.agreement view view {
+    color: #ffa467;
+}
+.agreement .xieyi {
+    display: flex;
+    align-items: center;
+    padding: 0 16rpx;
+}
+.agreement checkbox .wx-checkbox-input {
+    border-radius: 50%;
+    height: 44rpx;
+    width: 44rpx;
+    margin-top: -4rpx;
+}
+.agreement checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+    background-color: #ffa467;
+    border: 1rpx solid #ffa467;
+}
+.tags .is_checked{background: #0362dc;color: #fff;}

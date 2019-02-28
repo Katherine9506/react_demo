@@ -1,0 +1,159 @@
+<!--pages/minePersonal/minePersonal.wxml-->
+
+
+<view>
+    <form bindsubmit="formSubmit" report-submit="true">
+        <view class='wrap'>
+            <view class='pickerBox'>
+                <view>选择性别</view>
+                <picker bindchange="sexChange" value="{{user.gender}}" range="{{sex}}" name="gender">
+                    <view class="picker">{{sex[user.gender]}}
+                        <image src='/images/icon-arrow.png' mode='widthFix'></image>
+                    </view>
+                </picker>
+            </view>
+            <view class='pickerBox'>
+                <view>出生年月</view>
+                <picker mode="date" value="{{date}}" bindchange="dateChange" name="birth">
+                    <view class="picker" wx:if="{{user.birth}}">{{user.birth}}
+                        <image src='/images/icon-arrow.png' mode='widthFix'></image>
+                    </view>
+                    <view class="picker" wx:else>{{date}}
+                        <image src='/images/icon-arrow.png' mode='widthFix'></image>
+                    </view>
+                </picker>
+            </view>
+        </view>
+        <view class='wrap'>
+            <view class='title'>
+                <view>上传封面图
+                    <text>（请上传个人真实照片）</text>
+                </view>
+                <button>查看样例</button>
+            </view>
+            <view class='updateImg'>
+                <block wx:for="{{personalPic}}" wx:key="key">
+                    <view class='imgBox'>
+                        <view>
+                            <image src='{{item}}' mode='widthFix'></image>
+                        </view>
+                        <button data-id='{{index}}' bindtap='deleteTap' class='close'>
+                            <image src='/images/close.png' mode='widthFix'></image>
+                        </button>
+                        <button bindtap='editPersonal' class='edit'>
+                            <image src='/images/edit.png' mode='widthFix'></image>
+                            <text>修改</text>
+                        </button>
+                    </view>
+                </block>
+                <view class='updateBtn' bindtap='personalImg' hidden="{{personalPic.length==1}}">
+                    <image class='' src='/images/addImg.png' mode='widthFix'></image>
+                    <view>上传图片</view>
+                </view>
+            </view>
+        </view>
+        <view class='wrap'>
+            <view class='title'>
+                <view>上传形象照片
+                    <text>（1-6张）</text>
+                </view>
+                <button>查看样例</button>
+            </view>
+            <view class='updateImg'>
+                <block wx:for="{{figureImg}}" wx:key="key" wx:for-item="image">
+                    <view class='imgBox'>
+                        <view>
+                            <image src='{{image.path}}' mode='widthFix'></image>
+                        </view>
+                        <button data-id='{{image.id}}' bindtap='deleteFigure' class='close'>
+                            <image src='/images/close.png' mode='widthFix'></image>
+                        </button>
+                        <button data-id='{{image.id}}' bindtap='editFigure' class='edit'>
+                            <image src='/images/edit.png' mode='widthFix'></image>
+                            <text>修改</text>
+                        </button>
+                    </view>
+                </block>
+                <!-- 形象照片最多6张,当有6张照片时上传照片按钮隐藏 -->
+                <view class='updateBtn' bindtap='figureTap' hidden='{{figureImg.length>=6}}'>
+                    <image class='' src='/images/addImg.png' mode='widthFix'></image>
+                    <view>上传图片</view>
+                </view>
+            </view>
+        </view>
+        <view class='wrap'>
+            <view class='title'>
+                <view>录制一段语音介绍
+                    <text>（5-60秒）</text>
+                </view>
+            </view>
+            <view class='audioBox'>
+                <view class='voice' bindtap='playAudio'>
+                    <audio src='{{src}}'></audio>
+                    <image src='/images/audio-play.png'></image>
+                    <text></text>
+                    <view>{{recordTime}}"</view>
+                </view>
+                <view class='again'>
+                    <button bindtap='recordTap'>重新录制</button>
+                </view>
+            </view>
+        </view>
+        <view class='wrap'>
+            <view class='title'>
+                <view>选择陪玩标签
+                    <text>（2-4个标签）</text>
+                </view>
+            </view>
+            <view class='tags'>
+                <checkbox-group class='free-radios' bindchange="checkChange">
+                    <block wx:for="{{label}}" wx:key="key" wx:for-item="item">
+                        <label bindtap="click" class="free-radio {{item.checked?'is_checked':''}}">
+                            <checkbox value="{{item.id}}" name="{{item.name}}" checked="{{item.checked}}"
+                                      hidden='true'></checkbox>
+                            <text class="free-text">{{item.name}}</text>
+                        </label>
+                    </block>
+                </checkbox-group>
+            </view>
+        </view>
+        <view class='wrap agreement'>
+            <view class='xieyi'>
+                <!-- <checkbox color='#fff'></checkbox> -->
+                <checkbox-group bindchange="checkProcotol">
+                    <view class='check-box'>
+                        <checkbox color='#fff' value="1"></checkbox>
+                    </view>
+                </checkbox-group>
+                <text>勾选即同意</text>
+                <view bindtap='showProtocol'>用户协议</view>
+            </view>
+        </view>
+        <!-- <view class='formSubbmit'><button>提交审核</button></view> -->
+        <view class='formSubbmit'>
+            <button form-type='submit' disabled="{{submitEnable}}">提交审核</button>
+        </view>
+
+    </form>
+</view>
+
+<!-- 2018-10-26新增 recordStart-->
+<view class='popBox {{torecord?"popBox2":""}}'>
+    <view class=' popMain {{iconShow?"popMain2":""}} '>
+        <view class='timelong'>00:{{timeLength<10?"0"+timeLength:timeLength}}</view>
+        <view class='timets' hidden='{{iconShow}}'>最长60秒</view>
+        <view class='recordIcon'>
+            <view class='iconBox' hidden='{{!iconShow}}' bindtap='backTap'>
+                <image src='/images/icon-back.png' mode='widthFix'></image>
+            </view>
+            <!--<view class='record {{record?"border":""}}' bindtouchstart='recordStart' bindtouchend='recordEnd'>-->
+            <view class='record {{record?"border":""}}' bindtouchstart='recordStart' bindtouchend='stopRecord'>
+                <image src='/images/icon-ly.png' mode='widthFix'></image>
+            </view>
+            <view class='iconBox' hidden='{{!iconShow}}' bindtap='confirmTap'>
+                <image src='/images/icon-confirm.png' mode='widthFix'></image>
+            </view>
+        </view>
+        <view class='tapTs' hidden='{{iconShow}}'>长按录音</view>
+    </view>
+</view>

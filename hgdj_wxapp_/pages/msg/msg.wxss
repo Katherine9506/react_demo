@@ -1,0 +1,65 @@
+/* pages/msg/msg.wxss */
+page{
+background: #F7F7F7;
+}
+.msgList{
+padding: 0 24rpx;
+background: #fff;
+}
+.msgItem{
+border-bottom:1rpx solid #EEEEEE;
+display: flex;
+align-items: center;
+padding: 16rpx 6rpx;
+}
+.msgItem:last-child{
+border-bottom:none;
+}
+.friendPic{
+width: 98rpx;
+margin-right: 36rpx;
+position: relative;
+}
+.friendPic image{
+display: block;
+width: 100%;
+border-radius: 50%;
+overflow: hidden;
+}
+.friendPic text{
+position: absolute;
+top: 3rpx;
+right: -6rpx;
+width: 32rpx;
+height: 32rpx;
+line-height: 32rpx;
+border-radius: 50%;
+background: #DC0303;
+font-size: 24rpx;
+color: #fff;
+text-align: center;
+}
+.lastnews{
+width: 556rpx;
+}
+.friendName{
+font-size: 30rpx;
+line-height: 56rpx;
+color: #333333;
+}
+.lastMsg{
+font-size: 28rpx;
+color: #999999;
+line-height: 34rpx;
+white-space: nowrap;
+text-overflow: ellipsis;
+overflow: hidden;
+}
+.lastTime{
+font-size:10px;
+width:60px;
+}
+.lastMsg .emojiMstText{
+line-height: 34rpx;
+}
+

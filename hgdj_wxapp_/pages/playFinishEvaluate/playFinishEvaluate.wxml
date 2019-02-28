@@ -1,0 +1,46 @@
+<!--pages/playFinishEvaluate/playFinishEvaluate.wxml-->
+<view>
+    <view class='box'>
+        <view class='orderNum'>编号：18967540287</view>
+        <view class='playInfor'>
+            <view class='playerTxt'>陪玩师：</view>
+            <view class='playerPic'><image src='/images/user1.jpg' mode='widthFix'></image></view>
+            <view class='playerTxt'>罗格科技</view>
+        </view>
+        <view class='contact'>
+            <text>联系方式：</text>
+            <image src='/images/weixin.png' mode='widthFix'></image>
+            <text>阿迪多的 v</text>
+            <button bindtap='clipboardTap'>点击复制</button>
+        </view>
+        <view class='nnp'>
+            <view>声优聊天1*小时</view>
+            <view class='money'>￥15</view>
+        </view>
+        <view class='payM'>实付：￥<text>15</text></view>
+    </view>
+    <view class='state'>
+        <view class='sLeft'>
+            <view class='status'>已评价</view>
+            <view class='ts'>
+                <image wx:if="{{star>=1}}" src='/images/icon-star1.png' mode='widthFix'></image>
+                <image wx:if="{{star>=2}}" src='/images/icon-star1.png' mode='widthFix'></image>
+                <image wx:if="{{star>=3}}" src='/images/icon-star1.png' mode='widthFix'></image>
+                <image wx:if="{{star>=4}}" src='/images/icon-star1.png' mode='widthFix'></image>
+                <image wx:if="{{star==5}}" src='/images/icon-star1.png' mode='widthFix'></image>
+                <text>5分</text>
+            </view>
+            <view class='ts2'>你好</view>
+        </view>
+    </view>
+    <view class='before'>
+        <view class='buyer'>
+            <view class='buyerPic'><image src='/images/wh2.jpg' mode='widthFix'></image></view>
+            <text>罗格科技</text>
+        </view>
+        <view class='timeB'>
+            20小时前下单
+        </view>
+    </view>
+    
+</view>

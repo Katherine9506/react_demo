@@ -1,0 +1,45 @@
+<!--pages/mineChange/mineChange.wxml-->
+<view>
+    <view class='changeTap'>
+        <view>时间</view>
+        <view>动作</view>
+        <view>状态</view>
+        <view>金额</view>
+        <view wx:if="{{type=='withdraw'}}">余额</view>
+    </view>
+    <view class='detailList'>
+        <!-- 提现明细 -->
+        <view wx:if="{{type == 'withdraw'}}">
+            <block wx:for="{{opDetails}}" wx:key="{{index}}">
+                <view class='detailItem'>
+                    <view class='time'>
+                        <view>{{item.created_at}}</view>
+                    </view>
+                    <view>提现</view>
+                    <view>{{item.status[item.status.length - 1].desc}}</view>
+                    <view>￥{{item.amount}}</view>
+                    <view>￥{{item.balance}}</view>
+                </view>
+            </block>
+        </view>
+        <!-- 零钱明细 -->
+        <view wx:if="{{type == 'change'}}">
+            <block wx:for="{{opDetails}}" wx:key="{{index}}">
+                <view class="detailItem">
+                    <view class="time">
+                        <view>
+                            {{item.create_time}}
+                        </view>
+                    </view>
+                    <view wx:if="{{user.id == item.play_uid}}">收入-陪玩</view>
+                    <view wx:else>支出-雇佣</view>
+                    <view>
+                        <view>{{changeStatus[item.status-1]}}</view>
+                        <view wx:if="{{item.withdrawable}}">已提现</view>
+                    </view>
+                    <view>￥{{item.pay_total}}</view>
+                </view>
+            </block>
+        </view>
+    </view>
+</view>

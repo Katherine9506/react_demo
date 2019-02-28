@@ -1,0 +1,91 @@
+<!--pages/mineTakeOrder/mineTakeOrder.wxml-->
+<view>
+    <view class='takeTop' style='background-image:url({{domain}}/upload/wxapp/orderBg.jpg)'>
+        <view class='topCircle'>
+            <view class='cricle'>{{rate}}
+                <text>分</text>
+            </view>
+            <text class='txt'>综合评分</text>
+        </view>
+        <view class='topDe'>
+            <view>
+                <view class='top'>{{week.total}}
+                    <text>单</text>
+                </view>
+                <view class='bottom'>本周成功订单</view>
+            </view>
+            <view>
+                <view class='top'>{{week.amount}}
+                    <text>元</text>
+                </view>
+                <view class='bottom'>本周收入</view>
+            </view>
+        </view>
+    </view>
+    <view>
+        <form bindsubmit='startTakeOrder'>
+            <block wx:for='{{skillUnit}}' wx:key="key">
+                <view class='formBox'>
+                    <view class='formTop'>
+                        <view class='gameName'>
+                            <view>
+                                <image src='{{item.icon}}' mode='widthFix'></image>
+                            </view>
+                            <text>{{item.name}}</text>
+                        </view>
+                        <checkbox-group bindchange="startOrder" data-id="{{item.id}}">
+                            <view class='checkGame'>
+                                <checkbox wx:if="{{item.order_status == 0}}" name="skill" color='#fff'></checkbox>
+                                <checkbox wx:else name="skill" color='#fff' checked></checkbox>
+                            </view>
+                        </checkbox-group>
+                    </view>
+                    <view class='formBottom' wx:for="{{item.unit_name}}" wx:for-item="unit" wx:key="key">
+                        <view>{{unit.title}}</view>
+                        <view class='bright'>
+                            <input name='{{unit.name}}' bindtap='setpriceTap' data-sid="{{item.id}}"
+                                   data-id='{{unit.id}}' value='{{unit.price}}'></input>
+                            <image class='arrow' src='/images/icon-arrow.png' mode='widthFix'></image>
+                        </view>
+                    </view>
+                    <!-- <view class='formBottom'>
+                        <view>价格</view>
+                        <view class='bright'>
+                            <input name='price' bindtap='setpriceTap' data-id='{{index}}' value='{{item.price}}' ></input>
+                            <image class='arrow' src='/images/icon-arrow.png' mode='widthFix'></image> 
+                        </view>
+                    </view> -->
+                </view>
+            </block>
+            <!--<view class='formBtn'>-->
+            <!--<button formType='submit'>{{btnTxt}}</button>-->
+            <!--</view>-->
+        </form>
+    </view>
+</view>
+<view class='modal' wx:if='{{modalShow}}'>
+    <view class='modalMain'>
+        <form bindsubmit='confirmTap'>
+            <view class='inputbtn'>
+                <input name='time' placeholder='请输入时间...'/>
+            </view>
+            <view class='btn'>
+                <button bindtap='cancelTap' class='cancel'>取消</button>
+                <button formType="submit" class='confirm'>确定</button>
+            </view>
+        </form>
+    </view>
+</view>
+<view class='modal' wx:if='{{modal2Show}}'>
+    <view class='modalMain'>
+        <form bindsubmit='priceTap'>
+            <view class='inputbtn'>
+                <input name='price' placeholder='请输入价格...'/>
+            </view>
+            <view class='btn'>
+                <button bindtap='cancelTap' class='cancel'>取消</button>
+                <button formType="submit" class='confirm'>确定</button>
+            </view>
+        </form>
+    </view>
+</view>

@@ -1,0 +1,134 @@
+<!--pages/mineOrderRemind/mineOrderRemind.wxml-->
+<view>
+    <block wx:if="{{user.id == order.boss_uid}}">
+        <view class='box'>
+            <view class='orderNum'>编号：{{order.order_no}}</view>
+            <view class='playInfor'>
+                <view class='playerTxt'>陪玩师：</view>
+                <view class='playerPic' bindtap='toBuyTap' data-id="{{order.price_id}}">
+                    <image src='{{order.player.thumb}}' mode='widthFix'></image>
+                </view>
+                <view class='playerTxt'>{{order.player.name}}</view>
+            </view>
+            <view class='contact'>
+                <text>联系方式：</text>
+                <image src='/images/weixin.png' mode='widthFix'></image>
+                <text>{{order.contact}}</text>
+                <button bindtap='clipboardTap'>点击复制</button>
+            </view>
+            <view class='nnp'>
+                <view>{{order.label}}</view>
+                <view class='money'>￥{{order.total_price}}</view>
+            </view>
+            <view class='payM'>实付:￥
+                <text>{{order.pay_total}}</text>
+            </view>
+        </view>
+        <view class='state'>
+            <view class='sLeft'>
+                <view class='status'>订单状态:{{order_status[order.status]}}</view>
+                <block wx:if="{{order.status == 1}}">
+                    <view class='ts'>尽快付款享受服务</view>
+                    <view class='ts2'>超过一分钟未付款，订单将会关闭</view>
+                    <view class='ts2'>您可手动取消订单</view>
+                </block>
+                <block wx:if="{{order.status == 2}}">
+                    <view class="ts">正在等待接单，支付完成后三分钟内陪玩师未接订单，订单将会关闭，建议实时查看</view>
+                    <view class="ts2">您可手动取消订单</view>
+                </block>
+                <block wx:if="{{order.status > 2 && order.status < 6}}">
+                    <view class="ts" wx:if="{{order.cancelable}}">陪玩师接单后，您有十分钟时间可无责取消订单</view>
+                    <view class="ts" wx:else>陪玩师已接单超过十分钟，不可取消订单</view>
+                </block>
+                <block wx:if="{{order.status == 8 || order.status == 9}}">
+                    <view class="ts">订单已关闭</view>
+                </block>
+            </view>
+            <block wx:if="{{order.cancelable}}">
+                <view class='sRight'>
+                    <view class='sy' wx:if="{{order.status == 1}}">可支付-剩余时间</view>
+                    <view class='sy' wx:if="{{order.status == 2}}">用户接单-剩余时间</view>
+                    <view class='sy' wx:if="{{order.status > 2 && order.status < 6}}">无责取消-剩余时间</view>
+                    <view class='time'>
+                        {{hour<10? "0" + hour:hour}}:{{minute<10?"0"+minute:minute}}:{{second<10?"0"+second:second}}
+                    </view>
+                </view>
+            </block>
+        </view>
+        <view class='before'>
+            <view class='buyer'>
+                <view class='buyerPic'>
+                    <image src='{{user.thumb}}' mode='widthFix'></image>
+                </view>
+                <text>{{user.name}}</text>
+            </view>
+            <view class='timeB'>
+                {{order.create_time}}
+            </view>
+        </view>
+        <view bindtap='payOrder' class='payBtn' wx:if="{{order.status == 1}}" data-order_id="{{order.id}}">
+            <button>支付</button>
+        </view>
+    </block>
+    <block wx:if="{{user.id == order.play_uid}}">
+        <view class='box'>
+            <view class='orderNum'>编号：{{order.order_no}}</view>
+            <view class='playInfor'>
+                <view class='playerTxt'>老板：</view>
+                <view class='playerPic'>
+                    <image src='{{order.boss.thumb}}' mode='widthFix'></image>
+                </view>
+                <view class='playerTxt'>{{order.boss.name}}</view>
+            </view>
+            <view class='contact'>
+                <text>联系方式：</text>
+                <image src='/images/weixin.png' mode='widthFix'></image>
+                <text>{{order.contact}}</text>
+                <button bindtap='clipboardTap'>点击复制</button>
+            </view>
+            <view class='nnp'>
+                <view>{{order.label}}</view>
+                <view class='money'>￥{{order.total_price}}</view>
+            </view>
+            <view class='payM' wx:if="{{order.status > 1}}">实付：￥
+                <text>{{order.pay_total}}</text>
+            </view>
+        </view>
+        <view class='state'>
+            <view class='sLeft'>
+                <view class='status'>订单状态:{{order_status[order.status]}}</view>
+                <block wx:if="{{order.status == 8 || order.status == 9}}">
+                    <view class="ts">订单已被取消</view>
+                </block>
+                <block wx:if="{{order.status == 2}}">
+                    <view class="ts">用户已支付，支付起您有三分钟时间确认接单，超时将自动关闭</view>
+                </block>
+            </view>
+            <!--<block wx:if="{{order.cancelable}}">-->
+            <view class='sRight' wx:if="{{order.status==2}}">
+                <block wx:if="{{order.status == 2}}">
+                    <view class='sy'>订单可确认接单-剩余时间</view>
+                    <view class='time'>
+                        {{hour<10? "0" + hour:hour}}:{{minute<10?"0"+minute:minute}}:{{second<10?"0"+second:second}}
+                    </view>
+                </block>
+            </view>
+            <!--</block>-->
+        </view>
+        <view class='before'>
+            <view class='buyer'>
+                <view class='buyerPic'>
+                    <image src='{{user.thumb}}' mode='widthFix'></image>
+                </view>
+                <text>{{user.name}}</text>
+            </view>
+            <view class='timeB'>
+                {{order.create_time}}
+            </view>
+        </view>
+        <!--<view bindtap='confirmTakeTap' class='payBtn'>-->
+        <!--<button>确认接单</button>-->
+        <!--</view>-->
+    </block>
+</view>
+

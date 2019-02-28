@@ -1,0 +1,80 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/indexNavipage/indexNavipage",
+    "pages/indexBuy/indexBuy",
+    "pages/indexBuyOrder/indexBuyOrder",
+    "pages/indexPay/indexPay",
+    "pages/shanyue/shanyue",
+    "pages/shanyueLookfor/shanyueLookfor",
+    "pages/msg/msg",
+    "pages/msgDetail/msgDetail",
+    "pages/mine/mine",
+    "pages/mineSetting/mineSetting",
+    "pages/mineTakeOrder/mineTakeOrder",
+    "pages/mineTakeOrder2/mineTakeOrder2",
+    "pages/mineFeedback/mineFeedback",
+    "pages/mineOrder/mineOrder",
+    "pages/mineOrderComfirm/mineOrderComfirm",
+    "pages/mineOrderStart/mineOrderStart",
+    "pages/mineOrderStartBoss/mineOrderStartBoss",
+    "pages/mineOrderRemind/mineOrderRemind",
+    "pages/mineOrderAccep/mineOrderAccep",
+    "pages/playing/playing",
+    "pages/playConfirmOver/playConfirmOver",
+    "pages/playRemind/playRemind",
+    "pages/playEvaluate/playEvaluate",
+    "pages/playEvaluateWait/playEvaluateWait",
+    "pages/playEvaluateDetail/playEvaluateDetail",
+    "pages/playFinishEvaluate/playFinishEvaluate",
+    "pages/mineWallet/mineWallet",
+    "pages/mineChange/mineChange",
+    "pages/mineToCash/mineToCash",
+    "pages/mineSkillCer/mineSkillCer",
+    "pages/mineSkillCerDemo/mineSkillCerDemo",
+    "pages/mineSkillCer2/mineSkillCer2",
+    "pages/mineSkillCer3/mineSkillCer3",
+    "pages/minePersonal/minePersonal",
+    "pages/logs/logs",
+    "pages/auth/auth",
+    "pages/search/search",
+    "pages/mineOrderDetail/mineOrderDetail",
+    "pages/protocol/protocol"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#0362DC",
+    "navigationBarTextStyle": "#fff"
+  },
+  "tabBar": {
+    "color": "#C5C5C5",
+    "selectedColor": "#1A75DD",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/icon-index.png",
+        "selectedIconPath": "/images/icon-index2.png"
+      },
+      {
+        "pagePath": "pages/shanyue/shanyue",
+        "text": "闪约",
+        "iconPath": "/images/icon-quick.png",
+        "selectedIconPath": "/images/icon-quick2.png"
+      },
+      {
+        "pagePath": "pages/msg/msg",
+        "text": "消息",
+        "iconPath": "/images/icon-msg.png",
+        "selectedIconPath": "/images/icon-msg2.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "/images/icon-mine.png",
+        "selectedIconPath": "/images/icon-mine2.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,84 @@
+<!-- index.wxml -->
+
+<!-- <view wx:if="{{logged}}"> -->
+<!-- 引入wxSearch模板 -->
+<import src="/wxSearch/wxSearch.wxml"/>
+
+<view class='searchBox'>
+    <view class='box'>
+        <image src='/images/search.png' mode='widthFix'></image>
+        <!--<form bindsubmit="search">-->
+        <input type='text' placeholder='请输入陪玩师名称' bindfocus="wxSerchFocus" value="{{wxSearchData.value}}"
+               bindinput="wxSearchInput" bindblur="wxSearchBlur" bindconfirm="wxSearchFn" confirm-type="search"/>
+        <!--</form>-->
+    </view>
+</view>
+<!-- 引入wxSearch模板 -->
+<template is="wxSearch" data="{{wxSearchData}}"/>
+<view class='bannerBox'>
+    <view>
+        <image src='/images/banner.jpg' mode='widthFix'></image>
+    </view>
+</view>
+<view>
+    <view class='navigatorBox'>
+        <block wx:for="{{skill_list}}" wx:key="key" wx:for-item="nav">
+            <navigator url="/pages/indexNavipage/indexNavipage?id={{nav.id}}&name={{nav.name}}">
+                <view>
+                    <image src='{{nav.icon}}' mode='widthFix'></image>
+                    <view>{{nav.name}}</view>
+                </view>
+            </navigator>
+        </block>
+    </view>
+    <view class='adImg'>
+        <image src='/images/ad.png' mode='widthFix'></image>
+    </view>
+
+    <!-- 王者荣耀 -->
+    <view wx:for="{{priceList}}" wx:key="key" wx:for-item="skill">
+        <view class='sameTitle'>
+            <view class='titleTxt'>
+                <image src='/images/titlebg-left.png' mode='widthFix'></image>
+                <text>{{skill.name}}</text>
+                <image src='/images/titlebg-right.png' mode='widthFix'></image>
+            </view>
+            <text class='more' bindtap='moreTap' data-id="{{skill.id}}">更多></text>
+        </view>
+        <view class='beautyList'>
+            <block wx:for="{{skill.price_list}}" wx:key="key" wx:for-item="price">
+                <view class='beauty' bindtap='toBuyTap' data-id="{{price.id}}">
+                    <view class='beauty-pic'>
+                        <image class='b-pic' src='{{price.user_info.cover}}' mode='widthFix'></image>
+                        <view class='topAb'>
+                            <text></text>
+                            求单ing
+                        </view>
+                        <view class='bottomAb'>
+                            <image class='zan' src='/images/zuanshi.png' mode='widthFix'></image>
+                            <text>{{price.user_info.paragraph}}</text>
+                        </view>
+                    </view>
+                    <view class='beauty-txt'>
+                        <view class='b-name'>
+                            <text class='name'>{{price.user_info.name}}</text>
+                            <block wx:for='{{price.user_info.tags}}' wx:for-item='tags' wx:key="key">
+                                <text class='xg'>{{tags}}</text>
+                            </block>
+                        </view>
+                        <view class='b-price'>
+                            <view class='price'>￥{{price.price}}
+                                <text>起</text>
+                            </view>
+                            <view class='addr'>
+                                <image class='b-addr' src='/images/address.png'></image>
+                                <text>{{price.user_info.city}}</text>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </view>
+    </view>
+
+</view>

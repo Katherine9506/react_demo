@@ -1,0 +1,440 @@
+/* pages/indexBuy/indexBuy.wxss */
+.banner{
+    padding: 34rpx 36rpx 10rpx;
+    height: 678rpx;
+    position: relative;
+}
+.banner swiper{
+    height: 678rpx;
+}
+.banner swiper swiper-item{
+    border-radius: 9rpx;
+}
+.banner swiper swiper-item image{
+    display:block;
+    width: 100%;
+}
+.banner .current{
+    position: absolute;
+    right: 70rpx;
+    bottom: 40rpx;
+    font-size: 34rpx;
+    color: #999999;
+}
+.banner .current text{
+    color: #0362dc;
+    font-size: 36rpx;
+}
+.userTxt{
+    padding:17rpx 36rpx 29rpx;
+    border-bottom: 25rpx solid #F7F7F7;
+}
+.userName{
+    font-size: 36rpx;
+    color: #333333;
+    display: flex;
+    align-items: center;
+    height: 54rpx;
+}
+.userName view{
+    font-weight: 600;
+    line-height: 54rpx;
+}
+.userName text{
+    display: block;
+    padding: 0 20rpx;
+    height: 34rpx;
+    line-height: 34rpx;
+    font-size: 24rpx;
+    color: #999999;
+    border-radius: 12rpx;
+    border: 2rpx solid #999999;
+    margin-left: 14rpx;
+}
+.user-intro{
+    font-size: 30rpx;
+    color: #999999;
+    line-height: 36rpx;
+    padding-top: 14rpx;
+    margin-bottom: 24rpx;
+}
+.price{
+    height: 40rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 26rpx;
+    color: #999999;
+}
+.price-left,.price-right{
+    display: flex;
+    align-items: center;
+}
+.price-left text{
+    color: #da2121;
+    font-size: 36rpx;
+}
+.price-right image{
+    width: 23rpx;
+    height: 23rpx;
+    margin-right: 14rpx;
+}
+.price-right .num{
+    margin-right: 20rpx;
+}
+.beautySoundBox{
+    display: flex;
+    padding: 46rpx 24rpx 44rpx;
+    border-bottom: 18rpx solid #F7F7F7;
+}
+.beautyPic{
+    width: 118rpx;
+    height: 118rpx;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 30rpx;
+}
+.beautyPic image{
+    display: block;
+    width: 100%;
+}
+
+.beautySound{
+    margin-left: 33rpx;
+    width: 520rpx;
+}
+.beautyName{
+    display: flex;
+    height: 46rpx;
+    align-items: center;
+}
+.beautyName .mc{
+    display: flex;
+    line-height: 46rpx;
+    font-size: 34rpx;
+    color: #333333;
+    margin-right: 16rpx;
+}
+.beautyName .sex{
+    height: 40rpx;
+    padding:0 18rpx;
+    background: #0362DC;
+    font-size: 22rpx;
+    color: #fff;line-height: 40rpx;
+    border-radius: 20rpx;
+}
+.beautyName .sex image{
+    width: 16rpx;
+    height: 22rpx;
+    vertical-align: middle;
+    margin-top: -4rpx;
+    margin-right: 8rpx;
+}
+.beautyAddr{
+    font-size: 24rpx;
+    color: #999999;
+    height: 36rpx;
+    line-height: 36rpx;
+    margin-top: 12rpx;
+}
+.beautyAddr image{
+    width: 16rpx;
+    height: 24rpx;
+    vertical-align: middle;
+    margin-top: -4rpx;
+    margin-right: 15rpx;
+}
+.soundbox{
+    display: flex;
+    align-items: center;
+    padding-top: 24rpx;
+}
+.soundbox .audio{
+    height: 58rpx;
+    padding: 0 21rpx 0 17rpx;
+    background-color: #0362DC;
+    background:linear-gradient(to right,#3899EA,#0362DC);
+    border-bottom-left-radius: 29rpx;
+    border-bottom-right-radius: 29rpx;
+    border-top-right-radius: 29rpx;
+    margin: 0;
+    margin-right: 12rpx;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.soundbox .audio audio{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;height: 100%;
+    z-index: -1;
+}
+.soundbox .audio .lb{
+    width: 23rpx;
+    height: 28rpx;
+}
+.soundbox .audio .wave{
+    width: 166rpx;
+    height: 22rpx;
+    margin: 0 12rpx;
+}
+.soundbox .audio text{
+    font-size: 30rpx;
+    color: #fff;
+}
+.soundbox .tags{
+    margin-left: 8rpx;
+    font-size: 22rpx;
+    color: #fff;
+    background: #0362DC;
+    border-radius: 20rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    padding: 0 19rpx;
+}
+
+.title{
+    position: relative;
+    font-size: 30rpx;
+    height: 48rpx;
+    text-align: center;
+    padding-top: 26rpx;
+}
+.title text{
+    padding: 0 15rpx;
+    display: inline-block;
+    background: #fff;
+    line-height: 48rpx;
+    color: #333333;
+}
+.title::after{
+    position: absolute;
+    left: 0;
+    bottom: 23rpx;
+    display: block;
+    content: '';
+    width:100%;
+    height: 2rpx;
+    background: #EEEEEE;
+    z-index: -1;
+}
+.skillList{
+    padding: 0 24rpx 23rpx;
+}
+.skillList .skill{
+    border-bottom: 1rpx solid #EEEEEE;
+    padding: 38rpx 9rpx 35rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.skillList .skill .arrow{
+    width: 16rpx;
+    height: 30rpx;
+}
+.skillList .skill .skillLogo{
+    width: 72rpx;
+    height: 72rpx;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: 7rpx;
+}
+.skillList .skill .skill-left{
+    display: flex;
+}
+.skillList .skill .skillInfor{
+    width: 510rpx;
+    margin-left: 34rpx;
+}
+.skillList image{
+    display:block;
+    width: 100%;
+}
+.skillTxt{
+    display: flex;
+    align-items: center;
+    height: 38rpx;
+    margin-bottom: 15rpx;
+}
+.skillTxt view{
+    font-size: 30rpx;
+    color: #333333;
+    height: 38rpx;
+    line-height: 38rpx;
+}
+.skillTxt text{
+    font-size: 24rpx;
+    color: #999999;
+    display: block;
+    height: 34rpx;
+    line-height: 34rpx;
+    padding: 0 18rpx;
+    border:2rpx solid #BFBFBF;
+    border-radius: 9rpx;
+    margin-left: 20rpx;
+}
+.skillPrice{
+    font-size: 24rpx;
+    color: #999999;
+    height: 34rpx;
+    line-height: 34rpx;
+}
+.skillPrice text{
+    display: inline-block;
+    font-size: 30rpx;
+    color: #da2121;
+}
+.allJn{
+    border-bottom: 20rpx solid #F7F7F7;
+}
+.evaluList{
+    padding: 0 24rpx 25rpx;
+}
+.evalu{
+    padding: 37rpx 9rpx 30rpx;
+    border-bottom: 1rpx solid #EEEEEE;
+    display: flex;
+    justify-content: space-between;
+}
+.evalu .userPic{
+    width: 74rpx;
+    height: 74rpx;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.evalu .userPic image{
+    display: block;
+    width: 100%;
+}
+.evaluTxt{
+    width: 580rpx;
+}
+.evaluTxt .top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 28rpx;
+    margin-bottom: 22rpx;
+}
+.evaluTxt .top .name{
+    font-size: 24rpx;
+    color: #0362dc;
+}
+.evaluTxt .evaluDetail{
+    font-size: 28rpx;
+    color: #333333;
+    line-height: 36rpx;
+    margin-bottom: 18rpx;
+}
+.evaluTxt .addTime{
+    font-size: 22rpx;
+    color: #999999;
+    line-height: 28rpx;
+}
+.evalu .star{
+    display: flex;
+    align-items: center;
+    height: 28rpx;
+    justify-content: flex-end;
+}
+.evalu .star image{
+    display: block;
+    width: 22rpx;
+    height: 22rpx;
+    margin: 0 6rpx;
+}
+.evalu .star text{
+    font-size: 28rpx;
+    color: #333333;
+}
+.other{
+    padding: 57rpx 12rpx 0;
+    display: flex;
+    justify-content: space-around;
+}
+.other view{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.other view image{
+    display: block;
+    width: 98rpx;
+    height: 98rpx;
+    margin:0 auto 15rpx;
+}
+.other view text{
+    font-size: 28rpx;
+    line-height: 54rpx;
+    color: #333333;
+}
+.terms{
+    margin-top: 24rpx;
+    padding: 0 45rpx 18rpx;
+    font-size: 28rpx;
+    color: #999999;
+    line-height: 56rpx;
+}
+.wrap{
+    border-bottom: 44rpx solid #F7F7F7;
+    margin-bottom: 98rpx;
+}
+.fixBottom{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 98rpx;
+    display: flex;
+    background: #fff;
+    box-shadow: 1rpx -1rpx 6rpx #ddd;
+}
+.fixBottom view{
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    font-size: 34rpx;
+    justify-content: center;
+}
+.fixBottom view image{
+    display: block;
+    width: 36rpx;
+    height: 34rpx;
+    margin-right: 20rpx;
+}
+.fixBottom view text{
+    color: #333333;
+}
+.fixBottom .share,.fixBottom .wx{
+    width: 219rpx;
+}
+.fixBottom .wx{
+    border-left: 2rpx solid #EDEDED;
+}
+.fixBottom .nowBoy{
+    width: 312rpx;
+    background: #0B6BDE;
+    background: linear-gradient(135deg ,#3B99EA,#0362DC);
+}
+.fixBottom .nowBoy button{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    color: #fff;
+}
+
+button::after {
+    border: none;
+}
+
+button {
+    background-color: #fff;
+}
+
+.share-button{
+    background: #fff;
+    margin:0px;
+    padding:0px;
+}

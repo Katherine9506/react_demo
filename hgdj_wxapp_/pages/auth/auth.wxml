@@ -1,0 +1,15 @@
+<view wx:if="{{canIUse}}">
+    <view wx:if="{{canIUse}}">
+        <view class='logo'>
+            <view class='logoBox'>
+                <image src='/images/logo.png' mode='widthFix'></image>
+            </view>
+            <view class='wxName'>嗨狗电竞</view>
+        </view>
+        <view class='impowerBtn'>
+            <button type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onAuth">微信授权登录</button>
+        </view>
+    </view>
+</view>
+ 
+<view wx:else>请升级微信版本</view>

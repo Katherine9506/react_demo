@@ -1,0 +1,409 @@
+/* pages/msgDetail/msgDetail.wxss */
+page{
+background: #F7F7F7;
+}
+.beautySoundBox{
+display: flex;
+padding: 46rpx 24rpx 44rpx;
+background: #fff;
+margin-bottom: 40rpx;
+}
+.beautyPic{
+width: 118rpx;
+height: 118rpx;
+border-radius: 50%;
+overflow: hidden;
+margin-left: 30rpx;
+}
+.beautyPic image{
+display: block;
+width: 100%;
+}
+.beautySound{
+margin-left: 33rpx;
+width: 520rpx;
+}
+.beautyName{
+display: flex;
+height: 46rpx;
+align-items: center;
+}
+.beautyName .mc{
+display: flex;
+line-height: 46rpx;
+font-size: 34rpx;
+color: #333333;
+margin-right: 16rpx;
+}
+.beautyName .sex{
+height: 40rpx;
+padding:0 18rpx;
+background: #0362DC;
+font-size: 22rpx;
+color: #fff;line-height: 40rpx;
+border-radius: 20rpx;
+}
+.beautyName .sex image{
+width: 16rpx;
+height: 22rpx;
+vertical-align: middle;
+margin-top: -4rpx;
+margin-right: 8rpx;
+}
+.beautyAddr{
+font-size: 24rpx;
+color: #999999;
+height: 36rpx;
+line-height: 36rpx;
+margin-top: 12rpx;
+}
+.beautyAddr image{
+width: 16rpx;
+height: 24rpx;
+vertical-align: middle;
+margin-top: -4rpx;
+margin-right: 15rpx;
+}
+.soundbox{
+display: flex;
+align-items: center;
+padding-top: 24rpx;
+}
+.soundbox .audio{
+height: 58rpx;
+padding: 0 21rpx 0 17rpx;
+background-color: #0362DC;
+background:linear-gradient(to right,#3899EA,#0362DC);
+border-bottom-left-radius: 29rpx;
+border-bottom-right-radius: 29rpx;
+border-top-right-radius: 29rpx;
+margin: 0;
+margin-right: 12rpx;
+position: relative;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.soundbox .audio audio{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;height: 100%;
+z-index: -1;
+}
+.soundbox .audio .lb{
+width: 23rpx;
+height: 28rpx;
+}
+.soundbox .audio .wave{
+width: 166rpx;
+height: 22rpx;
+margin: 0 12rpx;
+}
+.soundbox .audio text{
+font-size: 30rpx;
+color: #fff;
+}
+.soundbox .tags{
+margin-left: 8rpx;
+font-size: 22rpx;
+color: #fff;
+background: #0362DC;
+border-radius: 20rpx;
+height: 40rpx;
+line-height: 40rpx;
+padding: 0 19rpx;
+}
+.msg{
+padding: 0 36rpx;
+}
+.msg .imgBox{
+width: 90rpx;
+height: 90rpx;
+border-radius: 50%;
+overflow: hidden;
+}
+.msg .imgBox image{
+display: block;
+width: 100%;
+}
+.detail{
+width: 320rpx;
+background: #fff;
+border-radius: 10rpx;
+font-size: 26rpx;
+color: #000000;
+line-height: 36rpx;
+padding: 17rpx;
+position: relative;
+box-sizing: border-box;
+}
+.you .audio{
+background-color: transparent;
+background-size: 100% 100%;
+height: 60rpx;
+}
+.detail .emoji_icon{
+height: 40rpx;
+width: 40rpx;
+display: inline-block;
+}
+.detail image{
+display: block;
+width: 100%;
+}
+.msgTime{
+font-size: 20rpx;
+line-height: 48rpx;
+}
+.you {
+display: flex;
+margin-bottom: 40rpx;
+}
+.you .imgBox{
+margin-right: 40rpx;
+}
+/* .you .detail::after{
+position: absolute;
+top: 41rpx;
+left: -10rpx;
+display: block;
+content: '';
+width: 0;
+height: 0;
+border-color: transparent #fff transparent transparent;
+border-style: solid;
+border-width: 7rpx 11rpx 7rpx 0;
+} */
+.me {
+display: flex;
+margin-bottom: 40rpx;
+justify-content: flex-end;
+}
+.me .imgBox{
+margin-left: 40rpx;
+}
+.me .detail{
+background: #0362DC;
+color: #fff;
+}
+.me .audio{
+background-color:transparent;
+background-size: 100% 100%;
+height: 60rpx;
+}
+.me .msgTime{text-align: right}
+/* .me .detail::after{
+position: absolute;
+top: 41rpx;
+right: -10rpx;
+display: block;
+content: '';
+width: 0;
+height: 0;
+border-color: transparent  transparent transparent #0362DC;
+border-style: solid;
+border-width: 7rpx  0  7rpx 11rpx;
+} */
+.bottomFix{
+position: fixed;
+bottom: 0;
+left: 0;
+width: 100%;
+/* height: 98rpx; */
+background: #fff;
+box-sizing: border-box;
+}
+.bottomFix .bottom{
+padding: 15rpx 24rpx;
+display: flex;
+height: 68rpx;
+justify-content: space-between;
+align-items: center;
+}
+.bottomFix .inputBox{
+width: 480rpx;
+height: 68rppx;
+box-sizing: border-box;
+border:1rpx solid #B5B5B5;
+border-radius: 34rpx;
+background: #F6F6F6;
+padding: 0 30rpx;
+}
+.bottomFix .inputBox.gray{
+width: 480rpx;
+height: 68rppx;
+box-sizing: border-box;
+border:1rpx solid #B5B5B5;
+border-radius: 34rpx;
+background: #b5b5b5;
+padding: 0 30rpx;
+}
+.bottomFix .inputBox view{
+line-height: 68rpx;
+font-size: 28rpx;
+color: #666;
+text-align: center;
+}
+.bottomFix button{
+padding: 0;
+font-size: 34rpx;
+color: #0362dc;
+width: 60rpx;
+height: 60rpx;
+line-height: 60rpx;
+border: 0;
+margin: 0;
+background: transparent;
+}
+.bottomFix button image{
+display: block;
+width: 100%;
+}
+.bottomFix button::after{
+border: 0;
+}
+.bottomFix .inputBox input{
+display: block;
+width: 100%;
+height: 66rpx;
+line-height: 66rpx;
+color:#333;
+font-size: 30rpx;
+}
+.btnList{
+background: #EAEAEA;
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+padding: 54rpx 40rpx 26rpx;
+}
+.btnItem{
+width: 100rpx;
+font-size: 22rpx;
+color: #747474;
+line-height: 59rpx;
+padding-bottom: 9rpx;
+text-align: center;
+margin: 0 33rpx;
+}
+.btnItem .btn{
+width: 100rpx;
+height: 100rpx;
+padding-top: 24rpx;
+box-sizing: border-box;
+border-radius: 18rpx;
+background: #F6F6F6;
+border:1rpx solid #BFBFBF;
+}
+.btnItem .btn image{
+display: block;
+width: 51rpx;
+margin: 0 auto;
+}
+.bottomFix .fsBtn{
+font-size: 24rpx;
+color: #fff;
+background-size: 100% 100%;
+}
+.detail.photo{
+padding: 0;
+}
+.mask{
+position: fixed;
+top: 50%;
+left: 50%;
+margin-left: -240rpx;
+margin-top: -420rpx;
+width: 460rpx;
+height: 480rpx;
+background: rgba(0,0,0,.7);
+overflow: hidden;
+color: #ffffff;
+z-index:900;
+}
+.mask .inRecord{
+position: relative;
+left: 80rpx;
+top: 80rpx;
+width: 300rpx;
+height: 440rpx;
+text-align: center;
+}
+.mask .inRecord image{
+position: relative;
+width: 300rpx;
+height: 300rpx;
+}
+.mask .inRecord text{
+font-size: 32rpx;
+position: relative;
+bottom: 5rpx;
+}
+
+.emoji_container{
+background: #fff;
+flex-wrap: wrap;
+padding: 0rpx 10rpx 10rpx;
+}
+
+.emoji_content{
+display: flex;
+flex-flow: row;
+justify-content: center;
+padding: 5rpx;
+border: 1px solid #bfbfbf;
+margin-bottom: 10rpx;
+}
+
+.emoji_content  .show{
+display: block;
+}
+
+.emoji_content .hide{
+display: none;
+}
+
+.emoji_item{
+width: 65rpx;
+height: 65rpx;
+display: inline;
+}
+
+.emoji_item image{
+vertical-align: middle;
+max-width: 50rpx;
+max-height: 50rpx;
+padding: 11rpx;
+}
+
+.emoji_tab{
+background-color: #f7f7f7;
+border-top: 1px solid #e3e3e3;
+color: #666;
+height: 60rpx;
+position: relative;
+}
+
+.emoji_tab .type{
+border-top: 0 none;
+cursor: pointer;
+float: left;
+height: 45rpx;
+line-height: 45rpx;
+margin: 10rpx 20rpx 0 0;
+font-size: 25rpx;
+border-radius: 3rpx;
+text-align: center;
+width: 100rpx;
+overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+padding: 0rpx 10rpx 0 10rpx;
+}
+
+.emoji_tab .type.iconTypeSelect{
+color: #fff;
+background: steelblue;
+}
+

@@ -1,0 +1,131 @@
+<!--pages/msgDetail/msgDetail.wxml-->
+<import src="../../wxParse/wxParse/wxParse.wxml"/>
+
+<view style='padding-bottom:{{moreFn?508:98}}rpx;transition: 0.5s;'>
+    <view class='msg' id="messages">
+        <block wx:for="{{chats}}" wx:key="{{index}}">
+            <view class="msgDetail {{item.send_uid == user_id ? 'me' : 'you'}}">
+                <!-- 自己聊天 -->
+                <block wx:if="{{item.send_uid == user_id}}">
+                    <view>
+                        <view class='msgTime'>{{item.timeShown}}</view>
+                        <!-- 文本 -->
+                        <view class='detail' wx:if="{{item.type == 1}}">
+                            <rich-text nodes="{{item.message}}"></rich-text>
+                        </view>
+                        <!-- 图片 -->
+                        <view class='detail photo' wx:if="{{item.type == 2}}">
+                            <image src="{{item.message}}" mode="widthFix" bindtap="previewImage"
+                                   data-url="{{item.message}}"></image>
+                        </view>
+                        <!-- 语音 -->
+                        <view class='detail audio' bindtap='playAudio' wx:if="{{item.type == 3}}"
+                              data-src="{{item.message}}" data-index="{{index}}"
+                              style='background-image:url({{item.is_play?_wxapp+"/audioBg3.gif":_wxapp+"/audioBg2.png"}})'>
+                            <!--style='background-image:url(/images/{{item.is_play?"audioBg3.gif":"audioBg2.png"}})'>-->
+                        </view>
+                    </view>
+                    <view class='imgBox' id="{{(index + 1) == chats.length ? 'lastMessage' : ''}}">
+                        <image src="{{user.thumb}}" mode='widthFix'></image>
+                    </view>
+                </block>
+                <block wx:else>
+                    <view class='imgBox' id="{{(index + 1) == chats.length ? 'lastMessage' : ''}}">
+                        <image src="{{chater.thumb}}" mode='widthFix'></image>
+                    </view>
+                    <view>
+                        <view class='msgTime'>{{item.timeShown}}</view>
+                        <!-- 文本 -->
+                        <view class='detail' wx:if="{{item.type == 1}}">
+                            <rich-text nodes="{{item.message}}"></rich-text>
+                        </view>
+                        <!-- 图片 -->
+                        <view class='detail photo' wx:if="{{item.type == 2}}">
+                            <image src="{{item.message}}" mode="widthFix" bindtap="previewImage"
+                                   data-url="{{item.message}}"></image>
+                        </view>
+                        <!-- 语音 -->
+                        <view class='detail audio' bindtap='playAudio' wx:if="{{item.type == 3}}"
+                              data-src="{{item.message}}" data-index="{{index}}"
+                              style='background-image:url({{item.is_play?_wxapp+"/audioBg2.gif":_wxapp+"/audioBg.png"}})'>
+                        </view>
+                    </view>
+                </block>
+            </view>
+        </block>
+    </view>
+    <view class="mask" wx:if="{{inRecord}}">
+        <view class="inRecord">
+            <image src="/images/record.gif"></image>
+            <text>语音录入中...</text>
+        </view>
+    </view>
+    <view class='bottomFix'>
+        <form bindsubmit="sendChat">
+            <view class='bottom'>
+                <button bindtap='luyinTap'>
+                    <image src='/images/{{enterTxt?"yuyin.png":"yuyin2.png"}}' mode='widthFix'></image>
+                </button>
+                <view class="inputBox {{inRecord ? 'gray' : ''}}">
+                    <!--<view class="inputBox grayAudio">-->
+                    <input wx:if='{{enterTxt}}' type='text' bindinput='enterTap' value="{{message}}" name="message"
+                           bindblur="messageBlur"/>
+                    <view class="luyinBtn" wx:if='{{!enterTxt}}'
+                          bindtouchstart="startRecord" bindtouchend="stopRecord">
+                        按住 说话
+                    </view>
+                </view>
+                <button bindtap="showEmojis">
+                    <image src='/images/emtion.png' mode='widthFix'></image>
+                </button>
+                <button hidden='{{fsBtn}}' bindtap='moreFnTap'>
+                    <image src='/images/add.png' mode='widthFix'></image>
+                </button>
+                <button hidden='{{!fsBtn}}' class='fsBtn' form-type='submit'
+                        style='background-image:url({{_wxapp + "/fsbtn.png"}})'>
+                </button>
+            </view>
+            <view wx:if='{{moreFn}}' class='btnList'>
+                <view class='btnItem'>
+                    <view class='btn' bindtap="selectAlbum">
+                        <image src='/images/icon-img.png' mode='widthFix'></image>
+                    </view>
+                    <view>相册</view>
+                </view>
+                <view class='btnItem'>
+                    <view class='btn' bindtap="takePhoto">
+                        <image src='/images/icon-carma.png' mode='widthFix'></image>
+                    </view>
+                    <view>相机</view>
+                </view>
+            </view>
+            <view class="emoji_container" wx:if="{{showEmoji}}">
+                <view class="emoji_content">
+                    <block wx:for="{{emojiIcons}}" wx:for-item="icons" wx:for-index="key" wx:key="{{key}}">
+                        <view class="{{type == icons.type ? 'show' : 'hide'}}">
+                            <block class="emojiBlock" wx:for="{{icons.indexes}}" wx:for-item="icon" wx:for-index="key2"
+                                   wx:key="{{key2}}">
+                                <view class="emoji_item" bindtap="selectEmoji" data-id="{{key2 + 1}}"
+                                      data-emoji_code="{{icons.notations[key2 + 1]}}">
+                                    <image src="{{_wxapp + icons.path + (key2 + 1) + icons.file}}"
+                                           mode="widthFix"></image>
+                                </view>
+                            </block>
+                        </view>
+                    </block>
+                </view>
+                <view class="emoji_tab">
+                    <block wx:for="{{emojiIcons}}" wx:key="{{key}}">
+                        <view class="type {{type == item.type ? 'iconTypeSelect' : ''}}"
+                              bindtap="switchIconType" data-type="{{item.type}}">
+                            {{item.name}}
+                        </view>
+                    </block>
+                </view>
+            </view>
+        </form>
+    </view>
+</view>
+
+<import src="/towxml/entry.wxml"></import>
+<template is="entry" data="{{...article}}"></template>
